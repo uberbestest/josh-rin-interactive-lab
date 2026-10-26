@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>The Verb That Vanished — Method | Josh & Rin Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1421;--ink:#edf2ef;--muted:#aebec2;--line:#354957;--gold:#f3c16b;--mint:#a5e1c9;--panel:#172432}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse 75% 35% at 80% 0%,#1a3541 0%,transparent 80%),var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+main,header,footer{padding:24px max(24px,calc((100% - 850px)/2))}header{border-bottom:1px solid var(--line)}footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+a{color:var(--mint)}a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+h1{font-size:clamp(2.1rem,6vw,3.55rem);line-height:1.12;letter-spacing:-.045em;margin:.45em 0 .3em}
+h2{font-size:1.42rem;letter-spacing:-.02em;margin-top:2.1rem;border-top:1px solid var(--line);padding-top:1.2rem}
+p{margin:0 0 16px}.lead{font-size:1.16rem;color:var(--muted)}li{margin:.4rem 0}.eyebrow{font:650 .78rem ui-monospace,Consolas,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}
+.callout{padding:16px 22px;margin:25px 0;border:1px solid var(--line);border-left:4px solid var(--gold);background:var(--panel);border-radius:4px}
+.button{display:inline-block;background:var(--gold);color:#0b1b23;padding:10px 20px;margin:14px 0 20px;text-decoration:none;border-radius:5px;font-weight:750}
+code{overflow-wrap:anywhere;font-size:.85rem}small{color:var(--muted)}
+</style></head>
+<body><header><a href="../../index.html">← Back to all experiments</a></header>
+<main><p class="eyebrow">Discovery audited · Protocol not run · Exhibit added 2026-10-26</p><h1>The Verb That Vanished</h1><p class="lead">A translation and later commentary disagree about a source-language distinction. What experiment could establish whether that matters?</p>
+<a class="button" href="index.html">Open the interactive exhibit ↗</a><section><h2>The selected observation</h2><p>One post-hoc, manually transcribed conversational excerpt shows different wording in an initial translation and subsequent commentary, alongside an assurance of fidelity. This is neither a provider raw-log export nor a controlled replication. The interesting question is whether preserving source meaning differs from noticing it after the fact.</p></section>
+<section><h2>The planned comparison</h2><p>Visitors can inspect twelve author-created French passages and four planned trial conditions: direct translation, simple retry, analysis before, and analysis after. The page generates initial prompts and exports the planned protocol; it does not run a model or collect replies. The packet specifies 48 isolated trial sessions and independent bilingual review, but there are <strong>zero fresh model trials</strong> and <strong>zero independent ratings</strong>.</p></section>
+<section><h2>What would count</h2><p>Bilingual reviewers would need to assess propositions, register, force, attribution, negation, and amplification without seeing the trial condition. Literal word matching alone cannot establish fidelity. A second analysis step also costs extra tokens and generation turns, so the design does not cleanly isolate an internal mechanism.</p></section>
+<section><h2>Checks and unknowns</h2><p>Seventeen local Python fixture tests re-ran and passed on October 26; they test protocol setup and data isolation, not translation quality. An injected-document Chromium smoke test exercised prompt selection and JSON export without page errors. Ordinary hosted navigation, native Windows clipboard and independent review were not established.</p><div class="callout">We have a prepared way to question our own interpretation, not an established finding about model behavior.</div></section>
+<section><h2>Artifact receipt</h2><p>Original standalone HTML copied without source modification. SHA-256: <code>5159ceb535967237b0fe8af5b9f7d660ad4b43636a9fad07ca58f01c1b24a18a</code>. Byte identity is not independent scientific validation.</p>
+<p><a href="https://github.com/uberbestest/josh-rin-interactive-lab/blob/main/experiments/verb-that-vanished/README.md">Full public README and evidence boundary on GitHub ↗</a></p></section>
+</main><footer>Josh & Rin · Keep the evidence. Name the bridge. Return the counterexample.</footer></body></html>

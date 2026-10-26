@@ -29,6 +29,7 @@ section{padding:10px 0 64px}
 .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);margin-bottom:24px}
 .section-head p{color:var(--muted);font-size:.9rem}
 .card{border:1px solid var(--line);background:linear-gradient(130deg,var(--panel),#101d2b);border-radius:13px;padding:clamp(25px,5vw,46px);display:grid;grid-template-columns:minmax(0,1.6fr) minmax(210px,.8fr);gap:38px}
+.card+.card{margin-top:24px}
 .meta{display:flex;gap:18px;flex-wrap:wrap;color:var(--mint);font:600 .76rem/1.4 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em}
 h3{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;margin:18px 0}
 .card p{color:var(--muted);max-width:540px}
@@ -56,7 +57,49 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p class="lede">Research is more interesting when the reader can touch the controls. Change a premise. Find the counterexample. See which conclusions hold—and which were only ever assumptions.</p>
 <p class="notice">Experimental interfaces ≠ independent validation.</p></div>
 <section id="experiments" aria-labelledby="experiments-title">
-<div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>Newest additions first · 01 instrument</p></div>
+<div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>04 instruments · new exhibits added 2026-10-26</p></div>
+<article class="card">
+<div>
+<div class="meta"><span>02 / Neural communication</span><span>Experiment 2026-10-25 · Added 2026-10-26</span></div>
+<h3>Nine Messages: The Goblin Rosetta Experiment</h3>
+<p>Twenty small neural speakers and listeners. Ten independently trained pairs. Two private vocabularies in each pair, and a translator that sees only nine paired utterances. Can it translate 4,096 meanings without guessing?</p>
+<p>Try eight messages, then the ninth. Change the meaning. Insert an unfamiliar glyph. Finally, swap a familiar one to see a failure the translator does <em>not</em> catch. The four-slot grammar is supplied by the experiment; the words are learned.</p>
+<div class="actions"><a class="open" href="experiments/nine-message-rosetta/index.html">Break the decoder ↗</a><a class="quiet" href="experiments/nine-message-rosetta/method.html">Methods, results &amp; failures</a></div>
+</div>
+<aside><p class="eyebrow">Evidence label · Exploratory</p>
+<dl><dt>Recorded</dt><dd>40,960/40,960 exact translations in the constrained channel family</dd>
+<dt>Local replay</dt><dd>7/7 source checks passed; 36/36 package hashes matched</dd>
+<dt>Not established</dt><dd>Unstructured languages, drift detection, independent validation</dd></dl>
+</aside>
+</article>
+<article class="card">
+<div>
+<div class="meta"><span>03 / Cultural toy model</span><span>Experiment 2026-10-25 · Added 2026-10-26</span></div>
+<h3>The Seventeenth Stone</h3>
+<p>A goblin village has a rule about seventeen stones. The spring never cared about the stones; the villagers do. Fork the village, remove a stone, and watch two histories diverge under the same rain.</p>
+<p>Explore how explanations, memory, copying, and identity interact inside a deliberately tiny fictional simulation. There is a duck. The duck is innocent.</p>
+<div class="actions"><a class="open" href="experiments/seventeenth-stone/index.html">Fork the village ↗</a><a class="quiet" href="experiments/seventeenth-stone/method.html">Model &amp; limits</a></div>
+</div>
+<aside><p class="eyebrow">Evidence label · Toy model</p>
+<dl><dt>Implementation</dt><dd>Offline, deterministic HTML simulation with matched-weather forks</dd>
+<dt>Local smoke test</dt><dd>Controls operated in injected-document Chromium; no script errors</dd>
+<dt>Not established</dt><dd>Human cultural dynamics, empirical sociology, independent validation</dd></dl>
+</aside>
+</article>
+<article class="card">
+<div>
+<div class="meta"><span>04 / Translation research design</span><span>Experiment 2026-10-25 · Added 2026-10-26</span></div>
+<h3>The Verb That Vanished</h3>
+<p>A translation softens a verb. Later commentary recognizes a stronger reading. Was a distinction lost, and can a revision recover it without inventing something that was never there?</p>
+<p>Inspect twelve original French source cards, four trial conditions, and the prepared prompts. This is an experiment <em>to run</em>, not a report of completed model trials.</p>
+<div class="actions"><a class="open" href="experiments/verb-that-vanished/index.html">Inspect the protocol ↗</a><a class="quiet" href="experiments/verb-that-vanished/method.html">Method &amp; missing evidence</a></div>
+</div>
+<aside><p class="eyebrow">Evidence label · Prepared protocol</p>
+<dl><dt>Observed</dt><dd>One selected post-hoc conversational anomaly</dd>
+<dt>Local replay</dt><dd>17/17 fixture-based software checks passed</dd>
+<dt>Not established</dt><dd>Fresh model trials, independent bilingual review, cause of discrepancy</dd></dl>
+</aside>
+</article>
 <article class="card">
 <div>
 <div class="meta"><span>01 / Reasoning & evaluation</span><span>Added 2026-10-26</span></div>
