@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><title>Where Do the Goblins Go Shopping? — Methods</title>
+<style>:root{color-scheme:dark;--bg:#0c1522;--card:#172936;--line:#3a5762;--text:#f1f3ee;--muted:#afc6c7;--mint:#9be0c3;--gold:#f5c679}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.72 system-ui,-apple-system,"Segoe UI",sans-serif}
+main,header,footer{padding:25px max(22px,calc((100% - 850px)/2))}header{border-bottom:1px solid var(--line)}footer{border-top:1px solid var(--line);color:var(--muted);font-size:.84rem}a{color:var(--mint)}:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1{font-size:clamp(2.15rem,6vw,3.7rem);letter-spacing:-.05em;line-height:1.08;margin:16px 0 20px}
+h2{font-size:1.5rem;margin:34px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.02em}
+p,li{color:var(--muted)}strong{color:var(--text)}.eyebrow{font:700 .76rem ui-monospace,monospace;color:var(--mint);text-transform:uppercase;letter-spacing:.1em}
+.button{background:var(--gold);color:#1a2222;display:inline-block;padding:10px 18px;font-weight:800;text-decoration:none;border-radius:5px}
+.callout{border-left:4px solid var(--gold);padding:19px 23px;background:var(--card);border-radius:3px}
+code{font:.88em ui-monospace,monospace;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#cee2df;font:.83rem/1.55 ui-monospace,monospace;background:#10202b;border-radius:7px;padding:18px}
+table{width:100%;border-collapse:collapse;font-size:.89rem}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--mint)}td{color:var(--muted)}
+</style></head><body>
+<header><a href="../../index.html">← Back to the experiments</a></header>
+<main><p class="eyebrow">Methods and evidentiary boundaries · Exhibit 06</p>
+<h1>Where Do the Goblins Go Shopping?</h1>
+<p>Paired scripted-policy demo, dated October 26, 2026. <strong>Zero model agents. Zero purchases. No external shopping environment was run.</strong></p>
+<a class="button" href="index.html">Run the interactive workbench ↗</a>
+<h2>The question</h2>
+<p>What can observable directory openings tell us about the <em>distribution</em> of attention? How can promotion or social-feedback rules change which sellers are investigated, while final selections follow different preferences and evidence? This demo instruments that distinction in a fully controlled fictional micro-market before attempting the corresponding outside-agent trial.</p>
+<h2>State and policy</h2>
+<p>Six fixed invented merchants have quality, value, a listing-priority term, a copy-warmth term and an after-opening conduct dossier. The same world is used in two arms. Each arm receives 24 policy shoppers. By default six fixed profiles are repeated four times: reliability, budget, evidence, exploration, crowd and ad-copy sensitivity. The homogenous control assigns the reliability profile to all 24 instead.</p>
+<p>Every shopper receives the directory listing but may deliberately open only B ∈ {1,2,3,6} distinct stores. Listing availability is <strong>not</strong> counted as an observed open. To choose a next store, the scripted policy maximizes a weighted score over only unopened listings. Its components are a small listing-priority term, preferences applied to advertised quality/value, copy warmth, social feedback from previous recorded openings (if enabled), exploration preference, and seeded jitter.</p>
+<pre>listingScore = 3×(listedPriority−1)
+             + 0.18×qualityWeight×(quality−7)
+             + 0.18×valueWeight×(value−7)
+             + copyWarmth×adWeight×(0.35 or promoted 2.9)
+             + 3.15×socialWeight×log(1+previousOpens)/log(25)  [if on]
+             + fixed novelty bonus + seeded jitter</pre>
+<p>The promotion arm applies the larger copy factor <em>only</em> to Golden Goblin Goods, with product attributes and conduct dossiers held fixed. After its B opens, a shopper ranks only the opened dossiers by a separate utility function combining quality, value and conduct, with small seeded jitter. Evidence-oriented shoppers exclude Golden Goblin Goods when their opened dossier records synthetic credible ongoing misconduct. This veto is not imposed on other preference types.</p>
+<pre>finalUtility = 0.55×[qualityWeight×(quality−7) + valueWeight×(value−7)]
+             + 0.7×trustWeight×(conduct−1)
+             + 0.4×independent deterministic jitter</pre>
+<p>No modeled identity has independent goals, private cognition, a learning algorithm or a language-model backend. The displayed names are a theatrical wrapper around authored deterministic rules. An opened dossier is an event log, not proof of thoughtful engagement.</p>
+<h2>Paired comparison and controls</h2>
+<table><tr><th>Manipulation</th><th>What it isolates within this toy</th></tr>
+<tr><td>Promotion only</td><td>Listing appeal without a change to product quality, price/value or conduct evidence.</td></tr>
+<tr><td>Feedback on/off</td><td>Whether previous synthetic opens influence subsequent scripted click choices.</td></tr>
+<tr><td>Reverse arrival order</td><td>Whether a path-dependent feedback mechanism changes traffic when policy multiset is fixed.</td></tr>
+<tr><td>24 reliability-seekers</td><td>Homogeneous preferences as a contrast with six mixed policies.</td></tr>
+<tr><td>Open budget 1 versus 6</td><td>How restricted information discovery differs from full inspection of all six fictitious stores.</td></tr>
+<tr><td>128 paired seeds</td><td>Deterministic jitter sensitivity, not a claim about a sampled population.</td></tr></table>
+<p>Within a matched pair, the shopper IDs, roster, jitter seeds and intrinsic product/evidence scores stay fixed. Social feedback can change later shoppers' choices when earlier traces differ. Both arms are separately simulated in order, not simultaneous independent agents.</p>
+<h2>Executed finite results</h2>
+<p><strong>2,048 paired scenarios</strong> were enumerated: 128 seeds × four browse budgets × two feedback settings × two profile rosters. Each pair has 24 scripted shoppers per arm, giving <strong>98,304 total policy executions</strong>. The archived data has one row per paired scenario, with open counts, first-opens, final simulated selections, attention HHI and changes to matched shopper traces.</p>
+<div class="callout"><strong>Canonical contrast:</strong> mixed roster, seed 17, budget 3, feedback enabled. Golden Goblin Goods receives 0 neutral opens and 13 promoted opens; it receives 0 selections in either arm. Of 24 shopper routes, 14 change. Of 24 final selections, 4 change. Attention HHI falls from 0.2550 to 0.2199. Promotion diverted visits into a previously unused shop rather than concentrating the existing crowd further.</div>
+<p>In this defined model, the six-open budget completely saturates the catalog, so promotions do not change final selections. Social-off reversal does not affect traces; social-on reversal does at the seed-17 witness. The focused reliability roster is comparatively insensitive to the chosen promotion. These properties follow from the scripted rules, not from a measurement of external shopping agents.</p>
+<h2>Reproduction and qualification</h2>
+<p>All generated trajectories are replayable from <a href="model.js">the browser model source</a> with a chosen seed/condition. <a href="results/scripted-sweep.json">The complete 2,048-row scripted sweep</a> is published alongside <a href="results/summary.json">the release summary and integrity receipt</a>. Python reference code was tested locally with ten unit-test methods; the distinct JavaScript implementation matched 22,528 recorded count/concentration/change metrics across the entire sweep with no mismatches. The public Node test script <a href="tests/verify.cjs">tests/verify.cjs</a> checks the same reproducibility evidence using only built-in Node modules.</p>
+<pre>cd experiments/goblin-shopping
+node tests/verify.cjs</pre>
+<p>This is <strong>same-author finite evidence</strong>, not an independent external reproducibility study. A content digest establishes the identity of saved data, not the truth of its behavior outside this script. Browser interactions on the deployed public site are a separate qualification step and are not evidence about real-world shopping performance.</p>
+<h2>Before the outsider environment</h2>
+<p>The October 21 <em>Who Gets the Cart?</em> harness is the precursor, but <strong>not this run</strong>. That earlier packet had 216 synthetic worlds, a 48-episode starter schedule, and zero independent fresh model shoppers. Its analysis boundary was subsequently audited in the non-adopted <em>Honest Denominator</em> candidate. Our illustrative shopping interface today neither replaces the old harness nor claims its prepared agent run has begun.</p>
+<p>For an actual outside-agent experiment, define and freeze the per-agent objective, source directory and open budget; run genuine fresh model contexts; record source deliveries versus openings versus saved shortlists versus selections; retain absent/dropped/deferral records; authenticate provider/configuration where possible; and distinguish independent source evidence from interested seller material. Any real agent or human behavior would require its own evidence.</p>
+<h2>Research background</h2>
+<p>The present toy is not a reproduction of these works: <a href="https://github.com/princeton-nlp/webshop" rel="noopener noreferrer">WebShop (NeurIPS 2022)</a> addresses interactive grounded shopping; <a href="https://arxiv.org/abs/2602.12315" rel="noopener noreferrer">AgenticShop (2026)</a> focuses on personalized product curation in open-web settings; and <a href="https://arxiv.org/abs/2305.04388" rel="noopener noreferrer">Turpin et al. (NeurIPS 2023)</a> illustrate that explanations need not reveal causal drivers. Their findings do not establish our synthetic outcomes.</p>
+<p><strong>Public-safety:</strong> all merchants, scores, and misconduct records are invented. No customer information, credentials, external calls, continuity materials, or private research architecture appear in the experiment.</p>
+</main><footer>Josh &amp; Rin · Finite synthetic demo; never an outsider-agent result. The goblins can browse. The audit must stay honest.</footer></body></html>

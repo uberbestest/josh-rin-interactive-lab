@@ -1,0 +1,229 @@
+{
+  "date": "2026-10-26",
+  "default_witness": {
+    "baseline_concentration_hhi": 0.255,
+    "budget": 3,
+    "changed_final_selections": 4,
+    "changed_paths": 14,
+    "cohort": "mixed",
+    "crowd_feedback": true,
+    "neutral_final_selections": [
+      0,
+      3,
+      0,
+      3,
+      3,
+      15
+    ],
+    "neutral_visits": [
+      24,
+      5,
+      0,
+      18,
+      6,
+      19
+    ],
+    "promoted_concentration_hhi": 0.2199,
+    "promoted_final_selections": [
+      1,
+      3,
+      0,
+      3,
+      2,
+      15
+    ],
+    "promoted_visits": [
+      23,
+      4,
+      13,
+      11,
+      4,
+      17
+    ],
+    "seed": 17
+  },
+  "facts": {
+    "actual_external_shop_opens": 0,
+    "js_vs_python_stored_case_metric_differences": 0,
+    "live_model_runs": 0,
+    "local_python_regression_test_methods_passed": 10,
+    "metrics_equal_across_js_and_python_reference": 22528,
+    "real_purchases": 0,
+    "scripted_shoppers_per_arm": 24,
+    "total_paired_worlds": 2048,
+    "total_scripted_policy_executions": 98304,
+    "visible_shops": 6
+  },
+  "limits": [
+    "All shopper policies and utility weights are written by the experiment author.",
+    "The open counts are explicit synthetic directory opens and are not measurements of private attention.",
+    "Scenario frequencies do not estimate real-world ad effectiveness, LLM behavior, consumer purchasing, or systemic manipulation.",
+    "Source code and test fixtures share authorship; same-author dual-language check is not independent scientific replication.",
+    "No live provider sessions, real storefront search, real vendor claims, products purchased or provider identity verification.",
+    "Future outsider-environment run requires fresh isolated model contexts and actual trace capture."
+  ],
+  "lineage": {
+    "outsider_environment_status": "NOT_EXECUTED",
+    "prior_independent_model_episodes": 0,
+    "prior_pilot_status": "OFFLINE_HARNESS_TESTED_NO_MODEL_RUNS",
+    "prior_synthetic_worlds": 216,
+    "separate_pilot": "SHOPPING-AGENT-PILOT-2026-10-21-001"
+  },
+  "record_id": "GOBLIN-SHOPPING-ATTENTION-DEMO-2026-10-26-001",
+  "source_receipt": {
+    "client_model_git_blob_sha": "41b2133712dec6bbdebf5a2246b921079f3ec57f",
+    "node_test_script_git_blob_sha": "e26c7ddb9d1e09408e43d7fb5067845280f51bf6",
+    "python_reference_source_sha256": "e6f52faac0d351018c688769f4e26bfca333617f3df11ffa6082d8f747f60d32"
+  },
+  "status": "SCRIPTED_POLICY_DEMO_NO_MODEL_AGENTS",
+  "sweep": {
+    "grouped": {
+      "focused/budget-1/social-false": {
+        "count": 128,
+        "exact_equal_concentration_cases": 128,
+        "less_concentrated_cases": 0,
+        "mean_added_promoted_visits": 0,
+        "mean_changed_choice_count": 0,
+        "mean_changed_path_count": 0,
+        "more_concentrated_cases": 0
+      },
+      "focused/budget-1/social-true": {
+        "count": 128,
+        "exact_equal_concentration_cases": 128,
+        "less_concentrated_cases": 0,
+        "mean_added_promoted_visits": 0,
+        "mean_changed_choice_count": 0,
+        "mean_changed_path_count": 0,
+        "more_concentrated_cases": 0
+      },
+      "focused/budget-2/social-false": {
+        "count": 128,
+        "exact_equal_concentration_cases": 128,
+        "less_concentrated_cases": 0,
+        "mean_added_promoted_visits": 0.0078,
+        "mean_changed_choice_count": 0,
+        "mean_changed_path_count": 0.0078,
+        "more_concentrated_cases": 0
+      },
+      "focused/budget-2/social-true": {
+        "count": 128,
+        "exact_equal_concentration_cases": 128,
+        "less_concentrated_cases": 0,
+        "mean_added_promoted_visits": 0,
+        "mean_changed_choice_count": 0,
+        "mean_changed_path_count": 0,
+        "more_concentrated_cases": 0
+      },
+      "focused/budget-3/social-false": {
+        "count": 128,
+        "exact_equal_concentration_cases": 124,
+        "less_concentrated_cases": 4,
+        "mean_added_promoted_visits": 0.0313,
+        "mean_changed_choice_count": 0.0078,
+        "mean_changed_path_count": 0.0313,
+        "more_concentrated_cases": 0
+      },
+      "focused/budget-3/social-true": {
+        "count": 128,
+        "exact_equal_concentration_cases": 128,
+        "less_concentrated_cases": 0,
+        "mean_added_promoted_visits": 0,
+        "mean_changed_choice_count": 0,
+        "mean_changed_path_count": 0,
+        "more_concentrated_cases": 0
+      },
+      "focused/budget-6/social-false": {
+        "count": 128,
+        "exact_equal_concentration_cases": 128,
+        "less_concentrated_cases": 0,
+        "mean_added_promoted_visits": 0,
+        "mean_changed_choice_count": 0,
+        "mean_changed_path_count": 2.5391,
+        "more_concentrated_cases": 0
+      },
+      "focused/budget-6/social-true": {
+        "count": 128,
+        "exact_equal_concentration_cases": 128,
+        "less_concentrated_cases": 0,
+        "mean_added_promoted_visits": 0,
+        "mean_changed_choice_count": 0,
+        "mean_changed_path_count": 2.5391,
+        "more_concentrated_cases": 0
+      },
+      "mixed/budget-1/social-false": {
+        "count": 128,
+        "exact_equal_concentration_cases": 1,
+        "less_concentrated_cases": 122,
+        "mean_added_promoted_visits": 7.7578,
+        "mean_changed_choice_count": 7.7578,
+        "mean_changed_path_count": 7.7578,
+        "more_concentrated_cases": 5
+      },
+      "mixed/budget-1/social-true": {
+        "count": 128,
+        "exact_equal_concentration_cases": 0,
+        "less_concentrated_cases": 128,
+        "mean_added_promoted_visits": 5.25,
+        "mean_changed_choice_count": 6.4844,
+        "mean_changed_path_count": 6.4844,
+        "more_concentrated_cases": 0
+      },
+      "mixed/budget-2/social-false": {
+        "count": 128,
+        "exact_equal_concentration_cases": 0,
+        "less_concentrated_cases": 128,
+        "mean_added_promoted_visits": 9.0391,
+        "mean_changed_choice_count": 4.1641,
+        "mean_changed_path_count": 9.1328,
+        "more_concentrated_cases": 0
+      },
+      "mixed/budget-2/social-true": {
+        "count": 128,
+        "exact_equal_concentration_cases": 0,
+        "less_concentrated_cases": 128,
+        "mean_added_promoted_visits": 5.0859,
+        "mean_changed_choice_count": 4.2344,
+        "mean_changed_path_count": 7.4219,
+        "more_concentrated_cases": 0
+      },
+      "mixed/budget-3/social-false": {
+        "count": 128,
+        "exact_equal_concentration_cases": 0,
+        "less_concentrated_cases": 128,
+        "mean_added_promoted_visits": 9.8125,
+        "mean_changed_choice_count": 2.4063,
+        "mean_changed_path_count": 10.2266,
+        "more_concentrated_cases": 0
+      },
+      "mixed/budget-3/social-true": {
+        "count": 128,
+        "exact_equal_concentration_cases": 0,
+        "less_concentrated_cases": 128,
+        "mean_added_promoted_visits": 5.6016,
+        "mean_changed_choice_count": 2.8125,
+        "mean_changed_path_count": 9.125,
+        "more_concentrated_cases": 0
+      },
+      "mixed/budget-6/social-false": {
+        "count": 128,
+        "exact_equal_concentration_cases": 128,
+        "less_concentrated_cases": 0,
+        "mean_added_promoted_visits": 0,
+        "mean_changed_choice_count": 0,
+        "mean_changed_path_count": 12.6406,
+        "more_concentrated_cases": 0
+      },
+      "mixed/budget-6/social-true": {
+        "count": 128,
+        "exact_equal_concentration_cases": 128,
+        "less_concentrated_cases": 0,
+        "mean_added_promoted_visits": 0,
+        "mean_changed_choice_count": 0,
+        "mean_changed_path_count": 12.6406,
+        "more_concentrated_cases": 0
+      }
+    },
+    "raw_json_git_blob_sha": "bcec812b05be7a981e4561407ee67c1775181b12",
+    "raw_json_sha256": "994e3bd1260e48d8911dad2bdf1116a8ab65bb91a7ed059dda40dec022a669ca"
+  }
+}
