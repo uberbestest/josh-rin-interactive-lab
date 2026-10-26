@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Interactive research by Josh and Rin. Open the instruments, change the premises, inspect what survives.">
+<title>Josh & Rin / The Interactive Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1421;--ink:#edf2ef;--muted:#aebec2;--line:#354957;--gold:#f3c16b;--mint:#a5e1c9;--panel:#172432;--font:system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse 70% 40% at 80% 0%,#1a3541 0%,transparent 80%),var(--bg);color:var(--ink);font:16px/1.6 var(--font)}
+a{color:var(--mint)}a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.wrap{width:min(1040px,calc(100% - 40px));margin:auto}
+header{border-bottom:1px solid var(--line)}
+nav{display:flex;gap:2rem;align-items:center;justify-content:space-between;min-height:78px}
+.logo{color:var(--ink);font-weight:750;letter-spacing:.04em;text-decoration:none}
+.logo span{color:var(--gold)}
+nav a:last-child{text-decoration:none;font-size:.9rem}
+.eyebrow,.mono{font:600 .78rem/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+.hero{padding:clamp(64px,10vw,128px) 0 68px;max-width:880px}
+h1{font-size:clamp(2.8rem,6vw,5.1rem);line-height:1.08;letter-spacing:-.055em;margin:18px 0 26px}
+h1 em{font-style:normal;color:var(--gold)}
+.lede{font-size:clamp(1.06rem,2vw,1.34rem);color:var(--muted);max-width:700px}
+.notice{margin-top:30px;display:inline-block;padding:9px 15px;border:1px solid var(--line);border-radius:6px;color:var(--muted);font-size:.88rem}
+h2{font-size:1.5rem;letter-spacing:-.025em}
+section{padding:10px 0 64px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.section-head p{color:var(--muted);font-size:.9rem}
+.card{border:1px solid var(--line);background:linear-gradient(130deg,var(--panel),#101d2b);border-radius:13px;padding:clamp(25px,5vw,46px);display:grid;grid-template-columns:minmax(0,1.6fr) minmax(210px,.8fr);gap:38px}
+.meta{display:flex;gap:18px;flex-wrap:wrap;color:var(--mint);font:600 .76rem/1.4 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em}
+h3{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;margin:18px 0}
+.card p{color:var(--muted);max-width:540px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:28px}
+.open{display:inline-block;color:#0b1b23;background:var(--gold);padding:12px 20px;font-weight:750;border-radius:5px;text-decoration:none}
+.open:hover{background:#ffdb99}
+.quiet{font-weight:650;text-underline-offset:4px}
+aside{border-left:1px solid var(--line);padding-left:30px;align-self:stretch}
+aside p{font-size:.93rem}
+aside dl{margin-top:20px}
+aside dt{color:var(--mint);font:.72rem ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em}
+aside dd{margin:3px 0 22px;color:var(--ink)}
+.note{border-top:1px solid var(--line);padding:34px 0 52px;color:var(--muted)}
+footer{border-top:1px solid var(--line);color:var(--muted);padding:24px 0 42px;font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:720px){.card{grid-template-columns:1fr;gap:12px}aside{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.hero{padding-top:70px}.section-head{display:block}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><nav class="wrap"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><a href="#experiments">The experiments</a></nav></header>
+<main id="top" class="wrap">
+<div class="hero"><p class="eyebrow">A living collection of interactive research</p>
+<h1>Open the instrument.<br><em>Question the conclusion.</em></h1>
+<p class="lede">Research is more interesting when the reader can touch the controls. Change a premise. Find the counterexample. See which conclusions hold—and which were only ever assumptions.</p>
+<p class="notice">Experimental interfaces ≠ independent validation.</p></div>
+<section id="experiments" aria-labelledby="experiments-title">
+<div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>Newest additions first · 01 instrument</p></div>
+<article class="card">
+<div>
+<div class="meta"><span>01 / Reasoning & evaluation</span><span>Added 2026-10-26</span></div>
+<h3>Keep the Gaps</h3>
+<p>Three synthetic ledgers. A set of premises you can change. A finite checker that shows which claims follow, where compatible alternatives survive, and when the premises contradict one another.</p>
+<p>It does not verify the evidence, invent missing variables, or decide what is true about the world outside the declared model.</p>
+<div class="actions"><a class="open" href="experiments/keep-the-gaps/index.html">Open the workbench ↗</a><a class="quiet" href="experiments/keep-the-gaps/method.html">Method, evidence & limits</a></div>
+</div>
+<aside><p class="eyebrow">Evidence label</p>
+<dl><dt>Implementation</dt><dd>Self-contained HTML + embedded finite checker reports</dd>
+<dt>Verification</dt><dd>Packaged candidate checks reported as passing</dd>
+<dt>Not established</dt><dd>Independent validation; full browser/device coverage</dd></dl>
+</aside>
+</article>
+</section>
+<div class="note">This shelf is deliberately incomplete. A missing observation stays missing. A result is only as broad as the model and checks that produced it. New exhibits earn their place with their own methods, boundaries, and receipts.</div>
+</main>
+<footer><div class="wrap"><span>Josh & Rin · Interactive research</span><span>Keep the evidence. Name the bridge. Return the counterexample.</span></div></footer>
+</body></html>
