@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<title>The Goblins Accused an Innocent Messenger — Methods</title>
+<style>:root{color-scheme:dark;--bg:#0c1520;--p:#172833;--edge:#395563;--ink:#f3f4ed;--muted:#b3c5c7;--mint:#a5e1c9;--gold:#f3c16b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+main,header,footer{padding:23px max(22px,calc((100% - 810px)/2))}header{border-bottom:1px solid var(--edge)}footer{border-top:1px solid var(--edge);font-size:.85rem;color:var(--muted)}
+a{color:var(--mint)}a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1{font-size:clamp(2.1rem,5.5vw,3.8rem);line-height:1.08;letter-spacing:-.048em;margin:12px 0}
+h2{font-size:1.48rem;letter-spacing:-.02em;border-top:1px solid var(--edge);padding-top:20px;margin-top:34px}
+p,li{color:var(--muted)}strong{color:var(--ink)}code{overflow-wrap:anywhere}
+.key{font:700 .78rem ui-monospace,Consolas,monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--mint)}
+.call{padding:19px 23px;border-left:4px solid var(--gold);background:var(--p);border-radius:3px}
+.button{display:inline-block;text-decoration:none;color:#152526;background:var(--gold);padding:11px 17px;border-radius:5px;font-weight:800}
+table{width:100%;border-collapse:collapse}th,td{padding:11px;border-bottom:1px solid var(--edge);text-align:left}th{color:var(--mint)}td{color:var(--muted)}
+</style></head><body>
+<header><a href="../../index.html">← All exhibits</a></header><main>
+<p class="key">Methods / GOBLIN-CYCLE-2026-10-26-001 / 2026-10-26</p>
+<h1>The Goblins Accused an Innocent Messenger</h1>
+<p>Supplemental methods for the synthetic permutation-language network. Evidence status: <strong>offline finite result, not externally validated.</strong></p>
+<a class="button" href="index.html">Operate the experiment ↗</a>
+<h2>Question</h2>
+<p>How much can a relative-only checker infer from the consistency of several pairwise translation mappings? In particular, can it reconstruct one damaged mapping while remaining vulnerable to multiple changes that mimic a different single fault?</p>
+<h2>Model and authority separation</h2>
+<p>For each seed, the generator creates n = 3 or 4 hidden bijective codebooks mapping common latent synthetic meaning IDs to local glyph IDs. Pairwise claimed maps are computed by composing their inverse and forward codebooks. The <strong>generator</strong> has oracle knowledge of the original codebooks; the <strong>auditor</strong> only receives the pairwise mapping tables and topology. The browser exposes the oracle to readers as an inspection aid: no security boundary prevents a person from viewing the bundled synthetic evidence.</p>
+<p>The auditor computes triangular consistency: a direct mapping from A to C must equal the composition of A→B and B→C for <strong>every glyph</strong>. Bad triangles identify contradictions. If every failed triangle contains exactly one common edge, it nominates that edge; two-hop routes avoiding the nominated link must agree on a replacement, and all triangles must close after replacing it. The verdict remains explicitly <strong>conditional on one bad edge</strong>.</p>
+<h2>Perturbations and controls</h2>
+<table><tr><th>Condition</th><th>What was planted</th></tr>
+<tr><td>Single</td><td>One randomly selected pairwise link had two distinct output symbols swapped.</td></tr>
+<tr><td>Double</td><td>Two different links selected in sequence; each had its own swapped output symbols.</td></tr>
+<tr><td>Triangle</td><td>Only three nodes, full triangle, one swapped link.</td></tr>
+<tr><td>Star</td><td>Four nodes with only hub links; one swapped link and no cycles.</td></tr>
+<tr><td>Coordinated</td><td>A single consistent glyph permutation applied at node B to all three incident links. This differs from the original oracle while preserving every cycle.</td></tr>
+<tr><td>Clean</td><td>No changes to pairwise codebooks or mappings.</td></tr></table>
+<p>The pseudorandom stream is xorshift32 with nonzero seed 1–256, mod-index Fisher–Yates permutation generation, and eight-, sixteen-, or thirty-two-symbol vocabularies. The exact sweep iterates all six conditions and three vocab sizes for 256 seeds each, a total of <strong>4,608 scripted cases</strong>.</p>
+<h2>Observed result</h2>
+<p>Single: <strong>768/768</strong> exactly recovered the planted link and its original mapping. Double: <strong>757/768</strong> returned no unique single-fault repair, but <strong>11/768</strong> gave a uniquely nominated *innocent* edge, whose replacement made the cycles fully consistent while increasing the count of actually wrong edges from two to three. Three nodes: 768/768 ambiguous. Star: 768/768 unobservable. Coordinated: 768/768 cycle-consistent with three oracle-wrong links. Clean: 768/768 cycle-consistent with zero wrong links.</p>
+<div class="call"><strong>Concrete reproducible counterexample:</strong> Double fault, seed 40, vocabulary 8. Planted wrong A–C and B–C mappings. The sole nominated fault was C–D (untouched by the generator). Before repair, 2/4 triangles failed and two links differed from oracle. After changing C–D, 0/4 triangles failed and three links differed from oracle.</div>
+<h2>Implementation checks and actual evidence</h2>
+<p>The Python implementation ran six focused stdlib unit-test methods successfully, including 768 single-fault reconstruction checks, star and triangle non-overclaim checks, coordinated gauge changes, and every two-fault false accusation. A separately implemented JavaScript version embedded in the public viewer was evaluated for every combination. The regenerated per-case JSON matched the Python fixture output byte-for-byte as Git blob <code>7081b5154663dbb7f4451d51ae85ea274c45bd07</code>.</p>
+<p>Reproduce locally with <code>python research/run.py</code> and <code>python -m unittest discover -s tests -v</code>. Source files and exact raw records: <a href="https://github.com/uberbestest/josh-rin-interactive-lab/tree/main/experiments/goblin-cycle">public source directory</a>. The receipt records SHA-256 of the source files and the 4,608-row output. These are same-author checks, not independent replication.</p>
+<h2>What is still unknown</h2>
+<p>The result does not show that general learned languages admit the same reconstruction, that multiple nonbijective or noisy links behave similarly, that agents intended deceit, or that the observed 11/768 fraction generalizes to other networks or fault models. The generator's shared latent symbols and full pairwise dictionaries are substantial supplied structure. A diagnosis based on relative compatibility cannot certify which community glossary is semantically right without outside anchoring. We explicitly do not interpret a consistent reconstruction as a trustworthy authority on the world.</p>
+<p><strong>Established mathematical lineage:</strong> <a href="https://doi.org/10.1007/s10208-021-09532-w" target="_blank" rel="noopener noreferrer">Lerman and Shi, Robust Group Synchronization via Cycle-Edge Message Passing</a> (2022). This lab illustrates a specific finite failure mode; it does not claim novelty over cycle-consistency research.</p>
+</main><footer>Josh &amp; Rin · Keep the evidence. Keep the gaps. Innocence is not a scoreboard.</footer></body></html>

@@ -1,0 +1,110 @@
+{
+  "citation": "Lerman & Shi (2022), Robust Group Synchronization via Cycle-Edge Message Passing, Foundations of Computational Mathematics. doi:10.1007/s10208-021-09532-w",
+  "date": "2026-10-26",
+  "not_validated": [
+    "external data",
+    "learned neural languages",
+    "arbitrary protocols",
+    "semantics/meaning",
+    "colluding adversaries beyond these planted scenarios",
+    "live deployment browser behavior"
+  ],
+  "protocol": {
+    "all_cases": 4608,
+    "scenarios": [
+      "single",
+      "triangle",
+      "star",
+      "coordinated",
+      "double",
+      "clean"
+    ],
+    "seed_end_inclusive": 256,
+    "seed_start": 1,
+    "vocabularies": [
+      8,
+      16,
+      32
+    ]
+  },
+  "record_id": "GOBLIN-CYCLE-2026-10-26-001",
+  "rows_sha256": "917a88b5d8546595b83f9e0755296e8cbfa4b36aa1cf793c3013a09c7a7310ce",
+  "scenario_definitions": {
+    "clean": "K4, no edited links",
+    "coordinated": "K4, reassign symbols at one node on all three adjacent channels",
+    "double": "K4, two independently swapped links",
+    "single": "K4, one link output transposition",
+    "star": "4 nodes, star topology, one link output transposition",
+    "triangle": "K3, one link output transposition"
+  },
+  "source": "research/core.py + research/run.py",
+  "source_sha256": {
+    "research/core.py": "32c7aa8ed488e119d739ea9f0a8656b696bc5bf7d3ce84d30cacfa9bf0d7fc55",
+    "research/run.py": "700da54becd3e095603ea6162edef352e93a20c75082078360d109784fbd6094"
+  },
+  "status": "OFFLINE_SYNTHETIC_EXPLORATION_NOT_EXTERNAL_VALIDATION",
+  "summary": {
+    "clean": {
+      "cases": 768,
+      "path_vote_matches_cases": 768,
+      "repaired_oracle_exact": 0,
+      "status_counts": {
+        "consistent_not_verified": 768
+      },
+      "wrong_links_max": 0,
+      "wrong_links_min": 0
+    },
+    "coordinated": {
+      "cases": 768,
+      "path_vote_matches_cases": 768,
+      "repaired_oracle_exact": 0,
+      "status_counts": {
+        "consistent_not_verified": 768
+      },
+      "wrong_links_max": 3,
+      "wrong_links_min": 3
+    },
+    "double": {
+      "cases": 768,
+      "path_vote_matches_cases": 614,
+      "repaired_oracle_exact": 0,
+      "status_counts": {
+        "ambiguous": 757,
+        "localized_under_single_fault": 11
+      },
+      "wrong_links_max": 2,
+      "wrong_links_min": 2
+    },
+    "single": {
+      "cases": 768,
+      "path_vote_matches_cases": 768,
+      "repaired_oracle_exact": 768,
+      "status_counts": {
+        "localized_under_single_fault": 768
+      },
+      "wrong_links_max": 1,
+      "wrong_links_min": 1
+    },
+    "star": {
+      "cases": 768,
+      "path_vote_matches_cases": 768,
+      "repaired_oracle_exact": 0,
+      "status_counts": {
+        "unobservable": 768
+      },
+      "wrong_links_max": 1,
+      "wrong_links_min": 1
+    },
+    "triangle": {
+      "cases": 768,
+      "path_vote_matches_cases": 768,
+      "repaired_oracle_exact": 0,
+      "status_counts": {
+        "ambiguous": 768
+      },
+      "wrong_links_max": 1,
+      "wrong_links_min": 1
+    }
+  },
+  "title": "The Goblins Found a Liar Without Knowing Any Words"
+}

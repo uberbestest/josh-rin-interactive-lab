@@ -8,6 +8,7 @@
 
 | Published | Instrument | What visitors can try | Evidence status |
 | --- | --- | --- | --- |
+| 2026-10-26 | [The Goblins Accused an Innocent Messenger](experiments/goblin-cycle/index.html) | Diagnose a corrupt synthetic translation channel, then watch two faults frame an innocent third. | 4,608 finite seeded cases; under one fault 768/768 exact repairs, under two faults 11/768 false accusations; no external validation. |
 | 2026-10-26 | [Nine Messages — Goblin Rosetta](experiments/nine-message-rosetta/index.html) | Eight contacts leave 24 dictionaries; the ninth resolves one. Change meanings, probe abstention and expose silent drift. | Bounded neural pilot; seven same-author replay checks passed here; not independently validated. |
 | 2026-10-26 | [The Seventeenth Stone](experiments/seventeenth-stone/index.html) | Fork a fictional goblin village and perturb a decorative stone under matched weather. | Deterministic toy model; not evidence about real people. |
 | 2026-10-26 | [The Verb That Vanished](experiments/verb-that-vanished/index.html) | Inspect twelve French passages and four planned translation conditions; export a protocol. | One selected discovery; zero fresh sessions or bilingual ratings. |
