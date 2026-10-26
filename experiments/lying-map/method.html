@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>The Lying Map — Methods | Josh & Rin Lab</title>
+<style>:root{color-scheme:dark;--bg:#0c1520;--pane:#172a36;--edge:#395661;--text:#eff3ed;--muted:#b4c5c7;--gold:#f5c679;--mint:#a5e1c9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 system-ui,-apple-system,"Segoe UI",sans-serif}
+main,header,footer{padding:24px max(20px,calc((100% - 820px)/2))}header{border-bottom:1px solid var(--edge)}footer{border-top:1px solid var(--edge);font-size:.85rem;color:var(--muted)}
+a{color:var(--mint)}a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1{font-size:clamp(2.1rem,5.7vw,3.55rem);line-height:1.12;letter-spacing:-.04em;margin:17px 0}h2{font-size:1.5rem;border-top:1px solid var(--edge);padding-top:21px;margin:35px 0 13px}p,li{color:var(--muted)}strong{color:var(--text)}
+.key{font:700 .75rem ui-monospace,monospace;letter-spacing:.12em;color:var(--mint);text-transform:uppercase}
+.button{display:inline-block;background:var(--gold);color:#131e1e;padding:11px 17px;border-radius:5px;text-decoration:none;font-weight:800}
+.call{background:var(--pane);border-left:4px solid var(--gold);padding:17px 22px}
+table{width:100%;border-collapse:collapse}th,td{padding:10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--edge);font-size:.9rem}th{color:var(--mint)}td{color:var(--muted)}
+code{overflow-wrap:anywhere;font:.86rem ui-monospace,monospace}
+</style></head><body>
+<header><a href="../../index.html">← The interactive laboratory</a></header><main>
+<p class="key">Archived research / September 30, 2026 · Curated October 26</p><h1>The Lying Map</h1><p>Four rooms, six signs, ten fixed policies. An exact finite game about when checking the map helps and when it costs the very move needed to succeed.</p>
+<a class="button" href="index.html">Play the interactive arcade ↗</a>
+<h2>The arena</h2><p>Three nonterminal rooms (Camp, Mill, Pond) each have two doors into one of four rooms (including Vault). The space contains 4⁶ = 4,096 fully specified physical worlds. The map starts accurate or contains one substituted door destination. A move, inspection, or one-use rope costs an action. Every episode starts at Camp and succeeds only by physically entering Vault before the action budget expires.</p>
+<h2>The policies</h2>
+<table><tr><th>Pair</th><th>How it acts</th></tr><tr><td>01 / 02 · Believer</td><td>Follow initial map; doesn't incorporate contradictions into planning.</td></tr>
+<tr><td>03 / 04 · Repairer</td><td>Update map when a move contradicts a sign; plan again.</td></tr>
+<tr><td>05 / 06 · Explorer</td><td>Ignore initial signs, discover physical routes.</td></tr>
+<tr><td>07 / 08 · Scout</td><td>Inspect a door before traversing; use discovered destination in planning.</td></tr>
+<tr><td>09 / 10 · Detective</td><td>Scout-like, but stops extra inspection after one falsified sign under an explicit one-error assumption.</td></tr></table>
+<p>Even-numbered slots have a rescue rope. Its activation criterion is deliberately conservative: the agent must have demonstrated there is no reachable unknown door or Vault path within the currently reached component. The rope returns it to Camp and preserves observations, but costs an action.</p>
+<h2>Why budget matters</h2>
+<div class="call"><strong>Original finite result:</strong> with an eight-action cap, Repairer + rope wins 54,390 of 54,432 initially solvable one-error cases, versus 53,858 for Scout + rope. At ten actions, Scout + rope wins all 54,432 while Repairer + rope wins 54,420. The reversal was found in a post-hoc budget supplement—not a pre-registered experiment.</div>
+<p>The result doesn't say Scout is universally best, nor that safety inspection is always beneficial. It says these hand-authored policies exhibit competing benefits of information, recovery, and action cost under a specific bounded task. The experiment also retained 1,072 impossible physical worlds as negative controls; impossible worlds never count as failures to solve a reachable maze in the quoted denominators.</p>
+<h2>Executed evidence and limitations</h2>
+<p>The original run reported 77,824 exhaustive primary pairs per policy × 10 = 778,240 scripted episodes, plus a separately selected 40,960-episode two-error stress panel. A budget sensitivity supplement used 217,728 additional scripted episodes after observing primary failures. The report includes case IDs and policy-specific counterexamples.</p>
+<p>Original methods include 13 prelaunch tests, 65 post-run assertions, and 2,450 cross-language JavaScript-vs-Python sampled replay comparisons. Ten local processes shared one author-written implementation; none is a fresh or isolated AI-model agent. The browser page replays embedded examples and can generate additional toy maps, but does not re-run the full primary corpus when opened.</p>
+<p>The complete source and raw 819,200 primary/stress episode evidence are **not included** in this curated exhibit. The full research audit therefore still depends on the original private test package. Both published artifacts are SHA-verified copies from that historical package, not freshly independently qualified research.</p>
+<p>Revisit the complete original caveats and witness descriptions in <a href="REPORT.md">the public original report</a>. The headline examples were selected after inspecting the results, and should not be mistaken for blinded discoveries or estimates of performance outside this small maze family.</p>
+<p>**Privacy review:** fictional map material only; no personal/credential/private-architecture content, no runtime external network dependency.</p>
+</main><footer>Josh &amp; Rin · Keep the evidence; don't let the scoreboard decide what the problem was.</footer></body></html>
