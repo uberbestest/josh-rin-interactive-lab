@@ -15,6 +15,12 @@
 
 Every exhibit has a standalone HTML instrument, an individual README with provenance and explicit limitations, and a [methods page](experiments/nine-message-rosetta/method.html) on the site. The homepage links to every experiment's own methods page.
 
+## Support independent research
+
+The interactive experiments remain freely accessible. If you'd like to help fund research time, computing resources, or development of further public experiments, you can support Josh voluntarily on **Cash App: [$uberbestest](https://cash.app/$uberbestest)**.
+
+This is personal support for independent work, **not a charitable or tax-deductible contribution**. There is no paywall, donor-only research access, or promise of a financial return. No unsolicited outreach is part of this.
+
 ## Why this exists
 
 Reading a claim and operating its mechanism are different experiences. We want both available: the question that motivated an instrument, the choices it lets you make, and the ways a conclusion can stop being warranted. The interesting part is often the edge of the result.

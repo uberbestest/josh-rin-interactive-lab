@@ -17,7 +17,11 @@ header{border-bottom:1px solid var(--line)}
 nav{display:flex;gap:2rem;align-items:center;justify-content:space-between;min-height:78px}
 .logo{color:var(--ink);font-weight:750;letter-spacing:.04em;text-decoration:none}
 .logo span{color:var(--gold)}
-nav a:last-child{text-decoration:none;font-size:.9rem}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{text-decoration:none;font-size:.9rem}
+.nav-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.nav-links .nav-support{padding:7px 12px;border:1px solid var(--line);border-radius:5px;color:var(--gold);white-space:nowrap}
+.nav-links .nav-support:hover{border-color:var(--gold);text-decoration:none;background:#1b2a38}
 .eyebrow,.mono{font:600 .78rem/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
 .hero{padding:clamp(64px,10vw,128px) 0 68px;max-width:880px}
 h1{font-size:clamp(2.8rem,6vw,5.1rem);line-height:1.08;letter-spacing:-.055em;margin:18px 0 26px}
@@ -42,15 +46,24 @@ aside p{font-size:.93rem}
 aside dl{margin-top:20px}
 aside dt{color:var(--mint);font:.72rem ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em}
 aside dd{margin:3px 0 22px;color:var(--ink)}
+.support{padding:2px 0 70px}
+.support-box{background:linear-gradient(115deg,#1d2b32 0%,#182a32 55%,#18303b 100%);border:1px solid var(--line);border-radius:13px;padding:clamp(28px,5vw,50px);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(200px,.65fr);gap:35px;align-items:center}
+.support h2{font-size:clamp(1.65rem,3.2vw,2.4rem);line-height:1.18;margin:15px 0 14px;letter-spacing:-.025em}
+.support-lede{color:var(--muted);max-width:650px}
+.support-aside{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.support-button{display:inline-block;background:var(--mint);color:#09241b;padding:13px 20px;border-radius:5px;font-weight:750;text-decoration:none;text-align:center}
+.support-button:hover{background:#c7f3e2}
+.support-handle{font:600 .81rem ui-monospace,Consolas,monospace;letter-spacing:.035em;color:var(--gold)}
+.support-terms{font-size:.83rem;line-height:1.5;color:var(--muted);max-width:660px;margin-top:20px}
 .note{border-top:1px solid var(--line);padding:34px 0 52px;color:var(--muted)}
 footer{border-top:1px solid var(--line);color:var(--muted);padding:24px 0 42px;font-size:.86rem}
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-@media(max-width:720px){.card{grid-template-columns:1fr;gap:12px}aside{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.hero{padding-top:70px}.section-head{display:block}}
+@media(max-width:720px){.card{grid-template-columns:1fr;gap:12px}aside{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.hero{padding-top:70px}.section-head{display:block}.support-box{grid-template-columns:1fr;gap:8px}.nav-links{gap:12px}.nav-links a{font-size:.82rem}nav{gap:8px;flex-wrap:wrap;padding:12px 0}.logo{font-size:.93rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header><nav class="wrap"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><a href="#experiments">The experiments</a></nav></header>
+<header><nav class="wrap"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><div class="nav-links"><a href="#experiments">The experiments</a><a class="nav-support" href="#support">Support the lab ↗</a></div></nav></header>
 <main id="top" class="wrap">
 <div class="hero"><p class="eyebrow">A living collection of interactive research</p>
 <h1>Open the instrument.<br><em>Question the conclusion.</em></h1>
@@ -114,6 +127,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <dt>Not established</dt><dd>Independent validation; full browser/device coverage</dd></dl>
 </aside>
 </article>
+</section>
+<section id="support" class="support" aria-labelledby="support-title">
+<div class="support-box">
+<div>
+<p class="eyebrow">Independent research · Public experiments</p>
+<h2 id="support-title">Help keep the experiments running.</h2>
+<p class="support-lede">The instruments here are free to explore. If the work is useful, surprising, or worth seeing more of, voluntary support helps Josh devote more time and resources to independent research and new public experiments.</p>
+<p class="support-terms">This supports independent work through Josh's personal Cash App. It is not a charitable donation or tax-deductible contribution. No access, benefit, or return is promised.</p>
+</div>
+<div class="support-aside">
+<a class="support-button" href="https://cash.app/$uberbestest" target="_blank" rel="noopener noreferrer" aria-label="Support independent research through Cash App, $uberbestest">Support via Cash App ↗</a>
+<span class="support-handle">Cash App · $uberbestest</span>
+</div>
+</div>
 </section>
 <div class="note">This shelf is deliberately incomplete. A missing observation stays missing. A result is only as broad as the model and checks that produced it. New exhibits earn their place with their own methods, boundaries, and receipts.</div>
 </main>
