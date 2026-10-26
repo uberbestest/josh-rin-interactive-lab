@@ -18,7 +18,7 @@ Every exhibit has a standalone HTML instrument, an individual README with proven
 
 ## Support independent research
 
-The interactive experiments remain freely accessible. If you'd like to help fund research time, computing resources, or development of further public experiments, you can support Josh voluntarily on **Cash App: [$uberbestest](https://cash.app/$uberbestest)**.
+The interactive experiments remain freely accessible. If you'd like to help fund research time, computing resources, or development of further public experiments, you can support Josh voluntarily on **Cash App: [$Uberbestest1](https://cash.app/$Uberbestest1)**.
 
 This is personal support for independent work, **not a charitable or tax-deductible contribution**. There is no paywall, donor-only research access, or promise of a financial return. No unsolicited outreach is part of this.
 
