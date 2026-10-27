@@ -23,11 +23,20 @@ nav{display:flex;gap:2rem;align-items:center;justify-content:space-between;min-h
 .nav-links .nav-support{padding:7px 12px;border:1px solid var(--line);border-radius:5px;color:var(--gold);white-space:nowrap}
 .nav-links .nav-support:hover{border-color:var(--gold);text-decoration:none;background:#1b2a38}
 .eyebrow,.mono{font:600 .78rem/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
-.hero{padding:clamp(64px,10vw,128px) 0 68px;max-width:880px}
-h1{font-size:clamp(2.8rem,6vw,5.1rem);line-height:1.08;letter-spacing:-.055em;margin:18px 0 26px}
+.hero{padding:clamp(38px,6vw,68px) 0 26px;max-width:1000px}
+h1{font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1.08;letter-spacing:-.055em;margin:18px 0 22px}
 h1 em{font-style:normal;color:var(--gold)}
 .lede{font-size:clamp(1.06rem,2vw,1.34rem);color:var(--muted);max-width:700px}
-.notice{margin-top:30px;display:inline-block;padding:9px 15px;border:1px solid var(--line);border-radius:6px;color:var(--muted);font-size:.88rem}
+.notice{margin-top:12px;display:inline-block;padding:9px 15px;border:1px solid var(--line);border-radius:6px;color:var(--muted);font-size:.88rem}
+.skip-link{position:absolute;left:20px;top:-80px;z-index:10;padding:10px 16px;background:var(--gold);color:var(--bg);font-weight:750}
+.skip-link:focus{top:12px}
+.start{padding:0 0 40px}
+.start h2{font-size:1.1rem;margin:0 0 14px}
+.start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.start-grid a{display:block;padding:17px 18px;border:1px solid var(--line);border-radius:8px;background:#15232e;text-decoration:none}
+.start-grid a:hover{border-color:var(--mint);background:#1c303b}
+.start-grid strong{display:block;color:var(--ink);font-size:1rem;line-height:1.35;margin-bottom:7px}
+.start-grid span{display:block;color:var(--muted);font-size:.87rem;line-height:1.5}
 h2{font-size:1.5rem;letter-spacing:-.025em}
 section{padding:10px 0 64px}
 .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);margin-bottom:24px}
@@ -58,17 +67,26 @@ aside dd{margin:3px 0 22px;color:var(--ink)}
 .note{border-top:1px solid var(--line);padding:34px 0 52px;color:var(--muted)}
 footer{border-top:1px solid var(--line);color:var(--muted);padding:24px 0 42px;font-size:.86rem}
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-@media(max-width:720px){.card{grid-template-columns:1fr;gap:12px}aside{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.hero{padding-top:70px}.section-head{display:block}.support-box{grid-template-columns:1fr;gap:8px}.nav-links{gap:12px}.nav-links a{font-size:.82rem}nav{gap:8px;flex-wrap:wrap;padding:12px 0}.logo{font-size:.93rem}}
+@media(max-width:720px){.card{grid-template-columns:1fr;gap:12px}aside{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.hero{padding-top:38px}.start-grid{grid-template-columns:1fr}.section-head{display:block}.support-box{grid-template-columns:1fr;gap:8px}.nav-links{gap:12px}.nav-links a{font-size:.82rem}nav{gap:8px;flex-wrap:wrap;padding:12px 0}.logo{font-size:.93rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header><nav class="wrap"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><div class="nav-links"><a href="#experiments">The experiments</a><a class="nav-support" href="#support">Support the lab ↗</a></div></nav></header>
+<a class="skip-link" href="#experiments">Skip to the experiments</a>
+<header><nav class="wrap" aria-label="Lab navigation"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><div class="nav-links"><a href="#experiments">The experiments</a><a href="https://github.com/uberbestest/josh-rin-interactive-lab">Source &amp; records ↗</a><a class="nav-support" href="#support">Support the lab ↗</a></div></nav></header>
 <main id="top" class="wrap">
 <div class="hero"><p class="eyebrow">A living collection of interactive research</p>
 <h1>Open the instrument.<br><em>Question the conclusion.</em></h1>
 <p class="lede">Research is more interesting when the reader can touch the controls. Change a premise. Find the counterexample. See which conclusions hold—and which were only ever assumptions.</p>
 <p class="notice">Experimental interfaces ≠ independent validation.</p></div>
+<section class="start" aria-labelledby="start-title">
+<h2 id="start-title">Pick a first experiment</h2>
+<div class="start-grid">
+<a href="experiments/goblin-shopping/index.html#workbench"><strong>Follow a shopping goblin ↗</strong><span>Change an advertisement. Watch the visits and the carts take different routes.</span></a>
+<a href="experiments/nine-message-rosetta/index.html#experiment"><strong>Decode a goblin language ↗</strong><span>Reveal a ninth message, then find the mistranslation the decoder misses.</span></a>
+<a href="experiments/goblin-cycle/index.html"><strong>Catch a false accusation ↗</strong><span>Two faulty translators can make an innocent messenger look guilty.</span></a>
+</div>
+</section>
 <section id="experiments" aria-labelledby="experiments-title">
 <div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>08 instruments · latest addition 2026-10-27</p></div>
 <article class="card">
@@ -91,7 +109,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <h3>Where Do the Goblins Go Shopping?</h3>
 <p>Twenty-four scripted goblin shoppers investigate six fictional shops. Show them a promotion, a crowd signal, or a bigger browsing budget. Do their recorded visits pile up at one seller—or split apart? Do their carts follow their clicks?</p>
 <p>The seed-17 example sends a promoted storefront from zero to thirteen recorded opens without a single extra cart. Change the controls and inspect every shopper's route. This is an honest <strong>scripted-policy demonstration</strong>, not a run of outside model agents.</p>
-<div class="actions"><a class="open" href="experiments/goblin-shopping/index.html">Follow the shopping goblins ↗</a><a class="quiet" href="experiments/goblin-shopping/notes/ghost-seller.html">New: The Shop That Sold Nothing ↗</a><a class="quiet" href="experiments/goblin-shopping/method.html">Methods &amp; the outsider boundary</a></div>
+<p>The <a href="experiments/goblin-shopping/notes/ghost-seller.html">selected ghost-store case</a> led to a new question: can the crowd give a diverted cart back? Compare four recorded cases in the follow-up.</p>
+<div class="actions"><a class="open" href="experiments/goblin-shopping/index.html">Follow the shopping goblins ↗</a><a class="quiet" href="experiments/goblin-shopping/notes/crowd-feedback/index.html">New: When the Crowd Gives a Cart Back ↗</a><a class="quiet" href="experiments/goblin-shopping/method.html">Methods &amp; the outsider boundary</a></div>
 </div>
 <aside><p class="eyebrow">Evidence label · Scripted micro-world</p>
 <dl><dt>Executed</dt><dd>2,048 paired scenarios, 98,304 scripted policy executions</dd>
@@ -117,7 +136,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <div>
 <div class="meta"><span>02 / Neural communication</span><span>Experiment 2026-10-25 · Added 2026-10-26</span></div>
 <h3>Nine Messages: The Goblin Rosetta Experiment</h3>
-<p>Twenty small neural speakers and listeners. Ten independently trained pairs. Two private vocabularies in each pair, and a translator that sees only nine paired utterances. Can it translate 4,096 meanings without guessing?</p>
+<p>Twenty small neural speaker–listener cultures, grouped into ten pairs. Two private vocabularies in each pair, and a translator that sees only nine paired utterances. Can it translate 4,096 meanings without guessing?</p>
 <p>Try eight messages, then the ninth. Change the meaning. Insert an unfamiliar glyph. Finally, swap a familiar one to see a failure the translator does <em>not</em> catch. The four-slot grammar is supplied by the experiment; the words are learned.</p>
 <div class="actions"><a class="open" href="experiments/nine-message-rosetta/index.html">Break the decoder ↗</a><a class="quiet" href="experiments/nine-message-rosetta/method.html">Methods, results &amp; failures</a></div>
 </div>

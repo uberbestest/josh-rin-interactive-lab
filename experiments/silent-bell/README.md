@@ -27,6 +27,14 @@ probe. Identity, repository authority, and deployment grants are explicit fixtur
 inputs. Missing deployment authority yields LIMIT to preview; missing observation
 evidence yields CHALLENGE. Neither permits deployment.
 
+**Decision-order clarification — October 27, 2026.** After the earlier authority,
+binding, and observation-origin checks, incomplete probe coverage yields CHALLENGE
+before trace invariants are inspected, even if a supplied trace already omits a
+required control. With complete, well-formed evidence, detected control violations
+yield BLOCK before preview-only authority is considered. This qualifies the original
+protocol's broad phrase “Known violations take precedence.” The frozen protocol,
+execution, and recorded results remain unchanged.
+
 ## Observed results
 
 | Denominator | Result | What it does not establish |

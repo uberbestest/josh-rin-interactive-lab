@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Seventeenth Stone — A Tiny Goblin Civilization</title>
+<meta name="description" content="A miniature, offline goblin culture experiment: fork the village, move a stone, see what the village remembers and invents.">
+<style>
+:root{color-scheme:light;--ink:#24243d;--muted:#66667d;--violet:#554473;--green:#507768;--paper:#fffdf8;--ivory:#f7f1e5;--line:#ddd6c6;--orange:#d58147;--gold:#d7a35b;--plum:#ae7fa3;--blue:#78aebe}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:radial-gradient(circle at 80% -30%,#ebe3f0 0,transparent 35%),radial-gradient(circle at -10% 40%,#e9f2eb 0,transparent 37%),var(--ivory);margin:0;font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink)}
+main{max-width:1200px;margin:0 auto;padding:24px 22px 72px}header{display:flex;justify-content:space-between;align-items:start;gap:18px;margin-bottom:12px}.eyebrow{font:700 11px/1.45 ui-monospace,Consolas,monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--violet)}.stamp{font:700 12px/1.4 ui-monospace,monospace;color:var(--green);border:1px solid #91b8a7;border-radius:30px;padding:7px 12px;background:#e9f2ec;white-space:nowrap}
+h1,h2,h3{font-family:Georgia,'Palatino Linotype',serif;margin-top:0;font-weight:700;line-height:1.14}h1{font-size:clamp(42px,6vw,79px);letter-spacing:-.045em;color:#30253f;margin:0 0 10px}h1 em{color:#a76b61;font-style:italic}h2{font-size:29px;margin-bottom:6px}h3{font-size:20px}.intro{font-size:18px;max-width:850px;color:#494555;margin:0 0 24px}.intro b{color:#2b2942}
+.ribbon{display:flex;gap:9px;align-items:center;margin:0 0 22px;flex-wrap:wrap}.ribbon span{display:inline-block;padding:6px 11px;border-radius:20px;border:1px solid var(--line);font-size:12px;background:#fbf8f1}.ribbon strong{color:#845079}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:0 9px 25px #3228420c;padding:22px}.panel-title{display:flex;justify-content:space-between;gap:12px;align-items:center}.panel-title h2{margin:0;font-size:24px}
+.controls{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;margin-bottom:18px}.control-left{display:flex;align-items:center;flex-wrap:wrap;gap:9px}.control-right{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+button,select,input{font:inherit}button{border:1px solid #ccc2b2;border-radius:11px;padding:10px 14px;cursor:pointer;background:#fffaf0;color:#332f47;font-weight:650;transition:transform .12s,box-shadow .12s,border-color .12s}button:hover{border-color:#8665a0;box-shadow:0 3px 10px #40335115;transform:translateY(-1px)}button:active{transform:translateY(1px)}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #b28db6;outline-offset:2px}button.primary{background:#574574;color:white;border-color:#574574}.accent{background:#e5eedf;border-color:#a2b99e}.dark{background:#2f2b45;color:white;border-color:#2f2b45}.small-button{padding:7px 10px;font-size:13px}
+input[type=number],select{padding:10px;background:#fffaf0;border:1px solid #ccc2b2;border-radius:10px;color:var(--ink)}input[type=number]{width:88px}input[type=range]{accent-color:#735489;width:115px;vertical-align:middle}label{font-size:12px;font-weight:700;color:#685f70;white-space:nowrap}
+.forkbar{margin:0 0 20px;border-radius:14px;background:#e9e6ef;border:1px solid #d2c7df;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.forkbar p{margin:0;font-size:14px;color:#55486a}.forkbar .selectline{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.worlds{display:grid;grid-template-columns:1fr;gap:18px}.worlds.twinned{grid-template-columns:repeat(2,minmax(0,1fr))}.world{overflow:hidden;padding:0;background:var(--paper);border-radius:21px;border:1px solid var(--line);box-shadow:0 7px 24px #2720360a}.world-head{display:flex;justify-content:space-between;align-items:start;gap:10px;padding:18px 20px 4px}.world-head h2{font-size:23px;margin:0}.world-head p{margin:4px 0 0;font-size:13px;color:var(--muted)}.pill{font:700 11px ui-monospace,monospace;color:var(--violet);border:1px solid #c8b6d5;border-radius:8px;padding:5px 7px;letter-spacing:.03em;white-space:nowrap}
+.world-stage{background:radial-gradient(ellipse at 50% 42%,#f5f0df 0,#f0eddf 49%,#e9eada 100%);border-bottom:1px solid var(--line);height:235px;position:relative;overflow:hidden}.stage-trees{position:absolute;bottom:-35px;left:0;right:0;height:100%;opacity:.6;background:radial-gradient(circle at 7% 29%,#acc6a67c 0 11%,transparent 12%),radial-gradient(circle at 89% 24%,#d8bca59c 0 13%,transparent 14%),radial-gradient(circle at 28% 0%,#cad9b781 0 13%,transparent 14%),radial-gradient(circle at 79% 90%,#b1cdb29c 0 10%,transparent 11%)}
+.fountain-svg{position:absolute;max-width:340px;width:78%;height:240px;top:0;left:50%;transform:translateX(-50%);filter:drop-shadow(0 6px 4px #6f665326)}.gob{position:absolute;width:35px;height:42px;bottom:8px;background:#7b977c;border:2px solid #3e6756;border-radius:52% 48% 39% 41%;box-shadow:inset -5px -4px 0 #32584925;transform:rotate(-4deg)}.gob:before,.gob:after{content:'';position:absolute;top:6px;width:15px;height:17px;background:#7b977c;border:2px solid #3e6756;border-radius:0 85% 10% 70%;z-index:-1}.gob:before{left:-11px;transform:rotate(-30deg)}.gob:after{right:-11px;transform:scaleX(-1) rotate(-30deg)}.gob .eyes{position:absolute;left:5px;top:12px;letter-spacing:4px;color:#253b39;font-size:16px;font-weight:900;line-height:1}.gob .eyes:after{content:'⌣';display:block;text-align:center;line-height:6px;font-size:12px;margin-top:3px}.gob.a{left:12%;bottom:19px;transform:scale(.85) rotate(-15deg)}.gob.b{right:12%;bottom:24px;transform:scale(.72) rotate(12deg);background:#9da878}
+.caption{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);font:700 10px ui-monospace,monospace;letter-spacing:.06em;color:#3c5368;background:#e3ecdfa8;border-radius:7px;padding:3px 8px;white-space:nowrap}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}.metric{padding:11px 13px;text-align:center;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric b{font:700 24px/1.1 Georgia,serif;display:block;color:#473858}.metric span{font-size:11px;color:#676373;font-weight:700}.reason-wrap{padding:18px 20px 13px}.reason-wrap h3{font-size:19px;margin:0 0 2px}.reason-wrap p{font-size:14px;color:#655e6b;margin:0 0 12px}.beliefs{display:grid;gap:8px}.belief-row{display:grid;grid-template-columns:1fr auto;gap:6px;align-items:center}.belief-title{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:12px;color:#4a455a}.belief-count{font:700 11px ui-monospace,monospace;color:#5b5870}.track{height:6px;border-radius:9px;background:#eee8df;overflow:hidden}.track i{height:100%;display:block;border-radius:9px;background:linear-gradient(90deg,#b4a0c8,#6d588c)}.belief-row[data-type=picnic] .track i{background:#b6a58d}.belief-row[data-type=tested] .track i{background:#85b2a1}.belief-row[data-type=belonging] .track i{background:#d6a46f}
+.world-footer{display:flex;justify-content:space-between;gap:8px;align-items:center;background:#fbfaf6;border-top:1px solid #eee8dd;padding:10px 17px;color:#625967;font-size:12px}.world-footer span b{color:#44314e}
+.notes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:18px}.note-block{padding:22px}.note-block h2{font-size:23px}.note-block p{font-size:14px;color:#645d6a;margin-top:8px}.chronicle{display:grid;gap:0;margin-top:12px;max-height:275px;overflow:auto;padding-right:6px}.event{border-top:1px solid #e9e2d6;padding:8px 2px;display:grid;grid-template-columns:56px 1fr;gap:10px;font-size:13px;line-height:1.45}.event .date{font:700 11px/1.5 ui-monospace,monospace;color:#937b8c}.event strong{color:#5d425e}.fine{font-size:12px!important;color:#77707b!important}.foot{margin-top:24px;color:#625c65;font-size:13px}.foot a{color:#74518c}.foot a:hover{text-decoration-thickness:2px}.mini{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:11px}.statusline{font:700 12px ui-monospace,monospace;color:#405d55;background:#e8f3ec;border-radius:9px;padding:8px 10px;display:none;margin:12px 0}.statusline[aria-hidden=false]{display:block}.origin{background:#f3eada;border:1px dashed #bea78a;border-radius:13px;padding:13px 15px;margin-top:12px;font-size:14px;display:none}.origin.open{display:block}details{margin-top:15px;padding-top:11px;border-top:1px solid var(--line)}details summary{cursor:pointer;color:#6f557f;font-weight:750;font-size:13px}.goblinlist{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}.goblinitem{font-size:12px;background:#f7f1e6;border-radius:8px;padding:6px 8px}.goblinitem b{display:block;color:#544361}.goblinitem span{color:#6d6775}.compar-note{color:#445d68;margin:2px 0 18px;padding:10px 13px;background:#e4edf0;border-left:4px solid #7aa1b1;border-radius:7px;font-size:13px;display:none}
+.tip{background:#fdf6e7;border-radius:14px;padding:16px 19px;margin:0 0 20px;display:flex;gap:16px;align-items:center;border:1px solid #ecdcb7}.tip em{font-size:23px;font-style:normal}.tip p{margin:0;color:#514d5a;font-size:14px}.tip strong{color:#573d58}
+@media(max-width:1000px){.worlds.twinned{grid-template-columns:1fr}.worlds.twinned .world{max-width:none}.controls{grid-template-columns:1fr}.control-right{justify-content:flex-start}}@media(max-width:690px){main{padding:18px 13px 45px}h1{font-size:42px}.intro{font-size:16px}.stamp{white-space:normal;max-width:130px;text-align:center}.notes{grid-template-columns:1fr}.card{padding:16px}.world-head{padding:14px 13px 7px}.reason-wrap{padding:13px}.world-stage{height:210px}.fountain-svg{height:210px}.forkbar{padding:10px}button{padding:9px 11px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style></head>
+<body><main><header><span class="eyebrow">Rin &amp; Josh's Lab / Little Civilizations / No. 01</span><span class="stamp">PLAYFUL MODEL<br>NOT A CLAIM ABOUT PEOPLE</span></header>
+<h1>The <em>Seventeenth</em> Stone</h1>
+<p class="intro">Nobody remembers who made the rule. Everybody has a reason to keep it. <b>Fork a goblin village, change one detail, and follow what happens to its customs and stories.</b></p>
+<div class="ribbon"><span>🪨 24 goblins</span><span>📜 Oral history</span><span>🦆 An extremely innocent duck</span><span>🔬 <strong>The spring does not count ordinary stones</strong></span></div>
+<div class="tip"><em>✶</em><p><strong>Try this:</strong> keep the first village untouched. Choose <b>remove one stone</b> for its identical twin. Move forward a few years. Both villages get exactly the same rain; the gossip does the interesting work.</p></div>
+<section class="controls card" aria-label="Simulation controls">
+<div class="control-left"><button id="year1" class="primary">One year →</button><button id="year8">Eight years ⇥</button><button id="year24">Twenty-four years »</button><span aria-live="polite" class="eyebrow" id="years">Year 0</span></div>
+<div class="control-right"><label for="seed">Seed</label><input id="seed" type="number" value="1703" min="1" max="9999999" aria-label="Village seed"><label for="pressure">Copying <span id="pressValue">72%</span></label><input id="pressure" type="range" min="15" max="95" value="72" step="1" aria-label="Copying pressure"><button id="reset" class="small-button">Start a new village ↺</button></div>
+</section>
+<section class="forkbar"><p><b>Counterfactual fork:</b> make a twin with one different beginning. Future rain and random draws stay matched.</p><div class="selectline"><select id="forkMode" aria-label="Fork intervention"><option value="stone">Remove one stone</option><option value="plaque">Engrave the forgotten origin</option><option value="test">Prove the water does not count</option></select><button id="fork" class="dark">Fork the village ⇉</button></div></section>
+<div id="compareNote" class="compar-note" role="status"></div>
+<div class="worlds" id="worlds">
+  <section class="world" id="worldA" aria-label="Original village"></section>
+  <section class="world" id="worldB" aria-label="Forked village" style="display:none"></section>
+</div>
+<div class="statusline" id="status" aria-hidden="true" role="status"></div>
+<section class="notes">
+  <div class="card note-block"><div class="panel-title"><h2>Village chronicle</h2><span class="pill">SPOKEN, NOT VERIFIED</span></div><p>The villagers narrate changes, not causes. The simulation records when a popular explanation is replaced or the public ring is altered.</p><div id="chronicle" class="chronicle"></div><details><summary>Read who is telling which story</summary><div id="goblins" class="goblinlist"></div></details></div>
+  <div class="card note-block"><div class="panel-title"><h2>A note from the attic</h2><span class="pill">SEALED ORIGIN</span></div><p>Oral tradition is not a reliable timestamp. There is one mundane founding event recorded in the program; the village never sees it unless you engrave the plaque.</p><button id="origin" class="small-button accent" aria-expanded="false">Unseal Tilda's notebook</button><div id="originContent" class="origin">“The wind was dreadful. I put seventeen stones on the picnic cloth by the fountain. Puddle sat on the corner. The water was fine both before and after. I hope nobody makes a ceremony of this.”<br><br>— Tilda, before anyone called her an elder.</div><p class="fine">The fountain's flow comes from rain. In this model, 14–20 decorative stones have no effect on the spring. Social learning, remembered explanations and occasional random variation are separately modeled. A test changes what some goblins believe, not what the physics does.</p><h3 style="margin:18px 0 4px">Little question worth keeping</h3><p>When does <em>“we do it because it works”</em> quietly become <em>“we do it because we are us”</em>? And if the second one is true, is forgetting the first automatically a mistake?</p></div>
+</section>
+<section class="card foot"><b>A real-world neighbor, not a validation:</b> Children and adults can faithfully copy actions whose function is unclear; ritual also has norm, identity, and coordination dimensions. See <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3049065/" target="_blank" rel="noopener">over-imitation and norm learning</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7423267/" target="_blank" rel="noopener">different mechanisms of ritual</a>, and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7423255/" target="_blank" rel="noopener">cultural transmission of ritual</a>.<br><br><b>What this is:</b> A deterministic, fully fictional agent toy with a shared-weather fork. It is not an LLM experiment, an empirical account of actual cultures, or proof that stories evolve in any particular way. There are no external assets, networks, or saved personal data. The model code is embedded in this page, which runs entirely offline.</section>
+</main>
+<script>
+/* The Seventeenth Stone: deterministic invented goblin culture model.
+   No live human data, no model calls, no claim of empirical human validity.
+   Physics is intentionally identical at 16/17 stones; gossip and identity do the work.
+*/
+(function(root,factory){
+  const model=factory();
+  if(typeof module==='object' && module.exports)module.exports=model;
+  root.StoneEngine=model;
+})(typeof globalThis==='object'?globalThis:this,function(){
+  'use strict';
+  const STORIES={
+    picnic:{name:'The lost picnic',short:'The stones held down a blanket.',tone:'origin',icon:'🧺'},
+    ducks:{name:'The duck oath',short:'Puddle requires an orderly landing.',tone:'folklore',icon:'🦆'},
+    moon:{name:'The moon bargain',short:'The moon reflects only in seventeen pieces.',tone:'folklore',icon:'🌙'},
+    water:{name:'The thirsty spring',short:'A precise ring keeps the water kind.',tone:'claim',icon:'💧'},
+    elders:{name:'Because it was done',short:'The elders knew. That is enough.',tone:'tradition',icon:'🪨'},
+    belonging:{name:'The village is the reason',short:'We count together so no one stands alone.',tone:'social',icon:'✨'},
+    tested:{name:'The spring does not count',short:'Changing a stone did not change the spring.',tone:'finding',icon:'🔎'}
+  };
+  const NAMES=['Nix','Brindle','Moss','Tilda','Snip','Hob','Dimple','Pip','Cobble','Fizz','Nettle','Grub','Plink','Thimble','Peat','Bram','Knoll','Mug','Quill','Nib','Flit','Rook','Fenn','Soot'];
+  function hash(input){let h=2166136261;const s=String(input);for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+  function rng(seed,...keys){let t=hash([seed,...keys].join('|'))+0x6d2b79f5|0;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;}
+  function pick(seed,keys,list){return list[Math.min(list.length-1,Math.floor(rng(seed,...keys)*list.length))];}
+  function clamp(x,lo,hi){return Math.max(lo,Math.min(hi,x));}
+  function flow(seed,year,stones){
+    // The fountain has an underground spring. Normal ornamental stone counts have zero hydraulic effect.
+    const rainfall=0.51+0.25*Math.sin(year*0.91+0.7)+0.15*Math.sin(year*0.27+1.9)+0.16*(rng(seed,'weather',year)-0.5);
+    const physicalPenalty=(stones<14?0.09*(14-stones):stones>20?0.09*(stones-20):0);
+    return Math.round(100*clamp(rainfall-physicalPenalty,0.06,0.97));
+  }
+  function majority(goblins,field){const counts={}; for(const g of goblins)counts[g[field]]=(counts[g[field]]||0)+1;return Object.keys(counts).sort((a,b)=>counts[b]-counts[a] || String(a).localeCompare(String(b)))[0];}
+  function tally(goblins,field){const counts={};for(const g of goblins)counts[g[field]]=(counts[g[field]]||0)+1;return counts;}
+  function gob(seed,i){let story=i<4?'picnic':pick(seed,['initial-story',i],['elders','elders','water','ducks','moon','belonging']);
+    return {id:i,name:NAMES[i],age:1+Math.floor(rng(seed,'initial-age',i)*5),generation:1,
+      preferred:rng(seed,'initial-count',i)<0.86?17:(rng(seed,'direction',i)<0.5?16:18),story,
+      social:0.38+0.62*rng(seed,'social',i,1),curiosity:0.24+0.74*rng(seed,'curiosity',i,1),
+      prestige:0.20+0.80*rng(seed,'prestige',i,1),sawTest:false};
+  }
+  function create(seed=1703,pressure=.72){seed=Number.isFinite(Number(seed))?Math.floor(Number(seed)):1703; pressure=clamp(Number(pressure)||0,0,1);
+    const w={seed,pressure,year:0,stones:17,tablet:false,testAt:-1,goblins:Array.from({length:24},(_,i)=>gob(seed,i)),history:[],events:[],water:flow(seed,0,17),births:0, lastMajority:'elders',firstLostYear:null};
+    w.lastMajority=majority(w.goblins,'story');
+    w.events.push({year:0,kind:'origin',message:'Seventeen stones appeared around the fountain. No ordinance was passed. Someone copied someone.'});
+    saveSnapshot(w);return w;
+  }
+  function saveSnapshot(w){const prefs=tally(w.goblins,'preferred'),stories=tally(w.goblins,'story'); w.water=flow(w.seed,w.year,w.stones);
+    const topStory=majority(w.goblins,'story'),topCount=Number(majority(w.goblins,'preferred'));
+    w.history.push({year:w.year,stones:w.stones,water:w.water,prefs,stories,topStory,topCount,origin:stories.picnic||0,investigators:stories.tested||0,belonging:stories.belonging||0,agree:prefs[w.stones]||0});
+    if(w.history.length>81)w.history.shift();
+  }
+  function event(w,kind,message){w.events.push({year:w.year,kind,message}); if(w.events.length>130)w.events.shift();}
+  function step(w){
+    const prev=w.goblins.map(g=>({...g}));const year=w.year+1; const water=flow(w.seed,year,w.stones);
+    const oldStory=majority(prev,'story');const originBefore=prev.filter(g=>g.story==='picnic').length;
+    const newG=[];let births=0;
+    for(let i=0;i<prev.length;i++){
+      const prior=prev[i];let person={...prior};
+      const peer1=prev[Math.floor(rng(w.seed,'peer1',year,i)*prev.length)];
+      const peer2=prev[Math.floor(rng(w.seed,'peer2',year,i)*prev.length)];
+      const mentor=peer1.prestige>=peer2.prestige?peer1:peer2;
+      const replaced=prior.age>=10||rng(w.seed,'mortality',year,i)<(.035+.016*prior.age);
+      if(replaced){
+        births++;
+        person={...person,age:0,generation:prior.generation+1,social:.38+.62*rng(w.seed,'next-social',year,i),curiosity:.24+.74*rng(w.seed,'next-curiosity',year,i),prestige:.20+.8*rng(w.seed,'next-prestige',year,i),preferred:mentor.preferred,story:mentor.story,sawTest:mentor.sawTest&&rng(w.seed,'teach-test',year,i)<.36};
+      }else{
+        person.age++;
+        // Customs are copied more faithfully than their rationales.
+        if(rng(w.seed,'imitate-count',year,i)<w.pressure*(.45+.42*person.social)) person.preferred=mentor.preferred;
+        // Visiting the fountain can nudge private preference after a conspicuous year.
+        if(rng(w.seed,'learn-from-appearance',year,i)<.16*person.curiosity){
+          if(water>=65)person.preferred=w.stones;
+          else if(water<=35&&w.stones!==17)person.preferred=17;
+        }
+        if(rng(w.seed,'innovation',year,i)<.043*(1-w.pressure))person.preferred=clamp(person.preferred+(rng(w.seed,'innovation-dir',year,i)<.5?-1:1),14,20);
+        if(rng(w.seed,'imitate-story',year,i)<.47)person.story=mentor.story;
+      }
+      // Interpretation reconstruction: a fair year can inspire a new causal story.
+      if(rng(w.seed,'rationale-rebuilt',year,i)<.060){
+        const options=water>66?['ducks','moon','water','belonging','elders']:water<42?['elders','moon','water','belonging','ducks']:['elders','belonging','ducks','moon','water'];
+        person.story=pick(w.seed,['new-story',year,i],options);
+      }
+      // A verifiable plaque preserves the mundane origin; it does not physically force a stone count.
+      if(w.tablet&&rng(w.seed,'reads-plaque',year,i)<(.10+.15*person.curiosity))person.story='picnic';
+      // Shared test results can spread as a new explanation without dictating the custom.
+      if(w.testAt>=0&&year>=w.testAt){
+        if(rng(w.seed,'test-exposure',year,i)<(.07+.26*person.curiosity))person.sawTest=true;
+        if(person.sawTest && rng(w.seed,'evidence-shift',year,i)<(.085+.32*person.curiosity))person.story='tested';
+      }
+      if(year%6===0&&person.preferred===w.stones&&rng(w.seed,'festival',year,i)<.20)person.story='belonging';
+      newG.push(person);
+    }
+    w.year=year; w.goblins=newG; w.births+=births;
+    const preferenceCounts=tally(w.goblins,'preferred'); const most=Number(majority(w.goblins,'preferred'));
+    // Community consensus can peacefully restore or alter the public ring during the seasonal assembly.
+    if(year%4===0&&most!==w.stones&&(preferenceCounts[most]||0)>=16){const old=w.stones;w.stones=most;event(w,'vote',`At the assembly, ${preferenceCounts[most]} of 24 preferred ${most}. The ring changed from ${old} to ${most}.`);}
+    const top=majority(newG,'story');
+    if(top!==oldStory){event(w,'story',`The most repeated explanation changed: “${STORIES[oldStory].name}” → “${STORIES[top].name}.”`);}
+    const orig=newG.filter(g=>g.story==='picnic').length;
+    if(originBefore>0&&orig===0&&w.firstLostYear===null){w.firstLostYear=year;event(w,'lost','The last goblin who still told the picnic story stopped telling it. Seventeen stones remained in place.');}
+    if(w.stones!==17&&water>=69&&rng(w.seed,'omen',year)<.31)event(w,'omen',`A generous spring after the stone change was taken as an omen by some. Rainfall was the same in both timelines.`);
+    if(year%9===0)event(w,'visit',`A traveling goblin asked why there were ${w.stones} stones. The village offered ${Object.keys(tally(w.goblins,'story')).length} different answers.`);
+    saveSnapshot(w);return w;
+  }
+  function advance(w,years=1){for(let n=0;n<years;n++)step(w);return w;}
+  function clone(w){return JSON.parse(JSON.stringify(w));}
+  function fork(w,mode='stone'){
+    const copy=clone(w);
+    if(mode==='stone'){copy.stones=clamp(copy.stones-1,12,24);event(copy,'intervention',`One stone was removed. The spring machinery did not change.`);}
+    else if(mode==='plaque'){copy.tablet=true;event(copy,'intervention',`A plaque was installed: “The stones held down Tilda’s picnic blanket.”`);}
+    else if(mode==='test'){copy.testAt=copy.year;event(copy,'intervention',`The goblins publicly compared 16 and 17 stones with matched water: ${flow(copy.seed,copy.year,16)} and ${flow(copy.seed,copy.year,17)}. No difference.`);}
+    else throw new Error('Unknown fork mode');
+    copy.history=[]; saveSnapshot(copy);return copy;
+  }
+  function summary(w){const h=w.history.at(-1), topStory=STORIES[h.topStory];return {year:w.year,stoneCount:w.stones,water:h.water,majorityReason:h.topStory,majorityReasonName:topStory.name,countAtPublicStone:h.agree,originsRemembered:h.origin,knowledgeHolders:h.investigators,mostPopularCount:h.topCount,distinctReasons:Object.keys(h.stories).length,births:w.births};}
+  return {STORIES,NAMES,flow,create,step,advance,clone,fork,summary,tally,majority};
+});
+
+</script>
+<script>
+(function(){'use strict';const E=window.StoneEngine;let A,B=null,mode=null;
+const $=(id)=>document.getElementById(id);
+const enc=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function svgFountain(n,flow){const cx=175,cy=113,r=76;let stones='';for(let i=0;i<n;i++){const angle=-Math.PI/2+2*Math.PI*i/n,x=cx+Math.cos(angle)*r,y=cy+Math.sin(angle)*r;stones+=`<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="9" ry="7" fill="${i%3===0?'#b79a79':'#c8ad8d'}" stroke="#8d7f72" stroke-width="1.6"/>`;}const hue=flow>66?'#88c7ca':flow<38?'#a7c6b6':'#93c4c7';return `<svg class="fountain-svg" viewBox="0 0 350 240" role="img" aria-label="${n} stones surrounding a spring fountain with ${flow} percent water flow"><defs><radialGradient id="water${n}${flow}"><stop stop-color="#e0eeec"/><stop offset="1" stop-color="${hue}"/></radialGradient></defs><ellipse cx="175" cy="207" rx="116" ry="21" fill="#5f7c6e" opacity=".16"/><circle cx="175" cy="113" r="80" fill="#cfbea2" stroke="#ad9f8d" stroke-width="6"/><circle cx="175" cy="113" r="64" fill="url(#water${n}${flow})" stroke="#edf0e4" stroke-width="2"/><ellipse cx="160" cy="95" rx="34" ry="16" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/><ellipse cx="185" cy="129" rx="44" ry="19" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="2"/>${stones}<g transform="translate(147 109) rotate(-12)"><ellipse cx="0" cy="0" rx="16" ry="12" fill="#fff3c4" stroke="#bd9c61" stroke-width="2"/><circle cx="10" cy="-9" r="9" fill="#fff3c4" stroke="#bd9c61" stroke-width="2"/><path d="M17 -8l10 3-10 3z" fill="#d89852"/><circle cx="13" cy="-11" r="1.6" fill="#303247"/></g><g transform="translate(213 143) scale(.65)"><ellipse cx="0" cy="0" rx="16" ry="12" fill="#faf0c1" stroke="#bd9c61" stroke-width="2"/><circle cx="10" cy="-9" r="9" fill="#faf0c1" stroke="#bd9c61" stroke-width="2"/><path d="M17 -8l10 3-10 3z" fill="#d89852"/><circle cx="13" cy="-11" r="1.6" fill="#303247"/></g></svg>`;}
+function renderWorld(w,id,label){const sum=E.summary(w),story=E.STORIES[sum.majorityReason],counts=E.tally(w.goblins,'story'); const rows=Object.keys(E.STORIES).sort((a,b)=>(counts[b]||0)-(counts[a]||0)).map(key=>{const st=E.STORIES[key],n=counts[key]||0;return `<div class="belief-row" data-type="${key}"><div class="belief-title"><span>${st.icon} ${enc(st.name)}</span><span class="belief-count">${n} / 24</span></div><div class="track" style="grid-column:1/3"><i style="width:${100*n/24}%"></i></div></div>`;}).join('');
+ $(id).innerHTML=`<div class="world-head"><div><h2>${label}</h2><p>Year ${w.year} · ${w.goblins.length} goblins · ${w.births} successor arrivals</p></div><span class="pill">${id==='worldA'?'A / UNTOUCHED':'B / '+(mode||'FORK')}</span></div><div class="world-stage"><div class="stage-trees"></div>${svgFountain(w.stones,sum.water)}<div class="gob a" aria-hidden="true"><div class="eyes">••</div></div><div class="gob b" aria-hidden="true"><div class="eyes">••</div></div><div class="caption">THE SPRING WAS THERE FIRST</div></div><div class="metrics"><div class="metric"><b>${w.stones}</b><span>stones in circle</span></div><div class="metric"><b>${sum.water}%</b><span>spring flow</span></div><div class="metric"><b>${sum.countAtPublicStone}/24</b><span>goblins favor ring</span></div></div><div class="reason-wrap"><h3>${story.icon} ${enc(story.name)}</h3><p>${enc(story.short)} <span class="fine">(${sum.distinctReasons} live explanations)</span></p><div class="beliefs">${rows}</div></div><div class="world-footer"><span><b>${sum.originsRemembered}</b> still tell the actual picnic origin</span><span><b>${sum.knowledgeHolders}</b> tell the tested-water account</span></div>`;
+}
+function render(){renderWorld(A,'worldA','Original village');$('years').textContent='Year '+A.year;
+ if(B){$('worldB').style.display='block';$('worlds').classList.add('twinned');renderWorld(B,'worldB','The forked village');const ca=E.summary(A),cb=E.summary(B);const delta=ca.water===cb.water?'identical spring flow':'different spring flow'; $('compareNote').style.display='block'; $('compareNote').textContent=`Matched at Year ${A.year}: A has ${ca.stoneCount} stones, B has ${cb.stoneCount}; ${delta} (${ca.water}% / ${cb.water}%). The main difference is not necessarily physical.`; $('fork').textContent='Fork already open';$('fork').disabled=true;}
+ else{$('worldB').style.display='none';$('worlds').classList.remove('twinned');$('compareNote').style.display='none';$('fork').textContent='Fork the village ⇉';$('fork').disabled=false;}
+ const worlds=B?[{prefix:'B · ',world:B},{prefix:'A · ',world:A}]:[{prefix:'',world:A}];let all=[];for(const {prefix,world} of worlds){all.push(...world.events.slice(-7).map(e=>({...e,prefix})));}all.sort((a,b)=>b.year-a.year || a.prefix.localeCompare(b.prefix));$('chronicle').innerHTML=all.slice(0,14).map(e=>`<div class="event"><span class="date">${enc(e.prefix)}Y${e.year}</span><span>${enc(e.message)}</span></div>`).join('');
+ $('goblins').innerHTML=A.goblins.map(g=>`<div class="goblinitem"><b>${enc(g.name)} · ${g.preferred} stones</b><span>${E.STORIES[g.story].icon} ${enc(E.STORIES[g.story].name)} · gen ${g.generation}</span></div>`).join('');
+}
+function reset(){const seed=Math.max(1,Math.min(9999999,Math.floor(Number($('seed').value)||1703)));$('seed').value=seed;A=E.create(seed,Number($('pressure').value)/100);B=null;mode=null;$('status').setAttribute('aria-hidden','true');render();}
+function advance(n){E.advance(A,n);if(B)E.advance(B,n);render();}
+$('year1').addEventListener('click',()=>advance(1));$('year8').addEventListener('click',()=>advance(8));$('year24').addEventListener('click',()=>advance(24));$('reset').addEventListener('click',reset);$('pressure').addEventListener('input',e=>{let v=Number(e.target.value);$('pressValue').textContent=v+'%';A.pressure=v/100;if(B)B.pressure=v/100;});
+$('fork').addEventListener('click',()=>{if(B)return;mode=$('forkMode').value;B=E.fork(A,mode);$('status').textContent=mode==='stone'?'One stone was removed at the fork; the public ring can change again.':mode==='plaque'?'A forgotten picnic note is now carved on the forked village plaque.':'Only the forked village sees a matched-water test.';$('status').setAttribute('aria-hidden','false');render();});
+$('origin').addEventListener('click',()=>{const v=$('originContent').classList.toggle('open');$('origin').setAttribute('aria-expanded',String(v));$('origin').textContent=v?'Seal Tilda’s notebook':'Unseal Tilda’s notebook';});
+reset();
+})();
+</script></body></html>

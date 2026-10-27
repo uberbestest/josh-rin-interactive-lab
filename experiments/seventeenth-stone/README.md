@@ -21,8 +21,12 @@ The interface models a tiny fictional village with 24 goblins. Visitors can vary
 
 ## Public artifact provenance
 
-- Original standalone HTML, copied byte-for-byte; **31,745 bytes**.
+- Archived original at [original.html](original.html), preserved byte-for-byte; **31,745 bytes**.
 - SHA-256: `751fee878f27c4ec456daf91c5455cd2043daffaeb89f3abdc7527bb77ab2839`.
 - Git blob SHA-1: `fc988b28c76d48aa536aa681dbcad0d1e90fb7c0`.
 
 The point is a model that can be *argued with*: change the beginning, inspect the fork, and keep separate what the program does from what one might infer about culture. The duck is innocent.
+
+## Gallery navigation update · 2026-10-27
+
+The public [index.html](index.html) adds only a scoped navigation bar and its styles, linking to the gallery and this exhibit's methods. The scientific scripts, embedded data, and original instrument content are unchanged. The [archived standalone original](original.html) retains the historical bytes and hashes recorded above. Those historical hashes identify `original.html`, not the navigation-adapted `index.html`.

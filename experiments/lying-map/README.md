@@ -26,7 +26,7 @@ The report carefully distinguishes the separate post-hoc budget supplement from 
 
 ## What can be verified and what remains missing
 
-- Original standalone arcade was copied **byte-for-byte** from the checked October 1 Library artifact: **55,762 bytes**, SHA-256 `9b2d097aeff5ba0a4ed4961814922f82cd1b8c28ae42f3baf3519187aa6737aa`; Git blob `a6f9557dc1a62919c99a3b22f1dab78e1aa8aaf3`.
+- The archived standalone arcade at [original.html](original.html) is preserved **byte-for-byte** from the checked October 1 artifact: **55,762 bytes**, SHA-256 `9b2d097aeff5ba0a4ed4961814922f82cd1b8c28ae42f3baf3519187aa6737aa`; Git blob `a6f9557dc1a62919c99a3b22f1dab78e1aa8aaf3`.
 - Original research report was copied **byte-for-byte**: **12,054 bytes**, SHA-256 `1f96436cdf2268441df93f0d9b268c3bafd84acb9187a411249ebfc949627142`; Git blob `f2106f7c2d4d0e6fdc208e16a80b617b2cbd8a05`.
 - The original same-lab evidence reported 13 prelaunch tests, 65 post-run assertions, and 2,450 browser-engine-vs-Python sampled case comparisons. Those checks were recorded with the original run; **this public curation did not rerun the entire 819,200-episode set.**
 - The public repo includes the archived self-contained arcade and original report. The original full multi-file primary dataset and engine aren't part of this exhibit. Hence full independent recomputation of the original aggregate results **is not qualified from these public files alone**.
@@ -41,3 +41,7 @@ At least-one-error, at-most-one-error, sampled two-error and impossible-world co
 **Our public release does not include continuity research, Mirror Node internals, personal information or external credentials.**
 
 _A goblin may know exactly where the door goes, and still not have enough moves left to walk through it._
+
+## Gallery navigation update · 2026-10-27
+
+The public [index.html](index.html) adds only a scoped navigation bar and its styles, linking to the gallery and this exhibit's methods. The scientific scripts, embedded data, and original instrument content are unchanged. The [archived standalone original](original.html) retains the historical bytes and hashes recorded above. Those historical hashes identify `original.html`, not the navigation-adapted `index.html`.

@@ -14,6 +14,14 @@
 
 A **post-hoc** sweep of the existing 2,048 paired scripted scenarios found an extreme case: with seed 72, two opens per shopper, mixed policies and visible prior visits, Golden Goblin Goods gained 11 opens but remained at zero final selections. **Sixteen** shoppers changed which other store got their cart; **five** made those changes without opening the promoted shop. Disabling popularity feedback reduced the sixteen changed choices to four and the five indirect changes to zero. Full six-store browsing removed all final-choice changes in this toy. The case was chosen **after** inspecting the sweep; it is not a new model-agent experiment, preregistered test or estimate of real-world influence.
 
+## Mechanism follow-up: When the Crowd Gives a Cart Back (October 27)
+
+[Inspect four recorded cases](notes/crowd-feedback/index.html) · [Declared analysis plan](notes/crowd-feedback/PROTOCOL.md) · [Reproducible runner](notes/crowd-feedback/run.cjs) · [Full summary](notes/crowd-feedback/results/summary.json)
+
+A new **exploratory intervention in the same fixed generator** holds each shopper's neutral prior-visit display fixed while promoting the shop, then compares that world with live feedback. The full grid contains 2,048 parameter cells and five worlds per cell; it reuses seeds 1–128 and includes both arrival orders. In the declared 512-cell mixed-roster, limited-browse panel, live feedback produces more changed final choices in **398** cells, the same number in **91**, and fewer in **23**. In **21** tied cells, the same count hides different shopper choices. The first suppression case returns a coded crowd-averse shopper to its neutral destination.
+
+All 512 primary cells are retained: **491** satisfy the full paired zero-sale ghost condition; two reversed-order cases produce target selections 0→1. The original model and archived baseline results are unchanged. This is a mechanism test with scripted policies, not a new-seed replication, external model-agent run, population estimate, or additive decomposition of influence. The follow-up preserves the exact plan, runner, per-shopper records, display-selection rules and controls.
+
 ## What you can do
 
 Six fictitious shops are listed in two matched simulated worlds. Each world receives **24 scripted shopper policies** (four each of six profiles by default): quality seeker, bargain hunter, evidence-sensitive customer, wanderer, crowd follower, and promotional-copy follower. No living participant or language model made a shopping decision.

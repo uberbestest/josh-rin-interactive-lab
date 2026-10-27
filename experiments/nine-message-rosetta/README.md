@@ -25,7 +25,7 @@ The interactive viewer lets you choose a tribe pair, compare eight versus nine c
 
 ## Evidence and integrity
 
-The public HTML is the original standalone viewer, preserved **byte-for-byte**:
+The archived original viewer at [original.html](original.html) is preserved **byte-for-byte**:
 - Size: **29,012 bytes**.
 - SHA-256: `e6a3c6dc078e67822389b481712301ee13d5aa3761f45f5de37e9ea1a1321dbf`.
 - Git blob SHA-1: `e4daa70b83ced73cd8432ee75332a99fac9ef4d9`.
@@ -39,3 +39,7 @@ A headless Chromium injected-document smoke test exercised the controls and repo
 Whether the same leverage transfers to unstructured protocols, whether drift among familiar symbols can be detected, how robust the result is to alternative architecture/training design, and whether an independent group would reproduce the complete run.
 
 **The result is a bounded counterexample to “nine examples could never be enough,” not proof that arbitrary languages can be decoded in nine messages.**
+
+## Gallery navigation and citation clarification · 2026-10-27
+
+The public [index.html](index.html) adds a scoped navigation bar and its styles, linking to the gallery and this exhibit's methods. It also clarifies that the Brinkmann et al. reference concerns human transmission of machine-discovered strategies. The scientific scripts, embedded data, and experimental results are unchanged. The [archived standalone original](original.html) retains the historical bytes and hashes recorded above. Those historical hashes identify `original.html`, not the navigation-adapted `index.html`.

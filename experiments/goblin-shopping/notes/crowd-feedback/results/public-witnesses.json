@@ -1,0 +1,5190 @@
+{
+  "record_id": "GOBLIN-HELD-HISTORY-2026-10-27-001",
+  "title": "When the Crowd Gives a Cart Back",
+  "status": "EXPLORATORY_FINITE_MECHANISM_INTERVENTION_NO_MODEL_AGENTS",
+  "selection_note": "These are transparent selected witnesses, not representative samples. Both display selections made after the grid are identified below.",
+  "stores": [
+    {
+      "id": "moth",
+      "name": "Mothlight Market"
+    },
+    {
+      "id": "copper",
+      "name": "Copper Commons"
+    },
+    {
+      "id": "gold",
+      "name": "Golden Goblin Goods"
+    },
+    {
+      "id": "lantern",
+      "name": "Lantern & Nail"
+    },
+    {
+      "id": "stone",
+      "name": "Stone & Star"
+    },
+    {
+      "id": "duck",
+      "name": "Duck Cart Co."
+    }
+  ],
+  "witnesses": [
+    {
+      "seed": 4,
+      "budget": 3,
+      "cohort": "mixed",
+      "reverse": false,
+      "comparisons": {
+        "live": {
+          "changed_choices": 1,
+          "changed_paths": 4,
+          "changed_first": 4,
+          "changed_ids": [
+            6
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 4,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        },
+        "held": {
+          "changed_choices": 2,
+          "changed_paths": 5,
+          "changed_first": 5,
+          "changed_ids": [
+            6,
+            16
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 5,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        },
+        "off": {
+          "changed_choices": 3,
+          "changed_paths": 11,
+          "changed_first": 9,
+          "changed_ids": [
+            6,
+            20,
+            23
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 11,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        }
+      },
+      "overlap": {
+        "live_only": [],
+        "held_only": [
+          16
+        ],
+        "both_same_destination": [
+          6
+        ],
+        "both_different_destination": [],
+        "neither": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "live_vs_held_changed": [
+          16
+        ]
+      },
+      "live_minus_held_changed_choices": -1,
+      "id": "suppression",
+      "selection_rule": "First primary-panel cell with fewer changed choices under live feedback than held history, in fixed seed/budget/roster/arrival loop order.",
+      "selection_status": "Specified in protocol before new-grid execution",
+      "world_totals": {
+        "base": {
+          "traffic": [
+            21,
+            2,
+            1,
+            22,
+            5,
+            21
+          ],
+          "first": [
+            6,
+            1,
+            0,
+            5,
+            2,
+            10
+          ],
+          "carts": [
+            0,
+            0,
+            0,
+            7,
+            2,
+            15
+          ]
+        },
+        "live": {
+          "traffic": [
+            20,
+            2,
+            5,
+            20,
+            5,
+            20
+          ],
+          "first": [
+            5,
+            1,
+            4,
+            5,
+            2,
+            7
+          ],
+          "carts": [
+            0,
+            0,
+            0,
+            8,
+            2,
+            14
+          ]
+        },
+        "held": {
+          "traffic": [
+            20,
+            2,
+            6,
+            19,
+            5,
+            20
+          ],
+          "first": [
+            5,
+            1,
+            5,
+            4,
+            2,
+            7
+          ],
+          "carts": [
+            0,
+            1,
+            0,
+            7,
+            2,
+            14
+          ]
+        },
+        "off_base": {
+          "traffic": [
+            18,
+            5,
+            0,
+            16,
+            10,
+            23
+          ],
+          "first": [
+            5,
+            2,
+            0,
+            4,
+            5,
+            8
+          ],
+          "carts": [
+            0,
+            3,
+            0,
+            2,
+            4,
+            15
+          ]
+        },
+        "off_promoted": {
+          "traffic": [
+            15,
+            3,
+            11,
+            15,
+            7,
+            21
+          ],
+          "first": [
+            4,
+            1,
+            9,
+            4,
+            4,
+            2
+          ],
+          "carts": [
+            0,
+            3,
+            0,
+            3,
+            4,
+            14
+          ]
+        }
+      },
+      "shoppers": [
+        {
+          "id": 1,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 2,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "duck",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "stone",
+              "duck",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 3,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 4,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 5,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 6,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": true,
+          "held_changed": true,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 7,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "copper",
+              "lantern",
+              "duck"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "copper",
+              "lantern",
+              "duck"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 8,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "duck",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "stone",
+              "gold",
+              "duck"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 9,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "stone",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "stone",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "stone",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "stone",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 10,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "copper",
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "copper",
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "copper",
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 11,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "copper",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 12,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 13,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "copper",
+              "lantern"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "copper",
+              "lantern"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 14,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "stone",
+              "duck",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "held": {
+            "opens": [
+              "stone",
+              "duck",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "live": {
+            "opens": [
+              "stone",
+              "duck",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "duck",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "stone",
+              "duck",
+              "gold"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 15,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "duck",
+              "stone",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "stone",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "stone",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "stone",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "stone",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 16,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "copper",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "copper",
+              "moth"
+            ],
+            "selected": "copper"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "copper",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": true,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 17,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 18,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 19,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 20,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "moth",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 21,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 22,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern",
+              "gold"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern",
+              "gold"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "lantern",
+              "gold"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 23,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "lantern",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "lantern",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "lantern",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 24,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "duck",
+              "copper"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        }
+      ]
+    },
+    {
+      "seed": 72,
+      "budget": 2,
+      "cohort": "mixed",
+      "reverse": false,
+      "comparisons": {
+        "live": {
+          "changed_choices": 16,
+          "changed_paths": 16,
+          "changed_first": 8,
+          "changed_ids": [
+            2,
+            5,
+            6,
+            8,
+            9,
+            11,
+            12,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            23,
+            24
+          ],
+          "strict_nonvisitor_ids": [
+            8,
+            9,
+            16,
+            19,
+            22
+          ],
+          "no_treatment_target_visit_ids": [
+            8,
+            9,
+            16,
+            19,
+            22
+          ],
+          "target_open_gain": 11,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        },
+        "held": {
+          "changed_choices": 3,
+          "changed_paths": 5,
+          "changed_first": 4,
+          "changed_ids": [
+            2,
+            6,
+            24
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 5,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        },
+        "off": {
+          "changed_choices": 4,
+          "changed_paths": 10,
+          "changed_first": 8,
+          "changed_ids": [
+            2,
+            5,
+            14,
+            24
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 10,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        }
+      },
+      "overlap": {
+        "live_only": [
+          5,
+          8,
+          9,
+          11,
+          12,
+          14,
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          23
+        ],
+        "held_only": [],
+        "both_same_destination": [
+          2,
+          6,
+          24
+        ],
+        "both_different_destination": [],
+        "neither": [
+          1,
+          3,
+          4,
+          7,
+          10,
+          13,
+          15,
+          21
+        ],
+        "live_vs_held_changed": [
+          5,
+          8,
+          9,
+          11,
+          12,
+          14,
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          23
+        ]
+      },
+      "live_minus_held_changed_choices": 13,
+      "id": "parent_case",
+      "selection_rule": "Original post-hoc extreme parent example, selected before this mechanism follow-up.",
+      "selection_status": "Previously post-hoc selected parent example",
+      "world_totals": {
+        "base": {
+          "traffic": [
+            23,
+            3,
+            0,
+            7,
+            3,
+            12
+          ],
+          "first": [
+            13,
+            1,
+            0,
+            5,
+            0,
+            5
+          ],
+          "carts": [
+            1,
+            3,
+            0,
+            5,
+            3,
+            12
+          ]
+        },
+        "live": {
+          "traffic": [
+            21,
+            5,
+            11,
+            6,
+            3,
+            2
+          ],
+          "first": [
+            12,
+            2,
+            5,
+            5,
+            0,
+            0
+          ],
+          "carts": [
+            11,
+            5,
+            0,
+            3,
+            3,
+            2
+          ]
+        },
+        "held": {
+          "traffic": [
+            21,
+            3,
+            5,
+            7,
+            2,
+            10
+          ],
+          "first": [
+            10,
+            1,
+            4,
+            5,
+            0,
+            4
+          ],
+          "carts": [
+            4,
+            3,
+            0,
+            5,
+            2,
+            10
+          ]
+        },
+        "off_base": {
+          "traffic": [
+            15,
+            4,
+            0,
+            8,
+            8,
+            13
+          ],
+          "first": [
+            6,
+            2,
+            0,
+            6,
+            1,
+            9
+          ],
+          "carts": [
+            1,
+            4,
+            0,
+            4,
+            7,
+            8
+          ]
+        },
+        "off_promoted": {
+          "traffic": [
+            12,
+            4,
+            10,
+            6,
+            4,
+            12
+          ],
+          "first": [
+            5,
+            2,
+            8,
+            4,
+            0,
+            5
+          ],
+          "carts": [
+            4,
+            4,
+            0,
+            4,
+            4,
+            8
+          ]
+        }
+      },
+      "shoppers": [
+        {
+          "id": 1,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "copper",
+              "moth"
+            ],
+            "selected": "copper"
+          },
+          "held": {
+            "opens": [
+              "copper",
+              "moth"
+            ],
+            "selected": "copper"
+          },
+          "live": {
+            "opens": [
+              "copper",
+              "moth"
+            ],
+            "selected": "copper"
+          },
+          "off_neutral": {
+            "opens": [
+              "copper",
+              "moth"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "copper",
+              "moth"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 2,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "live_changed": true,
+          "held_changed": true,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 3,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 4,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 5,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 6,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": true,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 7,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 8,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 9,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "copper",
+              "moth"
+            ],
+            "selected": "copper"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 10,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 11,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 12,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 13,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 14,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "gold"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 15,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 16,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 17,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 18,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 19,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_neutral": {
+            "opens": [
+              "copper",
+              "duck"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "copper",
+              "duck"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 20,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 21,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 22,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 23,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 24,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live_changed": true,
+          "held_changed": true,
+          "held_vs_live_changed": false
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "budget": 2,
+      "cohort": "mixed",
+      "reverse": true,
+      "comparisons": {
+        "live": {
+          "changed_choices": 1,
+          "changed_paths": 14,
+          "changed_first": 9,
+          "changed_ids": [
+            2
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 12,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        },
+        "held": {
+          "changed_choices": 1,
+          "changed_paths": 4,
+          "changed_first": 4,
+          "changed_ids": [
+            18
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 4,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        },
+        "off": {
+          "changed_choices": 3,
+          "changed_paths": 9,
+          "changed_first": 7,
+          "changed_ids": [
+            11,
+            18,
+            23
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 9,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        }
+      },
+      "overlap": {
+        "live_only": [
+          2
+        ],
+        "held_only": [
+          18
+        ],
+        "both_same_destination": [],
+        "both_different_destination": [],
+        "neither": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "live_vs_held_changed": [
+          2,
+          18
+        ]
+      },
+      "live_minus_held_changed_choices": 0,
+      "id": "equal_count_different_choices",
+      "selection_rule": "First primary-panel cell with equal changed-choice counts but different live/held shopper choices, in fixed loop order.",
+      "selection_status": "Post-hoc display selection from the completed fixed grid; aggregate metric was specified before execution",
+      "world_totals": {
+        "base": {
+          "traffic": [
+            19,
+            1,
+            0,
+            9,
+            1,
+            18
+          ],
+          "first": [
+            10,
+            0,
+            0,
+            3,
+            0,
+            11
+          ],
+          "carts": [
+            0,
+            1,
+            0,
+            7,
+            0,
+            16
+          ]
+        },
+        "live": {
+          "traffic": [
+            9,
+            1,
+            12,
+            8,
+            1,
+            17
+          ],
+          "first": [
+            7,
+            0,
+            7,
+            2,
+            0,
+            8
+          ],
+          "carts": [
+            1,
+            1,
+            0,
+            7,
+            0,
+            15
+          ]
+        },
+        "held": {
+          "traffic": [
+            16,
+            1,
+            4,
+            9,
+            1,
+            17
+          ],
+          "first": [
+            8,
+            0,
+            4,
+            3,
+            0,
+            9
+          ],
+          "carts": [
+            1,
+            1,
+            0,
+            7,
+            0,
+            15
+          ]
+        },
+        "off_base": {
+          "traffic": [
+            17,
+            3,
+            0,
+            10,
+            4,
+            14
+          ],
+          "first": [
+            11,
+            1,
+            0,
+            2,
+            2,
+            8
+          ],
+          "carts": [
+            1,
+            2,
+            0,
+            6,
+            2,
+            13
+          ]
+        },
+        "off_promoted": {
+          "traffic": [
+            12,
+            2,
+            9,
+            10,
+            4,
+            11
+          ],
+          "first": [
+            7,
+            1,
+            7,
+            2,
+            2,
+            5
+          ],
+          "carts": [
+            3,
+            2,
+            0,
+            7,
+            2,
+            10
+          ]
+        }
+      },
+      "shoppers": [
+        {
+          "id": 1,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 2,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "stone",
+              "moth"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 3,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 4,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 5,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "moth"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "gold"
+            ],
+            "selected": "moth"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 6,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 7,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "copper",
+              "lantern"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "copper",
+              "lantern"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 8,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "gold"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "gold"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 9,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 10,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 11,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "gold"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 12,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 13,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 14,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "gold"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "duck"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "stone",
+              "duck"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 15,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 16,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 17,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 18,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live_changed": false,
+          "held_changed": true,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 19,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 20,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "gold"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 21,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 22,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 23,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 24,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        }
+      ]
+    },
+    {
+      "seed": 86,
+      "budget": 2,
+      "cohort": "mixed",
+      "reverse": true,
+      "comparisons": {
+        "live": {
+          "changed_choices": 6,
+          "changed_paths": 14,
+          "changed_first": 13,
+          "changed_ids": [
+            5,
+            6,
+            8,
+            9,
+            14,
+            20
+          ],
+          "strict_nonvisitor_ids": [
+            9
+          ],
+          "no_treatment_target_visit_ids": [
+            9
+          ],
+          "target_open_gain": 11,
+          "target_choices": [
+            0,
+            1
+          ],
+          "paired_zero_sale": false,
+          "ghost": false
+        },
+        "held": {
+          "changed_choices": 2,
+          "changed_paths": 5,
+          "changed_first": 4,
+          "changed_ids": [
+            6,
+            12
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 5,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        },
+        "off": {
+          "changed_choices": 3,
+          "changed_paths": 10,
+          "changed_first": 9,
+          "changed_ids": [
+            6,
+            11,
+            23
+          ],
+          "strict_nonvisitor_ids": [],
+          "no_treatment_target_visit_ids": [],
+          "target_open_gain": 10,
+          "target_choices": [
+            0,
+            0
+          ],
+          "paired_zero_sale": true,
+          "ghost": true
+        }
+      },
+      "overlap": {
+        "live_only": [
+          5,
+          8,
+          9,
+          14,
+          20
+        ],
+        "held_only": [
+          12
+        ],
+        "both_same_destination": [
+          6
+        ],
+        "both_different_destination": [],
+        "neither": [
+          1,
+          2,
+          3,
+          4,
+          7,
+          10,
+          11,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          21,
+          22,
+          23,
+          24
+        ],
+        "live_vs_held_changed": [
+          5,
+          8,
+          9,
+          12,
+          14,
+          20
+        ]
+      },
+      "live_minus_held_changed_choices": 4,
+      "id": "nonzero_target",
+      "selection_rule": "First primary-panel cell failing the paired zero-sale condition under live feedback, in fixed loop order.",
+      "selection_status": "Post-hoc display selection from the completed fixed grid; inclusion in denominators was specified before execution",
+      "world_totals": {
+        "base": {
+          "traffic": [
+            22,
+            2,
+            0,
+            15,
+            2,
+            7
+          ],
+          "first": [
+            16,
+            1,
+            0,
+            7,
+            0,
+            0
+          ],
+          "carts": [
+            3,
+            1,
+            0,
+            12,
+            1,
+            7
+          ]
+        },
+        "live": {
+          "traffic": [
+            14,
+            0,
+            11,
+            13,
+            3,
+            7
+          ],
+          "first": [
+            7,
+            0,
+            11,
+            5,
+            0,
+            1
+          ],
+          "carts": [
+            2,
+            0,
+            1,
+            12,
+            2,
+            7
+          ]
+        },
+        "held": {
+          "traffic": [
+            19,
+            2,
+            5,
+            14,
+            2,
+            6
+          ],
+          "first": [
+            12,
+            1,
+            4,
+            7,
+            0,
+            0
+          ],
+          "carts": [
+            5,
+            1,
+            0,
+            11,
+            1,
+            6
+          ]
+        },
+        "off_base": {
+          "traffic": [
+            10,
+            5,
+            0,
+            14,
+            7,
+            12
+          ],
+          "first": [
+            7,
+            0,
+            0,
+            6,
+            3,
+            8
+          ],
+          "carts": [
+            1,
+            4,
+            0,
+            7,
+            4,
+            8
+          ]
+        },
+        "off_promoted": {
+          "traffic": [
+            7,
+            4,
+            10,
+            11,
+            6,
+            10
+          ],
+          "first": [
+            4,
+            0,
+            9,
+            4,
+            3,
+            4
+          ],
+          "carts": [
+            2,
+            4,
+            0,
+            7,
+            3,
+            8
+          ]
+        }
+      },
+      "shoppers": [
+        {
+          "id": 1,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 2,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "duck"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "stone",
+              "duck"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 3,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "stone",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 4,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "moth"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "moth"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 5,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 6,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live_changed": true,
+          "held_changed": true,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 7,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 8,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "moth"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "gold"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 9,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 10,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "copper",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "copper",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 11,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 12,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "moth"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": true,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 13,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 14,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "moth"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "lantern"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 15,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "stone"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "stone"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "stone"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "stone"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "stone"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 16,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 17,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 18,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "copper"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 19,
+          "type": "Reliability",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "off_promoted": {
+            "opens": [
+              "lantern",
+              "copper"
+            ],
+            "selected": "copper"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 20,
+          "type": "Budget",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "moth"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "lantern",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "live_changed": true,
+          "held_changed": false,
+          "held_vs_live_changed": true
+        },
+        {
+          "id": 21,
+          "type": "Evidence",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "stone",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "stone",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 22,
+          "type": "Wanderer",
+          "neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "held": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "off_promoted": {
+            "opens": [
+              "moth",
+              "duck"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 23,
+          "type": "Crowd",
+          "neutral": {
+            "opens": [
+              "lantern",
+              "moth"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "lantern",
+              "gold"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "duck",
+              "stone"
+            ],
+            "selected": "stone"
+          },
+          "off_promoted": {
+            "opens": [
+              "duck",
+              "gold"
+            ],
+            "selected": "duck"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        },
+        {
+          "id": 24,
+          "type": "Copy",
+          "neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "held": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_neutral": {
+            "opens": [
+              "moth",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "off_promoted": {
+            "opens": [
+              "gold",
+              "lantern"
+            ],
+            "selected": "lantern"
+          },
+          "live_changed": false,
+          "held_changed": false,
+          "held_vs_live_changed": false
+        }
+      ]
+    }
+  ]
+}

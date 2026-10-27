@@ -17,7 +17,13 @@
 | 2026-10-26 (Sep 30 original run) | [The Lying Map](experiments/lying-map/index.html) | Play the four-room navigation arcade and compare ten deterministic policies under changing action budgets. | 819,200 primary/stress scripted episodes in historical report; not independent model agents; full raw corpus not public. |
 | 2026-10-26 | [Keep the Gaps](experiments/keep-the-gaps/index.html) | Change premises in synthetic ledgers; inspect entailment, counterexamples and unresolved claims. | Finite packaged candidate; not independently validated. |
 
-Every exhibit has a standalone HTML instrument, an individual README with provenance and explicit limitations, and a [methods page](experiments/nine-message-rosetta/method.html) on the site. The homepage links to every experiment's own methods page.
+Every exhibit has a browser instrument, an individual README with provenance and explicit limitations, and a methods page on the site. The homepage links to every experiment's own methods page.
+
+## October 27 review and follow-up
+
+[When the Crowd Gives a Cart Back](experiments/goblin-shopping/notes/crowd-feedback/index.html) tests whether popularity feedback always amplifies a promotion's effect inside the existing shopping generator. It compares live feedback with held neutral prior-visit displays across 2,048 parameter cells. The declared 512-cell primary panel contains **398** larger changed-choice counts, **91** ties and **23** smaller counts; **21** ties hide different shopper choices. Four selectable witnesses include a suppression case and a case that breaks the zero-sale condition. The exact protocol, runner, per-shopper records and controls are published with the note. No external model-agent trial was run.
+
+The gallery now offers three direct starting points and a source link. Five older instruments gained gallery/method navigation; each previous HTML remains byte-for-byte available as its exhibit's `original.html`, with the historical hashes identified in its methods. The neural card now names the trained unit precisely as a speaker–listener culture. A dated Silent Bell methods clarification describes the existing incomplete-evidence decision order; experimental code and results remain unchanged.
 
 ## Support independent research
 
