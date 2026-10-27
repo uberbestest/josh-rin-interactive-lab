@@ -1,0 +1,22 @@
+{
+  "benign_cases": 6,
+  "benign_digest_freeze_rejections": 5,
+  "boundary_false_allows": 2,
+  "business_tests_passed": 21,
+  "decisions": {
+    "ALLOW": 6,
+    "BLOCK": 12,
+    "CHALLENGE": 2,
+    "LIMIT": 1
+  },
+  "evidence_status": "SYNTHETIC_SAME_AUTHOR_NOT_INDEPENDENTLY_VALIDATED",
+  "external_model_runs": 0,
+  "grid_allow": 3,
+  "grid_oracle_disagreements": 0,
+  "grid_probe_executions": 2048,
+  "grid_states": 512,
+  "named_cases": 21,
+  "named_expectations_met": 21,
+  "protocol_sha256": "15492e03686959f577a86ee5c3e4d55931ca199e5d81d5b2def6881b943c9e73",
+  "schema": "silent-bell-results-v1"
+}
