@@ -37,6 +37,7 @@ evidence yields CHALLENGE. Neither permits deployment.
 | 512 finite configurations / 2,048 severity-probe executions | 3 ALLOW, 509 BLOCK; zero disagreement with the separate Boolean oracle | Universal control preservation; the oracle is also same-author |
 | 2 assumption-breaking witnesses | Both falsely ALLOWed despite actual control loss | Observer authenticity or completeness of finite probes |
 | 32 same-author Python regression tests | Passed in normal and optimized Python execution | Independent validation |
+| Published-browser verification | 21 scenario decisions, 84 fixture views, 16 counterexample views; downloaded receipt matched | Mobile, offline browser execution, or independent validation |
 
 The grid enumerates seven Boolean control flags, two alert thresholds, and two
 execution routes. Its extremely unbalanced constructed population is not a deployment
@@ -93,6 +94,7 @@ python -B -m unittest discover -s experiments/silent-bell/research -p 'test_*.py
 python -O -B -m unittest discover -s experiments/silent-bell/research -p 'test_*.py' -v
 python -B experiments/silent-bell/research/experiment.py --check
 python -B experiments/silent-bell/research/build.py --check
+node experiments/silent-bell/research/static_check.cjs
 ```
 
 To regenerate the records, HTML, and checksum manifest:
@@ -106,8 +108,12 @@ with the repository's `python -m http.server 8000` preview. It makes no network 
 uses no tracking or persistent storage, and does not run a model. Downloaded receipts
 are generated locally in the browser. Browser-specific download policies can vary.
 
-`research/browser_check.cjs` is optional release QA and requires Playwright plus Chromium;
-neither is needed for Python reproduction or viewing. `results/SHA256SUMS.txt` hashes
+The [release verification record](results/release-qa.json) separates executed checks from
+unexecuted coverage. We checked the live published site in cloud Chromium; the standalone
+`research/browser_check.cjs` was not executed because the local Chromium download was
+unavailable. It is provided for optional reproduction and requires Playwright plus Chromium;
+neither is needed for Python reproduction or viewing. Mobile rendering and offline file-URL
+execution were not verified. `results/SHA256SUMS.txt` hashes
 every exhibit file except the manifest itself and Python cache files. The protocol hash
 is also embedded in the results. These are reproducibility aids, not signed attestations.
 

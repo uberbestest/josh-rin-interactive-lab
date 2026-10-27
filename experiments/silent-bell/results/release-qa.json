@@ -1,0 +1,31 @@
+{
+  "schema": "silent-bell-release-qa-v1",
+  "date_utc": "2026-10-27",
+  "evidence": "SAME_AUTHOR_RELEASE_QA_NOT_INDEPENDENT_VALIDATION",
+  "verified_ui_commit": "0d6777ab48248075a952bbeea9ba7a3763e9fb36",
+  "public_url": "https://uberbestest.github.io/josh-rin-interactive-lab/experiments/silent-bell/index.html",
+  "python_version": "3.12.14",
+  "ordinary_regression_tests": {"run": 32, "passed": 32},
+  "optimized_regression_tests": {"run": 32, "passed": 32},
+  "deterministic_record_replay": "PASS",
+  "static_html_javascript_and_links": "PASS",
+  "live_cloud_chromium": {
+    "scenario_decisions_and_record_ids": {"checked": 21, "passed": 21},
+    "fixture_severity_views": {"checked": 84, "passed": 84},
+    "counterexample_supplied_and_actual_views": {"checked": 16, "passed": 16},
+    "downloaded_quiet_receipt_matches_saved_record": true,
+    "homepage_entry_and_preserved_shopping_followup": true,
+    "methods_page_loaded": true,
+    "desktop_screenshot_visually_inspected": true,
+    "desktop_horizontal_overflow": false,
+    "console_note": "Browser-extension metadata errors were present. No exhaustive zero-console-error claim is made."
+  },
+  "unexecuted_qa": [
+    "The provided standalone Playwright browser_check.cjs did not run: the local Chromium download was unavailable. The live cloud-browser checks above were executed instead.",
+    "No mobile viewport rendering test was executed.",
+    "No offline file-URL browser execution was verified; self-contained packaging was checked statically."
+  ],
+  "external_model_runs": 0,
+  "production_deployments_of_a_security_gate": 0,
+  "result": "PASS_WITH_DECLARED_COVERAGE_LIMITS"
+}
