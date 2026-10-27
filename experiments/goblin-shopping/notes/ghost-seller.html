@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<meta name="description" content="A fictional shop sells nothing but changes sixteen other carts. Replay the paired scripted attention experiment and find the five shoppers who never opened the promoted store.">
+<title>The Shop That Sold Nothing — Josh &amp; Rin Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1621;--panel:#172936;--raised:#203845;--line:#3c5967;--ink:#f0f5ee;--muted:#b3c5c8;--gold:#f3c477;--mint:#a0e3c8;--blue:#99c9ea}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 75% 36% at 75% 0%,#224246,transparent 85%),var(--bg);color:var(--ink);font:16px/1.62 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--mint)}:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.wrap{width:min(1100px,calc(100% - 38px));margin:0 auto}
+header{border-bottom:1px solid var(--line)}header .wrap{padding:18px 0;display:flex;justify-content:space-between;gap:20px;align-items:center}header a:first-child{color:var(--ink);font-weight:750;text-decoration:none}
+.eyebrow{font:700 .76rem/1.5 ui-monospace,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+.hero{padding:67px 0 35px}.hero h1{font-size:clamp(2.65rem,7vw,5.25rem);letter-spacing:-.058em;line-height:1.07;margin:16px 0 22px}.hero h1 em{color:var(--gold);font-style:normal}
+.lede{font-size:1.13rem;color:var(--muted);max-width:820px}.lede strong{color:var(--ink)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:28px}.metric{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:18px}.metric strong{font-size:1.8rem;display:block;color:var(--gold);line-height:1.2}.metric span{color:var(--muted);font-size:.84rem}
+.panel{background:linear-gradient(140deg,#1a2e39,#11202b);border:1px solid #55707b;border-radius:13px;overflow:hidden;margin:15px 0 62px}
+.panelhead,.controls,.outputs,.traceSection{padding:23px clamp(18px,3.4vw,35px);border-bottom:1px solid var(--line)}
+.panelhead h2{margin:5px 0;font-size:1.7rem}.panelhead p{color:var(--muted);margin:4px 0}
+.controls{display:flex;gap:13px;align-items:end;flex-wrap:wrap}
+.controls label{font-size:.83rem;font-weight:700;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+button,select{font:inherit;min-height:43px;padding:10px 12px;border-radius:5px;background:#10232e;color:var(--ink);border:1px solid #66858d}
+button{cursor:pointer;font-weight:700}button:hover{filter:brightness(1.15)}
+.controls .checkbox{display:flex;flex-direction:row;align-items:center;gap:10px;min-height:42px;padding:7px 13px;border:1px solid var(--line);border-radius:5px;cursor:pointer}
+input[type=checkbox]{height:18px;width:18px;accent-color:var(--mint)}
+.outputs{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(250px,.75fr);gap:30px}
+.bars h3,.summary h3{margin:7px 0 15px;font-size:1.35rem}.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.84rem;color:var(--muted)}.swatch{display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--blue);margin-right:6px;vertical-align:-1px}.swatch.gold{background:var(--gold)}
+.shoprow{margin:16px 0}.shopmeta{display:flex;justify-content:space-between;gap:14px;font-size:.87rem;margin-bottom:6px}.shopmeta span{color:var(--muted);font-family:ui-monospace,Consolas,monospace;font-size:.79rem}
+.track{background:#0c1c27;border-radius:3px;border:1px solid #415968;height:12px;overflow:hidden;margin:3px 0}.fill{height:100%;background:var(--blue);width:0}.fill.gold{background:var(--gold)}
+.summary{background:#10232f;padding:22px;border-radius:9px;border:1px solid var(--line)}.summary p{color:var(--muted);margin:10px 0}.summary b{color:var(--gold)}
+#summaryTitle{font-size:1.45rem;line-height:1.22;color:var(--ink);margin:6px 0 15px}
+.traceSection h3{font-size:1.35rem;margin:8px 0}.traceSection p{color:var(--muted);font-size:.89rem}
+.tablebox{max-height:440px;overflow:auto;border:1px solid var(--line);border-radius:7px;background:#10202b}table{border-collapse:collapse;width:100%}th,td{text-align:left;vertical-align:top;padding:11px 12px;border-bottom:1px solid #344c57;font-size:.83rem}thead{position:sticky;top:0;background:#1c3441}th{font:.76rem ui-monospace,monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--mint)}tr.indirect td:first-child{border-left:4px solid var(--gold)}tr.changed td:first-child{font-weight:750}.indirectBadge{display:block;color:var(--gold);font-size:.74rem}
+code{font:.82rem/1.5 ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
+.endcap{padding:22px clamp(18px,3.4vw,35px);background:#182a32}.endcap a{font-weight:750}
+.story{max-width:890px;margin:0 auto 70px}.story h2{font-size:clamp(1.7rem,3.5vw,2.25rem);letter-spacing:-.03em;line-height:1.25;margin:36px 0 15px}.story p,.story li{color:var(--muted)}.story strong{color:var(--ink)}
+.callout{border-left:4px solid var(--gold);background:#1b3039;padding:20px 25px;color:var(--ink);border-radius:3px;margin:25px 0}
+.controlGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.controlGrid>div{border:1px solid var(--line);border-radius:7px;padding:16px;background:var(--panel)}.controlGrid b{display:block;color:var(--gold);font-size:1.45rem}.controlGrid small{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:27px 0 43px;color:var(--muted);font-size:.84rem}
+@media(max-width:860px){.metrics,.controlGrid{grid-template-columns:repeat(2,1fr)}.outputs{grid-template-columns:1fr}}
+@media(max-width:550px){.hero{padding-top:42px}.metrics,.controlGrid{grid-template-columns:1fr 1fr}.metric{padding:13px}.metric strong{font-size:1.35rem}.controls{gap:9px}.controls select{max-width:100%}td,th{padding:8px 6px;font-size:.76rem}.panelhead h2{font-size:1.4rem}.outputs{gap:17px}.summary{padding:16px}}
+</style>
+</head><body>
+<header><div class="wrap"><a href="../index.html">[ ✦ ] GOBLIN SHOPPING / RESEARCH NOTES</a><a href="../../../index.html">← Full lab</a></div></header>
+<main class="wrap">
+<section class="hero">
+<p class="eyebrow">Field note 01 · October 26, 2026 · Post-hoc synthetic replay</p>
+<h1>It sold <em>nothing.</em><br>It moved sixteen carts.</h1>
+<p class="lede">An advertised store received eleven visits and zero selections. Yet <strong>sixteen of twenty-four</strong> shoppers chose a different <em>other</em> store than before. Five of them never even opened the advertised store.</p>
+<p class="lede">No real merchants, buyers, models, or purchases were involved. This is a replayable extreme witness from our existing deterministic shopping simulator.</p>
+<div class="metrics">
+<div class="metric"><strong>0 → 11</strong><span>Promoted store visits</span></div>
+<div class="metric"><strong>0 → 0</strong><span>Promoted store selections</span></div>
+<div class="metric"><strong>16 / 24</strong><span>Changed final choices elsewhere</span></div>
+<div class="metric"><strong>5</strong><span>Changed choices without visiting the promoted store</span></div>
+</div>
+</section>
+<section class="panel" id="replay">
+<div class="panelhead"><p class="eyebrow">The case · replay with controls</p><h2>Follow the consequences, not just the advertisement.</h2>
+<p>Default case: seed 72, two shop opens per buyer, six mixed scripted policy types, previous shoppers' visits visible.</p></div>
+<div class="controls">
+<label>Browse budget<select id="budget"><option value="1">One open</option><option value="2" selected>Two opens</option><option value="3">Three opens</option><option value="6">All six shops</option></select></label>
+<label>Roster<select id="roster"><option value="mixed" selected>Six profiles × four</option><option value="focused">Reliability-only</option></select></label>
+<label class="checkbox"><input type="checkbox" id="social" checked>Show prior visit counts</label>
+<label class="checkbox"><input type="checkbox" id="reverse">Reverse shopper arrival order</label>
+<button type="button" id="reset">Restore original witness ↻</button>
+</div>
+<div class="outputs">
+<div class="bars">
+<p class="eyebrow">Distribution of final scripted selections</p>
+<h3>Twenty-four carts, six possible shops</h3>
+<div class="legend"><span><i class="swatch"></i>Neutral listings</span><span><i class="swatch gold"></i>Promoted listing</span></div>
+<div id="bars"></div>
+</div>
+<div class="summary" aria-live="polite"><p class="eyebrow">Recorded difference</p><h3 id="summaryTitle">Replaying the evidence...</h3><p id="summaryBody"></p><p id="counts"></p><p id="controlNote"></p></div>
+</div>
+<div class="traceSection">
+<p class="eyebrow">Every changed choice / paired IDs</p>
+<h3>Which goblins went somewhere else?</h3>
+<p>A gold border marks a changed final choice by a shopper who <strong>never opened</strong> the advertised store. The initial six directory listings were delivered to everyone; only explicit opening actions are counted.</p>
+<div class="tablebox"><table><thead><tr><th>Goblin</th><th>Neutral shops opened → choice</th><th>Promoted shops opened → choice</th></tr></thead><tbody id="rows"></tbody></table></div>
+</div>
+<div class="endcap">Want a different seed or an exact 24-shopper trace download? <a href="../index.html">Use the complete shopping workbench →</a></div>
+</section>
+<section class="story">
+<p class="eyebrow">What was actually learned inside this toy</p>
+<h2>The seller never won. Other sellers lost anyway.</h2>
+<p>In the witness, the six fictional stores all keep the same scripted product quality, value, reputation record and final-choice scoring function. Only the promotional appeal of Golden Goblin Goods changes. Each shopper has just two source-open actions before choosing from the evidence actually opened.</p>
+<p>With the advertisement and social feedback on, eleven shoppers open Golden Goblin Goods. None selects it. But as those opens alter the publicly visible visit counts, later shoppers investigate different competitors. <strong>Five changed their final choice without visiting the promoted store at all.</strong> The entire pair of worlds contains no real checkout.</p>
+<div class="callout"><strong>Recorded carts in the baseline:</strong> Mothlight 1, Copper 3, Golden Goblin 0, Lantern 5, Stone 3, Duck Cart 12.<br>
+<strong>After the promotion:</strong> Mothlight 11, Copper 5, Golden Goblin 0, Lantern 3, Stone 3, Duck Cart 2.</div>
+<p>The seller that advertised did not benefit through final simulated selection. But the changed browsing order redistributed ten of Duck Cart's twelve selections, including toward a shop that hadn't placed the promotion. <strong>Attribution to the advertising shop alone would miss the indirect displacement.</strong></p>
+<h2>We tried removing the mechanism.</h2>
+<div class="controlGrid">
+<div><b>16 → 4</b><small>Changed choices with the same seed and two-open budget when prior-visit feedback is switched off</small></div>
+<div><b>5 → 0</b><small>Changed choices by shoppers who never opened Golden Goblin Goods, with feedback switched off</small></div>
+<div><b>16 → 0</b><small>Changed choices when all six shops must be opened before selecting</small></div>
+<div><b>16 → 0</b><small>Changed choices when all 24 shoppers use the reliability-only scripted profile</small></div>
+</div>
+<p>One-open control: the promoted seller actually receives four scripted selections. Three-open control: it receives eleven visits and no selections, but five other choices change. Reverse arrival order also changes which competitors receive the carts under social feedback. These are probes within a fully specified mechanism, not evidence that real attention or social contagion operates identically.</p>
+<h2>We selected the dramatic case after seeing the results.</h2>
+<p>The original public sweep contains <strong>2,048 paired scripted scenarios</strong> using 128 seeds, four browse budgets, two feedback conditions, and two shopper rosters. The condition “promotion gains visits, gains no carts, but redirects at least one other cart” occurred in <strong>494</strong> of those 2,048 scenarios. Seed 72, mixed roster, two opens, feedback on was the <strong>unique highest count of changed final choices</strong> within that qualifying set: sixteen.</p>
+<p>This is deliberately a <strong>post-hoc counterexample</strong>, not a pre-registered estimate or a claim that two-thirds of real consumers would change their minds. The simulator authors chose the toy's preferences, quality scores, behavioral rules and seeds. A plausible scripted trace reveals the authored state transitions, not an agent's private attention. No model calls or independent human trials were run.</p>
+<h2>What it suggests testing next</h2>
+<p>In the planned outsider-model environment, separate delivery of promotional material from source openings, shortlists, final selections and customer-specified constraints. Keep per-agent trace receipts and distinguish direct exposure from changes mediated by shared popularity signals. A claimed explanation is not evidence of a causal attention path. Before making external claims, rerun with fresh isolated model sessions and a frozen baseline schedule.</p>
+<p>Source and evidence: <a href="../model.js">deterministic shop policies</a>, <a href="../results/scripted-sweep.json">the original 2,048 paired records</a>, <a href="ghost-seller-record.json">this derived witness and full-grid accounting</a>, and <a href="ghost-seller.test.cjs">the reproducibility checks</a>. The companion <a href="../method.html">methods page</a> explains the original pilot lineage and why this doesn't establish real-agent behavior.</p>
+</section>
+</main>
+<footer><div class="wrap">Josh &amp; Rin · A goblin needn't make a sale to change the neighborhood. Synthetic toy, real receipts, no inflated conclusions. <a href="../index.html">Shopping workbench</a></div></footer>
+<script src="../model.js"></script>
+<script>
+(function(){
+"use strict";
+const M=window.GoblinShopModel;
+const $=id=>document.getElementById(id);
+if(!M){$("summaryTitle").textContent="Model script unavailable";return;}
+const names=Object.fromEntries(M.SHOPS.map(x=>[x.id,x.name]));
+function lookup(x){return x?names[x]:"(deferred)";}
+function params(){return {seed:72,budget:Number($("budget").value),cohort:$("roster").value,social:$("social").checked,reverse:$("reverse").checked};}
+function addBar(text,neutral,promoted){
+ const row=document.createElement("div");row.className="shoprow";
+ const head=document.createElement("div");head.className="shopmeta";
+ const label=document.createElement("strong");label.textContent=text;
+ const counts=document.createElement("span");counts.textContent=neutral+" → "+promoted;
+ head.append(label,counts);row.append(head);
+ for(const [n,gold] of [[neutral,false],[promoted,true]]){
+  const track=document.createElement("div");track.className="track";track.setAttribute("role","img");track.setAttribute("aria-label",(gold?"Promoted":"Neutral")+": "+n+" of 24");
+  const f=document.createElement("div");f.className="fill"+(gold?" gold":"");f.style.width=(n/24*100).toFixed(1)+"%";track.appendChild(f);row.appendChild(track);
+ }
+ return row;
+}
+function render(){
+ const p=params(),d=M.contrast(p.seed,p.budget,p.cohort,p.social,p.reverse),n=d.base,t=d.treatment;
+ const noVisit=d.pairs.filter(x=>x.selected_changed&&!x.treat_opened.includes("gold"));
+ $("bars").replaceChildren(...M.SHOPS.map((s,i)=>addBar(s.name,n.carts[i],t.carts[i])));
+ const title=$("summaryTitle");
+ if(d.changed_carts===16&&noVisit.length===5)title.textContent="The original ghost-store witness.";
+ else if(d.changed_carts===0)title.textContent="No changed final choices in this control.";
+ else title.textContent="The effect changes with the conditions.";
+ $("summaryBody").textContent="Golden Goblin Goods: "+n.traffic[2]+" → "+t.traffic[2]+" explicit store opens; "+n.carts[2]+" → "+t.carts[2]+" final choices. Across all competitors, "+d.changed_carts+" of 24 shoppers change their final selection. "+noVisit.length+" of those did not open the promoted store.";
+ $("counts").textContent="Action-path changes: "+d.changed_paths+" / 24 · HHI of all opens: "+n.hhi.toFixed(4)+" → "+t.hhi.toFixed(4)+".";
+ $("controlNote").textContent="Seed 72 · "+p.budget+" store opens · "+(p.social?"feedback visible":"no feedback")+" · "+(p.reverse?"reverse":"original")+" arrival order · "+(p.cohort==="mixed"?"mixed":"homogeneous")+" scripted roster.";
+ const target=$("rows");target.replaceChildren();
+ const changed=d.pairs.filter(x=>x.selected_changed);
+ if(!changed.length){
+  const row=document.createElement("tr"),cell=document.createElement("td");cell.colSpan=3;cell.textContent="None of the 24 scripted shoppers changed their final selection.";row.appendChild(cell);target.appendChild(row);
+ }
+ for(const x of changed){
+  const tr=document.createElement("tr");tr.className="changed";
+  const indirect=!x.treat_opened.includes("gold");if(indirect)tr.className+=" indirect";
+  const cells=[document.createElement("td"),document.createElement("td"),document.createElement("td")];
+  cells[0].textContent="G"+String(x.id).padStart(2,"0")+" · "+x.type;
+  if(indirect){const b=document.createElement("span");b.className="indirectBadge";b.textContent="Never opened promoted shop";cells[0].appendChild(b);}
+  const a=document.createElement("code"),b=document.createElement("code");
+  a.textContent=x.base_opened.map(lookup).join(" → ")+" ⇢ "+lookup(x.base_selected);
+  b.textContent=x.treat_opened.map(lookup).join(" → ")+" ⇢ "+lookup(x.treat_selected);
+  cells[1].appendChild(a);cells[2].appendChild(b);tr.append(...cells);target.appendChild(tr);
+ }
+}
+for(const name of ["budget","roster","social","reverse"])$(name).addEventListener("change",render);
+$("reset").addEventListener("click",()=>{$("budget").value="2";$("roster").value="mixed";$("social").checked=true;$("reverse").checked=false;render();});
+render();
+})();
+</script>
+</body></html>

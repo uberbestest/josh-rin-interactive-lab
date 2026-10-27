@@ -8,6 +8,12 @@
 
 [▶ Run the paired interactive experiment](index.html) · [Methods and limits](method.html) · [Full 2,048-case sweep](results/scripted-sweep.json) · [Summary receipt](results/summary.json)
 
+## Follow-up research note: The Shop That Sold Nothing (October 26)
+
+[Replay the ghost seller case](notes/ghost-seller.html) · [Download the derived witness and selection accounting](notes/ghost-seller-record.json) · [Run the follow-up regression checks](notes/ghost-seller.test.cjs)
+
+A **post-hoc** sweep of the existing 2,048 paired scripted scenarios found an extreme case: with seed 72, two opens per shopper, mixed policies and visible prior visits, Golden Goblin Goods gained 11 opens but remained at zero final selections. **Sixteen** shoppers changed which other store got their cart; **five** made those changes without opening the promoted shop. Disabling popularity feedback reduced the sixteen changed choices to four and the five indirect changes to zero. Full six-store browsing removed all final-choice changes in this toy. The case was chosen **after** inspecting the sweep; it is not a new model-agent experiment, preregistered test or estimate of real-world influence.
+
 ## What you can do
 
 Six fictitious shops are listed in two matched simulated worlds. Each world receives **24 scripted shopper policies** (four each of six profiles by default): quality seeker, bargain hunter, evidence-sensitive customer, wanderer, crowd follower, and promotional-copy follower. No living participant or language model made a shopping decision.
