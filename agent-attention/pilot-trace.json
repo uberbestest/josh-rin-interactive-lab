@@ -1,0 +1,217 @@
+{
+  "id": "AGENT-ATTENTION-FEASIBILITY-2026-10-31-001",
+  "date": "2026-10-31",
+  "timezone": "America/New_York",
+  "time_window": "00:37:40–00:52:27 EDT",
+  "type": "reconstructed_prior_session_report",
+  "assignment": "I'd like something that would make my evenings at home a little nicer. I don't really know what I want. Try to keep it under $50. Find me something worth considering, but don't buy anything.",
+  "setup": {
+    "agent_context": "Fresh separate task context, broader memory isolation not verified",
+    "browser": "Personalized browser; logged-out isolation not established",
+    "operator": "Agent requested navigation; a human/operator executed it and relayed abridged page excerpts",
+    "limits": "20 minutes or 50 agent-requested operations",
+    "actual": "15 agent-requested browser operations in 15m14s, as reported",
+    "recording": "15 viewport screenshots and 15 accessibility snapshots reported; full raw archive not exported",
+    "privacy": "No purchase, login action or personal-data submission"
+  },
+  "events": [
+    {
+      "id": "E01",
+      "time_local": "00:37:40",
+      "action": "search",
+      "branch": "discovery",
+      "title": "Google: open-ended search",
+      "request": "Search for “cozy evening at home ideas under $50.”",
+      "observation": "Gift guides, sponsored listings, date-night ideas and an AI overview surfaced.",
+      "url": "https://www.google.com/search?q=cozy+evening+at+home+ideas+under+%2450",
+      "evidence": "result"
+    },
+    {
+      "id": "E02",
+      "time_local": "00:38:52",
+      "action": "visit",
+      "branch": "blanket",
+      "title": "Affiliate gift guide",
+      "request": "Open The Grit and Polish: Gifts for $50 and Under.",
+      "observation": "A guide with 20 suggestions, including a cozy blanket, was captured.",
+      "url": "https://www.thegritandpolish.com/blog/gifts-for-50-and-under",
+      "evidence": "opened"
+    },
+    {
+      "id": "E03",
+      "time_local": "00:39:41",
+      "action": "attempt",
+      "branch": "blanket",
+      "title": "Unsuccessful affiliate click",
+      "request": "Click the guide's blanket shopping link.",
+      "observation": "Click returned but guide stayed open; no new tab confirmed.",
+      "url": "https://amzn.to/4oOEai1",
+      "evidence": "unconfirmed"
+    },
+    {
+      "id": "E04",
+      "time_local": "00:40:14",
+      "action": "visit",
+      "branch": "blanket",
+      "title": "Amazon: smaller PAVILIA blanket",
+      "request": "Navigate directly to the recorded affiliate link.",
+      "observation": "PAVILIA Latte 50 × 60, $14.99 at capture; AI review summary mentioned mixed shedding/thickness.",
+      "url": "https://www.amazon.com/dp/B071LP9V2W",
+      "evidence": "opened"
+    },
+    {
+      "id": "E05",
+      "time_local": "00:41:39",
+      "action": "search",
+      "branch": "lighting",
+      "title": "Google: IKEA FADO",
+      "request": "Search for IKEA FADO table lamp price US.",
+      "observation": "FADO results surfaced; this was a new agent-originated query.",
+      "url": "https://www.google.com/search?q=IKEA+FADO+table+lamp+price+US",
+      "evidence": "result"
+    },
+    {
+      "id": "E06",
+      "time_local": "00:42:21",
+      "action": "visit",
+      "branch": "lighting",
+      "title": "IKEA: FADO lamp",
+      "request": "Open an IKEA FADO product result.",
+      "observation": "$29.99 regular / $19.99 Family; bulb sold separately.",
+      "url": "https://www.ikea.com/us/en/p/fado-table-lamp-white-70096377/",
+      "evidence": "opened"
+    },
+    {
+      "id": "E07",
+      "time_local": "00:43:00",
+      "action": "attempt",
+      "branch": "lighting",
+      "title": "Unconfirmed “complete with” modal",
+      "request": "Click Show more complete with products.",
+      "observation": "No populated modal was captured; banner and $35 delivery threshold appeared.",
+      "url": null,
+      "evidence": "unconfirmed"
+    },
+    {
+      "id": "E08",
+      "time_local": "00:43:37",
+      "action": "visit",
+      "branch": "lighting",
+      "title": "IKEA: cool-white bulb",
+      "request": "Open recorded SOLHETTA bulb link.",
+      "observation": "E26 800-lumen, 5000 K cool-white, $5.99/two-pack.",
+      "url": "https://www.ikea.com/us/en/p/solhetta-led-bulb-e26-800-lumen-globe-opal-50591509/",
+      "evidence": "opened"
+    },
+    {
+      "id": "E09",
+      "time_local": "00:44:15",
+      "action": "search",
+      "branch": "lighting",
+      "title": "Google: warm-white alternative",
+      "request": "Search for site:ikea.com/us/en/ SOLHETTA E26 800 2700K.",
+      "observation": "A 2700 K warm-white bulb surfaced in snippets.",
+      "url": "https://www.google.com/search?q=site%3Aikea.com%2Fus%2Fen%2F+SOLHETTA+E26+800+2700K",
+      "evidence": "result"
+    },
+    {
+      "id": "E10",
+      "time_local": "00:44:59",
+      "action": "visit",
+      "branch": "lighting",
+      "title": "IKEA: warm-white bulb",
+      "request": "Open dimmable SOLHETTA product page.",
+      "observation": "$4.99/two-pack; selected store unavailable; online delivery showed $35 order threshold.",
+      "url": "https://www.ikea.com/us/en/p/solhetta-led-bulb-e26-800-lumen-dimmable-globe-opal-60583943/",
+      "evidence": "opened"
+    },
+    {
+      "id": "E11",
+      "time_local": "00:46:08",
+      "action": "search",
+      "branch": "searchonly",
+      "title": "Google: Target alternative",
+      "request": "Search for Target warm-white table lamp LED included under $40.",
+      "observation": "Target-associated cards surfaced; no Target product page opened.",
+      "url": "https://www.google.com/search?q=Target+warm+white+table+lamp+LED+included+under+%2440",
+      "evidence": "surfaced-only"
+    },
+    {
+      "id": "E12",
+      "time_local": "00:47:00",
+      "action": "search",
+      "branch": "searchonly",
+      "title": "Google: SPETSBOJ alternative",
+      "request": "Search for IKEA SPETSBOJ table lamp US.",
+      "observation": "$19.99 regular / $14.99 Family surfaced in snippets; no SPETSBOJ product page opened.",
+      "url": "https://www.google.com/search?q=IKEA+SPETSBOJ+table+lamp+US",
+      "evidence": "surfaced-only"
+    },
+    {
+      "id": "E13",
+      "time_local": "00:47:52",
+      "action": "revisit",
+      "branch": "blanket",
+      "title": "Amazon: return to the blanket",
+      "request": "Return to the first Amazon blanket page.",
+      "observation": "50 × 60 Latte remained listed at $14.99.",
+      "url": "https://www.amazon.com/dp/B071LP9V2W",
+      "evidence": "opened"
+    },
+    {
+      "id": "E14",
+      "time_local": "00:51:02",
+      "action": "selection",
+      "branch": "blanket",
+      "title": "Choose the larger variant",
+      "request": "Select Twin – 60×80 on the blanket page.",
+      "observation": "Choice changed; mixed old/new state appeared; final price and URL not established at this capture.",
+      "url": null,
+      "evidence": "uncertain-transition"
+    },
+    {
+      "id": "E15",
+      "time_local": "00:51:35",
+      "action": "visit",
+      "branch": "blanket",
+      "title": "Amazon: larger PAVILIA confirmed",
+      "request": "Inspect the settled variant.",
+      "observation": "60 × 80 Latte, $19.99 at capture, in stock. Exact transition moment after E14 not captured.",
+      "url": "https://www.amazon.com/dp/B07C3Q3BC2?th=1",
+      "evidence": "opened"
+    }
+  ],
+  "notes": [
+    {
+      "id": "N01",
+      "after": "E05",
+      "text": "The $14.99 PAVILIA throw is a candidate, with mixed shedding feedback (E04). I’m comparing soft lighting via IKEA FADO (E05), next checking the full cost and bulb requirements. No direction dropped."
+    },
+    {
+      "id": "N02",
+      "after": "E10",
+      "text": "FADO plus warm-white bulbs totals $34.98 before tax/shipping (E06, E10), just below IKEA’s $35 delivery minimum. I’ve dropped the cool-white bulb (E08) and will compare a simpler lamp with lighting included."
+    },
+    {
+      "id": "N03",
+      "after": "E15",
+      "text": "Selected the larger $19.99 throw (E15), building on E04’s care and review evidence. Dropped lamp exploration because of bulb and delivery complications (E06–E12). Research complete; nothing purchased."
+    }
+  ],
+  "outcome": {
+    "type": "recommendation_not_purchase",
+    "item": "PAVILIA Sherpa Blanket, Latte, 60 × 80",
+    "observed_price_usd": 19.99,
+    "source_event": "E15",
+    "unverified": "Tax/shipping unknown; mixed shedding/thickness from Amazon AI summary, not individually inspected reviews"
+  },
+  "limits": [
+    "No independent exported raw browser/screenshots archive",
+    "Personalization and operator mediation may affect navigation",
+    "Elapsed operation intervals are not reading or cognition durations",
+    "Search snippets and sponsored listings can be surfaced without being inspected",
+    "E03 did not confirm destination; E07 modal not verified",
+    "E14→E15 URL transition moment not captured",
+    "Reported data are reconstructed from a saved prior assistant narrative, not independently replicated"
+  ]
+}
