@@ -8,6 +8,7 @@
 
 | Published | Instrument | What visitors can try | Evidence status |
 | --- | --- | --- | --- |
+| 2026-10-31 | [The Two-Candy Revolt](experiments/two-candy-revolt/index.html) | Read the TL;DR, replay recorded learning, compare refusal and enforcement, and test a hypothetical contract. | Executed synthetic pilot: 24 bargaining cells x 64 seeds; complete records; 58/64 unenforced veto policies admit a profitable proposer deviation. Independent review pending. |
 | 2026-10-31 | [The Porch That Ate Halloween](experiments/halloween-porches/index.html) | Change the reward signal across ten goblins and six porches; check crowding, payoffs, stable equilibria, and rotated roles. | 3,003 finite allocations exhaustively verified; earlier learning averages reported but **not reproduced**; zero external model-agent runs. |
 | 2026-10-27 | [The Refactor That Silenced the Bell](experiments/silent-bell/index.html) | Preserve security controls through a benign refactor, then fool the gate with an unprobed trigger or forged observer. | 21 synthetic fixtures; 512 finite states; **two deliberate false approvals**; zero external model-agent runs. |
 | 2026-10-26 | [Where Do the Goblins Go Shopping?](experiments/goblin-shopping/index.html) | Change promotion, social feedback, browse budget and arrival order across 24 scripted shoppers and six fictional stores. | 2,048 paired deterministic scenarios; **zero independent model-agent runs**. |
@@ -19,6 +20,10 @@
 | 2026-10-26 | [Keep the Gaps](experiments/keep-the-gaps/index.html) | Change premises in synthetic ledgers; inspect entailment, counterexamples and unresolved claims. | Finite packaged candidate; not independently validated. |
 
 Every exhibit has a browser instrument, an individual README with provenance and explicit limitations, and a methods page on the site. The homepage links to every experiment's own methods page.
+
+## Halloween 2026: The Two-Candy Revolt
+
+[The newest exhibit](experiments/two-candy-revolt/index.html) opens with a plain-language TL;DR and a working recorded-learning replay. It separates production, distribution and incentive stability. The [full methods](experiments/two-candy-revolt/method.html) retain the negative shock result and distinguish supplied mechanisms from learned choices. Source, complete training traces and a versioned research ZIP are linked from its downloads section. No external model-agent run or independent Rinball review is claimed.
 
 ## Halloween 2026: The Porch That Ate Halloween
 

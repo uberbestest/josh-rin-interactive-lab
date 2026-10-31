@@ -1,0 +1,17 @@
+{
+  "seed_ids": [
+    2056,
+    2057
+  ],
+  "cells": 24,
+  "rounds_per_cell_seed": 12000,
+  "separate_rerun_matches": {
+    "action": true,
+    "accept": true,
+    "proposer": true,
+    "receiver": true,
+    "final_qp": true,
+    "final_qr": true
+  },
+  "note": "Author-run reproducibility check in a new array batch, not independent external review."
+}

@@ -1,0 +1,33 @@
+{
+  "study_id": "CANDY-REVOLT-2026-10-31-001",
+  "science_version": "0.1.0",
+  "presentation_version": "0.1.2",
+  "status": "PACKAGED_EXECUTED_SYNTHETIC_PILOT",
+  "built_at_utc": "2026-10-31T19:39:19.352599+00:00",
+  "independent_review": "Pending. A GitHub queue ticket is not a completed Rinball review.",
+  "source_protocol_sha256": "a8dff360c7dc937cfb8bc829bc0417ec04c79134fc998a25c068137fe12b44b0",
+  "simulation_source_sha256": "8d3e9dbc789db19c67a4276b7fc38fd2b646142bc375293c99fcabc13e66763a",
+  "scientific_payload_sha256": "a261c44a91d001028e9117719d664bc7377cc7d0c46f270460b665c40a56265a",
+  "data_verification": "results/release-data-verification.json",
+  "replay_records": 184320,
+  "original_science_preserved": true,
+  "replay_default": "Recorded learning / Early / seed 2000",
+  "changes": [
+    "TL;DR at the top",
+    "repaired replay incorporated",
+    "lab homepage shortcut and newest exhibit card",
+    "methods and full evidence downloads"
+  ],
+  "limits": [
+    "Synthetic tabular learners, not LLMs",
+    "Two bargaining agents and eight fixed bystanders",
+    "Mechanisms supplied, not invented by agents",
+    "Frozen-partner incentive probe, not a mutual-adaptation rollout"
+  ],
+  "source_build": "Results may be deterministically regenerated in the release builder; each scientific array is checked against original content fingerprints. Runtime timestamps are new and raw ZIP-container differences are reported, not hidden.",
+  "api_credits_spent": 0,
+  "release_browser_tests": "results/public-browser-tests.json",
+  "release_browser_status": "PASS",
+  "github_build_run": "https://github.com/uberbestest/josh-rin-interactive-lab/actions/runs/41235148623",
+  "packaging_note": "ZIP timestamps earlier than 1980 are clamped; scientific contents are unchanged."
+}

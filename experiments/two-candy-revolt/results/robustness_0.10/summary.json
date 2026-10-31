@@ -1,0 +1,2914 @@
+{
+  "alpha": 0.1,
+  "rounds": 12000,
+  "seed_ids": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010,
+    3011,
+    3012,
+    3013,
+    3014,
+    3015,
+    3016,
+    3017,
+    3018,
+    3019,
+    3020,
+    3021,
+    3022,
+    3023,
+    3024,
+    3025,
+    3026,
+    3027,
+    3028,
+    3029,
+    3030,
+    3031
+  ],
+  "cells": [
+    {
+      "institution": "no_refusal",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 0
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 3
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 0
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 3
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 0
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 3
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 0
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 3
+    },
+    {
+      "institution": "exit_only",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 0
+    },
+    {
+      "institution": "exit_only",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 3
+    },
+    {
+      "institution": "exit_only",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 0
+    },
+    {
+      "institution": "exit_only",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 3
+    },
+    {
+      "institution": "exit_only",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 0
+    },
+    {
+      "institution": "exit_only",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 3
+    },
+    {
+      "institution": "exit_only",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 0
+    },
+    {
+      "institution": "exit_only",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 3
+    },
+    {
+      "institution": "veto",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 0
+    },
+    {
+      "institution": "veto",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 3
+    },
+    {
+      "institution": "veto",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 0
+    },
+    {
+      "institution": "veto",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 3
+    },
+    {
+      "institution": "veto",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 0
+    },
+    {
+      "institution": "veto",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 3
+    },
+    {
+      "institution": "veto",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 0
+    },
+    {
+      "institution": "veto",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 3
+    }
+  ],
+  "metric_names": [
+    "proposer_bag",
+    "receiver_bag",
+    "neighborhood_candy",
+    "outside_candy",
+    "total_including_outside",
+    "offer",
+    "delivered_transfer",
+    "refusal_rate",
+    "renege_rate_on_acceptance",
+    "per_round_gini",
+    "gini_of_mean_bags",
+    "best_response_gain_proposer",
+    "best_response_gain_receiver"
+  ],
+  "summary": [
+    {
+      "institution": "no_refusal",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 2.0,
+          "ci95": [
+            2.0,
+            2.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 2.0,
+          "ci95": [
+            2.0,
+            2.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 3.8671875,
+          "ci95": [
+            3.3384765625,
+            4.3828125
+          ],
+          "sd": 1.4912918335742689
+        },
+        "receiver_bag": {
+          "mean": 6.1328125,
+          "ci95": [
+            5.617187500000001,
+            6.6615234375000005
+          ],
+          "sd": 1.4912918335742689
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 4.1328125,
+          "ci95": [
+            3.6171875,
+            4.6615234375
+          ],
+          "sd": 1.4912918335742689
+        },
+        "delivered_transfer": {
+          "mean": 4.1328125,
+          "ci95": [
+            3.6171875,
+            4.6615234375
+          ],
+          "sd": 1.4912918335742689
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.19335755813953487,
+          "ci95": [
+            0.18088662790697677,
+            0.20603306686046513
+          ],
+          "sd": 0.036536726074925155
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.16115552325581395,
+          "ci95": [
+            0.14956304505813947,
+            0.17525526889534881
+          ],
+          "sd": 0.03747311227486931
+        },
+        "best_response_gain_proposer": {
+          "mean": 2.7755575615628914e-16,
+          "ci95": [
+            1.3877787807814457e-16,
+            4.163336342344337e-16
+          ],
+          "sd": 4.182690414998946e-16
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 3.8671875,
+          "ci95": [
+            3.3384765625,
+            4.3828125
+          ],
+          "sd": 1.4912918335742689
+        },
+        "receiver_bag": {
+          "mean": 6.1328125,
+          "ci95": [
+            5.617187500000001,
+            6.6615234375000005
+          ],
+          "sd": 1.4912918335742689
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 4.1328125,
+          "ci95": [
+            3.6171875,
+            4.6615234375
+          ],
+          "sd": 1.4912918335742689
+        },
+        "delivered_transfer": {
+          "mean": 4.1328125,
+          "ci95": [
+            3.6171875,
+            4.6615234375
+          ],
+          "sd": 1.4912918335742689
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.19335755813953487,
+          "ci95": [
+            0.18088662790697677,
+            0.20603306686046513
+          ],
+          "sd": 0.036536726074925155
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.16115552325581395,
+          "ci95": [
+            0.14956304505813947,
+            0.17525526889534881
+          ],
+          "sd": 0.03747311227486931
+        },
+        "best_response_gain_proposer": {
+          "mean": 2.7755575615628914e-16,
+          "ci95": [
+            1.3877787807814457e-16,
+            4.163336342344337e-16
+          ],
+          "sd": 4.182690414998946e-16
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 2.0,
+          "ci95": [
+            2.0,
+            2.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.15625,
+          "ci95": [
+            2.21875,
+            4.15625
+          ],
+          "sd": 2.841051316087966
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.8125,
+          "ci95": [
+            0.6875,
+            0.9375
+          ],
+          "sd": 0.39655776945626603
+        },
+        "per_round_gini": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 2.0,
+          "ci95": [
+            2.0,
+            2.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.15625,
+          "ci95": [
+            2.21875,
+            4.15625
+          ],
+          "sd": 2.841051316087966
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.8125,
+          "ci95": [
+            0.6875,
+            0.9375
+          ],
+          "sd": 0.39655776945626603
+        },
+        "per_round_gini": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 6.71875,
+          "ci95": [
+            5.9375,
+            7.40625
+          ],
+          "sd": 2.1587686902640857
+        },
+        "receiver_bag": {
+          "mean": 3.28125,
+          "ci95": [
+            2.59375,
+            4.0625
+          ],
+          "sd": 2.1587686902640857
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.65625,
+          "ci95": [
+            2.8125,
+            4.53125
+          ],
+          "sd": 2.535036743387082
+        },
+        "delivered_transfer": {
+          "mean": 1.28125,
+          "ci95": [
+            0.59375,
+            2.0625
+          ],
+          "sd": 2.1587686902640857
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.59375,
+          "ci95": [
+            0.4375,
+            0.75
+          ],
+          "sd": 0.49899091723584604
+        },
+        "per_round_gini": {
+          "mean": 0.19636627906976745,
+          "ci95": [
+            0.18415697674418613,
+            0.20813953488372106
+          ],
+          "sd": 0.03514995925634743
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.19636627906976745,
+          "ci95": [
+            0.18415697674418613,
+            0.20813953488372106
+          ],
+          "sd": 0.03514995925634743
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "no_refusal",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 6.71875,
+          "ci95": [
+            5.9375,
+            7.40625
+          ],
+          "sd": 2.1587686902640857
+        },
+        "receiver_bag": {
+          "mean": 3.28125,
+          "ci95": [
+            2.59375,
+            4.0625
+          ],
+          "sd": 2.1587686902640857
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.65625,
+          "ci95": [
+            2.8125,
+            4.53125
+          ],
+          "sd": 2.535036743387082
+        },
+        "delivered_transfer": {
+          "mean": 1.28125,
+          "ci95": [
+            0.59375,
+            2.0625
+          ],
+          "sd": 2.1587686902640857
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.59375,
+          "ci95": [
+            0.4375,
+            0.75
+          ],
+          "sd": 0.49899091723584604
+        },
+        "per_round_gini": {
+          "mean": 0.19636627906976745,
+          "ci95": [
+            0.18415697674418613,
+            0.20813953488372106
+          ],
+          "sd": 0.03514995925634743
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.19636627906976745,
+          "ci95": [
+            0.18415697674418613,
+            0.20813953488372106
+          ],
+          "sd": 0.03514995925634743
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "exit_only",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 2.0,
+          "ci95": [
+            2.0,
+            2.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "exit_only",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 3.0,
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 41.0,
+          "ci95": [
+            41.0,
+            41.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 3.0,
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 44.0,
+          "ci95": [
+            44.0,
+            44.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.18636363636363637,
+          "ci95": [
+            0.18636363636363645,
+            0.18636363636363645
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.18636363636363637,
+          "ci95": [
+            0.18636363636363645,
+            0.18636363636363645
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "exit_only",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 3.46875,
+          "ci95": [
+            2.5625,
+            4.40625
+          ],
+          "sd": 2.6878985075885535
+        },
+        "receiver_bag": {
+          "mean": 6.53125,
+          "ci95": [
+            5.59375,
+            7.4375
+          ],
+          "sd": 2.6878985075885535
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 4.53125,
+          "ci95": [
+            3.59375,
+            5.4375
+          ],
+          "sd": 2.6878985075885535
+        },
+        "delivered_transfer": {
+          "mean": 4.53125,
+          "ci95": [
+            3.59375,
+            5.4375
+          ],
+          "sd": 2.6878985075885535
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.20247093023255813,
+          "ci95": [
+            0.18284883720930237,
+            0.2225399709302327
+          ],
+          "sd": 0.0583026593794859
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.20247093023255813,
+          "ci95": [
+            0.18284883720930237,
+            0.2225399709302327
+          ],
+          "sd": 0.0583026593794859
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "exit_only",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 3.0,
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 41.0,
+          "ci95": [
+            41.0,
+            41.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 3.0,
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 44.0,
+          "ci95": [
+            44.0,
+            44.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 4.46875,
+          "ci95": [
+            3.5625,
+            5.3125
+          ],
+          "sd": 2.577625501465729
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.18636363636363637,
+          "ci95": [
+            0.18636363636363645,
+            0.18636363636363645
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.18636363636363637,
+          "ci95": [
+            0.18636363636363645,
+            0.18636363636363645
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "exit_only",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 2.0,
+          "ci95": [
+            2.0,
+            2.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.125,
+          "ci95": [
+            2.1875,
+            4.125
+          ],
+          "sd": 2.8820915344421705
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.78125,
+          "ci95": [
+            0.625,
+            0.90625
+          ],
+          "sd": 0.42001344064515445
+        },
+        "per_round_gini": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "exit_only",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 3.0,
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 41.0,
+          "ci95": [
+            41.0,
+            41.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 3.0,
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 44.0,
+          "ci95": [
+            44.0,
+            44.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.15625,
+          "ci95": [
+            2.1875,
+            4.1875
+          ],
+          "sd": 2.9304780519401996
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.18636363636363637,
+          "ci95": [
+            0.18636363636363645,
+            0.18636363636363645
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.18636363636363637,
+          "ci95": [
+            0.18636363636363645,
+            0.18636363636363645
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "exit_only",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 6.0,
+          "ci95": [
+            4.96875,
+            6.90625
+          ],
+          "sd": 2.8284271247461903
+        },
+        "receiver_bag": {
+          "mean": 4.0,
+          "ci95": [
+            3.09375,
+            5.03125
+          ],
+          "sd": 2.8284271247461903
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 4.28125,
+          "ci95": [
+            3.3117187500000003,
+            5.219531250000003
+          ],
+          "sd": 2.8310988975558478
+        },
+        "delivered_transfer": {
+          "mean": 2.0,
+          "ci95": [
+            1.09375,
+            3.03125
+          ],
+          "sd": 2.8284271247461903
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.4375,
+          "ci95": [
+            0.25,
+            0.59375
+          ],
+          "sd": 0.5040161287741853
+        },
+        "per_round_gini": {
+          "mean": 0.20726744186046514,
+          "ci95": [
+            0.19767441860465126,
+            0.21642441860465125
+          ],
+          "sd": 0.02732418473390368
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.20726744186046514,
+          "ci95": [
+            0.19767441860465126,
+            0.21642441860465125
+          ],
+          "sd": 0.02732418473390368
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "exit_only",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 3.0,
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 41.0,
+          "ci95": [
+            41.0,
+            41.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 3.0,
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 44.0,
+          "ci95": [
+            44.0,
+            44.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 4.03125,
+          "ci95": [
+            3.28125,
+            4.78125
+          ],
+          "sd": 2.250224003186378
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.18636363636363637,
+          "ci95": [
+            0.18636363636363645,
+            0.18636363636363645
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.18636363636363637,
+          "ci95": [
+            0.18636363636363645,
+            0.18636363636363645
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "veto",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 7.9375,
+          "ci95": [
+            7.84375,
+            8.0
+          ],
+          "sd": 0.24593468841898236
+        },
+        "receiver_bag": {
+          "mean": 2.0625,
+          "ci95": [
+            2.0,
+            2.15625
+          ],
+          "sd": 0.24593468841898236
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 0.0625,
+          "ci95": [
+            0.0,
+            0.15625
+          ],
+          "sd": 0.24593468841898236
+        },
+        "delivered_transfer": {
+          "mean": 0.0625,
+          "ci95": [
+            0.0,
+            0.15625
+          ],
+          "sd": 0.24593468841898236
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.20901162790697675,
+          "ci95": [
+            0.20508720930232568,
+            0.21162790697674433
+          ],
+          "sd": 0.010294940445445776
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.20901162790697675,
+          "ci95": [
+            0.20508720930232568,
+            0.21162790697674433
+          ],
+          "sd": 0.010294940445445776
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0625,
+          "ci95": [
+            0.0,
+            0.15625
+          ],
+          "sd": 0.24593468841898236
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "veto",
+      "contract": "escrow",
+      "objective": "personal",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 6.0,
+          "ci95": [
+            6.0,
+            6.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 4.0,
+          "ci95": [
+            4.0,
+            4.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 2.0,
+          "ci95": [
+            2.0,
+            2.0
+          ],
+          "sd": 0.0
+        },
+        "delivered_transfer": {
+          "mean": 2.0,
+          "ci95": [
+            2.0,
+            2.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.14186046511627906,
+          "ci95": [
+            0.14186046511627912,
+            0.14186046511627912
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.14186046511627906,
+          "ci95": [
+            0.14186046511627912,
+            0.14186046511627912
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "veto",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 4.25,
+          "ci95": [
+            3.34375,
+            5.15625
+          ],
+          "sd": 2.6518405051051106
+        },
+        "receiver_bag": {
+          "mean": 5.75,
+          "ci95": [
+            4.84375,
+            6.65625
+          ],
+          "sd": 2.6518405051051106
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.75,
+          "ci95": [
+            2.84375,
+            4.65625
+          ],
+          "sd": 2.6518405051051106
+        },
+        "delivered_transfer": {
+          "mean": 3.75,
+          "ci95": [
+            2.84375,
+            4.65625
+          ],
+          "sd": 2.6518405051051106
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.19026162790697673,
+          "ci95": [
+            0.17324491279069765,
+            0.208139534883721
+          ],
+          "sd": 0.05148042132087768
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.19026162790697673,
+          "ci95": [
+            0.17324491279069765,
+            0.208139534883721
+          ],
+          "sd": 0.05148042132087768
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "veto",
+      "contract": "escrow",
+      "objective": "shared",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 4.46875,
+          "ci95": [
+            3.53125,
+            5.375
+          ],
+          "sd": 2.6637879286895676
+        },
+        "receiver_bag": {
+          "mean": 5.53125,
+          "ci95": [
+            4.625,
+            6.46875
+          ],
+          "sd": 2.6637879286895676
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.53125,
+          "ci95": [
+            2.625,
+            4.46875
+          ],
+          "sd": 2.6637879286895676
+        },
+        "delivered_transfer": {
+          "mean": 3.53125,
+          "ci95": [
+            2.625,
+            4.46875
+          ],
+          "sd": 2.6637879286895676
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.19069767441860463,
+          "ci95": [
+            0.17543604651162797,
+            0.20639534883720934
+          ],
+          "sd": 0.046346292787869364
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.19069767441860463,
+          "ci95": [
+            0.17543604651162797,
+            0.20639534883720934
+          ],
+          "sd": 0.046346292787869364
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "veto",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 8.0,
+          "ci95": [
+            8.0,
+            8.0
+          ],
+          "sd": 0.0
+        },
+        "receiver_bag": {
+          "mean": 2.0,
+          "ci95": [
+            2.0,
+            2.0
+          ],
+          "sd": 0.0
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.625,
+          "ci95": [
+            2.59375,
+            4.625781250000003
+          ],
+          "sd": 2.981123408078496
+        },
+        "delivered_transfer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.75,
+          "ci95": [
+            0.59375,
+            0.875
+          ],
+          "sd": 0.43994134506405985
+        },
+        "per_round_gini": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.2116279069767442,
+          "ci95": [
+            0.21162790697674433,
+            0.21162790697674433
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "veto",
+      "contract": "unenforced",
+      "objective": "personal",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 3.375,
+          "ci95": [
+            2.71875,
+            4.0
+          ],
+          "sd": 1.862187406112465
+        },
+        "receiver_bag": {
+          "mean": 5.75,
+          "ci95": [
+            5.1875,
+            6.3125
+          ],
+          "sd": 1.7038855027411945
+        },
+        "neighborhood_candy": {
+          "mean": 41.75,
+          "ci95": [
+            40.5,
+            42.6875
+          ],
+          "sd": 3.3601075251612356
+        },
+        "outside_candy": {
+          "mean": 0.375,
+          "ci95": [
+            0.09375,
+            0.75
+          ],
+          "sd": 1.0080322575483707
+        },
+        "total_including_outside": {
+          "mean": 42.125,
+          "ci95": [
+            41.25,
+            42.78125
+          ],
+          "sd": 2.352075267612865
+        },
+        "offer": {
+          "mean": 3.96875,
+          "ci95": [
+            3.46875,
+            4.4375
+          ],
+          "sd": 1.4697898686766473
+        },
+        "delivered_transfer": {
+          "mean": 3.625,
+          "ci95": [
+            2.96875,
+            4.25
+          ],
+          "sd": 1.930234817739257
+        },
+        "refusal_rate": {
+          "mean": 0.125,
+          "ci95": [
+            0.03125,
+            0.25
+          ],
+          "sd": 0.3360107525161235
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "per_round_gini": {
+          "mean": 0.16873385012919895,
+          "ci95": [
+            0.1563169210271318,
+            0.18238856589147293
+          ],
+          "sd": 0.03946328684645363
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.16873385012919895,
+          "ci95": [
+            0.1563169210271318,
+            0.18238856589147293
+          ],
+          "sd": 0.03946328684645363
+        },
+        "best_response_gain_proposer": {
+          "mean": 3.875,
+          "ci95": [
+            3.21875,
+            4.500781250000003
+          ],
+          "sd": 1.963374317260318
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.21875,
+          "ci95": [
+            0.0,
+            0.5
+          ],
+          "sd": 0.7063936122898273
+        }
+      }
+    },
+    {
+      "institution": "veto",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 0,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 5.96875,
+          "ci95": [
+            4.875,
+            6.96875
+          ],
+          "sd": 3.0319202368434177
+        },
+        "receiver_bag": {
+          "mean": 4.03125,
+          "ci95": [
+            3.03125,
+            5.125
+          ],
+          "sd": 3.0319202368434177
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.90625,
+          "ci95": [
+            3.0304687500000003,
+            4.8125
+          ],
+          "sd": 2.6071783660229433
+        },
+        "delivered_transfer": {
+          "mean": 2.03125,
+          "ci95": [
+            1.03125,
+            3.125
+          ],
+          "sd": 3.0319202368434177
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.5,
+          "ci95": [
+            0.3125,
+            0.65625
+          ],
+          "sd": 0.508000508000762
+        },
+        "per_round_gini": {
+          "mean": 0.2111918604651163,
+          "ci95": [
+            0.19636627906976756,
+            0.22645348837209311
+          ],
+          "sd": 0.04289558518935739
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.2111918604651163,
+          "ci95": [
+            0.19636627906976756,
+            0.22645348837209311
+          ],
+          "sd": 0.04289558518935739
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "institution": "veto",
+      "contract": "unenforced",
+      "objective": "shared",
+      "outside": 3,
+      "seed_count": 32,
+      "metrics": {
+        "proposer_bag": {
+          "mean": 5.875,
+          "ci95": [
+            4.780468750000001,
+            6.875
+          ],
+          "sd": 3.00268696874284
+        },
+        "receiver_bag": {
+          "mean": 4.125,
+          "ci95": [
+            3.125,
+            5.219531250000003
+          ],
+          "sd": 3.00268696874284
+        },
+        "neighborhood_candy": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "outside_candy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "total_including_outside": {
+          "mean": 43.0,
+          "ci95": [
+            43.0,
+            43.0
+          ],
+          "sd": 0.0
+        },
+        "offer": {
+          "mean": 3.46875,
+          "ci95": [
+            2.40625,
+            4.53125
+          ],
+          "sd": 3.0794257424438416
+        },
+        "delivered_transfer": {
+          "mean": 2.125,
+          "ci95": [
+            1.125,
+            3.219531250000003
+          ],
+          "sd": 3.00268696874284
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "renege_rate_on_acceptance": {
+          "mean": 0.3125,
+          "ci95": [
+            0.15625,
+            0.46875
+          ],
+          "sd": 0.47092907485988494
+        },
+        "per_round_gini": {
+          "mean": 0.20857558139534882,
+          "ci95": [
+            0.1937500000000001,
+            0.22383720930232567
+          ],
+          "sd": 0.04408697979607935
+        },
+        "gini_of_mean_bags": {
+          "mean": 0.20857558139534882,
+          "ci95": [
+            0.1937500000000001,
+            0.22383720930232567
+          ],
+          "sd": 0.04408697979607935
+        },
+        "best_response_gain_proposer": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        },
+        "best_response_gain_receiver": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "sd": 0.0
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 4.37
+}

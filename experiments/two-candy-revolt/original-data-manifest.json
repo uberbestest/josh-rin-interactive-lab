@@ -1,0 +1,717 @@
+{
+  "original_source_archive_sha256": "9208f2adff075ca179e0d9e7eaee810dddd78002962105188280c18ffd9754bf",
+  "files": {
+    "run_experiment.py": {
+      "sha256": "8d3e9dbc789db19c67a4276b7fc38fd2b646142bc375293c99fcabc13e66763a"
+    },
+    "audit_records.py": {
+      "sha256": "b669313875b6635e75c8136ab2a7484f93bb3055aa778837ba1516d4b31fdc0b"
+    },
+    "oracle_controls.py": {
+      "sha256": "b5414d7a3b09092f80c943506c9d2d036f92ee70e4a9acd13c41e70e0b356e9a"
+    },
+    "protocol.json": {
+      "sha256": "a8dff360c7dc937cfb8bc829bc0417ec04c79134fc998a25c068137fe12b44b0"
+    },
+    "protocol-freeze.json": {
+      "sha256": "91a72653f50848dde94ba50c5aa1e8cb83f68d35c8a96e5b188f1d002ccf0b1d"
+    },
+    "results/baseline/checkpoints.npz": {
+      "sha256": "bfba076638cdfd00e68b3b7d4faf45bdd1e3fcd71ec4c30c583b8d36bf60d5e9",
+      "arrays": {
+        "q": {
+          "shape": [
+            60,
+            256,
+            10,
+            6
+          ],
+          "dtype": "<f8",
+          "sha256": "21cf7e42388f3c787e6bec75b329231551f354803270e527437f0fce3cd3d786"
+        },
+        "rounds": {
+          "shape": [
+            60
+          ],
+          "dtype": "<i8",
+          "sha256": "e17543b3ff1cc480548ae2fa01c133314d45274aff22696b4e93309820432f14"
+        }
+      }
+    },
+    "results/baseline/evaluation_trace.npz": {
+      "sha256": "82d98ecd6ab9aa0902b200cd1aa9a7672ffa0d26a7a3d121fdefae828e5b3ae6",
+      "arrays": {
+        "action": {
+          "shape": [
+            2000,
+            256,
+            10
+          ],
+          "dtype": "<i8",
+          "sha256": "cbe684b5e9f36458e505d58825e07ed719302a7d74b4f4ccc6228a5da3a70bb0"
+        },
+        "actual_candy": {
+          "shape": [
+            2000,
+            256,
+            10
+          ],
+          "dtype": "|u1",
+          "sha256": "27471edbf1451d0b4d029983f4e043d8e694136fa6c886798a757cb0a97e66ca"
+        },
+        "seeds": {
+          "shape": [
+            64
+          ],
+          "dtype": "<i8",
+          "sha256": "6c9b1e00ce539e33d8cfa43e73a7aa0f83c1ec234a654b25e8d2cc697d616e88"
+        }
+      }
+    },
+    "results/baseline/policies.npz": {
+      "sha256": "79018c2650e90c117d4b272e94c547cc99c9f65526009e03ff98fc07bd7108b2",
+      "arrays": {
+        "q": {
+          "shape": [
+            256,
+            10,
+            6
+          ],
+          "dtype": "<f8",
+          "sha256": "17f3418c6863c57721677aef02cba98223b6ced22ea1a6b2848ffb191cf1b3d0"
+        },
+        "seeds": {
+          "shape": [
+            64
+          ],
+          "dtype": "<i8",
+          "sha256": "6c9b1e00ce539e33d8cfa43e73a7aa0f83c1ec234a654b25e8d2cc697d616e88"
+        }
+      }
+    },
+    "results/baseline/summary.json": {
+      "sha256": "162a0abe9e94a2b1e3aee7cb391bb5d1f679ab394b1d2786cb5391ec730d69fd",
+      "canonical_sha256": "bba22f26e79150e127ceccec15415c20901c0a6ae85244b05a55b7692be4c1c7"
+    },
+    "results/baseline/training_trace.npz": {
+      "sha256": "4f2698e6d679c794cf8a35e4a08cd39da04ac675edef4dbb10300410ee78f47f",
+      "arrays": {
+        "action": {
+          "shape": [
+            12000,
+            256,
+            10
+          ],
+          "dtype": "|u1",
+          "sha256": "a8289973a6da3f670d8efd76c2ea88bf0c67a1ca64b553603497b932cebb387b"
+        },
+        "actual_candy": {
+          "shape": [
+            12000,
+            256,
+            10
+          ],
+          "dtype": "|u1",
+          "sha256": "ffc60a76e71b742b6536576050668895425cfab146cb4bfff4565018b236736e"
+        },
+        "seeds": {
+          "shape": [
+            64
+          ],
+          "dtype": "<i8",
+          "sha256": "6c9b1e00ce539e33d8cfa43e73a7aa0f83c1ec234a654b25e8d2cc697d616e88"
+        },
+        "unscaled_reward": {
+          "shape": [
+            12000,
+            256,
+            10
+          ],
+          "dtype": "|u1",
+          "sha256": "f38672e819765c37230a1904c1346ec865a21e8b0b293a29eb037b0c316382a8"
+        }
+      }
+    },
+    "results/finite.json": {
+      "sha256": "74689a75288b612537f24a02a9fe8b8e59c6babe441562f5fc9c6e5aab9376a2"
+    },
+    "results/primary/checkpoints.npz": {
+      "sha256": "9c9832958ba85696e4b369b9bbf62a65e4ce2ba0f9551bcd765d5e38e2ab1548",
+      "arrays": {
+        "qp": {
+          "shape": [
+            60,
+            1536,
+            18
+          ],
+          "dtype": "<f8",
+          "sha256": "6624202e0ad63399c77dc3a8dc7e018bf892679e1cd052eb6058444f621df313"
+        },
+        "qr": {
+          "shape": [
+            60,
+            1536,
+            9,
+            2
+          ],
+          "dtype": "<f8",
+          "sha256": "1bfd13174465198cf377c67a3dd1efcae42b1eb31184b183aaf8d616df0ef2aa"
+        },
+        "rounds": {
+          "shape": [
+            60
+          ],
+          "dtype": "<i8",
+          "sha256": "e17543b3ff1cc480548ae2fa01c133314d45274aff22696b4e93309820432f14"
+        }
+      }
+    },
+    "results/primary/evaluation_trace.npz": {
+      "sha256": "aa65b9146c6bce9d95d169895b4fafaff8dc56b9f205ab9792ae12d752425739",
+      "arrays": {
+        "accept": {
+          "shape": [
+            600,
+            1536
+          ],
+          "dtype": "|u1",
+          "sha256": "c6729a3607c9fc7bada58745e28c1541d7c8e946e1a264616efc01f860e27f68"
+        },
+        "action": {
+          "shape": [
+            600,
+            1536
+          ],
+          "dtype": "|u1",
+          "sha256": "b58aad60f24d71ad385bd714e2f1af797721f8a0fa8bad3ed733f7dfe6c1abcb"
+        },
+        "proposer": {
+          "shape": [
+            600,
+            1536
+          ],
+          "dtype": "|u1",
+          "sha256": "76e89aac161526b30bbddd2115e85c9ac88f6464814e5bbba9289c44a5e1312e"
+        },
+        "receiver": {
+          "shape": [
+            600,
+            1536
+          ],
+          "dtype": "|u1",
+          "sha256": "2974329424ecbc7490b4e28bcdcb096260c3ae2dc38799060f81942041eb777d"
+        },
+        "seeds": {
+          "shape": [
+            64
+          ],
+          "dtype": "<i8",
+          "sha256": "5a4f27b2463aed547168fd33bf7c4b0aa29a1e895f2c8b5907576d322ec7434b"
+        }
+      }
+    },
+    "results/primary/per_seed.csv": {
+      "sha256": "2c55811daaea56b97a0d64c9c58dcc5fadd70622103923113d883143be417936"
+    },
+    "results/primary/policies.npz": {
+      "sha256": "94cf974e82a34407cccf71d1b26ccbe6d86d88b941ba4c9de4e5efb982e69f70",
+      "arrays": {
+        "acceptance_probability": {
+          "shape": [
+            1536,
+            9
+          ],
+          "dtype": "<f8",
+          "sha256": "3d2b52efe67501e7c9048978b8860b464c40d41659c0faa4d6b96b3bb350da87"
+        },
+        "metrics": {
+          "shape": [
+            1536,
+            13
+          ],
+          "dtype": "<f8",
+          "sha256": "527854f074f87aed57d1c6a03b6162487209a6da9d7c5ca30860f4fe8c16743b"
+        },
+        "proposal_probability": {
+          "shape": [
+            1536,
+            18
+          ],
+          "dtype": "<f8",
+          "sha256": "fc92c29f73e9ae36b238fe72cd523aced4ed0c9462c406933838468d38fae778"
+        },
+        "qp": {
+          "shape": [
+            1536,
+            18
+          ],
+          "dtype": "<f8",
+          "sha256": "840fd4e85973e05f476bfee5d24841730bf176b79e2cde64af816e55537cae5a"
+        },
+        "qr": {
+          "shape": [
+            1536,
+            9,
+            2
+          ],
+          "dtype": "<f8",
+          "sha256": "c2ecbb6b03c3d18fd6deb4ce84ccd91e55e8e18dfbc02ae605c4b1c2ac47ff9b"
+        },
+        "seeds": {
+          "shape": [
+            64
+          ],
+          "dtype": "<i8",
+          "sha256": "5a4f27b2463aed547168fd33bf7c4b0aa29a1e895f2c8b5907576d322ec7434b"
+        }
+      }
+    },
+    "results/primary/shock_trace.npz": {
+      "sha256": "f24c58f5191b6465fb18814a65b939a7e1de0219d7f615c26f32ebdefb146ce5",
+      "arrays": {
+        "cell_ids": {
+          "shape": [
+            12
+          ],
+          "dtype": "<i8",
+          "sha256": "ba4b90b62b6438f7b3bb5d7a5f13e34787d01904fcfb3f675703cf852f50bf70"
+        },
+        "control": {
+          "shape": [
+            30,
+            768,
+            6
+          ],
+          "dtype": "<i8",
+          "sha256": "0dce4207765bced21f942c079e12c4532483ddf25fb2f1a3540156e242dd0b22"
+        },
+        "seeds": {
+          "shape": [
+            64
+          ],
+          "dtype": "<i8",
+          "sha256": "5a4f27b2463aed547168fd33bf7c4b0aa29a1e895f2c8b5907576d322ec7434b"
+        },
+        "shock": {
+          "shape": [
+            30,
+            768,
+            6
+          ],
+          "dtype": "<i8",
+          "sha256": "b7d5411446b4e5331d78bb8904419b709c9f2922dd63785f79e726a5da8d2e03"
+        }
+      }
+    },
+    "results/primary/summary.json": {
+      "sha256": "f2b2256eaaeb3bd991477136fdb0d6d1f279ad6b4f1fb6f2bae2d4d004843b19",
+      "canonical_sha256": "0a69d0375655020126092f69637cc24c79457e91a7ced7b1b172f5f5cb443737"
+    },
+    "results/primary/training_trace.npz": {
+      "sha256": "1d9c5114f8f42f1b0c7eefd68496d2f5b8cc7df664b621339937ce8f3b13492a",
+      "arrays": {
+        "accept": {
+          "shape": [
+            12000,
+            1536
+          ],
+          "dtype": "|u1",
+          "sha256": "29cab4e405851e3969e5b0ee7c5424f9a21b1aad37806f064bce0b40637ece69"
+        },
+        "action": {
+          "shape": [
+            12000,
+            1536
+          ],
+          "dtype": "|u1",
+          "sha256": "547432b0c61d86aef6c03cfbac956fc5e431676933f0b11ae301e37f8d0124c0"
+        },
+        "proposer": {
+          "shape": [
+            12000,
+            1536
+          ],
+          "dtype": "|u1",
+          "sha256": "3d9e608b50f406a8afa22c272beb521e4a9c29e1beb93254538351810e46393e"
+        },
+        "receiver": {
+          "shape": [
+            12000,
+            1536
+          ],
+          "dtype": "|u1",
+          "sha256": "594e85fc13ecf39742ec13a5ad9670cc1d8c54212ffd7a0d84461dc46de92cd2"
+        },
+        "seeds": {
+          "shape": [
+            64
+          ],
+          "dtype": "<i8",
+          "sha256": "5a4f27b2463aed547168fd33bf7c4b0aa29a1e895f2c8b5907576d322ec7434b"
+        }
+      }
+    },
+    "results/robustness_0.02/checkpoints.npz": {
+      "sha256": "7d3c34c1c2448dc15f489590fcd0854ccf19cf8897412a477af50ad817a0a153",
+      "arrays": {
+        "qp": {
+          "shape": [
+            60,
+            768,
+            18
+          ],
+          "dtype": "<f8",
+          "sha256": "f4f1b7e78f0ecb88b9481b127d25417c0a16c830b7750b15a7ebd80f838119ad"
+        },
+        "qr": {
+          "shape": [
+            60,
+            768,
+            9,
+            2
+          ],
+          "dtype": "<f8",
+          "sha256": "2d4d55b451720f0a20c5f69b1cca6a605fcecf419da01f1706d29ed327e44c96"
+        },
+        "rounds": {
+          "shape": [
+            60
+          ],
+          "dtype": "<i8",
+          "sha256": "e17543b3ff1cc480548ae2fa01c133314d45274aff22696b4e93309820432f14"
+        }
+      }
+    },
+    "results/robustness_0.02/evaluation_trace.npz": {
+      "sha256": "528e55ec96f61ea37feb4ae7d2e61e8d509a526733692fe1db24cf15f96254a2",
+      "arrays": {
+        "accept": {
+          "shape": [
+            600,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "02eee62450cee7cf5f6afbb914c5c6a41eccca92685fb30e0123353dc307fc8f"
+        },
+        "action": {
+          "shape": [
+            600,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "4908db9ad8e8b6d124c95ee7c32ca11d56f5ea95b0c91c00690508796cbda4cb"
+        },
+        "proposer": {
+          "shape": [
+            600,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "f66deb4bec25764675b184596e014939db532e6c6b157fef4100203f0919bacc"
+        },
+        "receiver": {
+          "shape": [
+            600,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "c969d1fa52be251b4d03f8eb5e0207cc13337170678cf1a4550f077a8c383575"
+        },
+        "seeds": {
+          "shape": [
+            32
+          ],
+          "dtype": "<i8",
+          "sha256": "84a42459707891b9ae6d4465a5538b541d3aa411343f1fb1bd7c55e2638b64fa"
+        }
+      }
+    },
+    "results/robustness_0.02/per_seed.csv": {
+      "sha256": "53f60db6d069cd19d5fb2d95c05d0f0914b6d830d7f7390b7c38a3c82fb0d3dd"
+    },
+    "results/robustness_0.02/policies.npz": {
+      "sha256": "9eeef979345be2260169b1cf920e23222fa1d5273d87d47dfdeb8b5fa582d025",
+      "arrays": {
+        "acceptance_probability": {
+          "shape": [
+            768,
+            9
+          ],
+          "dtype": "<f8",
+          "sha256": "99c055cc71d236b719d7ae4482ed8c6ade52d1441fa150e2507fb5c575d68032"
+        },
+        "metrics": {
+          "shape": [
+            768,
+            13
+          ],
+          "dtype": "<f8",
+          "sha256": "b5f88b7939fd01140044e9f9b0c44b38af3aaabf2a8777be3ba131d1786beb46"
+        },
+        "proposal_probability": {
+          "shape": [
+            768,
+            18
+          ],
+          "dtype": "<f8",
+          "sha256": "1141417f43093dd30358f0c13d22a05036edbcd1d1c1c62ac277bd698c21e3d3"
+        },
+        "qp": {
+          "shape": [
+            768,
+            18
+          ],
+          "dtype": "<f8",
+          "sha256": "93cf89758754f341a47dd13d7ffba399ffaedb9516d0efe808c175a9f62835c2"
+        },
+        "qr": {
+          "shape": [
+            768,
+            9,
+            2
+          ],
+          "dtype": "<f8",
+          "sha256": "1d69abc8cd178fcd0c321c39a4ecac421110c7d57c095edd0f151e63740e4235"
+        },
+        "seeds": {
+          "shape": [
+            32
+          ],
+          "dtype": "<i8",
+          "sha256": "84a42459707891b9ae6d4465a5538b541d3aa411343f1fb1bd7c55e2638b64fa"
+        }
+      }
+    },
+    "results/robustness_0.02/summary.json": {
+      "sha256": "71ce8177a14ea5bdbb1db88da467b16b40072bb4db716e8bc15ccbc3b5f183af",
+      "canonical_sha256": "de2fb682800b2a49b1bd258307ee4a8d5f956de363b93b53945d52e9ca99a61d"
+    },
+    "results/robustness_0.02/training_trace.npz": {
+      "sha256": "2791fb206eab83802d2e9f9e5562237d18969bd5cc79e613596feb564faa2298",
+      "arrays": {
+        "accept": {
+          "shape": [
+            12000,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "521321ea7f9274a319f44bb098ea1ee18e3050cb68320b6a2f0ec5a387fd4e4a"
+        },
+        "action": {
+          "shape": [
+            12000,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "ae75fe9d9aaae5ea1a4f3011ea1a7408bb8566b578c47c9f72fe6efb8b7f5b05"
+        },
+        "proposer": {
+          "shape": [
+            12000,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "4b9ec02e030424d1fea805d91cb6ebaa20370914cb14f3106c9d11ecd2053c7b"
+        },
+        "receiver": {
+          "shape": [
+            12000,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "7f4c38b4b6e41d3a66afe31be46c8097b428f1751ce5ec922d968a72afb24d36"
+        },
+        "seeds": {
+          "shape": [
+            32
+          ],
+          "dtype": "<i8",
+          "sha256": "84a42459707891b9ae6d4465a5538b541d3aa411343f1fb1bd7c55e2638b64fa"
+        }
+      }
+    },
+    "results/robustness_0.10/checkpoints.npz": {
+      "sha256": "54c3d1efe380a6d5b1ea97c8c1f7b2d1ed57c43db96feac02b2ea37cedd6d184",
+      "arrays": {
+        "qp": {
+          "shape": [
+            60,
+            768,
+            18
+          ],
+          "dtype": "<f8",
+          "sha256": "06d88525ae388dc69df0a7c3e61520970dddb3b9e68d2dc11fd3a4dc3cd3839d"
+        },
+        "qr": {
+          "shape": [
+            60,
+            768,
+            9,
+            2
+          ],
+          "dtype": "<f8",
+          "sha256": "4699dfd6608c163ce7deb8795c58b025782b09cdd790f32a375139b27bdde515"
+        },
+        "rounds": {
+          "shape": [
+            60
+          ],
+          "dtype": "<i8",
+          "sha256": "e17543b3ff1cc480548ae2fa01c133314d45274aff22696b4e93309820432f14"
+        }
+      }
+    },
+    "results/robustness_0.10/evaluation_trace.npz": {
+      "sha256": "bdff1f6c5d85c73acb8878b9813f960ea02b54b77c460bddd06eff2922fdeb00",
+      "arrays": {
+        "accept": {
+          "shape": [
+            600,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "40e13deb025da18b826238cb2200adfc182b3d035ceddff05335ff04c6a721d5"
+        },
+        "action": {
+          "shape": [
+            600,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "041c5675e3f0a040dab1c0fc65082cb343c02c7475297aff0079e664931d56a8"
+        },
+        "proposer": {
+          "shape": [
+            600,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "b3745a3ac5116716973b8dabbba2504d72a12d705f8f66329095c1cf43a96559"
+        },
+        "receiver": {
+          "shape": [
+            600,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "18b578193400a5a4f0a5f372195c47d83ea7fe8b1c9c10fd1ee9df7b3db46f44"
+        },
+        "seeds": {
+          "shape": [
+            32
+          ],
+          "dtype": "<i8",
+          "sha256": "84a42459707891b9ae6d4465a5538b541d3aa411343f1fb1bd7c55e2638b64fa"
+        }
+      }
+    },
+    "results/robustness_0.10/per_seed.csv": {
+      "sha256": "4842caa41fb50eec2dc56ed83a42c4795302213c1f94d3075e1dfd4ca635639c"
+    },
+    "results/robustness_0.10/policies.npz": {
+      "sha256": "d83346723f038e4a6587db7a99124499e9fd0c0b917b922abeeb4b34b300ec6a",
+      "arrays": {
+        "acceptance_probability": {
+          "shape": [
+            768,
+            9
+          ],
+          "dtype": "<f8",
+          "sha256": "f35b66ea70e6b2d541807008c6a0f1db3f4d63247b3be74d3508e4e87a8dd659"
+        },
+        "metrics": {
+          "shape": [
+            768,
+            13
+          ],
+          "dtype": "<f8",
+          "sha256": "c2348e25098e98b792abd8f18f10dbef0b78c2e9e303962b80e51d9863a28247"
+        },
+        "proposal_probability": {
+          "shape": [
+            768,
+            18
+          ],
+          "dtype": "<f8",
+          "sha256": "8451a6e87d47d038a4e5436a31859530e4b59b725f576aedb8adafac35f65925"
+        },
+        "qp": {
+          "shape": [
+            768,
+            18
+          ],
+          "dtype": "<f8",
+          "sha256": "0b408689b21ff5aa44d0491911e8d10a965b0a6c1686c4ba5b16c0bc930efd6a"
+        },
+        "qr": {
+          "shape": [
+            768,
+            9,
+            2
+          ],
+          "dtype": "<f8",
+          "sha256": "403bcc948834cffadc230e2eeb5da64485387d3c4251a8293b47ee828ef8c503"
+        },
+        "seeds": {
+          "shape": [
+            32
+          ],
+          "dtype": "<i8",
+          "sha256": "84a42459707891b9ae6d4465a5538b541d3aa411343f1fb1bd7c55e2638b64fa"
+        }
+      }
+    },
+    "results/robustness_0.10/summary.json": {
+      "sha256": "688651848359b05d8d6985b26506ccc96c82b34286073aa074b8a93d4d9067c7",
+      "canonical_sha256": "f5b3abc45d99bf7a2fe2902ea3187921c571909a65179241064bd74887a22be9"
+    },
+    "results/robustness_0.10/training_trace.npz": {
+      "sha256": "f68bd890ce557ecfd7405c555f5182c839cf2040995e91eeae2f834b63953758",
+      "arrays": {
+        "accept": {
+          "shape": [
+            12000,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "15e65116cade23f68f11bfc9cb8e68cb470612c910440ca211707cd72f273cdd"
+        },
+        "action": {
+          "shape": [
+            12000,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "a16a3699af4f69a6d6adb506b7a1dac12c5f01aa840d51e420584bdf704b382c"
+        },
+        "proposer": {
+          "shape": [
+            12000,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "8d7ab7066c48b1f3d501f1683315b5245f4fb27232e9d74aee6851ecc12bab80"
+        },
+        "receiver": {
+          "shape": [
+            12000,
+            768
+          ],
+          "dtype": "|u1",
+          "sha256": "d4599ed1b4b4bb507eeb2f033a83e016048637888d5d489517b529d06fda9437"
+        },
+        "seeds": {
+          "shape": [
+            32
+          ],
+          "dtype": "<i8",
+          "sha256": "84a42459707891b9ae6d4465a5538b541d3aa411343f1fb1bd7c55e2638b64fa"
+        }
+      }
+    },
+    "results/tests.json": {
+      "sha256": "6ba36787ac75d93c553b204e0dee98c98192e8fe5cd542caa3e6c8724623518d"
+    }
+  },
+  "repaired_exhibit_scientific_payload_sha256": "a261c44a91d001028e9117719d664bc7377cc7d0c46f270460b665c40a56265a"
+}

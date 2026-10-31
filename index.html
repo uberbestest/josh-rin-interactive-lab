@@ -32,7 +32,7 @@ h1 em{font-style:normal;color:var(--gold)}
 .skip-link:focus{top:12px}
 .start{padding:0 0 40px}
 .start h2{font-size:1.1rem;margin:0 0 14px}
-.start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.start-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .start-grid a{display:block;padding:17px 18px;border:1px solid var(--line);border-radius:8px;background:#15232e;text-decoration:none}
 .start-grid a:hover{border-color:var(--mint);background:#1c303b}
 .start-grid strong{display:block;color:var(--ink);font-size:1rem;line-height:1.35;margin-bottom:7px}
@@ -73,7 +73,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 </head>
 <body>
 <a class="skip-link" href="#experiments">Skip to the experiments</a>
-<header><nav class="wrap" aria-label="Lab navigation"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><div class="nav-links"><a href="#experiments">The experiments</a><a href="https://github.com/uberbestest/josh-rin-interactive-lab">Source &amp; records ↗</a><a class="nav-support" href="#support">Support the lab ↗</a></div></nav></header>
+<header><nav class="wrap" aria-label="Lab navigation"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><div class="nav-links"><a href="#experiments">The experiments</a><a href="experiments/two-candy-revolt/index.html">Halloween Science ↗</a><a href="https://github.com/uberbestest/josh-rin-interactive-lab">Source &amp; records ↗</a><a class="nav-support" href="#support">Support the lab ↗</a></div></nav></header>
 <main id="top" class="wrap">
 <div class="hero"><p class="eyebrow">A living collection of interactive research</p>
 <h1>Open the instrument.<br><em>Question the conclusion.</em></h1>
@@ -82,13 +82,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <section class="start" aria-labelledby="start-title">
 <h2 id="start-title">Pick a first experiment</h2>
 <div class="start-grid">
+<a href="experiments/two-candy-revolt/index.html"><strong>New: The Two-Candy Revolt ↗</strong><span>Start with the TL;DR, watch the goblins learn, and test whether a generous deal survives an incentive to break it.</span></a>
 <a href="experiments/halloween-porches/index.html#workbench"><strong>Go trick-or-treating with ten goblins ↗</strong><span>Change their reward signal. Can a truthful score still give everybody empty bags?</span></a>
 <a href="experiments/nine-message-rosetta/index.html#experiment"><strong>Decode a goblin language ↗</strong><span>Reveal a ninth message, then find the mistranslation the decoder misses.</span></a>
 <a href="experiments/goblin-cycle/index.html"><strong>Catch a false accusation ↗</strong><span>Two faulty translators can make an innocent messenger look guilty.</span></a>
 </div>
 </section>
 <section id="experiments" aria-labelledby="experiments-title">
-<div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>09 instruments · latest addition 2026-10-31</p></div>
+<div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>10 instruments · latest addition 2026-10-31</p></div>
+<article class="card" id="two-candy-revolt">
+<div><div class="meta"><span>10 / Learning, bargaining &amp; unstable agreements</span><span>Halloween 2026-10-31 · v0.1.2</span></div>
+<h3>The Two-Candy Revolt</h3>
+<p>Ten goblins can collect every candy and still leave someone in the two-candy job. We let the two unequal roles bargain. Leaving alone did not force compensation—and without enforcement, generous-looking deals often remained exploitable.</p>
+<p><strong>Read the TL;DR, then press Play.</strong> Replay actual saved training, change the rules to inspect another completed run, and test a hypothetical contract. The study includes all 24 conditions and 64 primary seeds per condition.</p>
+<div class="actions"><a class="open" href="experiments/two-candy-revolt/index.html">Open the Candy Revolt ↗</a><a class="quiet" href="experiments/two-candy-revolt/method.html">Methods, results &amp; limits</a><a class="quiet" href="experiments/two-candy-revolt/index.html#downloads">Full evidence bundle ↓</a></div></div>
+<aside><p class="eyebrow">Evidence label · Executed synthetic learners</p><dl><dt>Measured</dt><dd>24 bargaining conditions; 64 seeds each; 12,000 training rounds per seed</dd><dt>Key result</dt><dd>58/64 unenforced veto runs admitted a profitable proposer deviation</dd><dt>Boundary</dt><dd>Two negotiating learners, eight fixed bystanders; not LLMs or invented institutions. Independent review pending.</dd></dl></aside>
+</article>
 <article class="card">
 <div>
 <div class="meta"><span>09 / Reward signals &amp; coordination</span><span>Halloween 2026-10-31</span></div>

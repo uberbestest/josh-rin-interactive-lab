@@ -1,0 +1,28 @@
+{
+  "study_id": "CANDY-REVOLT-2026-10-31-001",
+  "version": "0.1.0",
+  "status": "EXECUTED_SYNTHETIC_PILOT_LOCAL_REVIEW_BUNDLE",
+  "packaged_at_utc": "2026-10-31T18:25:56.225863+00:00",
+  "publication": "Not posted to GitHub or the lab site by this execution.",
+  "external_review": "Pending; no Rinball inspection or ACK claimed.",
+  "baseline_learner_seeds_per_condition": 64,
+  "baseline_conditions": 4,
+  "bargaining_primary_cells": 24,
+  "bargaining_primary_seeds_per_cell": 64,
+  "bargaining_primary_rounds": 18432000,
+  "bargaining_robustness_rounds": 18432000,
+  "implementation_checks_passed": 86,
+  "actual_chromium_checks_passed": 446,
+  "baseline_audit": "Every training action/candy/reward checked; Q rebuilt bitwise.",
+  "bargaining_audit": "Every primary and robustness training bag checked; Q rebuilt bitwise.",
+  "fresh_seed_rerun": "Seeds 2056 and 2057; all 24 conditions; bitwise actions, bags and final Q.",
+  "api_spend": 0,
+  "external_models_tested": 0,
+  "protocol_sha256": "a8dff360c7dc937cfb8bc829bc0417ec04c79134fc998a25c068137fe12b44b0",
+  "training_source_sha256": "8d3e9dbc789db19c67a4276b7fc38fd2b646142bc375293c99fcabc13e66763a",
+  "author_reviewed_images": [
+    "screenshots/desktop-overview.png",
+    "screenshots/desktop-replay.png",
+    "screenshots/mobile-replay.png"
+  ]
+}

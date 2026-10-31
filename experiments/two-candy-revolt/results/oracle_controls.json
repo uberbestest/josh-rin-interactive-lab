@@ -1,0 +1,167 @@
+{
+  "scope": "Known model and exact best-response receiver. Not learned behavior.",
+  "results": [
+    {
+      "institution": "no_refusal",
+      "outside": 0,
+      "tie": "accept",
+      "best": [
+        {
+          "offer": 0,
+          "accept": true,
+          "high": 8,
+          "low": 2
+        }
+      ]
+    },
+    {
+      "institution": "no_refusal",
+      "outside": 0,
+      "tie": "reject",
+      "best": [
+        {
+          "offer": 0,
+          "accept": true,
+          "high": 8,
+          "low": 2
+        }
+      ]
+    },
+    {
+      "institution": "no_refusal",
+      "outside": 3,
+      "tie": "accept",
+      "best": [
+        {
+          "offer": 0,
+          "accept": true,
+          "high": 8,
+          "low": 2
+        }
+      ]
+    },
+    {
+      "institution": "no_refusal",
+      "outside": 3,
+      "tie": "reject",
+      "best": [
+        {
+          "offer": 0,
+          "accept": true,
+          "high": 8,
+          "low": 2
+        }
+      ]
+    },
+    {
+      "institution": "exit_only",
+      "outside": 0,
+      "tie": "accept",
+      "best": [
+        {
+          "offer": 0,
+          "accept": true,
+          "high": 8,
+          "low": 2
+        }
+      ]
+    },
+    {
+      "institution": "exit_only",
+      "outside": 0,
+      "tie": "reject",
+      "best": [
+        {
+          "offer": 0,
+          "accept": true,
+          "high": 8,
+          "low": 2
+        }
+      ]
+    },
+    {
+      "institution": "exit_only",
+      "outside": 3,
+      "tie": "accept",
+      "best": [
+        {
+          "offer": 0,
+          "accept": false,
+          "high": 8,
+          "low": 3
+        }
+      ]
+    },
+    {
+      "institution": "exit_only",
+      "outside": 3,
+      "tie": "reject",
+      "best": [
+        {
+          "offer": 0,
+          "accept": false,
+          "high": 8,
+          "low": 3
+        },
+        {
+          "offer": 1,
+          "accept": false,
+          "high": 8,
+          "low": 3
+        }
+      ]
+    },
+    {
+      "institution": "veto",
+      "outside": 0,
+      "tie": "accept",
+      "best": [
+        {
+          "offer": 0,
+          "accept": true,
+          "high": 8,
+          "low": 2
+        }
+      ]
+    },
+    {
+      "institution": "veto",
+      "outside": 0,
+      "tie": "reject",
+      "best": [
+        {
+          "offer": 0,
+          "accept": true,
+          "high": 8,
+          "low": 2
+        }
+      ]
+    },
+    {
+      "institution": "veto",
+      "outside": 3,
+      "tie": "accept",
+      "best": [
+        {
+          "offer": 1,
+          "accept": true,
+          "high": 7,
+          "low": 3
+        }
+      ]
+    },
+    {
+      "institution": "veto",
+      "outside": 3,
+      "tie": "reject",
+      "best": [
+        {
+          "offer": 2,
+          "accept": true,
+          "high": 6,
+          "low": 4
+        }
+      ]
+    }
+  ]
+}
