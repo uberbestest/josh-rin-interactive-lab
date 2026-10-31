@@ -1,0 +1,48 @@
+{
+  "schema_id": "AGENT-ATTENTION-EVENT-JSONL-V0.1",
+  "status": "PROPOSED_NOT_IMPLEMENTED",
+  "event": {
+    "session_id": null,
+    "event_id": null,
+    "sequence": null,
+    "record_type": "action|observation|agent_note|researcher_inference|session_end",
+    "started_at_utc": null,
+    "finished_at_utc": null,
+    "browser_context": {
+      "isolated": null,
+      "logged_out": null,
+      "locale": null,
+      "viewport": null
+    },
+    "action": {
+      "tool": null,
+      "arguments": null
+    },
+    "observation": {
+      "url_before": null,
+      "url_after": null,
+      "completion": "confirmed|failed|ambiguous|unknown",
+      "error": null
+    },
+    "evidence": [
+      {
+        "artifact_id": null,
+        "sha256": null,
+        "captured_at_utc": null,
+        "channel": "viewport|accessibility|link_target|tool_output|history|other",
+        "delivered_to_agent": null
+      }
+    ],
+    "source_event_ids": [],
+    "text": null
+  },
+  "session_manifest": {
+    "assignment": null,
+    "model_identity": null,
+    "tool_version": null,
+    "stop_reason": null,
+    "operation_limit": 50,
+    "time_limit_minutes": 20,
+    "raw_export_completed": false
+  }
+}
