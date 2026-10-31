@@ -39,7 +39,27 @@ jobs:
               for member in archive.getmembers():
                   assert member.name.startswith('experiments/two-candy-revolt/'), member.name
               archive.extractall('.', filter='data')
-          print('Verified and extracted the public source package.')
+          # The source tar uses epoch timestamps for reproducibility. ZIP starts
+          # at 1980: clamp ZIP metadata, never change scientific file contents.
+          root = Path('experiments/two-candy-revolt')
+          builder = root / 'build_release.py'
+          original = builder.read_text()
+          needle = 'compresslevel=6) as z:'
+          assert original.count(needle) == 1
+          builder.write_text(original.replace(needle, 'compresslevel=6,strict_timestamps=False) as z:'))
+          review = root / 'REVIEW_REQUEST.md'
+          historical = review.read_text()
+          review.write_text('# Public release review request — v0.1.2\n\n'
+              'This is a request for independent inspection, not a completed review. '
+              'Science remains v0.1.0. The current presentation defaults to recorded early training; '
+              'frozen evaluation is a separately labelled mode. Review both against the raw archive. '
+              'The full-data download, public methods, release receipt, data fingerprints and '
+              'author-run browser checks accompany this release. A GitHub intake ticket is not proof '
+              'that Rinball has inspected it.\n\n'
+              'The historical request below describes the pre-publication bundle. Its earlier status '
+              'and check counts are historical, not the current publication state.\n\n'
+              '## Original v0.1.0 request (historical)\n\n' + historical)
+          print('Verified source archive; applied ZIP-metadata compatibility fix and review-status clarification.')
           PY
       - name: Install pinned build and browser dependencies
         run: |
@@ -71,6 +91,7 @@ jobs:
           receipt['release_browser_tests'] = 'results/public-browser-tests.json'
           receipt['release_browser_status'] = json.loads((root / 'results/public-browser-tests.json').read_text())['status']
           receipt['github_build_run'] = 'https://github.com/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs/' + os.environ['GITHUB_RUN_ID']
+          receipt['packaging_note'] = 'ZIP timestamps earlier than 1980 are clamped; scientific contents are unchanged.'
           p.write_text(json.dumps(receipt, indent=2) + '\n')
           (root / 'REPORT.md').write_text((root / 'README.md').read_text() + '\n\n---\n\n' + (root / 'METHODS.md').read_text())
           PY
