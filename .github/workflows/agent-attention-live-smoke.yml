@@ -1,0 +1,59 @@
+name: Verify Agent Attention is live on GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'agent-attention/**'
+      - 'index.html'
+      - '.github/workflows/agent-attention-live-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify live homepage, research exhibit, methods, and structured evidence
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, time, urllib.request
+          from pathlib import Path
+          paths = [
+              'index.html',
+              'agent-attention/index.html',
+              'agent-attention/method.html',
+              'agent-attention/pilot-trace.json',
+              'agent-attention/record-schema.json',
+          ]
+          base = 'https://uberbestest.github.io/josh-rin-interactive-lab/'
+          expected={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          found={}
+          for attempt in range(72):
+              for path in paths:
+                  if path in found:
+                      continue
+                  url=base+path+'?release='+os.environ['GITHUB_SHA']
+                  req=urllib.request.Request(url,headers={'User-Agent':'Agent-Attention-Lab-Deploy-Check','Cache-Control':'no-cache'})
+                  try:
+                      with urllib.request.urlopen(req,timeout=12) as resp:
+                          body=resp.read()
+                          digest=hashlib.sha256(body).hexdigest()
+                          if resp.status==200 and digest==expected[path]:
+                              found[path]=digest
+                              print('MATCH',path,digest,flush=True)
+                  except Exception as exc:
+                      print('Pending',path,type(exc).__name__,flush=True)
+              if len(found)==len(paths):break
+              time.sleep(5)
+          assert len(found)==len(paths),{'matched':found,'missing':sorted(set(paths)-set(found))}
+          assert b'agent-attention/index.html' in Path('index.html').read_bytes()
+          assert b'15' in Path('agent-attention/index.html').read_bytes()
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
+              out.write('## Agent Attention deployed: PASS\n\nFive public files matched the committed bytes by SHA-256. Source/HTML visibility is verified; this is not external scientific validation.\n')
+          print('PASS: Agent Attention website is publicly served and linked from homepage.')
+          PY
