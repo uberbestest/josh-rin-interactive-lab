@@ -37,7 +37,7 @@ with socketserver.TCPServer(("127.0.0.1",0),Handler) as server:
             page.locator("#branchFilter").select_option("caution")
             assert page.locator("#traceGraph .pointGroup").count()==15
             assert page.locator("#traceGraph .pointGroup").nth(10).evaluate("(e)=>e.style.opacity")=="1"
-            assert page.locator("#traceGraph .pointGroup").nth(1).evaluate("(e)=>e.style.opacity")==".16"
+            assert abs(float(page.locator("#traceGraph .pointGroup").nth(1).evaluate("(e)=>e.style.opacity"))-0.16)<1e-6
             page.locator("#eventNav button").nth(14).click()
             assert "N03" in page.locator("#detailNote").inner_text()
             page.locator("#witnessChoice").select_option("seed72")
