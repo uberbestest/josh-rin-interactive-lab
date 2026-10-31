@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-10-31T20:31:00.636544+00:00",
+  "kind": "Author-run Chromium checks, local HTTP, reduced motion",
+  "checks": [
+    "Agent Attention JavaScript and embedded trace unchanged byte-for-byte",
+    "Width 320: art, one h1, unique ids, 10 cards, 3 filters, keyboard evidence, Puddle, support, map controls, no overflow",
+    "Width 390: art, one h1, unique ids, 10 cards, 3 filters, keyboard evidence, Puddle, support, map controls, no overflow",
+    "Width 768: art, one h1, unique ids, 10 cards, 3 filters, keyboard evidence, Puddle, support, map controls, no overflow",
+    "Width 1440: art, one h1, unique ids, 10 cards, 3 filters, keyboard evidence, Puddle, support, map controls, no overflow",
+    "No-JavaScript: all instruments available, native evidence disclosure works, optional controls hidden"
+  ],
+  "viewport_widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "javascript_errors": [],
+  "failed_http_responses": [],
+  "independent_review": false,
+  "user_visual_review": "Pending",
+  "screenshots": "assets/lab/review/"
+}

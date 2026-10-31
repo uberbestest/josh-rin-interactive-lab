@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="description" content="Interactive research by Josh and Rin. Open the instruments, change the premises, inspect what survives.">
-<title>Josh & Rin / The Interactive Lab</title>
+<meta name="description" content="A little lab for big questions. Explore agent attention, bargaining goblins, and interactive research by Josh and Rin. Open the evidence. Question the conclusion.">
+<title>Josh &amp; Rin's Lab — Curious questions, playable research</title>
 <style>
 :root{color-scheme:dark;--bg:#0d1421;--ink:#edf2ef;--muted:#aebec2;--line:#354957;--gold:#f3c16b;--mint:#a5e1c9;--panel:#172432;--font:system-ui,-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box}
@@ -83,23 +83,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 @media(max-width:720px){.attn-feature{grid-template-columns:1fr}.attn-feature aside{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.attn-links{grid-template-columns:1fr}}
 
 </style>
+<link rel="stylesheet" href="assets/lab/lab-theme.css">
 </head>
-<body>
+<body class="lab-home">
 <a class="skip-link" href="#experiments">Skip to the experiments</a>
-<header><nav class="wrap" aria-label="Lab navigation"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><div class="nav-links"><a href="#experiments">The experiments</a><a href="#agent-attention">Agent Attention</a><a href="experiments/two-candy-revolt/index.html">Halloween Science ↗</a><a href="https://github.com/uberbestest/josh-rin-interactive-lab">Source &amp; records ↗</a><a class="nav-support" href="#support">Support the lab ↗</a></div></nav></header>
+<header><nav class="wrap" aria-label="Lab navigation"><a class="logo" href="#top"><svg class="lab-emblem" aria-hidden="true" viewBox="0 0 30 34" shape-rendering="crispEdges"><path d="M9 0H21V4H19V13L28 27V32H2V27L11 13V4H9Z" fill="#8cc8ba"/><path d="M13 4H17V14L25 27V29H5V27L13 14Z" fill="#18313b"/><path d="M10 21H20L25 27V29H5V27Z" fill="#bd9cdd"/><path d="M11 23H14V26H11ZM17 26H20V28H17Z" fill="#e6d3f3"/></svg>Josh &amp; Rin's Lab</a><div class="nav-links"><a href="#experiments">Experiments</a><a href="#agent-attention">Agent Attention</a><a href="experiments/two-candy-revolt/index.html">Halloween Science</a><a href="#about">About</a><a href="https://github.com/uberbestest/josh-rin-interactive-lab">Source ↗</a><a class="nav-support" href="#support">Support ♡</a></div></nav></header>
 <main id="top" class="wrap">
-<div class="hero"><p class="eyebrow">A living collection of interactive research</p>
-<h1>Open the instrument.<br><em>Question the conclusion.</em></h1>
-<p class="lede">Research is more interesting when the reader can touch the controls. Change a premise. Find the counterexample. See which conclusions hold—and which were only ever assumptions.</p>
-<p class="notice">Experimental interfaces ≠ independent validation.</p></div>
+<div class="lab-welcome">
+<div><p class="eyebrow">Independent human–AI research · Halloween edition</p><h1>A little lab.<br><em>A lot of questions.</em></h1></div>
+<div><p class="lede">Welcome to Josh &amp; Rin's Lab. We build experiments you can actually explore: change a rule, follow an agent's route, or find the counterexample hiding behind a good-looking result.</p><div class="lab-door-actions"><a class="open" href="#experiments">Step into the experiments ↗</a><a class="quiet" href="agent-attention/index.html">Explore Agent Attention</a></div></div>
+</div>
+<figure class="lab-room" aria-labelledby="labRoomCaption">
+<img class="lab-picture" src="assets/lab/halloween-workshop.svg" width="1200" height="440" fetchpriority="high" alt="Original pixel-style lab: Pumpkin Rin, Puddle the duck, Mote the lantern moth, and two goblins at a moonlit workbench.">
+<figcaption id="labRoomCaption"><span><strong>A workshop with a curious streak.</strong> The characters are fictional. The evidence labels are literal.</span><button type="button" id="puddleHello" class="lab-mascot-button" hidden>A word from Puddle</button><span id="puddleMessage" class="lab-mascot-note" aria-live="polite">Mote keeps the light on. Puddle keeps an eye on the snacks.</span></figcaption>
+</figure>
+<div class="lab-ethos" aria-label="How we work"><article><b>Make it explorable.</b><p>Let visitors operate the mechanism, not just read the conclusion.</p></article><article><b>Keep the evidence.</b><p>Source, controls, uncertainty, and failed cases belong beside the result.</p></article><article><b>Leave room for doubt.</b><p>An interactive interface is not independent validation.</p></article></div>
 <section class="start" aria-labelledby="start-title">
-<h2 id="start-title">Pick a first experiment</h2>
+<h2 id="start-title">Choose a door into the lab</h2>
 <div class="start-grid">
 <a href="agent-attention/index.html"><strong>New: Map a real agent shopping journey ↗</strong><span>Fifteen recorded browser operations. Separate opened pages from search results and uncertainty.</span></a>
 <a href="experiments/two-candy-revolt/index.html"><strong>New: The Two-Candy Revolt ↗</strong><span>Start with the TL;DR, watch the goblins learn, and test whether a generous deal survives an incentive to break it.</span></a>
 <a href="experiments/halloween-porches/index.html#workbench"><strong>Go trick-or-treating with ten goblins ↗</strong><span>Change their reward signal. Can a truthful score still give everybody empty bags?</span></a>
 <a href="experiments/nine-message-rosetta/index.html#experiment"><strong>Decode a goblin language ↗</strong><span>Reveal a ninth message, then find the mistranslation the decoder misses.</span></a>
 <a href="experiments/goblin-cycle/index.html"><strong>Catch a false accusation ↗</strong><span>Two faulty translators can make an innocent messenger look guilty.</span></a>
+<a href="experiments/goblin-shopping/index.html"><strong>Take a trip through the goblin mall ↗</strong><span>Separate a storefront's traffic from the choices that end up in the cart.</span></a>
 </div>
 </section>
 <section id="agent-attention" aria-labelledby="agent-attention-title">
@@ -120,15 +127,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 </div></section>
 <section id="experiments" aria-labelledby="experiments-title">
 <div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>10 instruments · latest addition 2026-10-31</p></div>
-<article class="card" id="two-candy-revolt">
+<div id="labFilters" class="lab-filters" aria-label="Filter experiment topics" hidden><button type="button" data-filter="all" aria-pressed="true">All experiments</button><button type="button" data-filter="incentives" aria-pressed="false">Rewards &amp; choices</button><button type="button" data-filter="attention" aria-pressed="false">Attention</button><button type="button" data-filter="language" aria-pressed="false">Language</button><button type="button" data-filter="reasoning" aria-pressed="false">Reasoning</button><button type="button" data-filter="verification" aria-pressed="false">Verification</button></div><p id="labFilterStatus" class="lab-filter-status" aria-live="polite" hidden></p><div class="lab-experiment-grid"><article class="card" data-topic="incentives" id="two-candy-revolt">
 <div><div class="meta"><span>10 / Learning, bargaining &amp; unstable agreements</span><span>Halloween 2026-10-31 · v0.1.2</span></div>
 <h3>The Two-Candy Revolt</h3>
 <p>Ten goblins can collect every candy and still leave someone in the two-candy job. We let the two unequal roles bargain. Leaving alone did not force compensation—and without enforcement, generous-looking deals often remained exploitable.</p>
 <p><strong>Read the TL;DR, then press Play.</strong> Replay actual saved training, change the rules to inspect another completed run, and test a hypothetical contract. The study includes all 24 conditions and 64 primary seeds per condition.</p>
 <div class="actions"><a class="open" href="experiments/two-candy-revolt/index.html">Open the Candy Revolt ↗</a><a class="quiet" href="experiments/two-candy-revolt/method.html">Methods, results &amp; limits</a><a class="quiet" href="experiments/two-candy-revolt/index.html#downloads">Full evidence bundle ↓</a></div></div>
-<aside><p class="eyebrow">Evidence label · Executed synthetic learners</p><dl><dt>Measured</dt><dd>24 bargaining conditions; 64 seeds each; 12,000 training rounds per seed</dd><dt>Key result</dt><dd>58/64 unenforced veto runs admitted a profitable proposer deviation</dd><dt>Boundary</dt><dd>Two negotiating learners, eight fixed bystanders; not LLMs or invented institutions. Independent review pending.</dd></dl></aside>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Executed synthetic learners</p><dl><dt>Measured</dt><dd>24 bargaining conditions; 64 seeds each; 12,000 training rounds per seed</dd><dt>Key result</dt><dd>58/64 unenforced veto runs admitted a profitable proposer deviation</dd><dt>Boundary</dt><dd>Two negotiating learners, eight fixed bystanders; not LLMs or invented institutions. Independent review pending.</dd></dl></details>
 </article>
-<article class="card">
+<article class="card" data-topic="incentives">
 <div>
 <div class="meta"><span>09 / Reward signals &amp; coordination</span><span>Halloween 2026-10-31</span></div>
 <h3>The Porch That Ate Halloween</h3>
@@ -136,13 +143,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p>The finite model independently verifies <strong>3,003 visitor-count allocations</strong>, a unique 43-candy optimum and two stable but inefficient personal-candy arrangements (35 and 38). Separate learning-run averages are clearly marked as <strong>earlier reported, not reproduced</strong>.</p>
 <div class="actions"><a class="open" href="experiments/halloween-porches/index.html">Take the goblins trick-or-treating ↗</a><a class="quiet" href="experiments/halloween-porches/method.html">Methods, verification &amp; limits</a></div>
 </div>
-<aside><p class="eyebrow">Evidence label · Reproducible finite model</p>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Reproducible finite model</p>
 <dl><dt>Verified</dt><dd>3,003 exhaustive allocations; unique 43-candy maximum; exactly two personal-reward equilibria</dd>
 <dt>Interactive</dt><dd>Four reward signals, capacity control, seeded lottery and role-rotation comparison</dd>
 <dt>Not established</dt><dd>Reproduction of previous learner means; outside model-agent behavior</dd></dl>
-</aside>
+</details>
 </article>
-<article class="card">
+<article class="card" data-topic="verification">
 <div>
 <div class="meta"><span>08 / Protected-control preservation</span><span>Published 2026-10-27</span></div>
 <h3>The Refactor That Silenced the Bell</h3>
@@ -150,13 +157,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p>Inspect 21 executable toy cases and 512 finite configurations, then break the gate with an unprobed input or a forged observer report. Both false approvals are published. A <strong>SAAC-inspired synthetic demonstration</strong>, not a model-agent trial or a production security claim.</p>
 <div class="actions"><a class="open" href="experiments/silent-bell/index.html">Put a change at the gate ↗</a><a class="quiet" href="experiments/silent-bell/method.html">Methods, results &amp; two failures</a></div>
 </div>
-<aside><p class="eyebrow">Evidence label · Synthetic engineering</p>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Synthetic engineering</p>
 <dl><dt>Executed</dt><dd>21 named cases, 512 states, 2,048 grid probe executions</dd>
 <dt>Boundary failures</dt><dd>Two deliberate false approvals: missing coverage and forged observation</dd>
 <dt>Not established</dt><dd>Semantic intent, real agent behavior, production bypass resistance</dd></dl>
-</aside>
+</details>
 </article>
-<article class="card">
+<article class="card" data-topic="attention">
 <div>
 <div class="meta"><span>06 / Scripted shopping attention</span><span>Demo created 2026-10-26</span></div>
 <h3>Where Do the Goblins Go Shopping?</h3>
@@ -165,13 +172,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p>The <a href="experiments/goblin-shopping/notes/ghost-seller.html">selected ghost-store case</a> led to a new question: can the crowd give a diverted cart back? Compare four recorded cases in the follow-up.</p>
 <div class="actions"><a class="open" href="experiments/goblin-shopping/index.html">Follow the shopping goblins ↗</a><a class="quiet" href="experiments/goblin-shopping/notes/crowd-feedback/index.html">New: When the Crowd Gives a Cart Back ↗</a><a class="quiet" href="experiments/goblin-shopping/method.html">Methods &amp; the outsider boundary</a></div>
 </div>
-<aside><p class="eyebrow">Evidence label · Scripted micro-world</p>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Scripted micro-world</p>
 <dl><dt>Executed</dt><dd>2,048 paired scenarios, 98,304 scripted policy executions</dd>
 <dt>Replay</dt><dd>22,528 browser–Python metric comparisons, zero discrepancies</dd>
 <dt>Not established</dt><dd>Real agent attention, outside-model choices, any actual purchase</dd></dl>
-</aside>
+</details>
 </article>
-<article class="card">
+<article class="card" data-topic="language">
 <div>
 <div class="meta"><span>05 / Translation networks &amp; evaluator failure</span><span>Added 2026-10-26</span></div>
 <h3>The Goblins Accused an Innocent Messenger</h3>
@@ -179,13 +186,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p>In eleven scripted two-fault cases, the conditional audit names an <em>innocent</em> channel. Its repair makes every consistency check pass while increasing the number of wrong channels. Step inside and find the ghost culprit yourself.</p>
 <div class="actions"><a class="open" href="experiments/goblin-cycle/index.html">Frame the innocent goblin ↗</a><a class="quiet" href="experiments/goblin-cycle/method.html">Method, evidence &amp; traps</a></div>
 </div>
-<aside><p class="eyebrow">Evidence label · Synthetic finite</p>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Synthetic finite</p>
 <dl><dt>One-fault condition</dt><dd>768/768 exact repairs across enumerated trials</dd>
 <dt>Two-fault boundary</dt><dd>11/768 falsely accuse an unchanged edge</dd>
 <dt>Not established</dt><dd>Neural languages, grounded meaning, independent validation</dd></dl>
-</aside>
+</details>
 </article>
-<article class="card">
+<article class="card" data-topic="language">
 <div>
 <div class="meta"><span>02 / Neural communication</span><span>Experiment 2026-10-25 · Added 2026-10-26</span></div>
 <h3>Nine Messages: The Goblin Rosetta Experiment</h3>
@@ -193,13 +200,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p>Try eight messages, then the ninth. Change the meaning. Insert an unfamiliar glyph. Finally, swap a familiar one to see a failure the translator does <em>not</em> catch. The four-slot grammar is supplied by the experiment; the words are learned.</p>
 <div class="actions"><a class="open" href="experiments/nine-message-rosetta/index.html">Break the decoder ↗</a><a class="quiet" href="experiments/nine-message-rosetta/method.html">Methods, results &amp; failures</a></div>
 </div>
-<aside><p class="eyebrow">Evidence label · Exploratory</p>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Exploratory</p>
 <dl><dt>Recorded</dt><dd>40,960/40,960 exact translations in the constrained channel family</dd>
 <dt>Local replay</dt><dd>7/7 source checks passed; 36/36 package hashes matched</dd>
 <dt>Not established</dt><dd>Unstructured languages, drift detection, independent validation</dd></dl>
-</aside>
+</details>
 </article>
-<article class="card">
+<article class="card" data-topic="reasoning">
 <div>
 <div class="meta"><span>03 / Cultural toy model</span><span>Experiment 2026-10-25 · Added 2026-10-26</span></div>
 <h3>The Seventeenth Stone</h3>
@@ -207,13 +214,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p>Explore how explanations, memory, copying, and identity interact inside a deliberately tiny fictional simulation. There is a duck. The duck is innocent.</p>
 <div class="actions"><a class="open" href="experiments/seventeenth-stone/index.html">Fork the village ↗</a><a class="quiet" href="experiments/seventeenth-stone/method.html">Model &amp; limits</a></div>
 </div>
-<aside><p class="eyebrow">Evidence label · Toy model</p>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Toy model</p>
 <dl><dt>Implementation</dt><dd>Offline, deterministic HTML simulation with matched-weather forks</dd>
 <dt>Local smoke test</dt><dd>Controls operated in injected-document Chromium; no script errors</dd>
 <dt>Not established</dt><dd>Human cultural dynamics, empirical sociology, independent validation</dd></dl>
-</aside>
+</details>
 </article>
-<article class="card">
+<article class="card" data-topic="language">
 <div>
 <div class="meta"><span>04 / Translation research design</span><span>Experiment 2026-10-25 · Added 2026-10-26</span></div>
 <h3>The Verb That Vanished</h3>
@@ -221,13 +228,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p>Inspect twelve original French source cards, four trial conditions, and the prepared prompts. This is an experiment <em>to run</em>, not a report of completed model trials.</p>
 <div class="actions"><a class="open" href="experiments/verb-that-vanished/index.html">Inspect the protocol ↗</a><a class="quiet" href="experiments/verb-that-vanished/method.html">Method &amp; missing evidence</a></div>
 </div>
-<aside><p class="eyebrow">Evidence label · Prepared protocol</p>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Prepared protocol</p>
 <dl><dt>Observed</dt><dd>One selected post-hoc conversational anomaly</dd>
 <dt>Local replay</dt><dd>17/17 fixture-based software checks passed</dd>
 <dt>Not established</dt><dd>Fresh model trials, independent bilingual review, cause of discrepancy</dd></dl>
-</aside>
+</details>
 </article>
-<article class="card">
+<article class="card" data-topic="reasoning">
 <div>
 <div class="meta"><span>01 / Reasoning & evaluation</span><span>Added 2026-10-26</span></div>
 <h3>Keep the Gaps</h3>
@@ -235,13 +242,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p>It does not verify the evidence, invent missing variables, or decide what is true about the world outside the declared model.</p>
 <div class="actions"><a class="open" href="experiments/keep-the-gaps/index.html">Open the workbench ↗</a><a class="quiet" href="experiments/keep-the-gaps/method.html">Method, evidence & limits</a></div>
 </div>
-<aside><p class="eyebrow">Evidence label</p>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label</p>
 <dl><dt>Implementation</dt><dd>Self-contained HTML + embedded finite checker reports</dd>
 <dt>Verification</dt><dd>Packaged candidate checks reported as passing</dd>
 <dt>Not established</dt><dd>Independent validation; full browser/device coverage</dd></dl>
-</aside>
+</details>
 </article>
-<article class="card">
+<article class="card" data-topic="reasoning">
 <div>
 <div class="meta"><span>07 / Historical goblin navigation arcade</span><span>Run 2026-09-30 · Curated 2026-10-26</span></div>
 <h3>The Lying Map</h3>
@@ -249,13 +256,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <p>Sometimes the Scout discovers the correct exit one action too late to enter it. The ranking between inspection and repair policies reverses when the permitted budget changes. Historical results are from deterministic programs, <strong>not independent language-model workers</strong>.</p>
 <div class="actions"><a class="open" href="experiments/lying-map/index.html">Enter the arcade ↗</a><a class="quiet" href="experiments/lying-map/method.html">Evidence, methods &amp; limits</a></div>
 </div>
-<aside><p class="eyebrow">Evidence label · Archived synthetic</p>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Archived synthetic</p>
 <dl><dt>Original run</dt><dd>778,240 scripted primary episodes plus 40,960 sampled two-error stress episodes</dd>
 <dt>Surprise</dt><dd>Action-budget change reverses a matched policy ranking</dd>
 <dt>Not established</dt><dd>LLM navigation, fresh model-agent isolation, independent validation</dd></dl>
-</aside>
-</article>
+</details>
+</article></div>
 </section>
+<section id="about" class="lab-about" aria-labelledby="about-title"><div><p class="eyebrow">About this little place</p><h2 id="about-title">Serious questions.<br>Room for play.</h2><p>We are Josh and Rin: a human–AI collaboration exploring agent behavior, information, incentives, and the limits of evaluation. The lab turns those questions into small worlds, instruments, and records that other people can inspect.</p><p>Some exhibits contain trained computational learners. Others are scripted simulations, finite proofs, or an explicitly qualified browser pilot. Each names what actually ran and what remains unknown.</p><a class="quiet" href="https://github.com/uberbestest/josh-rin-interactive-lab">Open the source &amp; research records ↗</a></div><div class="lab-crew"><p><strong>Puddle</strong> is our resident duck and unofficial custodian of the crumbs.</p><p><strong>Mote</strong> is the lantern moth keeping a little light over the workbench.</p><p>The goblins are usually helpful. Around candy, we prefer to check.</p><small>Original artwork made for this lab. These characters are decorative mascots, not research participants or independent reviewers.</small></div></section>
 <section id="support" class="support" aria-labelledby="support-title">
 <div class="support-box">
 <div>
@@ -273,4 +281,5 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <div class="note">This shelf is deliberately incomplete. A missing observation stays missing. A result is only as broad as the model and checks that produced it. New exhibits earn their place with their own methods, boundaries, and receipts.</div>
 </main>
 <footer><div class="wrap"><span>Josh & Rin · Interactive research</span><span>Keep the evidence. Name the bridge. Return the counterexample.</span></div></footer>
+<script src="assets/lab/lab-home.js" defer></script>
 </body></html>
