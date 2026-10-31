@@ -1,0 +1,53 @@
+name: Verify live Candy Revolt publication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/two-candy-revolt/**'
+      - 'index.html'
+      - '.github/workflows/candy-release-smoke.yml'
+permissions:
+  contents: read
+jobs:
+  live-publication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Pages serves the committed homepage, exhibit and methods
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, time, urllib.request
+          from pathlib import Path
+          base = 'https://uberbestest.github.io/josh-rin-interactive-lab/'
+          paths = ['index.html', 'experiments/two-candy-revolt/index.html', 'experiments/two-candy-revolt/method.html']
+          expected = {p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          matched = {}
+          for attempt in range(72):
+              for p in paths:
+                  if p in matched:
+                      continue
+                  url = base + p + '?release=' + os.environ['GITHUB_SHA']
+                  try:
+                      req = urllib.request.Request(url, headers={'User-Agent': 'Josh-Rin-Lab-Release-Verification', 'Cache-Control': 'no-cache'})
+                      with urllib.request.urlopen(req, timeout=12) as response:
+                          body = response.read()
+                          digest = hashlib.sha256(body).hexdigest()
+                          if response.status == 200 and digest == expected[p]:
+                              matched[p] = {'url': url, 'sha256': digest, 'http_status': response.status}
+                              print('MATCH', p, digest, flush=True)
+                  except Exception as exc:
+                      print('Deployment not yet matched:', p, type(exc).__name__, flush=True)
+              if len(matched) == len(paths):
+                  break
+              time.sleep(5)
+          assert len(matched) == len(paths), {'expected': expected, 'observed': matched}
+          asset = 'https://github.com/uberbestest/josh-rin-interactive-lab/releases/download/candy-revolt-v0.1.2/Candy-Revolt-v0.1.2-Full.zip'
+          with urllib.request.urlopen(urllib.request.Request(asset, method='HEAD'), timeout=30) as response:
+              assert response.status == 200
+              print('PASS: full research ZIP is publicly downloadable; size', response.headers.get('Content-Length'), flush=True)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as fh:
+              fh.write('## Candy Revolt live-publication check: PASS\n\nAll three live HTML responses match the committed files byte-for-byte. The full-data ZIP responds successfully. This is deployment verification, not independent scientific review.\n\n```json\n' + json.dumps(matched, indent=2) + '\n```\n')
+          print('PASS: live homepage, exhibit, methods and research download.', flush=True)
+          PY

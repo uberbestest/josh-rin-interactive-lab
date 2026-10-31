@@ -1,0 +1,109 @@
+name: Build and verify Candy Revolt v0.1.2
+
+on:
+  push:
+    branches: [release/candy-revolt-v0.1.2]
+    paths:
+      - '.publishing/candy-revolt-v0.1.2/**'
+      - '.github/workflows/build-candy-revolt-v012.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: candy-revolt-v012-release
+  cancel-in-progress: false
+
+jobs:
+  verified-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - name: Extract checksummed public build sources
+        run: |
+          python - <<'PY'
+          import hashlib, io, tarfile
+          from pathlib import Path
+          folder = Path('.publishing/candy-revolt-v0.1.2')
+          data = b''.join((folder / f'part-{i:02d}').read_bytes() for i in range(5))
+          expected = '1a55f1f4577b2008a2e8c0f3350f9b88dce3dab6cf08627d4bd22059088b7f42'
+          assert hashlib.sha256(data).hexdigest() == expected, 'Public source archive checksum mismatch'
+          with tarfile.open(fileobj=io.BytesIO(data), mode='r:xz') as archive:
+              for member in archive.getmembers():
+                  assert member.name.startswith('experiments/two-candy-revolt/'), member.name
+              archive.extractall('.', filter='data')
+          print('Verified and extracted the public source package.')
+          PY
+      - name: Install pinned build and browser dependencies
+        run: |
+          python -m pip install -r experiments/two-candy-revolt/requirements.txt playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Reproduce the complete preserved study
+        working-directory: experiments/two-candy-revolt
+        run: python -u run_experiment.py --out results --part all
+      - name: Audit every training record and exact incentive controls
+        working-directory: experiments/two-candy-revolt
+        run: |
+          python -u audit_records.py --results results
+          python oracle_controls.py --results results
+      - name: Verify original data fingerprints and build exhibit and homepage
+        working-directory: experiments/two-candy-revolt
+        run: python build_release.py --site "$GITHUB_WORKSPACE"
+      - name: Exercise the actual HTTP-served exhibit in Chromium
+        working-directory: experiments/two-candy-revolt
+        run: python test_public.py
+      - name: Assemble the full evidence download
+        working-directory: experiments/two-candy-revolt
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path('.')
+          p = root / 'RELEASE_RECEIPT.json'
+          receipt = json.loads(p.read_text())
+          receipt['release_browser_tests'] = 'results/public-browser-tests.json'
+          receipt['release_browser_status'] = json.loads((root / 'results/public-browser-tests.json').read_text())['status']
+          receipt['github_build_run'] = 'https://github.com/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs/' + os.environ['GITHUB_RUN_ID']
+          p.write_text(json.dumps(receipt, indent=2) + '\n')
+          (root / 'REPORT.md').write_text((root / 'README.md').read_text() + '\n\n---\n\n' + (root / 'METHODS.md').read_text())
+          PY
+          python build_release.py --bundle-only --zip /tmp/Candy-Revolt-v0.1.2-Full.zip
+          cp index.html /tmp/The-Two-Candy-Revolt-v0.1.2.html
+          cd /tmp
+          sha256sum Candy-Revolt-v0.1.2-Full.zip The-Two-Candy-Revolt-v0.1.2.html > Candy-Revolt-v0.1.2-Download-SHA256SUMS.txt
+      - name: Check homepage wiring and commit the verified website
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          home = Path('index.html').read_text()
+          assert '10 instruments' in home
+          assert home.count('experiments/two-candy-revolt/index.html') >= 3
+          assert 'experiments/goblin-shopping/index.html' in home
+          assert Path('experiments/two-candy-revolt/method.html').is_file()
+          assert Path('experiments/two-candy-revolt/results/public-browser-tests.json').is_file()
+          print('PASS: homepage shortcuts, newest exhibit card, methods and existing mall link.')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html README.md experiments/two-candy-revolt
+          git diff --cached --quiet || git commit -m 'Package Candy Revolt v0.1.2 with TLDR, repaired replay and verified evidence'
+          git push origin HEAD:"$GITHUB_REF_NAME"
+      - name: Publish versioned full-data download
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create candy-revolt-v0.1.2 \
+            /tmp/Candy-Revolt-v0.1.2-Full.zip \
+            /tmp/The-Two-Candy-Revolt-v0.1.2.html \
+            /tmp/Candy-Revolt-v0.1.2-Download-SHA256SUMS.txt \
+            --target "$(git rev-parse HEAD)" \
+            --title 'The Two-Candy Revolt v0.1.2 — Halloween public exhibit' \
+            --notes 'Presentation release: top-of-page TL;DR, repaired real learning replay, methods, complete training and evaluation traces, source, checksums, and author-run Chromium tests. Science v0.1.0 is unchanged. Public raw data were deterministically reproduced and checked against every original array fingerprint before packaging. No LLM runs or independent peer review are claimed. The main-branch site publication is verified separately.'
+          echo 'The verified release branch is ready for a non-forced main-branch fast-forward.'
