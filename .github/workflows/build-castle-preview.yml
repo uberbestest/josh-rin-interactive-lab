@@ -1,0 +1,84 @@
+name: Build and verify Castle development preview
+
+on:
+  push:
+    branches: [preview/rle-castle-2026-10-31]
+    paths:
+      - '.publishing/castle-preview/part-*.b64'
+      - '.github/workflows/build-castle-preview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: castle-preview-build
+  cancel-in-progress: false
+
+jobs:
+  build-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Restore checksummed public package and verify allowlisted contents
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, io, zipfile
+          from pathlib import Path, PurePosixPath
+          folder = Path('.publishing/castle-preview')
+          # Correct one duplicated character introduced during text transfer.
+          # The complete ZIP must still match the original locally frozen digest.
+          part = folder/'part-03.b64'
+          text = part.read_text()
+          if 'YeMMMyuko' in text:
+              text = text.replace('YeMMMyuko', 'YeMMyuko')
+              part.write_text(text)
+          payload = ''.join((folder/f'part-{i:02d}.b64').read_text().strip() for i in range(7))
+          data = base64.b64decode(payload, validate=True)
+          expected = 'd781546df682b467990b85889b0c21f79d68fa9f8c7b2933e2dd9839793187c6'
+          assert hashlib.sha256(data).hexdigest() == expected, 'Public package transfer checksum mismatch'
+          with zipfile.ZipFile(io.BytesIO(data)) as archive:
+              assert archive.testzip() is None
+              for member in archive.infolist():
+                  path = PurePosixPath(member.filename)
+                  assert not path.is_absolute() and '..' not in path.parts
+                  assert member.filename.startswith('projects/rle-castle/') or member.filename == '.publishing/castle-preview/apply.py'
+              archive.extractall('.')
+          for line in Path('projects/rle-castle/SHA256SUMS.txt').read_text().splitlines():
+              digest, name = line.split('  ', 1)
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == digest, name
+          print('PASS: exact public package; cropped image only; no private desktop source capture.')
+          PY
+      - name: Add project navigation while preserving all ten existing exhibits
+        run: python3 .publishing/castle-preview/apply.py
+      - name: Install the browser harness
+        run: |
+          python3 -m pip install playwright==1.57.0
+          python3 -m playwright install --with-deps chromium
+      - name: Exercise the real HTTP-served preview at phone and desktop widths
+        run: python3 projects/rle-castle/test_preview.py
+      - name: Check existing Agent Attention evidence and links
+        run: python3 agent-attention/audit_map.py
+      - name: Preserve review screenshots and public presentation files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: castle-preview-review
+          retention-days: 14
+          path: |
+            projects/rle-castle/
+            index.html
+            assets/lab/lab-theme.css
+            assets/lab/lab-home.js
+      - name: Commit verified presentation to the staging branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html projects/rle-castle .publishing/castle-preview/apply.py .publishing/castle-preview/part-03.b64
+          git diff --cached --quiet || git commit -m 'Add verified RLE Castle Faire development preview and homepage project section'
+          git push origin HEAD:"$GITHUB_REF_NAME"
+          echo 'Review branch ready; main is unchanged by this build.'
