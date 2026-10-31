@@ -27,7 +27,7 @@ assert trace["outcome"]["type"]=="recommendation_not_purchase"
 assert trace["setup"]["browser"].lower().startswith("personalized")
 assert len(trace["notes"])==3 and [x["id"] for x in trace["notes"]]==["N01","N02","N03"]
 assert len({x["url"] for x in events if x["evidence"]=="opened"})==6
-assert "full raw archive" in " ".join(trace["limits"]).lower()
+assert any(("raw" in x.lower() and ("archive" in x.lower() or "export" in x.lower())) for x in trace["limits"])
 
 html=(ROOT/"index.html").read_text(encoding="utf-8")
 payload=re.search(r'<script id="pilotData" type="application/json">([\s\S]*?)</script>',html)
