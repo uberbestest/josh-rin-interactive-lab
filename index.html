@@ -69,11 +69,24 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:24px 0 42px;f
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 @media(max-width:720px){.card{grid-template-columns:1fr;gap:12px}aside{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.hero{padding-top:38px}.start-grid{grid-template-columns:1fr}.section-head{display:block}.support-box{grid-template-columns:1fr;gap:8px}.nav-links{gap:12px}.nav-links a{font-size:.82rem}nav{gap:8px;flex-wrap:wrap;padding:12px 0}.logo{font-size:.93rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Dedicated Agent Attention research section — navigation and layered evidence, not conversion claims */
+.attn-feature{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(225px,.7fr);gap:27px;padding:clamp(24px,4vw,39px);border:1px solid #577083;border-radius:13px;background:linear-gradient(125deg,#1c3441,#172632 65%,#232c36)}
+.attn-feature h3{font-size:clamp(1.8rem,4vw,2.65rem);font-family:Georgia,serif;font-weight:500;letter-spacing:-.025em}
+.attn-feature p{color:var(--muted);line-height:1.7}
+.attn-feature aside{padding-left:25px;border-left:1px solid var(--line)}
+.attn-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:13px}
+.attn-links a{display:block;border:1px solid var(--line);border-radius:8px;background:#15232e;padding:15px;text-decoration:none;font-size:.89rem}
+.attn-links a:hover{border-color:var(--mint);background:#203642}
+.attn-links strong{display:block;margin-bottom:5px;color:var(--ink)}
+.attn-links span{display:block;color:var(--muted)}
+@media(max-width:720px){.attn-feature{grid-template-columns:1fr}.attn-feature aside{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.attn-links{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
 <a class="skip-link" href="#experiments">Skip to the experiments</a>
-<header><nav class="wrap" aria-label="Lab navigation"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><div class="nav-links"><a href="#experiments">The experiments</a><a href="experiments/two-candy-revolt/index.html">Halloween Science ↗</a><a href="https://github.com/uberbestest/josh-rin-interactive-lab">Source &amp; records ↗</a><a class="nav-support" href="#support">Support the lab ↗</a></div></nav></header>
+<header><nav class="wrap" aria-label="Lab navigation"><a class="logo" href="#top">[ <span>✦</span> ] JOSH & RIN / LAB</a><div class="nav-links"><a href="#experiments">The experiments</a><a href="#agent-attention">Agent Attention</a><a href="experiments/two-candy-revolt/index.html">Halloween Science ↗</a><a href="https://github.com/uberbestest/josh-rin-interactive-lab">Source &amp; records ↗</a><a class="nav-support" href="#support">Support the lab ↗</a></div></nav></header>
 <main id="top" class="wrap">
 <div class="hero"><p class="eyebrow">A living collection of interactive research</p>
 <h1>Open the instrument.<br><em>Question the conclusion.</em></h1>
@@ -82,12 +95,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <section class="start" aria-labelledby="start-title">
 <h2 id="start-title">Pick a first experiment</h2>
 <div class="start-grid">
+<a href="agent-attention/index.html"><strong>New: Map a real agent shopping journey ↗</strong><span>Fifteen recorded browser operations. Separate opened pages from search results and uncertainty.</span></a>
 <a href="experiments/two-candy-revolt/index.html"><strong>New: The Two-Candy Revolt ↗</strong><span>Start with the TL;DR, watch the goblins learn, and test whether a generous deal survives an incentive to break it.</span></a>
 <a href="experiments/halloween-porches/index.html#workbench"><strong>Go trick-or-treating with ten goblins ↗</strong><span>Change their reward signal. Can a truthful score still give everybody empty bags?</span></a>
 <a href="experiments/nine-message-rosetta/index.html#experiment"><strong>Decode a goblin language ↗</strong><span>Reveal a ninth message, then find the mistranslation the decoder misses.</span></a>
 <a href="experiments/goblin-cycle/index.html"><strong>Catch a false accusation ↗</strong><span>Two faulty translators can make an innocent messenger look guilty.</span></a>
 </div>
 </section>
+<section id="agent-attention" aria-labelledby="agent-attention-title">
+<div class="section-head"><h2 id="agent-attention-title">Agent Attention</h2><p>A research program · shopping, navigation &amp; evidence</p></div>
+<div class="attn-feature"><div>
+<p class="eyebrow">New · Explore the attention map</p>
+<h3>Where did the agent actually go?</h3>
+<p>Follow fifteen reported real-browser operations through Google, an affiliate guide, Amazon and IKEA. Which destinations were opened, which appeared in search only, and when did an uncertain transition become a verified product? Compare that qualified journey with our controlled, entirely scripted shopping-mall experiments.</p>
+<p><strong>The observation boundary matters:</strong> an exposure is not an opening, a visit is not a recommendation, and a recommendation is not a sale. The real pilot used a personalized browser and lacked complete exported raw captures; our mall's policies were written by us.</p>
+<div class="actions"><a class="open" href="agent-attention/index.html">Explore the interactive map ↗</a><a class="quiet" href="agent-attention/method.html">Methods &amp; evidence boundaries</a></div>
+</div><aside><p class="eyebrow">Two distinct evidence layers</p><dl><dt>Real browser pilot · qualified</dt><dd>15 recorded operations, one final recommendation, zero purchases</dd>
+<dt>Scripted mall</dt><dd>2,048 paired cases; promotion, budget, popularity and path changes</dd>
+<dt>Unclaimed</dt><dd>No clean ten-agent open-web replication or private “attention” measurement yet</dd></dl></aside></div>
+<div class="attn-links">
+<a href="agent-attention/index.html#journey"><strong>01 · Map the real journey</strong><span>Open the operation timeline, inspect unsettled events and three agent notes.</span></a>
+<a href="experiments/goblin-shopping/index.html"><strong>02 · Explore the mall</strong><span>Change scripted shopping policies, promotions and browsing constraints.</span></a>
+<a href="experiments/goblin-shopping/notes/crowd-feedback/index.html"><strong>03 · Challenge the mechanism</strong><span>See when crowd feedback amplifies, changes or suppresses a reroute.</span></a>
+</div></section>
 <section id="experiments" aria-labelledby="experiments-title">
 <div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>10 instruments · latest addition 2026-10-31</p></div>
 <article class="card" id="two-candy-revolt">
