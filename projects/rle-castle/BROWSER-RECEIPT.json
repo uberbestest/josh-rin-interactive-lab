@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-10-31T21:17:19.540678+00:00",
+  "scope": "Same-author Chromium presentation checks over localhost HTTP; no current game launch or independent research review",
+  "image_sha256": "6f9408efa9f5cbf078a0ad9bf8af48ccb0c429c02386403c4d766fbfa70f224d",
+  "checks": [
+    {
+      "viewport": 320,
+      "status": "PASS",
+      "image_loaded": true,
+      "horizontal_overflow": false,
+      "project_separate_from_10_instruments": true,
+      "evidence_disclosure_keyboard": true
+    },
+    {
+      "viewport": 390,
+      "status": "PASS",
+      "image_loaded": true,
+      "horizontal_overflow": false,
+      "project_separate_from_10_instruments": true,
+      "evidence_disclosure_keyboard": true
+    },
+    {
+      "viewport": 768,
+      "status": "PASS",
+      "image_loaded": true,
+      "horizontal_overflow": false,
+      "project_separate_from_10_instruments": true,
+      "evidence_disclosure_keyboard": true
+    },
+    {
+      "viewport": 1440,
+      "status": "PASS",
+      "image_loaded": true,
+      "horizontal_overflow": false,
+      "project_separate_from_10_instruments": true,
+      "evidence_disclosure_keyboard": true
+    }
+  ],
+  "no_javascript_required": true,
+  "javascript_errors": [],
+  "failed_http_responses": []
+}

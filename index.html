@@ -82,12 +82,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .attn-links span{display:block;color:var(--muted)}
 @media(max-width:720px){.attn-feature{grid-template-columns:1fr}.attn-feature aside{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.attn-links{grid-template-columns:1fr}}
 
+
+/* Castle development preview is not an experiment card. */
+.castle-project{display:grid;grid-template-columns:1.08fr 1fr;gap:32px;align-items:center;border:1px solid #5c655e;border-radius:13px;padding:clamp(23px,4vw,39px);background:linear-gradient(125deg,#243331,#182632)}.castle-project h3{font:500 clamp(2rem,4vw,3rem)/1.1 Georgia,serif;margin:14px 0}.castle-project p{color:var(--muted)}.castle-project figure{margin:0;min-width:0}.castle-project img{display:block;width:100%;height:auto;border-radius:7px;border:1px solid var(--line)}.castle-project figcaption{font-size:.79rem;color:var(--muted);margin-top:12px}.castle-project .actions{gap:12px}@media(max-width:800px){.castle-project{grid-template-columns:1fr;gap:22px}}
 </style>
 <link rel="stylesheet" href="assets/lab/lab-theme.css">
 </head>
 <body class="lab-home">
 <a class="skip-link" href="#experiments">Skip to the experiments</a>
-<header><nav class="wrap" aria-label="Lab navigation"><a class="logo" href="#top"><svg class="lab-emblem" aria-hidden="true" viewBox="0 0 30 34" shape-rendering="crispEdges"><path d="M9 0H21V4H19V13L28 27V32H2V27L11 13V4H9Z" fill="#8cc8ba"/><path d="M13 4H17V14L25 27V29H5V27L13 14Z" fill="#18313b"/><path d="M10 21H20L25 27V29H5V27Z" fill="#bd9cdd"/><path d="M11 23H14V26H11ZM17 26H20V28H17Z" fill="#e6d3f3"/></svg>Josh &amp; Rin's Lab</a><div class="nav-links"><a href="#experiments">Experiments</a><a href="#agent-attention">Agent Attention</a><a href="experiments/two-candy-revolt/index.html">Halloween Science</a><a href="#about">About</a><a href="https://github.com/uberbestest/josh-rin-interactive-lab">Source ↗</a><a class="nav-support" href="#support">Support ♡</a></div></nav></header>
+<header><nav class="wrap" aria-label="Lab navigation"><a class="logo" href="#top"><svg class="lab-emblem" aria-hidden="true" viewBox="0 0 30 34" shape-rendering="crispEdges"><path d="M9 0H21V4H19V13L28 27V32H2V27L11 13V4H9Z" fill="#8cc8ba"/><path d="M13 4H17V14L25 27V29H5V27L13 14Z" fill="#18313b"/><path d="M10 21H20L25 27V29H5V27Z" fill="#bd9cdd"/><path d="M11 23H14V26H11ZM17 26H20V28H17Z" fill="#e6d3f3"/></svg>Josh &amp; Rin's Lab</a><div class="nav-links"><a href="#experiments">Experiments</a><a href="#agent-attention">Agent Attention</a><a href="#major-projects">Projects</a><a href="experiments/two-candy-revolt/index.html">Halloween Science</a><a href="#about">About</a><a href="https://github.com/uberbestest/josh-rin-interactive-lab">Source ↗</a><a class="nav-support" href="#support">Support ♡</a></div></nav></header>
 <main id="top" class="wrap">
 <div class="lab-welcome">
 <div><p class="eyebrow">Independent human–AI research · Halloween edition</p><h1>A little lab.<br><em>A lot of questions.</em></h1></div>
@@ -101,6 +104,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <section class="start" aria-labelledby="start-title">
 <h2 id="start-title">Choose a door into the lab</h2>
 <div class="start-grid">
+<a href="projects/rle-castle/index.html"><strong>In development: RLE Castle — The Faire ↗</strong><span>A first look at the adventure, the local footrace playtest, and the research questions underneath.</span></a>
 <a href="agent-attention/index.html"><strong>New: Map a real agent shopping journey ↗</strong><span>Fifteen recorded browser operations. Separate opened pages from search results and uncertainty.</span></a>
 <a href="experiments/two-candy-revolt/index.html"><strong>New: The Two-Candy Revolt ↗</strong><span>Start with the TL;DR, watch the goblins learn, and test whether a generous deal survives an incentive to break it.</span></a>
 <a href="experiments/halloween-porches/index.html#workbench"><strong>Go trick-or-treating with ten goblins ↗</strong><span>Change their reward signal. Can a truthful score still give everybody empty bags?</span></a>
@@ -109,6 +113,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <a href="experiments/goblin-shopping/index.html"><strong>Take a trip through the goblin mall ↗</strong><span>Separate a storefront's traffic from the choices that end up in the cart.</span></a>
 </div>
 </section>
+<section id="major-projects" aria-labelledby="major-projects-title"><div class="section-head"><h2 id="major-projects-title">Major projects</h2><p>In development · separate from completed instruments</p></div><article class="castle-project"><div><p class="eyebrow">Development preview / RLE Castle</p><h3>The Faire</h3><p>A fair full of games, rumors and choices on the way to the castle. An adventure for people to enjoy, and a proposed environment for studying how agents explore, follow evidence and respond to incentives.</p><p><strong>Local footrace playtest reported October 31.</strong> View a shared Faire-window capture and the development scope. This is a project preview, not a public playable build or a validated agent benchmark.</p><div class="actions"><a class="open" href="projects/rle-castle/index.html">Preview the Castle project ↗</a><a class="quiet" href="projects/rle-castle/index.html#evidence">What is demonstrated?</a></div></div><figure><img src="projects/rle-castle/assets/faire-doorway.webp" width="575" height="200" loading="lazy" alt="A cropped development capture of the Faire's lamp-lit lab doorway and Puddle's booth."><figcaption>Shared development capture · cropped to exclude desktop overlays.</figcaption></figure></article></section>
 <section id="agent-attention" aria-labelledby="agent-attention-title">
 <div class="section-head"><h2 id="agent-attention-title">Agent Attention</h2><p>A research program · shopping, navigation &amp; evidence</p></div>
 <div class="attn-feature"><div>

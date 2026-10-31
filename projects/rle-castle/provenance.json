@@ -1,0 +1,46 @@
+{
+  "project": "RLE Castle \u2014 The Faire",
+  "release_type": "development_preview",
+  "date": "2026-10-31",
+  "build_verified_in_this_release": false,
+  "public_playable_build": false,
+  "source": {
+    "kind": "user-shared screenshot of a game window",
+    "shared_at_utc": "2026-10-31T02:09:13.976186Z",
+    "capture_timestamp": "unknown",
+    "build_revision": "unknown",
+    "source_dimensions": [
+      1891,
+      1035
+    ],
+    "original_sha256": "8507a994bd05109e0cf662099e7b441bccebae733dd0b528fef32c2fa4cbc0e1",
+    "original_published": false
+  },
+  "public_asset": {
+    "path": "assets/faire-doorway.webp",
+    "crop_box_xyxy": [
+      360,
+      145,
+      1510,
+      544
+    ],
+    "dimensions": [
+      575,
+      200
+    ],
+    "encoding": "WebP, quality 45",
+    "sha256": "6f9408efa9f5cbf078a0ad9bf8af48ccb0c429c02386403c4d766fbfa70f224d",
+    "editing": "Rectangular crop, resize and compression only. No inpainting or invented game elements. Desktop, chat and notification overlays excluded."
+  },
+  "claims": {
+    "visible_scene": "Lab doorway, Clockwork Town sign, booth, castle-access objective",
+    "footrace_status": "Josh reported playing the improved footrace on October 31; not independently rerun here",
+    "research_description": "Design intent, not completed experimental results"
+  },
+  "excluded": [
+    "Rejected October 18 v0.1.0 screenshots",
+    "Rejected top-down car-racing screenshot",
+    "Footrace visual whose provenance as a running-build capture was not verified",
+    "Private source code, executables, saves, chat, local paths and connection details"
+  ]
+}
