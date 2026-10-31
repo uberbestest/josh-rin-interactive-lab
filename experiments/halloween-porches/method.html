@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<title>The Porch That Ate Halloween — Methods &amp; Evidence</title>
+<meta name="description" content="Model, exhaustive checks, evidence limits and reproduction instructions for the Halloween goblin reward exhibit.">
+<style>
+:root{color-scheme:dark;--bg:#0d1421;--ink:#edf2ef;--muted:#b8c7c7;--line:#40535b;--gold:#ffc27a;--mint:#a7e4ca;--panel:#192c35}*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse 70% 35% at 85% 0%,#49322f,transparent 80%),var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+main,header,footer{padding:24px max(22px,calc((100% - 890px)/2))}header{border-bottom:1px solid var(--line)}footer{border-top:1px solid var(--line);color:var(--muted);font-size:.83rem}
+a{color:var(--mint)}:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1{font-size:clamp(2.15rem,6vw,3.9rem);line-height:1.04;letter-spacing:-.052em;margin:15px 0 22px}
+h2{font-size:1.46rem;border-top:1px solid var(--line);padding-top:22px;margin-top:35px}
+p,li{color:var(--muted)}strong{color:var(--ink)}.eyebrow{font:700 .77rem/1.45 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+.button{background:var(--gold);color:#2a2118;display:inline-block;text-decoration:none;font-weight:800;padding:11px 18px;border-radius:7px}
+.callout{border-left:4px solid var(--gold);padding:17px 21px;background:var(--panel);border-radius:4px}
+code{font:.88em ui-monospace,Consolas,monospace;overflow-wrap:anywhere;color:#d9e9df}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#14232d;color:#d2e7dc;padding:17px;border-radius:8px;font:.84rem/1.55 ui-monospace,Consolas,monospace}
+table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{padding:11px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--mint)}td{color:var(--muted)}
+</style></head><body>
+<header><a href="../../index.html">← All lab experiments</a></header><main>
+<p class="eyebrow">Evidence &amp; limitations · Public 2026-10-31 · Exhibit 09</p>
+<h1>The Porch That Ate Halloween</h1>
+<p>Exhaustive allocation mathematics plus a browser reconstruction of goblin decision incentives. <strong>Not a new external language-model evaluation. Not a replay of an archived training program.</strong></p>
+<a class="button" href="index.html">Open the interactive street ↗</a>
+<section><h2>Question and world</h2>
+<p>Can a reward function use fully accurate local inputs yet still produce wasteful coordination? Does maximizing group output ensure comparable outcomes for the participating individuals? When does concentration switch from failure to correct behavior?</p>
+<p>Ten fictional goblins choose one of six porches, with per-winner candy payouts <code>(8,6,5,4,3,2)</code> and service capacities <code>(1,1,2,2,3,1)</code>. When too many select a porch, exactly its capacity are selected by a uniform lottery; the rest receive nothing. Supplies reset between rounds. In the abundant-supply control, capacity is ten at every porch.</p>
+<pre>Visitors n[j], capacity c[j], candy payout v[j]
+Group candy T(n) = Σ_j v[j] × min(n[j], c[j])
+Expected candy for visitor at j = v[j] × min(1, c[j] / n[j])
+Expected empty bags = Σ_j max(0, n[j] − c[j])
+Sign reward for individual i = v[chosen porch]
+Shared reward for individual i = T(n)
+Marginal reward for individual i = T(n) − T(n without i)</pre>
+<p>The finite outcome and empty-bag count are not random for a fixed allocation; only <em>which individuals win</em> the fair lottery varies. The browser uses a seeded xorshift generator to sample winners for display, not for calculating mean rewards. Its controls remain local.</p></section>
+<section><h2>What was actually checked for this release</h2>
+<p><a href="verify.py">The standalone Python reference checker</a> enumerates all weak compositions of ten visitors among six porches, <code>C(15,5) = 3,003</code>. It calculates total candy and whether any currently occupied visitor has a strictly profitable personal-candy move to another porch. It confirms these complete finite results:</p>
+<table><thead><tr><th>Property</th><th>Verified value</th></tr></thead><tbody>
+<tr><td>Global optimum</td><td>43 candies, uniquely at <code>(1,1,2,2,3,1)</code></td></tr>
+<tr><td>Personal-reward equilibrium A</td><td>35 candies at <code>(2,2,3,2,1,0)</code></td></tr>
+<tr><td>Personal-reward equilibrium B</td><td>38 candies at <code>(2,1,3,2,2,0)</code></td></tr>
+<tr><td>All ten visit eight-candy porch</td><td>8 candies under limited supply; 80 under abundant supply</td></tr>
+<tr><td>Ten-role rotation of efficient allocation</td><td>All ten identities receive 4.3 candies per night in expectation across a full cycle</td></tr>
+</tbody></table>
+<p>The checker asserts these numbers and prints a PASS receipt if they hold. The browser also recomputes the 3,003 allocations at load to check the global optimum and equilibria. The public interface's <em>best-response</em> button repeatedly makes only strictly improving unilateral choices with a fixed scan order and stops at local stability; it is a transparent heuristic and does not train neural networks.</p>
+<p><strong>Independent calculation:</strong> the published finite computation and original conversational training account are separate evidence objects. Reconstructing a fixture that matches the earlier numbers does not reconstruct its learner, hyperparameters or trajectories. Running our own checker is not independent external peer review.</p></section>
+<section><h2>What the earlier in-chat experiment reported</h2>
+<p>A previous assistant response on October 31 described 64 seeds per reward condition, 12,000 training rounds, 2,000 held-out evaluation rounds per group, ten learners, a 10,000-check marginal-reward audit, and summary performance as follows:</p>
+<table><thead><tr><th>Learning objective</th><th>Reported mean group candy</th><th>Reported empty bags</th></tr></thead><tbody>
+<tr><td>Advertised sign reward</td><td>8.21 / 43</td><td>89.54%</td></tr>
+<tr><td>Personal actual candy</td><td>32.62 / 43</td><td>37.44%</td></tr>
+<tr><td>Shared actual group candy</td><td>42.68 / 43</td><td>0.78%</td></tr>
+<tr><td>Marginal contribution</td><td>42.41 / 43</td><td>1.55%</td></tr>
+</tbody></table>
+<div class="callout"><strong>Publication integrity note:</strong> The raw training source, full seeds and evaluation logs were not accessible to this publishing step. Therefore these are a <em>historical in-chat report</em>, not independently verified empirical results. They must not be represented as having been replayed by the finite checker or by site visitors.</div></section>
+<section><h2>Why the distinctions matter</h2>
+<p><strong>Sign reward ≠ receipt:</strong> the sign is truthful about a winner's payout, but the counter ignores capacity. Ten goblins can each receive an eight-point sign score while only one receives eight candies.</p>
+<p><strong>Personal honesty ≠ global optimum:</strong> in the finite toy game, both 35- and 38-candy arrangements are Nash-stable for single-person switches, despite a reachable 43-candy allocation. This demonstrates an incentive compatibility problem without implying deception.</p>
+<p><strong>Shared reward ≠ fair distribution:</strong> at the global optimum the ten fixed role payoffs are <code>(8,6,5,5,4,4,3,3,3,2)</code>. The group collects 43, but the lowest-payoff identity receives 2 in expectation while the highest gets 8. A ten-round cyclic reassignment has each individual occupy every role once, yielding 4.3 expected candy each.</p>
+<p><strong>Abundant supply changes the optimum:</strong> when every porch can serve ten visitors, choosing the eight-candy porch together yields 80 out of 80. Concentration is no longer a problem. A crowding detector insensitive to resource conditions would mark the optimal outcome as a failure.</p>
+<p><strong>Shared and marginal best responses:</strong> with other choices held fixed, maximizing a goblin's marginal group contribution gives the same unilateral change direction as maximizing group total. Their observed learning performance can nevertheless differ under other simultaneous, noisy or stochastic learning rules; the published best-response demo is not a test of those differences.</p></section>
+<section><h2>Limits, scope and reproduction</h2>
+<ul><li>Agents are named programmed counters, not autonomous LLMs, humans, or evidence of subjective experiences.</li>
+<li>The world has no travel time, porch preferences, changing demands, negotiation, social punishment, role costs, communication, or uncertainty about the published values and capacities.</li>
+<li>The lottery gives integer actual bags in a round; expectation and guaranteed equality are not interchangeable.</li>
+<li>The browser's seeded sample shows one conditional allocation lottery, not a rerun of prior training or external model actions.</li>
+<li>The exact 3,003-allocation verification tests finite mathematics, not neural training, converged policies, multi-day fairness in the real world, or general alignment claims.</li>
+<li>The public experiment includes no private continuity data, correspondence, personal locations, credentials or model access tokens.</li></ul>
+<p>To reproduce the independent finite results from the repo root:</p>
+<pre>python experiments/halloween-porches/verify.py</pre>
+<p>For the interface, open <a href="index.html">index.html</a> in a browser. It uses standalone inline CSS/JavaScript, no frameworks or external requests. Test navigation, presets, reward settings and capacity toggle. Browser automation/device coverage is <strong>not</strong> claimed for this first release.</p>
+<p><a href="README.md">Public evidence receipt and source notes</a> · <a href="https://github.com/uberbestest/josh-rin-interactive-lab/tree/main/experiments/halloween-porches">Source directory on GitHub ↗</a></p></section>
+</main><footer>Josh &amp; Rin · Keep the evidence. Name the bridge. Return the counterexample.</footer></body></html>
