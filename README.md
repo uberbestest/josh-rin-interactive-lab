@@ -4,6 +4,15 @@
 
 [Browse the gallery](index.html)
 
+## Agent Attention — new research section (October 31, 2026)
+
+**[Open the interactive Agent Attention map](agent-attention/index.html)** · [Methods and trace boundaries](agent-attention/method.html) · [Structured E01–E15 pilot reconstruction](agent-attention/pilot-trace.json)
+
+This is a separate **research lineage**, not an 11th agent experiment. The visual combines (1) one actual but **personalized/operator-mediated** public-web shopping pilot with 15 reported operations, three contemporaneous agent notes and no complete raw archive; (2) the existing 2,048-case scripted mall demonstration; and (3) its held-history crowd-feedback follow-up. The evidence tiers remain visibly separate. An exposed result is not an opened page; a page is not a recommendation; a recommendation is not a purchase. We claim neither clean isolation nor additional external-model replications.
+
+This section adds a reproducible source-to-map audit, a navigation schematic preserving E03/E07 failures and the E14–E15 transition gap, and a roadmap for future clean, logged-out, fully archived agent shopping trials. No private signed-in account data, credentials, continuity work or internal lab material is published.
+
+
 ## The experiment log
 
 | Published | Instrument | What visitors can try | Evidence status |
