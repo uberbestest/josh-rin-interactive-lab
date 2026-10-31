@@ -1,0 +1,47 @@
+name: Agent Attention evidence and browser verification
+
+on:
+  push:
+    branches:
+      - main
+      - feature/agent-attention-2026-10-31
+    paths:
+      - 'agent-attention/**'
+      - 'index.html'
+      - 'README.md'
+      - '.github/workflows/verify-agent-attention.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify every mapped operation and public link
+        run: python3 agent-attention/audit_map.py
+      - name: Verify previous mall sweep remains reproducible
+        run: node experiments/goblin-shopping/tests/verify.cjs
+      - name: Regenerate the completed crowd-feedback grid and verify controls
+        run: |
+          node experiments/goblin-shopping/notes/crowd-feedback/run.cjs experiments/goblin-shopping/model.js /tmp/agent-attention-crowd-replay
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          expected=json.loads(Path('experiments/goblin-shopping/notes/crowd-feedback/results/summary.json').read_text())
+          actual=json.loads(Path('/tmp/agent-attention-crowd-replay/summary.json').read_text())
+          assert actual==expected, 'Replayed deterministic mall grid differs from archived result'
+          print('PASS: reexecuted crowd feedback grid matches all archived summary fields exactly')
+          PY
+      - name: Install Chromium browser harness
+        run: |
+          python3 -m pip install playwright==1.57.0
+          python3 -m playwright install --with-deps chromium
+      - name: Operate the interactive map at four viewport sizes
+        run: python3 agent-attention/test_ui.py
