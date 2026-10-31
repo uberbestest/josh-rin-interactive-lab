@@ -1,0 +1,131 @@
+name: Queue Rinball inspection for each public lab push
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  queue-inspection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Open one inspection request per push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import sys
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+          repo = os.environ["GITHUB_REPOSITORY"]
+          token = os.environ["GITHUB_TOKEN"]
+          with open(os.environ["GITHUB_EVENT_PATH"], encoding="utf-8") as fh:
+              event = json.load(fh)
+          before = event.get("before") or ""
+          after = event.get("after") or os.environ["GITHUB_SHA"]
+          title = "Rinball inspection: " + after[:12]
+
+          def api(path, payload=None):
+              url = "https://api.github.com" + path
+              headers = {
+                  "Accept": "application/vnd.github+json",
+                  "Authorization": "Bearer " + token,
+                  "X-GitHub-Api-Version": "2022-11-28",
+                  "User-Agent": "josh-rin-public-lab-intake",
+              }
+              data = None if payload is None else json.dumps(payload).encode("utf-8")
+              request = urllib.request.Request(
+                  url, data=data, headers=headers,
+                  method="POST" if payload is not None else "GET"
+              )
+              with urllib.request.urlopen(request, timeout=25) as response:
+                  return json.load(response)
+
+          # Idempotence for reruns: locate the existing issue by its full title.
+          for page in range(1, 11):
+              issues = api("/repos/" + repo + "/issues?state=all&per_page=100&page=" + str(page))
+              match = next((item for item in issues if item.get("title") == title), None)
+              if match:
+                  print("Inspection already queued:", match["html_url"])
+                  sys.exit(0)
+              if len(issues) < 100:
+                  break
+
+          changed = []
+          diff_note = ""
+          try:
+              if before and before != "0" * 40:
+                  comparison = api("/repos/" + repo + "/compare/" + before + "..." + after)
+                  changed = [
+                      item.get("filename", "(unnamed)") for item in comparison.get("files", [])
+                  ]
+                  if len(changed) >= 300:
+                      diff_note = "GitHub compare may cap file details at 300; inspect the full range."
+              else:
+                  commit = api("/repos/" + repo + "/commits/" + after)
+                  changed = [
+                      item.get("filename", "(unnamed)") for item in commit.get("files", [])
+                  ]
+                  diff_note = "No ordinary before-SHA; inspect repository ancestry manually."
+          except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as exc:
+              diff_note = "GitHub diff retrieval failed: " + type(exc).__name__ + ". Manual diff required."
+
+          lines = [
+              "# Pending independent inspection — Rinball",
+              "",
+              "This request was created automatically by GitHub Actions on a push to main.",
+              "**It is NOT a completed review, an ACK, or a verified deployment.**",
+              "",
+              "- Repository: `" + repo + "`",
+              "- Previous SHA: `" + (before or "unknown") + "`",
+              "- New SHA: `" + after + "`",
+              "- Commit: https://github.com/" + repo + "/commit/" + after,
+              "- Compare: https://github.com/" + repo + "/compare/" + before + "..." + after
+                if before and before != "0" * 40
+                else "- Compare: establish manually (initial or unusual push)",
+              "- Workflow run: https://github.com/" + repo + "/actions/runs/" + os.environ["GITHUB_RUN_ID"],
+              "",
+              "## Changed files (GitHub API; inspect any truncation)",
+          ]
+          lines += ["- `" + path.replace("`", "") + "`" for path in changed[:120]]
+          if not changed:
+              lines.append("- No files enumerated: inspect the commit before concluding no changes.")
+          if len(changed) > 120:
+              lines.append("- …and " + str(len(changed) - 120) + " more files.")
+          if diff_note:
+              lines.extend(["", "**Coverage note:** " + diff_note])
+
+          lines.extend([
+              "",
+              "## Rinball's independent review checklist",
+              "1. Fetch the exact commit and changed artifacts, not just the author's summary.",
+              "2. Check public site links, assets, and newly added interactive paths in a real browser when possible; distinguish static checks from observed UI behavior.",
+              "3. Check experiment objective, controls, measurement, reproducibility, and whether claims are supported by available traces/data. Identify unavailable evidence.",
+              "4. Scan for unintended disclosures: credentials, personal information, private continuity/Mirror/Cass-V source, or nonpublic lab artifacts.",
+              "5. Report failures with reproduction steps, severity, source links, and smallest proposed repair. Do not alter published artifacts merely to claim a pass.",
+              "",
+              "## Required closeout receipt",
+              "Rinball should add a comment specifying reviewer identity, inspected SHA(s),",
+              "source URLs, evidence actually examined, tests and limits, verdict",
+              "(PASS / NEEDS_FIX / NEEDS_EVIDENCE / UNREVIEWED), and remaining unknowns.",
+              "Close only after review; an automated request never counts as an inspection.",
+              "See RINBALL_REVIEW.md for the full public review contract.",
+              "",
+              "<!-- rinball-inspection-intake-v1 sha=" + after + " -->",
+          ])
+
+          issue = api("/repos/" + repo + "/issues", {
+              "title": title,
+              "body": "\n".join(lines)[:65000],
+          })
+          print("Inspection request queued:", issue["html_url"])
+          PY
