@@ -39,7 +39,8 @@ with socketserver.TCPServer(('127.0.0.1',0),Handler) as server:
             assert page.goto(base+'/index.html',wait_until='networkidle').status==200
             assert page.locator('h1').count()==1
             assert page.locator('.card').count()==10
-            assert page.locator('.lab-picture').evaluate('(e)=>e.complete && e.naturalWidth===1200')
+            # ViewBox-only SVGs may have a 300x110 intrinsic size; verify content/aspect.
+            assert page.locator('.lab-picture').evaluate('(e)=>e.complete && e.naturalWidth>0 && Math.abs(e.naturalWidth/e.naturalHeight-1200/440)<0.01')
             duplicate=page.evaluate('''() => {const a=[...document.querySelectorAll('[id]')].map(e=>e.id);return a.filter((x,i)=>a.indexOf(x)!==i)}''')
             assert not duplicate,duplicate
             assert page.locator('#agent-attention a[href="agent-attention/index.html"]').count()>=1
