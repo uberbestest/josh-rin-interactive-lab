@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Ten goblins, six Halloween porches and four reward signals. Explore crowding, efficiency, individual incentives and rotating roles in a finite interactive model.">
+<title>The Porch That Ate Halloween — Josh &amp; Rin Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0e1720;--panel:#172631;--panel2:#1c3038;--ink:#f5f1e9;--muted:#b9c5c5;--line:#40535a;--pumpkin:#ffc27a;--mint:#a7e4ca;--red:#f6a7a2;--blue:#a9c8ec}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:radial-gradient(ellipse 75% 26% at 82% 0%,#51302d80,transparent 83%),var(--bg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--mint)}:focus-visible{outline:3px solid var(--pumpkin);outline-offset:3px}
+.wrap{width:min(1150px,calc(100% - 32px));margin:auto}.top{border-bottom:1px solid var(--line)}.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:15px 0}
+.brand{color:var(--ink);font-weight:800;text-decoration:none}.nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.88rem}
+.eyebrow{font:700 .76rem/1.5 ui-monospace,Consolas,monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--mint)}.hero{padding:58px 0 30px}
+h1{font-size:clamp(2.65rem,7.4vw,6.3rem);line-height:.99;letter-spacing:-.066em;max-width:1030px;margin:15px 0 25px}
+h1 em{font-style:normal;color:var(--pumpkin)}h2{font-size:clamp(1.5rem,3.2vw,2.25rem);line-height:1.15;letter-spacing:-.032em;margin:0 0 14px}h3{font-size:1.12rem;margin:0 0 8px}
+.lede{max-width:840px;color:var(--muted);font-size:clamp(1.07rem,2vw,1.24rem);margin-bottom:24px}
+.pills{display:flex;gap:9px;flex-wrap:wrap}.pill{border:1px solid var(--line);border-radius:50px;padding:7px 12px;color:var(--muted);font-size:.78rem}
+.pill strong{color:var(--mint)}.notice{margin:26px 0 6px;padding:14px 18px;background:#23302c;border-left:4px solid var(--mint);border-radius:5px;color:#d5e8df;font-size:.9rem}
+.intro{padding:22px 0 27px;display:grid;grid-template-columns:minmax(0,1fr) minmax(245px,.55fr);gap:30px}
+.intro p{color:var(--muted);margin:7px 0 13px}.stamp{padding:22px;border:1px solid #78604b;border-radius:13px;background:#2d2a2a}
+.stamp strong{display:block;color:var(--pumpkin);font-size:2.7rem;line-height:1.05;letter-spacing:-.05em}
+.stamp p{font-size:.92rem;margin-bottom:0}.lab{margin:25px 0 75px;border:1px solid #57716d;border-radius:16px;overflow:hidden;background:linear-gradient(120deg,#172930,#14232e)}
+.lab-head{padding:26px clamp(18px,3.3vw,36px);border-bottom:1px solid var(--line)}.lab-head p{color:var(--muted);max-width:850px;margin:0}
+.controls{display:flex;gap:16px;align-items:end;flex-wrap:wrap;margin-top:21px}.controls label{display:grid;gap:7px;font-size:.84rem;font-weight:750;color:var(--muted)}
+select,input,button{font:inherit}select,input[type=number]{min-height:44px;background:#0e2028;color:var(--ink);border:1px solid #6a8586;border-radius:8px;padding:9px 11px;max-width:100%}
+button{min-height:44px;cursor:pointer;border:1px solid #719494;border-radius:8px;padding:9px 14px;background:#22434a;color:var(--ink);font-weight:700}
+button:hover{background:#2a5257}button.primary{background:var(--pumpkin);border-color:var(--pumpkin);color:#2e2115}button:active{transform:translateY(1px)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}.actions button{font-size:.88rem}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.metric{background:#13232d;padding:21px 18px}.metric b{display:block;font-size:clamp(1.5rem,3.3vw,2.25rem);letter-spacing:-.055em;line-height:1.1;color:var(--pumpkin)}
+.metric span{display:block;color:var(--muted);font-size:.79rem;margin-top:8px;line-height:1.35}
+.stage{padding:25px clamp(18px,3.3vw,36px)}.stage-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:15px;margin-bottom:17px}
+.stage-head p{margin:0;color:var(--muted);font-size:.9rem;max-width:700px}.porches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.porch{background:#0e1f29;border:1px solid #3c5962;border-radius:12px;padding:17px;min-width:0}.porch-top{display:flex;justify-content:space-between;gap:9px;align-items:start}.porch h3{font-size:1.02rem;line-height:1.3}.porch .payout{font-size:1.3rem;font-weight:800;color:var(--pumpkin);white-space:nowrap}
+.porch .sub{font-size:.8rem;color:var(--muted);margin:4px 0 13px}.bar{height:14px;border:1px solid #45606a;background:#192c34;border-radius:4px;overflow:hidden;display:flex}
+.bar .served{height:100%;background:var(--mint)}.bar .overflow{height:100%;background:var(--red)}
+.porch .detail{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.81rem;color:var(--muted);margin-top:9px}.detail b{color:var(--ink)}
+.goblins-wrap{padding:26px clamp(18px,3.3vw,36px);border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(250px,.68fr);gap:30px}
+.goblins-head p,.notebook p{color:var(--muted);font-size:.9rem;margin:0 0 12px}
+.goblins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.goblin{background:#10222c;border:1px solid #3a5860;border-radius:8px;padding:11px;display:grid;grid-template-columns:1fr;gap:7px}
+.goblin label{font-size:.84rem;font-weight:750}.goblin select{width:100%;font-size:.9rem}.goblin .detail{color:var(--muted);font-size:.79rem}.goblin .result{font-size:.77rem;color:var(--mint)}
+.notebook{border-left:1px solid var(--line);padding-left:23px}.call{border-left:3px solid var(--pumpkin);padding:12px 14px;background:#263238;border-radius:4px;font-size:.88rem;margin:14px 0}
+.trace{margin:14px 0 0;padding-left:20px;color:var(--muted);font:.82rem/1.6 ui-monospace,monospace}.trace li{margin:5px 0}
+.fairness{border-top:1px solid var(--line);padding:24px clamp(18px,3.3vw,36px);background:#1b292f}.fairgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.fairbox{border:1px solid #4b6767;border-radius:9px;padding:15px;background:#13252c}
+.fairbox b{display:block;color:var(--pumpkin);font-size:1.8rem;line-height:1.2}.fairbox span{color:var(--muted);font-size:.84rem}.fairness p{color:var(--muted);font-size:.89rem;margin:13px 0 0}
+.sample{color:var(--mint);font-size:.87rem;margin:12px 0 0}
+.results{padding:15px 0 48px}.results p,.limits p,.limits li{color:var(--muted)}.results .subhead{max-width:830px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:18px 0;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:610px;font-size:.93rem}th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line)}th{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mint)}td:nth-child(2){font-weight:750;color:var(--pumpkin)}
+tbody tr:last-child td{border-bottom:0}.sidenote{border-left:4px solid var(--pumpkin);background:#242a30;padding:15px 18px;font-size:.9rem;border-radius:4px}
+.limits{padding:20px 0 65px;max-width:920px}.limits ul{padding-left:22px}.limits li{margin:8px 0}.methods{display:inline-block;background:var(--pumpkin);color:#2c2119;text-decoration:none;padding:12px 19px;border-radius:7px;font-weight:800}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.83rem;padding:25px 0 35px}
+footer .wrap{display:flex;justify-content:space-between;gap:13px;flex-wrap:wrap}
+@media(max-width:780px){.intro,.goblins-wrap{grid-template-columns:1fr}.notebook{border-left:0;border-top:1px solid var(--line);padding:19px 0 0}.porches{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.hero{padding-top:35px}.porches,.goblins{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.fairgrid{grid-template-columns:1fr}.nav{gap:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}button:active{transform:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="../../index.html">[ ✦ ] JOSH &amp; RIN / LAB</a><nav class="nav" aria-label="Experiment navigation"><a href="#workbench">Play the model</a><a href="#record">Reported results</a><a href="method.html">Methods &amp; evidence</a></nav></div></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">Halloween 2026 · Ten tiny optimizers · Six porch lights</div>
+<h1>The porch that <em>ate Halloween.</em></h1>
+<p class="lede">One porch advertises eight candies. It can serve one goblin. The sign-rewarded crowd moves in anyway. Reward the whole neighborhood, and the bags fill—but somebody may spend every Halloween at the two-candy house.</p>
+<div class="pills"><span class="pill"><strong>Executed here:</strong> finite allocation checker</span><span class="pill">Interactive incentive reconstruction</span><span class="pill">No LLM-agent trials</span></div>
+<p class="notice"><strong>Evidence boundary:</strong> this instrument independently checks the finite six-porch model. The learning averages quoted later came from an earlier in-chat run report; its training traces and source are not included in this release. The workbench is a new, transparent reconstruction—not a playback of those runs.</p>
+</section>
+<section class="intro"><div><h2>The problem isn't always dishonesty.</h2><p>Each goblin visits exactly one porch. The advertised candy number is real. Capacity is real too. Overcrowded porches use a fair lottery: one winner receives the whole listed amount, while the others leave empty-handed.</p>
+<p>When individuals seek their own candy, some stable distributions leave useful capacity unused. When a group maximizes all candy, it can split across porches perfectly. But total productivity and fair individual experiences are different measurements.</p></div>
+<div class="stamp"><div class="eyebrow">Finite checker · independently reproduced</div><strong>3,003</strong><p>Possible crowd allocations. A unique 43-candy optimum, and exactly two strict-unilateral-stable personal-reward allocations: 38 and 35.</p></div></section>
+<section class="lab" id="workbench" aria-labelledby="workbench-title">
+<div class="lab-head"><div class="eyebrow">Operating instrument · All local / no network calls</div><h2 id="workbench-title">Set the reward counter. Watch where they go.</h2>
+<p>Try a crowded night, change the objective, then let the goblins make only individually improving switches. That is <strong>best-response search</strong>, not the earlier reinforcement-learning experiment. You can also assign each goblin a porch yourself and sample the lottery.</p>
+<div class="controls">
+<label>What receives reward?<select id="mode">
+<option value="sign">Advertised candy (broken sign counter)</option>
+<option value="self">My expected actual candy</option>
+<option value="group">The group's actual candy</option>
+<option value="marginal">My marginal contribution to group candy</option>
+</select></label>
+<label>Porch supplies<select id="supply"><option value="limited">Limited · real capacities</option><option value="abundant">Abundant · any porch serves all ten</option></select></label>
+<label>Lottery seed<input id="seed" type="number" min="1" max="1000000000" step="1" value="1031" inputmode="numeric"></label>
+</div>
+<div class="actions">
+<button type="button" id="all">Everybody follows the eight-candy sign</button>
+<button type="button" id="optimal">Fill every porch efficiently</button>
+<button type="button" id="stable38">Personal-reward stable · 38</button>
+<button type="button" id="stable35">Personal-reward stable · 35</button>
+<button type="button" id="respond" class="primary">Let them find a stable arrangement ↗</button>
+<button type="button" id="night">Draw one actual lottery night 🎃</button>
+</div>
+</div>
+<div class="metrics" aria-live="polite">
+<div class="metric"><b id="total">8 / 43</b><span>Actual group candy / maximum</span></div>
+<div class="metric"><b id="empty">9 / 10</b><span>Empty bags this round (fixed by capacity)</span></div>
+<div class="metric"><b id="score">80</b><span>Sum of the selected reward counter</span></div>
+<div class="metric"><b id="status">Crowded</b><span id="status-label">Check best-response stability</span></div>
+</div>
+<div class="stage"><div class="stage-head"><div><h2>The six porches</h2><p>The bar shows successful visits in green and visitors beyond capacity in red. Every winning visitor receives that porch's full payout.</p></div><span class="eyebrow" id="model-check">Checking finite model…</span></div><div class="porches" id="porches"></div><p id="lottery-note" class="sample" aria-live="polite">No lottery sampled yet. Group candy is exact for the current crowd allocation; only the winners' identities vary.</p></div>
+<div class="goblins-wrap"><div><div class="goblins-head"><h2>Ten named goblins</h2><p>Move a goblin manually and watch the real consequences. Expected candy already averages over the fair lottery; a sampled night marks the actual winner or empty bag.</p></div><div class="goblins" id="goblins"></div></div>
+<div class="notebook"><div class="eyebrow">The experimenter's notebook</div><h2>What is rewarded?</h2><p id="explain">The sign counter sees ten claims of eight candies, even though capacity admits one visitor.</p><div class="call" id="interpretation">A high sign score is not a full candy bag.</div><h3>Latest decision trace</h3><ol class="trace" id="trace"><li>No changes yet. Select a preset or let the goblins respond.</li></ol></div></div>
+<div class="fairness"><h2>Different question: who gets the two-candy job?</h2><div class="fairgrid"><div class="fairbox"><div class="eyebrow">Fixed roles · ten nights</div><b id="fixed">2.0–8.0</b><span>Expected candy per goblin per night: lowest to highest</span></div>
+<div class="fairbox"><div class="eyebrow">Rotate assignments · ten nights</div><b id="rotated">4.3 each</b><span>Expected candy per goblin per night when everyone occupies every slot once</span></div></div><p>The rotation is an <strong>engineered follow-up</strong>, not an emergent goblin discovery. On the optimal 43-candy allocation it equalizes expected returns without changing capacity use. It does not guarantee equal bags on any one night.</p></div>
+</section>
+<section class="results" id="record"><div class="eyebrow">Earlier reported learning experiment · archival summary</div><h2>The training results that started this Halloween mess</h2>
+<p class="subhead">The earlier conversation reported ten independent small learners per group, 64 training seeds per reward condition, 12,000 training rounds, and 2,000 evaluation rounds. These means are <strong>quoted from that report</strong>; this release does not contain its learning source, raw traces or a matching rerun. Do not equate them with the best-response results in the interactive workbench above.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Reward signal</th><th scope="col">Reported candy / round</th><th scope="col">Reported empty bags</th><th scope="col">Interpretation</th></tr></thead><tbody>
+<tr><td>Sign value</td><td>8.21 / 43</td><td>89.54%</td><td>All want the 8; too few winners</td></tr>
+<tr><td>Individual candy</td><td>32.62 / 43</td><td>37.44%</td><td>Honest reward; crowd still competes</td></tr>
+<tr><td>Shared group candy</td><td>42.68 / 43</td><td>0.78%</td><td>High output; unequal fixed roles can emerge</td></tr>
+<tr><td>Marginal contribution</td><td>42.41 / 43</td><td>1.55%</td><td>Near-optimal but not better than shared here</td></tr>
+</tbody></table></div>
+<p class="sidenote"><strong>Reproduced separately:</strong> exhaustive counting of 3,003 visitor-count arrangements in this exact six-porch fixture gives a 43-candy maximum at <code>1 / 1 / 2 / 2 / 3 / 1</code>. The only personal-candy unilateral equilibria total <strong>38</strong> and <strong>35</strong>. Inspect the public <a href="verify.py">reference checker</a> and <a href="method.html">methods</a>. Those discrete results are reproducible; the preceding learning averages remain unverified in this release.</p>
+</section>
+<section class="limits"><h2>What survives when the rules change?</h2><ul><li><strong>Try abundant supplies:</strong> the ten goblins can all collect eight candies at one porch. Concentration now produces 80 candies; a detector that always penalizes crowding would be wrong.</li>
+<li><strong>Try personal reward:</strong> best-response switches can stop at 35 or 38 even though 43 is attainable. A stable choice is not necessarily an efficient outcome.</li>
+<li><strong>Try shared reward:</strong> the total aligns with the 43-candy target, while the fixed-role payoff distribution remains unequal.</li>
+<li><strong>Try rotating identities:</strong> expected fairness can improve without reducing output here, but this toy does not model travel, specialization costs, preferences, communication, or real agents.</li></ul>
+<p>Every number generated by the instrument follows published deterministic formulas; the sampled lottery uses a local seed. No outside LLMs, browsers, shoppers, purchases, or personal information are involved.</p>
+<a class="methods" href="method.html">Methods, full limits &amp; evidence receipt ↗</a></section>
+</main>
+<footer><div class="wrap"><span>Josh &amp; Rin · October 31, 2026</span><span>Keep the evidence. Name the bridge. Return the counterexample.</span></div></footer>
+<script>
+(function(){
+'use strict';
+const values=[8,6,5,4,3,2],caps=[1,1,2,2,3,1];
+const names=['The Glowing Pumpkin','The Velvet Witch','The Crooked Lantern','The Moonlit Owl','The Ghostly Porch','The Sleepy Gargoyle'];
+const gobnames=['Pip','Fenn','Clover','Nib','Moss','Wick','Tansy','Brim','Dot','Mallow'];
+const bestLayout=[0,1,2,2,3,3,4,4,4,5];
+const e38=[0,0,1,2,2,2,3,3,4,4];
+const e35=[0,0,1,1,2,2,2,3,3,4];
+const state={a:Array(10).fill(0),mode:'sign',supply:'limited',last:null,round:0,trace:[]};
+const $=id=>document.getElementById(id);
+const totalCount=a=>{const c=Array(6).fill(0);a.forEach(x=>{c[x]++});return c};
+const capacity=j=>state.supply==='limited'?caps[j]:10;
+const total=a=>totalCount(a).reduce((s,n,j)=>s+values[j]*Math.min(n,capacity(j)),0);
+const own=(a,i)=>{const p=a[i],n=totalCount(a)[p];return values[p]*Math.min(1,capacity(p)/n)};
+const marginal=(a,i)=>total(a)-total(a.filter((_,j)=>j!==i));
+const score=(a,i)=>{
+if(state.mode==='sign')return values[a[i]];
+if(state.mode==='self')return own(a,i);
+if(state.mode==='group')return total(a);
+return marginal(a,i);
+};
+function stable(a){
+for(let i=0;i<10;i++){const old=score(a,i);for(let p=0;p<6;p++){if(p===a[i])continue;const b=a.slice();b[i]=p;if(score(b,i)>old+1e-8)return false;}}return true;
+}
+function sample(seed){
+let x=(Math.trunc(seed)>>>0)||1;
+return function(){x^=x<<13;x^=x>>>17;x^=x<<5;return ((x>>>0)/4294967296)};
+}
+function render(){
+const c=totalCount(state.a),t=total(state.a),max=state.supply==='limited'?43:80;
+const empty=c.reduce((s,n,p)=>s+Math.max(0,n-capacity(p)),0);
+const reward=state.a.reduce((s,_,i)=>s+score(state.a,i),0);
+$('total').textContent=t+' / '+max;
+$('empty').textContent=empty+' / 10';
+$('score').textContent=reward.toFixed(state.mode==='self'?2:0);
+$('status').textContent=stable(state.a)?'Stable':'Movable';
+$('status-label').textContent=stable(state.a)?'No one can improve by switching alone':'At least one profitable unilateral switch';
+$('porches').innerHTML=names.map((name,p)=>{
+const n=c[p],served=Math.min(n,capacity(p)),fail=n-served,denom=Math.max(1,n);
+return '<article class="porch"><div class="porch-top"><h3>🏠 '+name+'</h3><span class="payout">'+values[p]+' 🍬</span></div>'+
+'<div class="sub">Capacity '+(state.supply==='limited'?caps[p]:'10')+' · '+n+' visitor'+(n===1?'':'s')+'</div>'+
+'<div class="bar" role="img" aria-label="'+served+' winners, '+fail+' empty bags">'+
+'<span class="served" style="width:'+(100*served/denom)+'%"></span><span class="overflow" style="width:'+(100*fail/denom)+'%"></span></div>'+
+'<div class="detail"><span><b>'+served+'</b> winners</span><span><b>'+fail+'</b> empty</span><span><b>'+(served*values[p])+'</b> candy</span></div></article>';
+}).join('');
+for(let i=0;i<10;i++){
+$('gselect'+i).value=String(state.a[i]);
+$('gexpected'+i).textContent='Expected '+own(state.a,i).toFixed(2)+' candy · score '+score(state.a,i).toFixed(2);
+const v=state.last;
+$('gresult'+i).textContent=v?(v[i]>0?'🍬 Got '+v[i]:'○ Empty bag'):'Lottery not drawn';
+}
+$('fixed').textContent=Math.min(...state.a.map((_,i)=>own(state.a,i))).toFixed(1)+'–'+Math.max(...state.a.map((_,i)=>own(state.a,i))).toFixed(1);
+$('rotated').textContent=(t/10).toFixed(2)+' each';
+const explain={
+sign:'The sign is the reward. Each goblin earns points for the advertised value, whether or not they receive candy.',
+self:'Every goblin scores only their own expected candy from the fair lottery. An honest score can still produce competition.',
+group:'Every goblin sees the whole neighborhood total as its score. A unilateral switch is good only if it raises group candy.',
+marginal:'Each goblin scores the total candy added by its visit, comparing the street with and without that goblin.'
+};
+$('explain').textContent=explain[state.mode];
+let msg='';
+if(state.supply==='abundant')msg='With enough capacity, ten visitors at the eight-candy porch yield 80. Concentration is efficient in this control.';
+else if(t===43)msg='Maximum available candy is delivered. Check the role distribution below: efficient does not mean identical returns.';
+else if(state.mode==='sign')msg='A rewarded sign is not a delivered piece of candy. The biggest sign can make the worst queue.';
+else if(state.mode==='self'&&stable(state.a))msg='A personal-payoff equilibrium can leave capacity unused. No goblin can improve by switching alone.';
+else msg='There is available candy elsewhere. The current allocation delivers '+t+' out of a possible 43.';
+$('interpretation').textContent=msg;
+$('trace').innerHTML=(state.trace.length?state.trace:['No changes yet. Select a preset or let the goblins respond.']).slice(-8).map(s=>'<li>'+s+'</li>').join('');
+if(!state.last)$('lottery-note').textContent='No lottery sampled yet. Group candy is exact for the current crowd; only winners’ identities vary.';
+}
+function update(a,msg){
+state.a=a.slice();state.last=null;state.trace=[msg];render();
+}
+function setup(){
+const root=$('goblins');
+for(let i=0;i<10;i++){
+const row=document.createElement('div');row.className='goblin';
+const label=document.createElement('label');label.setAttribute('for','gselect'+i);label.textContent='🎃 '+gobnames[i];
+const sel=document.createElement('select');sel.id='gselect'+i;
+names.forEach((name,p)=>{const opt=document.createElement('option');opt.value=String(p);opt.textContent=(p+1)+'. '+name;sel.appendChild(opt)});
+sel.addEventListener('change',()=>{const a=state.a.slice();a[i]=Number(sel.value);update(a,gobnames[i]+' moved to '+names[a[i]]+'.')});
+const detail=document.createElement('div');detail.className='detail';detail.id='gexpected'+i;
+const result=document.createElement('div');result.className='result';result.id='gresult'+i;
+row.append(label,sel,detail,result);root.appendChild(row);
+}
+}
+function bestRespond(){
+let a=state.a.slice(),moves=[],passes=0;
+for(;passes<100;passes++){
+let changed=false;
+for(let i=0;i<10;i++){
+const current=score(a,i),old=a[i];let target=old,top=current;
+for(let p=0;p<6;p++){
+if(p===old)continue;const b=a.slice();b[i]=p;
+const candidate=score(b,i);
+if(candidate>top+1e-8){target=p;top=candidate;}
+}
+if(target!==old){a[i]=target;changed=true;moves.push(gobnames[i]+': '+(old+1)+' → '+(target+1)+' ('+current.toFixed(2)+' → '+top.toFixed(2)+')');}
+}
+if(!changed)break;
+}
+state.a=a;state.last=null;state.trace=moves.length?moves:['No profitable move. The layout was already stable for this reward.'];render();
+$('lottery-note').textContent=moves.length?moves.length+' individually improving switches, '+(passes+1)+' passes. This is a myopic best-response reconstruction, not model training.':'The chosen reward admits no profitable unilateral switch from here.';
+}
+function draw(){
+let seed=Number($('seed').value);if(!Number.isSafeInteger(seed)||seed<1||seed>1000000000){seed=1031;$('seed').value=String(seed);}
+const rand=sample(seed+state.round*9973);
+const result=Array(10).fill(0);
+for(let p=0;p<6;p++){
+const visitors=state.a.map((x,i)=>x===p?i:-1).filter(x=>x>=0);
+for(let i=visitors.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));const temp=visitors[i];visitors[i]=visitors[j];visitors[j]=temp;}
+visitors.slice(0,capacity(p)).forEach(i=>result[i]=values[p]);
+}
+state.last=result;state.round++;
+render();
+$('lottery-note').textContent='Seed '+seed+' · draw '+state.round+': '+result.filter(x=>x>0).length+' winners, '+result.filter(x=>x===0).length+' empty bags. Actual total '+result.reduce((a,b)=>a+b,0)+' candies.';
+}
+function checkEnumeration(){
+const positions=[];let count=0,max=-1,opts=[],equilibria=[];
+function visit(rem,index,vec){
+if(index===5){
+const n=vec.concat(rem);count++;
+const candy=n.reduce((s,v,p)=>s+values[p]*Math.min(v,caps[p]),0);
+if(candy>max){max=candy;opts=[n];}else if(candy===max){opts.push(n);}
+let ok=true;
+for(let i=0;i<6&&ok;i++){
+if(!n[i])continue;
+const ownValue=values[i]*Math.min(1,caps[i]/n[i]);
+for(let j=0;j<6;j++){
+if(i===j)continue;
+const newValue=values[j]*Math.min(1,caps[j]/(n[j]+1));
+if(newValue>ownValue+1e-8){ok=false;break;}
+}
+}
+if(ok)equilibria.push({n:n,candy:candy});return;
+}
+for(let v=0;v<=rem;v++)visit(rem-v,index+1,vec.concat(v));
+}
+visit(10,0,positions);
+const sorted=equilibria.map(e=>e.candy).sort((a,b)=>a-b).join(',');
+const valid=count===3003&&max===43&&opts.length===1&&opts[0].join(',')==='1,1,2,2,3,1'&&sorted==='35,38';
+$('model-check').textContent=valid?'✓ 3,003 allocations verified':'⚠ Finite-model verification failed';
+if(!valid){$('model-check').style.color='#f6a7a2';console.error('Finite-model check failed',count,max,opts,equilibria);}
+}
+setup();
+$('mode').addEventListener('change',e=>{state.mode=e.target.value;state.last=null;state.trace=['Reward changed to '+e.target.selectedOptions[0].text+'.'];render()});
+$('supply').addEventListener('change',e=>{state.supply=e.target.value;state.last=null;state.trace=['Supply changed to '+e.target.selectedOptions[0].text+'.'];render()});
+$('all').addEventListener('click',()=>update(Array(10).fill(0),'All ten follow the richest sign.'));
+$('optimal').addEventListener('click',()=>update(state.supply==='abundant'?Array(10).fill(0):bestLayout,'Max-candy allocation selected.'));
+$('stable38').addEventListener('click',()=>update(e38,'Personal-reward equilibrium: 38 candies, limited supplies.'));
+$('stable35').addEventListener('click',()=>update(e35,'Personal-reward equilibrium: 35 candies, limited supplies.'));
+$('respond').addEventListener('click',bestRespond);
+$('night').addEventListener('click',draw);
+checkEnumeration();render();
+})();
+</script>
+</body></html>
