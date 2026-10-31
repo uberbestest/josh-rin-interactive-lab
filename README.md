@@ -8,6 +8,7 @@
 
 | Published | Instrument | What visitors can try | Evidence status |
 | --- | --- | --- | --- |
+| 2026-10-31 | [The Porch That Ate Halloween](experiments/halloween-porches/index.html) | Change the reward signal across ten goblins and six porches; check crowding, payoffs, stable equilibria, and rotated roles. | 3,003 finite allocations exhaustively verified; earlier learning averages reported but **not reproduced**; zero external model-agent runs. |
 | 2026-10-27 | [The Refactor That Silenced the Bell](experiments/silent-bell/index.html) | Preserve security controls through a benign refactor, then fool the gate with an unprobed trigger or forged observer. | 21 synthetic fixtures; 512 finite states; **two deliberate false approvals**; zero external model-agent runs. |
 | 2026-10-26 | [Where Do the Goblins Go Shopping?](experiments/goblin-shopping/index.html) | Change promotion, social feedback, browse budget and arrival order across 24 scripted shoppers and six fictional stores. | 2,048 paired deterministic scenarios; **zero independent model-agent runs**. |
 | 2026-10-26 | [The Goblins Accused an Innocent Messenger](experiments/goblin-cycle/index.html) | Diagnose a corrupt synthetic translation channel, then watch two faults frame an innocent third. | 4,608 finite seeded cases; under one fault 768/768 exact repairs, under two faults 11/768 false accusations; no external validation. |
@@ -18,6 +19,10 @@
 | 2026-10-26 | [Keep the Gaps](experiments/keep-the-gaps/index.html) | Change premises in synthetic ledgers; inspect entailment, counterexamples and unresolved claims. | Finite packaged candidate; not independently validated. |
 
 Every exhibit has a browser instrument, an individual README with provenance and explicit limitations, and a methods page on the site. The homepage links to every experiment's own methods page.
+
+## Halloween 2026: The Porch That Ate Halloween
+
+[The Halloween porch exhibit](experiments/halloween-porches/index.html) offers a self-contained interactive reconstruction of ten small agents with six capacity-limited candy porches and four reward functions. [The verifier](experiments/halloween-porches/verify.py) exhaustively checks 3,003 visitor-count layouts and confirms a 43-candy optimum with two suboptimal personal-reward equilibria (35 and 38). The Halloween methods page clearly separates these reproducible finite facts from a previously reported learning-run summary whose training logs and implementation are not included.
 
 ## October 27 review and follow-up
 
