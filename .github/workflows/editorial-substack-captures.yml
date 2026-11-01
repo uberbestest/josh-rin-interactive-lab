@@ -1,0 +1,79 @@
+name: Substack article screenshot captures
+
+on:
+  push:
+    branches: [editorial/substack-image-captures-2026-10-31]
+    paths: [.github/workflows/editorial-substack-captures.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install browser
+        run: |
+          python -m pip install playwright==1.57.0 pillow
+          python -m playwright install --with-deps chromium
+      - name: Capture existing public instruments, not invented images
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          from playwright.sync_api import sync_playwright
+          out=pathlib.Path("article-images")
+          out.mkdir(exist_ok=True)
+          base="https://uberbestest.github.io/josh-rin-interactive-lab/"
+          evidence=[]
+          with sync_playwright() as p:
+              browser=p.chromium.launch(headless=True, args=["--no-sandbox"])
+              page=browser.new_page(viewport={"width":1440, "height":1000}, device_scale_factor=1, reduced_motion="reduce")
+              errors=[]
+              page.on("pageerror", lambda exc: errors.append(str(exc)))
+              for url,label in [
+                  (base+"agent-attention/index.html", "Agent Attention"),
+                  (base+"experiments/goblin-shopping/index.html", "Goblin shopping"),
+                  (base+"index.html", "Lab homepage")
+              ]:
+                  resp=page.goto(url, wait_until="domcontentloaded",timeout=30000)
+                  page.wait_for_timeout(1400)
+                  assert resp and resp.status==200, (label, resp.status if resp else None)
+                  if label=="Agent Attention":
+                      nav=page.locator("#eventNav button")
+                      assert nav.count()>=15, nav.count()
+                      graph=page.locator("#traceGraph")
+                      assert len(graph.inner_html())>2500
+                      page.locator("#journey .box").first.screenshot(path=str(out/"agent-attention-journey.png"), animations="disabled")
+                      evidence.append({"image":"agent-attention-journey.png","source":url+"#journey","operation_events":nav.count()})
+                      page.locator("#eventRange").evaluate("(el)=>{el.value='14';el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}")
+                      page.wait_for_timeout(100)
+                      meta=page.locator("#detailMeta").inner_text()
+                      print("E14 detail:",meta,flush=True)
+                      page.locator("#journey .box").first.screenshot(path=str(out/"agent-attention-uncertain-event.png"),animations="disabled")
+                      evidence.append({"image":"agent-attention-uncertain-event.png","source":url+"#journey","selected_event":meta})
+                      page.locator("#mall .box").first.screenshot(path=str(out/"goblin-mall-bars.png"),animations="disabled")
+                      evidence.append({"image":"goblin-mall-bars.png","source":url+"#mall","selected_case":"seed17"})
+                  elif label=="Goblin shopping":
+                      page.locator("#workbench").screenshot(path=str(out/"goblin-shopping-controls.png"), animations="disabled")
+                      evidence.append({"image":"goblin-shopping-controls.png","source":url+"#workbench"})
+                  elif label=="Lab homepage":
+                      assert page.locator(".lab-experiment-grid article").count()==10
+                      page.locator(".lab-experiment-grid article").first.screenshot(path=str(out/"two-candy-exhibit-card.png"), animations="disabled")
+                      evidence.append({"image":"two-candy-exhibit-card.png","source":url+"#experiments"})
+              assert not errors,errors
+              browser.close()
+          (out/"CAPTURE-RECEIPT.json").write_text(json.dumps({"kind":"Same-author screenshots of published UI, not new experimental evidence","captures":evidence,"javascript_errors":errors},indent=2))
+          print(json.dumps(evidence,indent=2))
+          PY
+      - name: Preserve screenshots for the newsletter
+        uses: actions/upload-artifact@v4
+        with:
+          name: substack-article-screenshots
+          path: article-images
+          retention-days: 14
