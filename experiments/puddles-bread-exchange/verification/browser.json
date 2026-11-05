@@ -1,0 +1,438 @@
+{
+  "status": "PASS",
+  "ui_checks": 103,
+  "checks": [
+    {
+      "check": "UI initialized",
+      "passed": true
+    },
+    {
+      "check": "ten displayed reports",
+      "passed": true
+    },
+    {
+      "check": "receipts initially hidden",
+      "passed": true
+    },
+    {
+      "check": "trace reveals provenance",
+      "passed": true
+    },
+    {
+      "check": "all copied reports traced to A",
+      "passed": true
+    },
+    {
+      "check": "overconfident purchase flagged",
+      "passed": true
+    },
+    {
+      "check": "realized wrong-purchase payoff shown",
+      "passed": true
+    },
+    {
+      "check": "choice locked after outcome",
+      "passed": true
+    },
+    {
+      "check": "round 2 navigates",
+      "passed": true
+    },
+    {
+      "check": "round 2 expected action supported",
+      "passed": true
+    },
+    {
+      "check": "round 3 navigates",
+      "passed": true
+    },
+    {
+      "check": "round 3 expected action supported",
+      "passed": true
+    },
+    {
+      "check": "round 4 navigates",
+      "passed": true
+    },
+    {
+      "check": "round 4 expected action supported",
+      "passed": true
+    },
+    {
+      "check": "round 5 navigates",
+      "passed": true
+    },
+    {
+      "check": "round 5 expected action supported",
+      "passed": true
+    },
+    {
+      "check": "round 1 navigates",
+      "passed": true
+    },
+    {
+      "check": "round 1 expected action supported",
+      "passed": true
+    },
+    {
+      "check": "choir: root controls count",
+      "passed": true
+    },
+    {
+      "check": "choir: root toggles",
+      "passed": true
+    },
+    {
+      "check": "loud_minority: root controls count",
+      "passed": true
+    },
+    {
+      "check": "loud_minority: root toggles",
+      "passed": true
+    },
+    {
+      "check": "two_sources: root controls count",
+      "passed": true
+    },
+    {
+      "check": "two_sources: root toggles",
+      "passed": true
+    },
+    {
+      "check": "mixed: root controls count",
+      "passed": true
+    },
+    {
+      "check": "mixed: root toggles",
+      "passed": true
+    },
+    {
+      "check": "five_pairs: root controls count",
+      "passed": true
+    },
+    {
+      "check": "five_pairs: root toggles",
+      "passed": true
+    },
+    {
+      "check": "ten_roots: root controls count",
+      "passed": true
+    },
+    {
+      "check": "ten_roots: root toggles",
+      "passed": true
+    },
+    {
+      "check": "loud minority receipt estimate is 20%",
+      "passed": true
+    },
+    {
+      "check": "shared-cause ceiling visible",
+      "passed": true
+    },
+    {
+      "check": "shared-cause rule holds",
+      "passed": true
+    },
+    {
+      "check": "results render 90/0/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 90/0/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 90/0/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 90/0/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 90/0/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 90/25/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 90/25/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 90/25/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 90/25/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 90/25/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 90/50/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 90/50/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 90/50/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 90/50/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 90/50/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 90/75/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 90/75/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 90/75/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 90/75/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 90/75/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 80/0/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 80/0/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 80/0/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 80/0/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 80/0/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 80/25/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 80/25/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 80/25/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 80/25/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 80/25/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 80/50/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 80/50/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 80/50/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 80/50/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 80/50/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 80/75/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 80/75/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 80/75/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 80/75/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 80/75/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 70/0/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 70/0/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 70/0/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 70/0/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 70/0/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 70/25/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 70/25/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 70/25/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 70/25/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 70/25/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 70/50/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 70/50/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 70/50/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 70/50/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 70/50/payoff",
+      "passed": true
+    },
+    {
+      "check": "results render 70/75/brier",
+      "passed": true
+    },
+    {
+      "check": "results render 70/75/coverage",
+      "passed": true
+    },
+    {
+      "check": "results render 70/75/decisive_accuracy",
+      "passed": true
+    },
+    {
+      "check": "results render 70/75/wrong_mass",
+      "passed": true
+    },
+    {
+      "check": "results render 70/75/payoff",
+      "passed": true
+    },
+    {
+      "check": "no-decision accuracy is a dash",
+      "passed": true
+    },
+    {
+      "check": "full recorded support checked in Chromium",
+      "passed": true
+    },
+    {
+      "check": "no desktop horizontal page overflow",
+      "passed": true
+    },
+    {
+      "check": "no 375px horizontal page overflow",
+      "passed": true
+    },
+    {
+      "check": "mobile trace and decision work",
+      "passed": true
+    },
+    {
+      "check": "no 320px horizontal page overflow",
+      "passed": true
+    },
+    {
+      "check": "methods page renders",
+      "passed": true
+    },
+    {
+      "check": "methods page fits 320px",
+      "passed": true
+    },
+    {
+      "check": "no JavaScript page errors",
+      "passed": true
+    },
+    {
+      "check": "exhibit makes only same-origin local requests",
+      "passed": true
+    }
+  ],
+  "browser_parity_histories": 45612,
+  "browser_probability_and_action_comparisons": 136836,
+  "max_absolute_probability_error": 2.220446049250313e-16,
+  "viewports": [
+    [
+      1365,
+      1000
+    ],
+    [
+      375,
+      812
+    ],
+    [
+      320,
+      700
+    ]
+  ],
+  "page_errors": [],
+  "render_mode": "inline_local_document",
+  "scope": "Local Chromium only. No live deployment checked. Inline mode renders generated local content without URL navigation."
+}

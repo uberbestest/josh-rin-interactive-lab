@@ -1,0 +1,61 @@
+{
+  "id": "PUDDLES-BREAD-EXCHANGE-2026-11-04-001",
+  "version": "0.1.0",
+  "title": "Puddle's Bread Exchange — Ten witnesses. How many observations?",
+  "status_at_freeze": "LOCALLY_FROZEN_BEFORE_COMPUTATION_NOT_EXTERNALLY_PREREGISTERED",
+  "author": "Rin, in Josh & Rin's Lab",
+  "date_local": "2026-11-04",
+  "timezone": "America/New_York",
+  "question": "At a fixed ten-report display budget and fixed marginal accuracy per root witness, how do copying and a shared upstream fault change calibration and decisions?",
+  "scope": "Exact finite synthetic probability model. No external language-model agents, human participants, or learned policies.",
+  "truth_prior": "1/2",
+  "marginal_error_rates": ["1/10", "1/5", "3/10"],
+  "primary_marginal_error_rate": "1/5",
+  "shared_error_fractions": ["0", "1/4", "1/2", "3/4"],
+  "model": {
+    "q": "marginal_error_rate * shared_error_fraction",
+    "local_error_rate": "(marginal_error_rate - q) / (1 - 2*q)",
+    "root_signal": "truth XOR shared_fault XOR local_error",
+    "independence": "Truth, shared_fault, and each root's local_error are mutually independent draws. Copies add no draws.",
+    "marginal_control": "Each root signal is correct with probability 1 - marginal_error_rate in every shared-fault condition.",
+    "receipts": "True root identifiers supplied by the generator; no forged, missing, or mistaken lineage in this version. Different roots may share the same upstream fault."
+  },
+  "topologies": {
+    "choir": [10],
+    "loud_minority": [8, 1, 1],
+    "two_sources": [5, 5],
+    "mixed": [4, 3, 2, 1],
+    "five_pairs": [2, 2, 2, 2, 2],
+    "ten_roots": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  },
+  "rules": {
+    "headcount": "Treat all ten reports as independent Bernoulli witnesses with the known marginal error rate.",
+    "receipts": "Count each distinct root once, but treat roots as independent Bernoulli witnesses with the same known marginal error rate.",
+    "shared_cause": "Compute the exact Bayesian posterior over truth from the distinct root signals under the supplied shared-fault model. This rule has privileged knowledge of the generator's dependence structure."
+  },
+  "decision_rule": "Buy (fresh) if P(fresh) >= 9/10; reject (stale) if P(fresh) <= 1/10; otherwise hold.",
+  "toy_payoff": {"correct_decisive": 1, "wrong_decisive": -9, "hold": 0},
+  "enumeration": "Enumerate both truths, every positive-probability shared-fault state, and all 2^k local-error bit patterns for each cell. Preserve exact rational weights. Histories are not equally likely trials.",
+  "primary_endpoints": ["probability-weighted Brier score", "decisive coverage", "wrong decisive probability mass", "conditional accuracy among decisive cases", "expected toy payoff per case"],
+  "controls": [
+    "Weights sum to one per cell.",
+    "Per-root marginal accuracy stays fixed.",
+    "At q=0, the receipt and shared-cause rules coincide.",
+    "With ten distinct roots and q=0, all three rules coincide.",
+    "Receipt and shared-cause posteriors are invariant to multiplicity changes with the same root observations.",
+    "For q>0, shared-cause posterior lies in [q, 1-q].",
+    "Exact posterior independently reconstructed from joint-history weights matches the implementation.",
+    "Complementing all observations complements the posterior.",
+    "Shared-cause Brier score is no worse than the two misspecified rules within this supplied model.",
+    "Python and browser JavaScript outputs agree over the full recorded support."
+  ],
+  "presentation": "Curated play rounds are explicitly selected illustrative cases, not a random sample or prevalence estimate. Show decision quality under the model separately from realized outcome. Full-distribution results come from the exhaustive sweep.",
+  "limitations": [
+    "Shared-source dependence is constructed, not discovered in a real model system.",
+    "Exact source lineage, known reliability, a symmetric prior, and a known dependence model are strong supplied assumptions.",
+    "No evidence here that adding agents, debate, or voting generally harms performance.",
+    "Ten reports is a display budget, not an equal-compute, equal-token, or equal-data-acquisition budget.",
+    "Holding is not free in the real world; the zero payoff is an explicit toy choice. Coverage must accompany accuracy.",
+    "Tests are same-author checks, not independent review."
+  ]
+}

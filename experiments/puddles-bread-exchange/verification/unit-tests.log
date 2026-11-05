@@ -1,0 +1,29 @@
+test_all_rules_independent (test_engine.EngineTests.test_all_rules_independent) ... ok
+test_boundaries (test_engine.EngineTests.test_boundaries) ... ok
+test_complement (test_engine.EngineTests.test_complement) ... ok
+test_copy_illusion (test_engine.EngineTests.test_copy_illusion) ... ok
+test_copy_invariance (test_engine.EngineTests.test_copy_invariance) ... ok
+test_grid (test_engine.EngineTests.test_grid) ... ok
+test_invalid_bits (test_engine.EngineTests.test_invalid_bits) ... ok
+test_invalid_probability (test_engine.EngineTests.test_invalid_probability) ... ok
+test_invalid_rate (test_engine.EngineTests.test_invalid_rate) ... ok
+test_invalid_weights (test_engine.EngineTests.test_invalid_weights) ... ok
+test_known_summary (test_engine.EngineTests.test_known_summary) ... ok
+test_latent_truth_signal (test_engine.EngineTests.test_latent_truth_signal) ... ok
+test_loud_minority (test_engine.EngineTests.test_loud_minority) ... ok
+test_marginal_control (test_engine.EngineTests.test_marginal_control) ... ok
+test_mass (test_engine.EngineTests.test_mass) ... ok
+test_no_shared_fault (test_engine.EngineTests.test_no_shared_fault) ... ok
+test_payoffs (test_engine.EngineTests.test_payoffs) ... ok
+test_shared_ceiling (test_engine.EngineTests.test_shared_ceiling) ... ok
+test_shared_floor (test_engine.EngineTests.test_shared_floor) ... ok
+test_single_negative (test_engine.EngineTests.test_single_negative) ... ok
+test_single_sensor (test_engine.EngineTests.test_single_sensor) ... ok
+test_ten_positive (test_engine.EngineTests.test_ten_positive) ... ok
+test_tie (test_engine.EngineTests.test_tie) ... ok
+test_zero_mass_excluded (test_engine.EngineTests.test_zero_mass_excluded) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.003s
+
+OK

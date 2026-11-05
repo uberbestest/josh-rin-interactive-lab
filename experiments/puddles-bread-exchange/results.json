@@ -1,0 +1,4418 @@
+{
+  "id": "PUDDLES-BREAD-EXCHANGE-2026-11-04-001",
+  "version": "0.1.0",
+  "evidence_status": "EXECUTED_EXACT_SYNTHETIC_ENUMERATION_SAME_AUTHOR_CHECKS",
+  "external_model_runs": 0,
+  "independent_review": false,
+  "protocol_sha256": "843273958317c41e9de39574820b0911c09c751ae197babf016b98c729287ddc",
+  "cell_count": 72,
+  "history_count": 45612,
+  "rule_evaluations": 136836,
+  "weighting": "Exact rational probability mass, not uniform history counts.",
+  "cells": [
+    {
+      "id": "a90-s00-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/10",
+      "histories": 4,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.09999999994264056,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "1215766545905692881/12157665466030497604",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.09,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "9/100",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.09,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "9/100",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s00-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/10",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.09999969433243759,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "23656641272745489142794292349806200807057/236567135836452457249010139096414429885124",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.0252986301369863,
+          "coverage": 1.0,
+          "wrong_mass": 0.028,
+          "payoff": 0.72,
+          "decisive_accuracy": 0.972,
+          "exact": {
+            "brier": "4617/182500",
+            "coverage": "1",
+            "wrong_mass": "7/250",
+            "payoff": "18/25",
+            "decisive_accuracy": "243/250"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.0252986301369863,
+          "coverage": 1.0,
+          "wrong_mass": 0.028,
+          "payoff": 0.72,
+          "decisive_accuracy": 0.972,
+          "exact": {
+            "brier": "4617/182500",
+            "coverage": "1",
+            "wrong_mass": "7/250",
+            "payoff": "18/25",
+            "decisive_accuracy": "243/250"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s00-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/10",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.054999999994264054,
+          "coverage": 0.82,
+          "wrong_mass": 0.01,
+          "payoff": 0.72,
+          "decisive_accuracy": 0.9878048780487805,
+          "exact": {
+            "brier": "16309063428340041/296528426000743844",
+            "coverage": "41/50",
+            "wrong_mass": "1/100",
+            "payoff": "18/25",
+            "decisive_accuracy": "81/82"
+          }
+        },
+        "receipts": {
+          "brier": 0.054878048780487805,
+          "coverage": 0.82,
+          "wrong_mass": 0.01,
+          "payoff": 0.72,
+          "decisive_accuracy": 0.9878048780487805,
+          "exact": {
+            "brier": "9/164",
+            "coverage": "41/50",
+            "wrong_mass": "1/100",
+            "payoff": "18/25",
+            "decisive_accuracy": "81/82"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.054878048780487805,
+          "coverage": 0.82,
+          "wrong_mass": 0.01,
+          "payoff": 0.72,
+          "decisive_accuracy": 0.9878048780487805,
+          "exact": {
+            "brier": "9/164",
+            "coverage": "41/50",
+            "wrong_mass": "1/100",
+            "payoff": "18/25",
+            "decisive_accuracy": "81/82"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s00-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/10",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.023741128290178302,
+          "coverage": 0.9838,
+          "wrong_mass": 0.0199,
+          "payoff": 0.7848,
+          "decisive_accuracy": 0.9797723114454158,
+          "exact": {
+            "brier": "60460011774541359759762318721498852481189613297/2546635991161113080639761435977476577550594340164",
+            "coverage": "4919/5000",
+            "wrong_mass": "199/10000",
+            "payoff": "981/1250",
+            "decisive_accuracy": "9639/9838"
+          }
+        },
+        "receipts": {
+          "brier": 0.015806082321719286,
+          "coverage": 0.9514,
+          "wrong_mass": 0.0037,
+          "payoff": 0.9144,
+          "decisive_accuracy": 0.9961109943241538,
+          "exact": {
+            "brier": "8505/538084",
+            "coverage": "4757/5000",
+            "wrong_mass": "37/10000",
+            "payoff": "1143/1250",
+            "decisive_accuracy": "9477/9514"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.015806082321719286,
+          "coverage": 0.9514,
+          "wrong_mass": 0.0037,
+          "payoff": 0.9144,
+          "decisive_accuracy": 0.9961109943241538,
+          "exact": {
+            "brier": "8505/538084",
+            "coverage": "4757/5000",
+            "wrong_mass": "37/10000",
+            "payoff": "1143/1250",
+            "decisive_accuracy": "9477/9514"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s00-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/10",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.008374483732993846,
+          "coverage": 1.0,
+          "wrong_mass": 0.00856,
+          "payoff": 0.9144,
+          "decisive_accuracy": 0.99144,
+          "exact": {
+            "brier": "4276537407842049266762097/510662811486912227870447044",
+            "coverage": "1",
+            "wrong_mass": "107/12500",
+            "payoff": "1143/1250",
+            "decisive_accuracy": "12393/12500"
+          }
+        },
+        "receipts": {
+          "brier": 0.0077493833922958255,
+          "coverage": 1.0,
+          "wrong_mass": 0.00856,
+          "payoff": 0.9144,
+          "decisive_accuracy": 0.99144,
+          "exact": {
+            "brier": "208780497/26941562500",
+            "coverage": "1",
+            "wrong_mass": "107/12500",
+            "payoff": "1143/1250",
+            "decisive_accuracy": "12393/12500"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.0077493833922958255,
+          "coverage": 1.0,
+          "wrong_mass": 0.00856,
+          "payoff": 0.9144,
+          "decisive_accuracy": 0.99144,
+          "exact": {
+            "brier": "208780497/26941562500",
+            "coverage": "1",
+            "wrong_mass": "107/12500",
+            "payoff": "1143/1250",
+            "decisive_accuracy": "12393/12500"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s00-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/10",
+      "histories": 2048,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.000517229710086217,
+          "coverage": 0.9985119652,
+          "wrong_mass": 0.0001469026,
+          "payoff": 0.9970429392,
+          "decisive_accuracy": 0.9998528784780555,
+          "exact": {
+            "brier": "1650809255345121132009/3191636565250569428085284",
+            "coverage": "2496279913/2500000000",
+            "wrong_mass": "734513/5000000000",
+            "payoff": "623151837/625000000",
+            "decisive_accuracy": "4991825313/4992559826"
+          }
+        },
+        "receipts": {
+          "brier": 0.000517229710086217,
+          "coverage": 0.9985119652,
+          "wrong_mass": 0.0001469026,
+          "payoff": 0.9970429392,
+          "decisive_accuracy": 0.9998528784780555,
+          "exact": {
+            "brier": "1650809255345121132009/3191636565250569428085284",
+            "coverage": "2496279913/2500000000",
+            "wrong_mass": "734513/5000000000",
+            "payoff": "623151837/625000000",
+            "decisive_accuracy": "4991825313/4992559826"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.000517229710086217,
+          "coverage": 0.9985119652,
+          "wrong_mass": 0.0001469026,
+          "payoff": 0.9970429392,
+          "decisive_accuracy": 0.9998528784780555,
+          "exact": {
+            "brier": "1650809255345121132009/3191636565250569428085284",
+            "coverage": "2496279913/2500000000",
+            "wrong_mass": "734513/5000000000",
+            "payoff": "623151837/625000000",
+            "decisive_accuracy": "4991825313/4992559826"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s25-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/40",
+      "local_error": "3/38",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.09999999994264056,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "1215766545905692881/12157665466030497604",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.09,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "9/100",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.09,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "9/100",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s25-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/40",
+      "local_error": "3/38",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.09999975302765662,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "8540052512076029190124701757422429801728121/85400736036959337066892660213805609188529764",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.03959344910953446,
+          "coverage": 1.0,
+          "wrong_mass": 0.04182825484764543,
+          "payoff": 0.5817174515235457,
+          "decisive_accuracy": 0.9581717451523546,
+          "exact": {
+            "brier": "1523373/38475380",
+            "coverage": "1",
+            "wrong_mass": "151/3610",
+            "payoff": "210/361",
+            "decisive_accuracy": "3459/3610"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.03913450237873833,
+          "coverage": 1.0,
+          "wrong_mass": 0.04182825484764543,
+          "payoff": 0.5817174515235457,
+          "decisive_accuracy": 0.9581717451523546,
+          "exact": {
+            "brier": "1595001/40756900",
+            "coverage": "1",
+            "wrong_mass": "151/3610",
+            "payoff": "210/361",
+            "decisive_accuracy": "3459/3610"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s25-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/40",
+      "local_error": "3/38",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.06364265926412768,
+          "coverage": 0.8545706371191135,
+          "wrong_mass": 0.027285318559556786,
+          "payoff": 0.5817174515235457,
+          "decisive_accuracy": 0.9680713128038898,
+          "exact": {
+            "brier": "279322364013361030041/4388917233237009635044",
+            "coverage": "617/722",
+            "wrong_mass": "197/7220",
+            "payoff": "210/361",
+            "decisive_accuracy": "5973/6170"
+          }
+        },
+        "receipts": {
+          "brier": 0.06310425630436968,
+          "coverage": 0.8545706371191135,
+          "wrong_mass": 0.027285318559556786,
+          "payoff": 0.5817174515235457,
+          "decisive_accuracy": 0.9680713128038898,
+          "exact": {
+            "brier": "153177/2427364",
+            "coverage": "617/722",
+            "wrong_mass": "197/7220",
+            "payoff": "210/361",
+            "decisive_accuracy": "5973/6170"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.06277147487844409,
+          "coverage": 0.8545706371191135,
+          "wrong_mass": 0.027285318559556786,
+          "payoff": 0.5817174515235457,
+          "decisive_accuracy": 0.9680713128038898,
+          "exact": {
+            "brier": "3873/61700",
+            "coverage": "617/722",
+            "wrong_mass": "197/7220",
+            "payoff": "210/361",
+            "decisive_accuracy": "5973/6170"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s25-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/40",
+      "local_error": "3/38",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.039015781602093534,
+          "coverage": 0.9894251502060297,
+          "wrong_mass": 0.03654082995066029,
+          "payoff": 0.6240168506994268,
+          "decisive_accuracy": 0.9630686263199886,
+          "exact": {
+            "brier": "12948563411614514819679855985797867556913335696221441/331880149004107417782054350098020725062971005004512644",
+            "coverage": "1031543/1042568",
+            "wrong_mass": "380963/10425680",
+            "payoff": "162645/260642",
+            "decisive_accuracy": "9934467/10315430"
+          }
+        },
+        "receipts": {
+          "brier": 0.033735039796058255,
+          "coverage": 0.9682754506180892,
+          "wrong_mass": 0.025965980156690018,
+          "payoff": 0.708615649051189,
+          "decisive_accuracy": 0.9731832712064373,
+          "exact": {
+            "brier": "318226099849473/9433102844202244",
+            "coverage": "1009493/1042568",
+            "wrong_mass": "270713/10425680",
+            "payoff": "184695/260642",
+            "decisive_accuracy": "9824217/10094930"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.03319205624410152,
+          "coverage": 0.9682754506180892,
+          "wrong_mass": 0.025965980156690018,
+          "payoff": 0.708615649051189,
+          "decisive_accuracy": 0.9731832712064373,
+          "exact": {
+            "brier": "1536685329/46296780100",
+            "coverage": "1009493/1042568",
+            "wrong_mass": "270713/10425680",
+            "payoff": "184695/260642",
+            "decisive_accuracy": "9824217/10094930"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s25-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/40",
+      "local_error": "3/38",
+      "histories": 128,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.029017309630677127,
+          "coverage": 1.0,
+          "wrong_mass": 0.0291384350948811,
+          "payoff": 0.708615649051189,
+          "decisive_accuracy": 0.9708615649051189,
+          "exact": {
+            "brier": "1931104516867028664033456076161/66550088255785888448304529221124",
+            "coverage": "1",
+            "wrong_mass": "75947/2606420",
+            "payoff": "184695/260642",
+            "decisive_accuracy": "2530473/2606420"
+          }
+        },
+        "receipts": {
+          "brier": 0.028589729221255286,
+          "coverage": 1.0,
+          "wrong_mass": 0.0291384350948811,
+          "payoff": 0.708615649051189,
+          "decisive_accuracy": 0.9708615649051189,
+          "exact": {
+            "brier": "69232492935514569/2421586171723622500",
+            "coverage": "1",
+            "wrong_mass": "75947/2606420",
+            "payoff": "184695/260642",
+            "decisive_accuracy": "2530473/2606420"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.028008994066391894,
+          "coverage": 1.0,
+          "wrong_mass": 0.0291384350948811,
+          "payoff": 0.708615649051189,
+          "decisive_accuracy": 0.9708615649051189,
+          "exact": {
+            "brier": "569592801099921/20336067755584900",
+            "coverage": "1",
+            "wrong_mass": "75947/2606420",
+            "payoff": "184695/260642",
+            "decisive_accuracy": "2530473/2606420"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s25-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/40",
+      "local_error": "3/38",
+      "histories": 4096,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.025148356736191126,
+          "coverage": 0.9994877156720141,
+          "wrong_mass": 0.02502371345753656,
+          "payoff": 0.7492505810966484,
+          "decisive_accuracy": 0.9749634607157611,
+          "exact": {
+            "brier": "392656231753243477277994816524153045313647396344416465934521/15613593996309506088191812890243821366846251407892706312619364",
+            "coverage": "1568748904612681/1569552961997056",
+            "wrong_mass": "392760435774421/15695529619970560",
+            "payoff": "293997117209565/392388240499264",
+            "decisive_accuracy": "1390429873668399/1426135367829710"
+          }
+        },
+        "receipts": {
+          "brier": 0.025148356736191126,
+          "coverage": 0.9994877156720141,
+          "wrong_mass": 0.02502371345753656,
+          "payoff": 0.7492505810966484,
+          "decisive_accuracy": 0.9749634607157611,
+          "exact": {
+            "brier": "392656231753243477277994816524153045313647396344416465934521/15613593996309506088191812890243821366846251407892706312619364",
+            "coverage": "1568748904612681/1569552961997056",
+            "wrong_mass": "392760435774421/15695529619970560",
+            "payoff": "293997117209565/392388240499264",
+            "decisive_accuracy": "1390429873668399/1426135367829710"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.024525037745557123,
+          "coverage": 0.9994877156720141,
+          "wrong_mass": 0.02502371345753656,
+          "payoff": 0.7492505810966484,
+          "decisive_accuracy": 0.9749634607157611,
+          "exact": {
+            "brier": "4257291567752486447086752530438001790977/173589603079152192747613866819233940551300",
+            "coverage": "1568748904612681/1569552961997056",
+            "wrong_mass": "392760435774421/15695529619970560",
+            "payoff": "293997117209565/392388240499264",
+            "decisive_accuracy": "1390429873668399/1426135367829710"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s50-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/18",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.09999999994264056,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "1215766545905692881/12157665466030497604",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.09,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "9/100",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.09,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "9/100",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s50-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/18",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.09999982177482676,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "23656671421426478247556331654556259337361/236567135836452457249010139096414429885124",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.05633635198969533,
+          "coverage": 1.0,
+          "wrong_mass": 0.05802469135802469,
+          "payoff": 0.41975308641975306,
+          "decisive_accuracy": 0.9419753086419753,
+          "exact": {
+            "brier": "2431753/43164900",
+            "coverage": "1",
+            "wrong_mass": "47/810",
+            "payoff": "34/81",
+            "decisive_accuracy": "763/810"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.054328675439786554,
+          "coverage": 1.0,
+          "wrong_mass": 0.05802469135802469,
+          "payoff": 0.41975308641975306,
+          "decisive_accuracy": 0.9419753086419753,
+          "exact": {
+            "brier": "120137/2211300",
+            "coverage": "1",
+            "wrong_mass": "47/810",
+            "payoff": "34/81",
+            "decisive_accuracy": "763/810"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s50-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/18",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.07376543207150199,
+          "coverage": 0.8950617283950617,
+          "wrong_mass": 0.047530864197530866,
+          "payoff": 0.41975308641975306,
+          "decisive_accuracy": 0.9468965517241379,
+          "exact": {
+            "brier": "72642051132683983361/984770902748470305924",
+            "coverage": "145/162",
+            "wrong_mass": "77/1620",
+            "payoff": "34/81",
+            "decisive_accuracy": "1373/1450"
+          }
+        },
+        "receipts": {
+          "brier": 0.07273925720287013,
+          "coverage": 0.8950617283950617,
+          "wrong_mass": 0.047530864197530866,
+          "payoff": 0.41975308641975306,
+          "decisive_accuracy": 0.9468965517241379,
+          "exact": {
+            "brier": "39617/544644",
+            "coverage": "145/162",
+            "wrong_mass": "77/1620",
+            "payoff": "34/81",
+            "decisive_accuracy": "1373/1450"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.07124137931034483,
+          "coverage": 0.8950617283950617,
+          "wrong_mass": 0.047530864197530866,
+          "payoff": 0.41975308641975306,
+          "decisive_accuracy": 0.9468965517241379,
+          "exact": {
+            "brier": "1033/14500",
+            "coverage": "145/162",
+            "wrong_mass": "77/1620",
+            "payoff": "34/81",
+            "decisive_accuracy": "1373/1450"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s50-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/18",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.056526408525803026,
+          "coverage": 0.994493979576284,
+          "wrong_mass": 0.05527168114616674,
+          "payoff": 0.44177716811461665,
+          "decisive_accuracy": 0.944422306940746,
+          "exact": {
+            "brier": "55557076175843383608879775294450429167138170353793/982851690471062524828086751849895519135849968577412",
+            "coverage": "52199/52488",
+            "wrong_mass": "29011/524880",
+            "payoff": "5797/13122",
+            "decisive_accuracy": "492979/521990"
+          }
+        },
+        "receipts": {
+          "brier": 0.053667697063070736,
+          "coverage": 0.9834819387288523,
+          "wrong_mass": 0.049765660722450845,
+          "payoff": 0.48582533150434387,
+          "decisive_accuracy": 0.9493985006102168,
+          "exact": {
+            "brier": "8495753600731/158302928309868",
+            "coverage": "17207/17496",
+            "wrong_mass": "8707/174960",
+            "payoff": "2125/4374",
+            "decisive_accuracy": "163363/172070"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.05137550544188647,
+          "coverage": 0.9834819387288523,
+          "wrong_mass": 0.049765660722450845,
+          "payoff": 0.48582533150434387,
+          "decisive_accuracy": 0.9493985006102168,
+          "exact": {
+            "brier": "31109641/605534500",
+            "coverage": "17207/17496",
+            "wrong_mass": "8707/174960",
+            "payoff": "2125/4374",
+            "decisive_accuracy": "163363/172070"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s50-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/18",
+      "histories": 128,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.05135437279572646,
+          "coverage": 1.0,
+          "wrong_mass": 0.051417466849565614,
+          "payoff": 0.48582533150434387,
+          "decisive_accuracy": 0.9485825331504344,
+          "exact": {
+            "brier": "57353568477705719122149400667/1116819568721877042352667685228",
+            "coverage": "1",
+            "wrong_mass": "2249/43740",
+            "payoff": "2125/4374",
+            "decisive_accuracy": "41491/43740"
+          }
+        },
+        "receipts": {
+          "brier": 0.05111091650778195,
+          "coverage": 1.0,
+          "wrong_mass": 0.051417466849565614,
+          "payoff": 0.48582533150434387,
+          "decisive_accuracy": 0.9485825331504344,
+          "exact": {
+            "brier": "2077054900240883/40638185385007500",
+            "coverage": "1",
+            "wrong_mass": "2249/43740",
+            "payoff": "2125/4374",
+            "decisive_accuracy": "41491/43740"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.04870688749409416,
+          "coverage": 1.0,
+          "wrong_mass": 0.051417466849565614,
+          "payoff": 0.48582533150434387,
+          "decisive_accuracy": 0.9485825331504344,
+          "exact": {
+            "brier": "688169578777/14128793979300",
+            "coverage": "1",
+            "wrong_mass": "2249/43740",
+            "payoff": "2125/4374",
+            "decisive_accuracy": "41491/43740"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s50-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/18",
+      "histories": 4096,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.05002275498061876,
+          "coverage": 0.9998997879153373,
+          "wrong_mass": 0.04999956244751713,
+          "payoff": 0.4999041634401659,
+          "decisive_accuracy": 0.9499954264899287,
+          "exact": {
+            "brier": "170773005347292655166271950045177430196112088237842521/3413906439448574766386687918234381206438400282031035364",
+            "coverage": "99169706185/99179645184",
+            "wrong_mass": "49589388629/991796451840",
+            "payoff": "12395079389/24794911296",
+            "decisive_accuracy": "85646152111/90154278350"
+          }
+        },
+        "receipts": {
+          "brier": 0.05002275498061876,
+          "coverage": 0.9998997879153373,
+          "wrong_mass": 0.04999956244751713,
+          "payoff": 0.4999041634401659,
+          "decisive_accuracy": 0.9499954264899287,
+          "exact": {
+            "brier": "170773005347292655166271950045177430196112088237842521/3413906439448574766386687918234381206438400282031035364",
+            "coverage": "99169706185/99179645184",
+            "wrong_mass": "49589388629/991796451840",
+            "payoff": "12395079389/24794911296",
+            "decisive_accuracy": "85646152111/90154278350"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.04752439497139645,
+          "coverage": 0.9998997879153373,
+          "wrong_mass": 0.04999956244751713,
+          "payoff": 0.4999041634401659,
+          "decisive_accuracy": 0.9499954264899287,
+          "exact": {
+            "brier": "58076926933140267191885223108169/1222044530353202525640909820142500",
+            "coverage": "99169706185/99179645184",
+            "wrong_mass": "49589388629/991796451840",
+            "payoff": "12395079389/24794911296",
+            "decisive_accuracy": "85646152111/90154278350"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s75-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "1/34",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.09999999994264056,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "1215766545905692881/12157665466030497604",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.09,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "9/100",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.09,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "9/100",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s75-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "1/34",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.09999990300745508,
+          "coverage": 1.0,
+          "wrong_mass": 0.1,
+          "payoff": 0.0,
+          "decisive_accuracy": 0.9,
+          "exact": {
+            "brier": "6836783594496644943368366035883874993553329/68367902256734760144963930198863770236800836",
+            "coverage": "1",
+            "wrong_mass": "1/10",
+            "payoff": "0",
+            "decisive_accuracy": "9/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.0761200027790746,
+          "coverage": 1.0,
+          "wrong_mass": 0.07716262975778547,
+          "payoff": 0.22837370242214533,
+          "decisive_accuracy": 0.9228373702422146,
+          "exact": {
+            "brier": "11723097/154008100",
+            "coverage": "1",
+            "wrong_mass": "223/2890",
+            "payoff": "66/289",
+            "decisive_accuracy": "2667/2890"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.07115970969611062,
+          "coverage": 1.0,
+          "wrong_mass": 0.07716262975778547,
+          "payoff": 0.22837370242214533,
+          "decisive_accuracy": 0.9228373702422146,
+          "exact": {
+            "brier": "2173737/30547300",
+            "coverage": "1",
+            "wrong_mass": "223/2890",
+            "payoff": "66/289",
+            "decisive_accuracy": "2667/2890"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s75-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "1/34",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.08572664355763071,
+          "coverage": 0.9429065743944637,
+          "wrong_mass": 0.07145328719723183,
+          "payoff": 0.22837370242214533,
+          "decisive_accuracy": 0.9242201834862386,
+          "exact": {
+            "brier": "301206161776901382609/3513565319682813807556",
+            "coverage": "545/578",
+            "wrong_mass": "413/5780",
+            "payoff": "66/289",
+            "decisive_accuracy": "5037/5450"
+          }
+        },
+        "receipts": {
+          "brier": 0.08412411050433401,
+          "coverage": 0.9429065743944637,
+          "wrong_mass": 0.07145328719723183,
+          "payoff": 0.22837370242214533,
+          "decisive_accuracy": 0.9242201834862386,
+          "exact": {
+            "brier": "163473/1943236",
+            "coverage": "545/578",
+            "wrong_mass": "413/5780",
+            "payoff": "66/289",
+            "decisive_accuracy": "5037/5450"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.08031192660550458,
+          "coverage": 0.9429065743944637,
+          "wrong_mass": 0.07145328719723183,
+          "payoff": 0.22837370242214533,
+          "decisive_accuracy": 0.9242201834862386,
+          "exact": {
+            "brier": "4377/54500",
+            "coverage": "545/578",
+            "wrong_mass": "413/5780",
+            "payoff": "66/289",
+            "decisive_accuracy": "5037/5450"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s75-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "1/34",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.07668891451118053,
+          "coverage": 0.9983701703763126,
+          "wrong_mass": 0.07634771494594174,
+          "payoff": 0.23489302091689515,
+          "decisive_accuracy": 0.9235276481496194,
+          "exact": {
+            "brier": "56441338697185273421610880634189124370096991844369/735977801445561680304891054997490730912121764307396",
+            "coverage": "667079/668168",
+            "wrong_mass": "510131/6681680",
+            "payoff": "39237/167042",
+            "decisive_accuracy": "6160659/6670790"
+          }
+        },
+        "receipts": {
+          "brier": 0.07573700379115261,
+          "coverage": 0.9951105111289377,
+          "wrong_mass": 0.07471788532225428,
+          "payoff": 0.2479316579063948,
+          "decisive_accuracy": 0.9249149873439805,
+          "exact": {
+            "brier": "457871878778673/6045550468847044",
+            "coverage": "664901/668168",
+            "wrong_mass": "499241/6681680",
+            "payoff": "41415/167042",
+            "decisive_accuracy": "6149769/6649010"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.07033000589221418,
+          "coverage": 0.9951105111289377,
+          "wrong_mass": 0.07471788532225428,
+          "payoff": 0.2479316579063948,
+          "decisive_accuracy": 0.9249149873439805,
+          "exact": {
+            "brier": "2272810809/32316374500",
+            "coverage": "664901/668168",
+            "wrong_mass": "499241/6681680",
+            "payoff": "41415/167042",
+            "decisive_accuracy": "6149769/6649010"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s75-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "1/34",
+      "histories": 128,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.07518813330305874,
+          "coverage": 1.0,
+          "wrong_mass": 0.07520683420936052,
+          "payoff": 0.2479316579063948,
+          "decisive_accuracy": 0.9247931657906395,
+          "exact": {
+            "brier": "3206854237294294353525928637361/42651068678198396183967607561924",
+            "coverage": "1",
+            "wrong_mass": "125627/1670420",
+            "payoff": "41415/167042",
+            "decisive_accuracy": "1544793/1670420"
+          }
+        },
+        "receipts": {
+          "brier": 0.0750965743359407,
+          "coverage": 1.0,
+          "wrong_mass": 0.07520683420936052,
+          "payoff": 0.2479316579063948,
+          "decisive_accuracy": 0.9247931657906395,
+          "exact": {
+            "brier": "116547063609460089/1551962451550622500",
+            "coverage": "1",
+            "wrong_mass": "125627/1670420",
+            "payoff": "41415/167042",
+            "decisive_accuracy": "1544793/1670420"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.06954571578737354,
+          "coverage": 1.0,
+          "wrong_mass": 0.07520683420936052,
+          "payoff": 0.2479316579063948,
+          "decisive_accuracy": 0.9247931657906395,
+          "exact": {
+            "brier": "706694721808233/10161585279657700",
+            "coverage": "1",
+            "wrong_mass": "125627/1670420",
+            "payoff": "41415/167042",
+            "decisive_accuracy": "1544793/1670420"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90-s75-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "1/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "1/34",
+      "histories": 4096,
+      "mass": "1",
+      "root_accuracy": "9/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.07500065083607431,
+          "coverage": 0.9999952227158927,
+          "wrong_mass": 0.07499974604235171,
+          "payoff": 0.24999776229237555,
+          "decisive_accuracy": 0.9249998956608417,
+          "exact": {
+            "brier": "385053538257466138741371025462820482930779202747583079099729/5134002624844697447811306925593086202488762114465365858333636",
+            "coverage": "516091972985185/516094438514944",
+            "wrong_mass": "387069518224909/5160944385149440",
+            "payoff": "32255613690069/129023609628736",
+            "decisive_accuracy": "4773850211626941/5160919729851850"
+          }
+        },
+        "receipts": {
+          "brier": 0.07500065083607431,
+          "coverage": 0.9999952227158927,
+          "wrong_mass": 0.07499974604235171,
+          "payoff": 0.24999776229237555,
+          "decisive_accuracy": 0.9249998956608417,
+          "exact": {
+            "brier": "385053538257466138741371025462820482930779202747583079099729/5134002624844697447811306925593086202488762114465365858333636",
+            "coverage": "516091972985185/516094438514944",
+            "wrong_mass": "387069518224909/5160944385149440",
+            "payoff": "32255613690069/129023609628736",
+            "decisive_accuracy": "4773850211626941/5160919729851850"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.06937595150483691,
+          "coverage": 0.9999952227158927,
+          "wrong_mass": 0.07499974604235171,
+          "payoff": 0.24999776229237555,
+          "decisive_accuracy": 0.9249998956608417,
+          "exact": {
+            "brier": "2624721029068145767910613049481045628441/37833297736970851277042156581445642742500",
+            "coverage": "516091972985185/516094438514944",
+            "wrong_mass": "387069518224909/5160944385149440",
+            "payoff": "32255613690069/129023609628736",
+            "decisive_accuracy": "4773850211626941/5160919729851850"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s00-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/5",
+      "histories": 4,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.19999961853154674,
+          "coverage": 1.0,
+          "wrong_mass": 0.2,
+          "payoff": -1.0,
+          "decisive_accuracy": 0.8,
+          "exact": {
+            "brier": "219902325556/1099513724929",
+            "coverage": "1",
+            "wrong_mass": "1/5",
+            "payoff": "-1",
+            "decisive_accuracy": "4/5"
+          }
+        },
+        "receipts": {
+          "brier": 0.16,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "4/25",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.16,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "4/25",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s00-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/5",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.19993555650815675,
+          "coverage": 1.0,
+          "wrong_mass": 0.2,
+          "payoff": -1.0,
+          "decisive_accuracy": 0.8,
+          "exact": {
+            "brier": "54840056135495743877245108/274288661273005916032262881",
+            "coverage": "1",
+            "wrong_mass": "1/5",
+            "payoff": "-1",
+            "decisive_accuracy": "4/5"
+          }
+        },
+        "receipts": {
+          "brier": 0.08467692307692308,
+          "coverage": 0.52,
+          "wrong_mass": 0.008,
+          "payoff": 0.44,
+          "decisive_accuracy": 0.9846153846153847,
+          "exact": {
+            "brier": "688/8125",
+            "coverage": "13/25",
+            "wrong_mass": "1/125",
+            "payoff": "11/25",
+            "decisive_accuracy": "64/65"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.08467692307692308,
+          "coverage": 0.52,
+          "wrong_mass": 0.008,
+          "payoff": 0.44,
+          "decisive_accuracy": 0.9846153846153847,
+          "exact": {
+            "brier": "688/8125",
+            "coverage": "13/25",
+            "wrong_mass": "1/125",
+            "payoff": "11/25",
+            "decisive_accuracy": "64/65"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s00-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/5",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.1199999237067459,
+          "coverage": 0.68,
+          "wrong_mass": 0.04,
+          "payoff": 0.28,
+          "decisive_accuracy": 0.9411764705882353,
+          "exact": {
+            "brier": "7761268418/64677277937",
+            "coverage": "17/25",
+            "wrong_mass": "1/25",
+            "payoff": "7/25",
+            "decisive_accuracy": "16/17"
+          }
+        },
+        "receipts": {
+          "brier": 0.11764705882352941,
+          "coverage": 0.68,
+          "wrong_mass": 0.04,
+          "payoff": 0.28,
+          "decisive_accuracy": 0.9411764705882353,
+          "exact": {
+            "brier": "2/17",
+            "coverage": "17/25",
+            "wrong_mass": "1/25",
+            "payoff": "7/25",
+            "decisive_accuracy": "16/17"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.11764705882352941,
+          "coverage": 0.68,
+          "wrong_mass": 0.04,
+          "payoff": 0.28,
+          "decisive_accuracy": 0.9411764705882353,
+          "exact": {
+            "brier": "2/17",
+            "coverage": "17/25",
+            "wrong_mass": "1/25",
+            "payoff": "7/25",
+            "decisive_accuracy": "16/17"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s00-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/5",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.0877390064512329,
+          "coverage": 0.9488,
+          "wrong_mass": 0.0784,
+          "payoff": 0.1648,
+          "decisive_accuracy": 0.9173693086003373,
+          "exact": {
+            "brier": "1589522989897957656990503359912/18116491788420767748014931027169",
+            "coverage": "593/625",
+            "wrong_mass": "49/625",
+            "payoff": "103/625",
+            "decisive_accuracy": "544/593"
+          }
+        },
+        "receipts": {
+          "brier": 0.06408789196612497,
+          "coverage": 0.8464,
+          "wrong_mass": 0.0272,
+          "payoff": 0.5744,
+          "decisive_accuracy": 0.9678638941398866,
+          "exact": {
+            "brier": "280/4369",
+            "coverage": "529/625",
+            "wrong_mass": "17/625",
+            "payoff": "359/625",
+            "decisive_accuracy": "512/529"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.06408789196612497,
+          "coverage": 0.8464,
+          "wrong_mass": 0.0272,
+          "payoff": 0.5744,
+          "decisive_accuracy": 0.9678638941398866,
+          "exact": {
+            "brier": "280/4369",
+            "coverage": "529/625",
+            "wrong_mass": "17/625",
+            "payoff": "359/625",
+            "decisive_accuracy": "512/529"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s00-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/5",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.052779183673154255,
+          "coverage": 1.0,
+          "wrong_mass": 0.05792,
+          "payoff": 0.4208,
+          "decisive_accuracy": 0.94208,
+          "exact": {
+            "brier": "3370523883056512/63860856657601249",
+            "coverage": "1",
+            "wrong_mass": "181/3125",
+            "payoff": "263/625",
+            "decisive_accuracy": "2944/3125"
+          }
+        },
+        "receipts": {
+          "brier": 0.04758122626641651,
+          "coverage": 0.744,
+          "wrong_mass": 0.00672,
+          "payoff": 0.6768,
+          "decisive_accuracy": 0.9909677419354839,
+          "exact": {
+            "brier": "1981312/41640625",
+            "coverage": "93/125",
+            "wrong_mass": "21/3125",
+            "payoff": "423/625",
+            "decisive_accuracy": "768/775"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.04758122626641651,
+          "coverage": 0.744,
+          "wrong_mass": 0.00672,
+          "payoff": 0.6768,
+          "decisive_accuracy": 0.9909677419354839,
+          "exact": {
+            "brier": "1981312/41640625",
+            "coverage": "93/125",
+            "wrong_mass": "21/3125",
+            "payoff": "423/625",
+            "decisive_accuracy": "768/775"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s00-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "1/5",
+      "histories": 2048,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.012648508153927679,
+          "coverage": 0.9735758848,
+          "wrong_mass": 0.0063693824,
+          "payoff": 0.9098820608,
+          "decisive_accuracy": 0.993457744281219,
+          "exact": {
+            "brier": "53836442713088/4256347235414513",
+            "coverage": "9507577/9765625",
+            "wrong_mass": "62201/9765625",
+            "payoff": "8885567/9765625",
+            "decisive_accuracy": "9445376/9507577"
+          }
+        },
+        "receipts": {
+          "brier": 0.012648508153927679,
+          "coverage": 0.9735758848,
+          "wrong_mass": 0.0063693824,
+          "payoff": 0.9098820608,
+          "decisive_accuracy": 0.993457744281219,
+          "exact": {
+            "brier": "53836442713088/4256347235414513",
+            "coverage": "9507577/9765625",
+            "wrong_mass": "62201/9765625",
+            "payoff": "8885567/9765625",
+            "decisive_accuracy": "9445376/9507577"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.012648508153927679,
+          "coverage": 0.9735758848,
+          "wrong_mass": 0.0063693824,
+          "payoff": 0.9098820608,
+          "decisive_accuracy": 0.993457744281219,
+          "exact": {
+            "brier": "53836442713088/4256347235414513",
+            "coverage": "9507577/9765625",
+            "wrong_mass": "62201/9765625",
+            "payoff": "8885567/9765625",
+            "decisive_accuracy": "9445376/9507577"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s25-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/6",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.19999961853154674,
+          "coverage": 1.0,
+          "wrong_mass": 0.2,
+          "payoff": -1.0,
+          "decisive_accuracy": 0.8,
+          "exact": {
+            "brier": "219902325556/1099513724929",
+            "coverage": "1",
+            "wrong_mass": "1/5",
+            "payoff": "-1",
+            "decisive_accuracy": "4/5"
+          }
+        },
+        "receipts": {
+          "brier": 0.16,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "4/25",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.16,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "4/25",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s25-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/6",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.19994400913624294,
+          "coverage": 1.0,
+          "wrong_mass": 0.2,
+          "payoff": -1.0,
+          "decisive_accuracy": 0.8,
+          "exact": {
+            "brier": "54842374595537739682095284/274288661273005916032262881",
+            "coverage": "1",
+            "wrong_mass": "1/5",
+            "payoff": "-1",
+            "decisive_accuracy": "4/5"
+          }
+        },
+        "receipts": {
+          "brier": 0.09911242603550297,
+          "coverage": 0.5833333333333334,
+          "wrong_mass": 0.03333333333333333,
+          "payoff": 0.25,
+          "decisive_accuracy": 0.9428571428571428,
+          "exact": {
+            "brier": "67/676",
+            "coverage": "7/12",
+            "wrong_mass": "1/30",
+            "payoff": "1/4",
+            "decisive_accuracy": "33/35"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.0980952380952381,
+          "coverage": 0.5833333333333334,
+          "wrong_mass": 0.03333333333333333,
+          "payoff": 0.25,
+          "decisive_accuracy": 0.9428571428571428,
+          "exact": {
+            "brier": "103/1050",
+            "coverage": "7/12",
+            "wrong_mass": "1/30",
+            "payoff": "1/4",
+            "decisive_accuracy": "33/35"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s25-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/6",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.13055543899612934,
+          "coverage": 0.7222222222222222,
+          "wrong_mass": 0.06111111111111111,
+          "payoff": 0.1111111111111111,
+          "decisive_accuracy": 0.9153846153846154,
+          "exact": {
+            "brier": "1148379976323/8796109799432",
+            "coverage": "13/18",
+            "wrong_mass": "11/180",
+            "payoff": "1/9",
+            "decisive_accuracy": "119/130"
+          }
+        },
+        "receipts": {
+          "brier": 0.1258650519031142,
+          "coverage": 0.7222222222222222,
+          "wrong_mass": 0.06111111111111111,
+          "payoff": 0.1111111111111111,
+          "decisive_accuracy": 0.9153846153846154,
+          "exact": {
+            "brier": "291/2312",
+            "coverage": "13/18",
+            "wrong_mass": "11/180",
+            "payoff": "1/9",
+            "decisive_accuracy": "119/130"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.12538461538461537,
+          "coverage": 0.7222222222222222,
+          "wrong_mass": 0.06111111111111111,
+          "payoff": 0.1111111111111111,
+          "decisive_accuracy": 0.9153846153846154,
+          "exact": {
+            "brier": "163/1300",
+            "coverage": "13/18",
+            "wrong_mass": "11/180",
+            "payoff": "1/9",
+            "decisive_accuracy": "119/130"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s25-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/6",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.10401570505254126,
+          "coverage": 0.9614197530864198,
+          "wrong_mass": 0.09737654320987654,
+          "payoff": -0.012345679012345678,
+          "decisive_accuracy": 0.8987158908507223,
+          "exact": {
+            "brier": "60300789326437133450611718176687/579727737229464567936477792869408",
+            "coverage": "623/648",
+            "wrong_mass": "631/6480",
+            "payoff": "-1/81",
+            "decisive_accuracy": "5599/6230"
+          }
+        },
+        "receipts": {
+          "brier": 0.08493960765785662,
+          "coverage": 0.8842592592592593,
+          "wrong_mass": 0.0587962962962963,
+          "payoff": 0.2962962962962963,
+          "decisive_accuracy": 0.9335078534031414,
+          "exact": {
+            "brier": "51882909/610821152",
+            "coverage": "191/216",
+            "wrong_mass": "127/2160",
+            "payoff": "8/27",
+            "decisive_accuracy": "1783/1910"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.08358073236667486,
+          "coverage": 0.8842592592592593,
+          "wrong_mass": 0.0587962962962963,
+          "payoff": 0.2962962962962963,
+          "decisive_accuracy": 0.9335078534031414,
+          "exact": {
+            "brier": "34009/406900",
+            "coverage": "191/216",
+            "wrong_mass": "127/2160",
+            "payoff": "8/27",
+            "decisive_accuracy": "1783/1910"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s25-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/6",
+      "histories": 128,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.07806175571373103,
+          "coverage": 1.0,
+          "wrong_mass": 0.08194444444444444,
+          "payoff": 0.18055555555555555,
+          "decisive_accuracy": 0.9180555555555555,
+          "exact": {
+            "brier": "79761449473204201/1021773706521619984",
+            "coverage": "1",
+            "wrong_mass": "59/720",
+            "payoff": "13/72",
+            "decisive_accuracy": "661/720"
+          }
+        },
+        "receipts": {
+          "brier": 0.0735729609382975,
+          "coverage": 0.8070987654320988,
+          "wrong_mass": 0.0433641975308642,
+          "payoff": 0.3734567901234568,
+          "decisive_accuracy": 0.9462715105162524,
+          "exact": {
+            "brier": "209012689/2840890000",
+            "coverage": "523/648",
+            "wrong_mass": "281/6480",
+            "payoff": "121/324",
+            "decisive_accuracy": "4949/5230"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.07188902091013416,
+          "coverage": 0.8070987654320988,
+          "wrong_mass": 0.0433641975308642,
+          "payoff": 0.3734567901234568,
+          "decisive_accuracy": 0.9462715105162524,
+          "exact": {
+            "brier": "176971/2461725",
+            "coverage": "523/648",
+            "wrong_mass": "281/6480",
+            "payoff": "121/324",
+            "decisive_accuracy": "4949/5230"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s25-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "1/20",
+      "local_error": "1/6",
+      "histories": 4096,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.05436516655772924,
+          "coverage": 0.9869761897957628,
+          "wrong_mass": 0.051543150339125134,
+          "payoff": 0.4715446864045115,
+          "decisive_accuracy": 0.9477767033571589,
+          "exact": {
+            "brier": "1008543839763690621265114859244609/18551287591342866173967289371821056",
+            "coverage": "1657741/1679616",
+            "wrong_mass": "865727/16796160",
+            "payoff": "396007/839808",
+            "decisive_accuracy": "15711683/16577410"
+          }
+        },
+        "receipts": {
+          "brier": 0.05436516655772924,
+          "coverage": 0.9869761897957628,
+          "wrong_mass": 0.051543150339125134,
+          "payoff": 0.4715446864045115,
+          "decisive_accuracy": 0.9477767033571589,
+          "exact": {
+            "brier": "1008543839763690621265114859244609/18551287591342866173967289371821056",
+            "coverage": "1657741/1679616",
+            "wrong_mass": "865727/16796160",
+            "payoff": "396007/839808",
+            "decisive_accuracy": "15711683/16577410"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.052044282746218154,
+          "coverage": 0.9869761897957628,
+          "wrong_mass": 0.051543150339125134,
+          "payoff": 0.4715446864045115,
+          "decisive_accuracy": 0.9477767033571589,
+          "exact": {
+            "brier": "933669302529028267/17939901431283999700",
+            "coverage": "1657741/1679616",
+            "wrong_mass": "865727/16796160",
+            "payoff": "396007/839808",
+            "decisive_accuracy": "15711683/16577410"
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s50-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/10",
+      "local_error": "1/8",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.19999961853154674,
+          "coverage": 1.0,
+          "wrong_mass": 0.2,
+          "payoff": -1.0,
+          "decisive_accuracy": 0.8,
+          "exact": {
+            "brier": "219902325556/1099513724929",
+            "coverage": "1",
+            "wrong_mass": "1/5",
+            "payoff": "-1",
+            "decisive_accuracy": "4/5"
+          }
+        },
+        "receipts": {
+          "brier": 0.16,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "4/25",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.16,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "4/25",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s50-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/10",
+      "local_error": "1/8",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.19995582613274498,
+          "coverage": 1.0,
+          "wrong_mass": 0.2,
+          "payoff": -1.0,
+          "decisive_accuracy": 0.8,
+          "exact": {
+            "brier": "54845615863688556185586484/274288661273005916032262881",
+            "coverage": "1",
+            "wrong_mass": "1/5",
+            "payoff": "-1",
+            "decisive_accuracy": "4/5"
+          }
+        },
+        "receipts": {
+          "brier": 0.11929363905325444,
+          "coverage": 0.671875,
+          "wrong_mass": 0.06875,
+          "payoff": -0.015625,
+          "decisive_accuracy": 0.8976744186046511,
+          "exact": {
+            "brier": "32257/270400",
+            "coverage": "43/64",
+            "wrong_mass": "11/160",
+            "payoff": "-1/64",
+            "decisive_accuracy": "193/215"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.11421511627906977,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "3929/34400",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s50-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/10",
+      "local_error": "1/8",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.14531232714740555,
+          "coverage": 0.78125,
+          "wrong_mass": 0.090625,
+          "payoff": -0.125,
+          "decisive_accuracy": 0.884,
+          "exact": {
+            "brier": "20450930956793/140737756790912",
+            "coverage": "25/32",
+            "wrong_mass": "29/320",
+            "payoff": "-1/8",
+            "decisive_accuracy": "221/250"
+          }
+        },
+        "receipts": {
+          "brier": 0.13735402249134948,
+          "coverage": 0.78125,
+          "wrong_mass": 0.090625,
+          "payoff": -0.125,
+          "decisive_accuracy": 0.884,
+          "exact": {
+            "brier": "5081/36992",
+            "coverage": "25/32",
+            "wrong_mass": "29/320",
+            "payoff": "-1/8",
+            "decisive_accuracy": "221/250"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.1348,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "337/2500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s50-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/10",
+      "local_error": "1/8",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.12602465966991577,
+          "coverage": 0.97607421875,
+          "wrong_mass": 0.122412109375,
+          "payoff": -0.248046875,
+          "decisive_accuracy": 0.8745872936468234,
+          "exact": {
+            "brier": "18703357641101729700588481388923247/148410300730742929391738314974568448",
+            "coverage": "1999/2048",
+            "wrong_mass": "2507/20480",
+            "payoff": "-127/512",
+            "decisive_accuracy": "17483/19990"
+          }
+        },
+        "receipts": {
+          "brier": 0.11249982638253701,
+          "coverage": 0.92822265625,
+          "wrong_mass": 0.098486328125,
+          "payoff": -0.056640625,
+          "decisive_accuracy": 0.8938979484481852,
+          "exact": {
+            "brier": "17591622029/156370214912",
+            "coverage": "1901/2048",
+            "wrong_mass": "2017/20480",
+            "payoff": "-29/512",
+            "decisive_accuracy": "16993/19010"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.10592805995004163,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "318049/3002500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s50-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/10",
+      "local_error": "1/8",
+      "histories": 128,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.11042251019176351,
+          "coverage": 1.0,
+          "wrong_mass": 0.112841796875,
+          "payoff": -0.12841796875,
+          "decisive_accuracy": 0.887158203125,
+          "exact": {
+            "brier": "28883665285647248581/261574068869534715904",
+            "coverage": "1",
+            "wrong_mass": "2311/20480",
+            "payoff": "-263/2048",
+            "decisive_accuracy": "18169/20480"
+          }
+        },
+        "receipts": {
+          "brier": 0.10688711057125803,
+          "coverage": 0.88037109375,
+          "wrong_mass": 0.088916015625,
+          "payoff": -0.0087890625,
+          "decisive_accuracy": 0.8990016638935108,
+          "exact": {
+            "brier": "77735558029/727267840000",
+            "coverage": "1803/2048",
+            "wrong_mass": "1821/20480",
+            "payoff": "-9/1024",
+            "decisive_accuracy": "5403/6010"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.09907516008434522,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "28642391/289097600",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s50-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "1/10",
+      "local_error": "1/8",
+      "histories": 4096,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.10067704650489805,
+          "coverage": 0.9960555098950863,
+          "wrong_mass": 0.10001357905566692,
+          "payoff": -0.004080280661582947,
+          "decisive_accuracy": 0.8995903560975218,
+          "exact": {
+            "brier": "1958413696824103558451118494449837585159/19452434937379937241233924420346635616256",
+            "coverage": "267376615/268435456",
+            "wrong_mass": "268471907/2684354560",
+            "payoff": "-273823/67108864",
+            "decisive_accuracy": "218663113/243069650"
+          }
+        },
+        "receipts": {
+          "brier": 0.10067704650489805,
+          "coverage": 0.9960555098950863,
+          "wrong_mass": 0.10001357905566692,
+          "payoff": -0.004080280661582947,
+          "decisive_accuracy": 0.8995903560975218,
+          "exact": {
+            "brier": "1958413696824103558451118494449837585159/19452434937379937241233924420346635616256",
+            "coverage": "267376615/268435456",
+            "wrong_mass": "268471907/2684354560",
+            "payoff": "-273823/67108864",
+            "decisive_accuracy": "218663113/243069650"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.09095151999326086,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "10463565610032949726321/115045527670216598162500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s75-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/20",
+      "local_error": "1/14",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.19999961853154674,
+          "coverage": 1.0,
+          "wrong_mass": 0.2,
+          "payoff": -1.0,
+          "decisive_accuracy": 0.8,
+          "exact": {
+            "brier": "219902325556/1099513724929",
+            "coverage": "1",
+            "wrong_mass": "1/5",
+            "payoff": "-1",
+            "decisive_accuracy": "4/5"
+          }
+        },
+        "receipts": {
+          "brier": 0.16,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "4/25",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.16,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "4/25",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s75-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/20",
+      "local_error": "1/14",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.19997306220807512,
+          "coverage": 1.0,
+          "wrong_mass": 0.2,
+          "payoff": -1.0,
+          "decisive_accuracy": 0.8,
+          "exact": {
+            "brier": "2687666832662106432607961716/13440144402377289885580881169",
+            "coverage": "1",
+            "wrong_mass": "1/5",
+            "payoff": "-1",
+            "decisive_accuracy": "4/5"
+          }
+        },
+        "receipts": {
+          "brier": 0.14872962202632534,
+          "coverage": 0.8010204081632653,
+          "wrong_mass": 0.12040816326530612,
+          "payoff": -0.4030612244897959,
+          "decisive_accuracy": 0.8496815286624204,
+          "exact": {
+            "brier": "123163/828100",
+            "coverage": "157/196",
+            "wrong_mass": "59/490",
+            "payoff": "-79/196",
+            "decisive_accuracy": "667/785"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.13414532692057715,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "51599/384650",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s75-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/20",
+      "local_error": "1/14",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.16683647973300048,
+          "coverage": 0.8673469387755102,
+          "wrong_mass": 0.1336734693877551,
+          "payoff": -0.46938775510204084,
+          "decisive_accuracy": 0.8458823529411764,
+          "exact": {
+            "brier": "4229887512931/25353492951304",
+            "coverage": "85/98",
+            "wrong_mass": "131/980",
+            "payoff": "-23/49",
+            "decisive_accuracy": "719/850"
+          }
+        },
+        "receipts": {
+          "brier": 0.15411164465786314,
+          "coverage": 0.8673469387755102,
+          "wrong_mass": 0.1336734693877551,
+          "payoff": -0.46938775510204084,
+          "decisive_accuracy": 0.8458823529411764,
+          "exact": {
+            "brier": "1027/6664",
+            "coverage": "85/98",
+            "wrong_mass": "131/980",
+            "payoff": "-23/49",
+            "decisive_accuracy": "719/850"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.14623529411764705,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "1243/8500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s75-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/20",
+      "local_error": "1/14",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.1565663208969415,
+          "coverage": 0.9912015826738859,
+          "wrong_mass": 0.155804872969596,
+          "payoff": -0.5668471470220742,
+          "decisive_accuracy": 0.8428121224854247,
+          "exact": {
+            "brier": "31132682756394662266747016404779641/198846613869706346802211882954206944",
+            "coverage": "19039/19208",
+            "wrong_mass": "29927/192080",
+            "payoff": "-1361/2401",
+            "decisive_accuracy": "160463/190390"
+          }
+        },
+        "receipts": {
+          "brier": 0.14937244937982597,
+          "coverage": 0.9736047480216576,
+          "wrong_mass": 0.1470064556434819,
+          "payoff": -0.4964598084131612,
+          "decisive_accuracy": 0.8490080744345222,
+          "exact": {
+            "brier": "12886287277/86269505056",
+            "coverage": "18701/19208",
+            "wrong_mass": "28237/192080",
+            "payoff": "-1192/2401",
+            "decisive_accuracy": "158773/187010"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.13140553676831002,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "15951121/121388500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s75-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/20",
+      "local_error": "1/14",
+      "histories": 128,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.15138294524555249,
+          "coverage": 1.0,
+          "wrong_mass": 0.15228550603915036,
+          "payoff": -0.5228550603915035,
+          "decisive_accuracy": 0.8477144939608496,
+          "exact": {
+            "brier": "371384550475566006601/2453278669358409581584",
+            "coverage": "1",
+            "wrong_mass": "29251/192080",
+            "payoff": "-10043/19208",
+            "decisive_accuracy": "162829/192080"
+          }
+        },
+        "receipts": {
+          "brier": 0.1491586392706573,
+          "coverage": 0.9560079133694294,
+          "wrong_mass": 0.14348708871303623,
+          "payoff": -0.47886297376093295,
+          "decisive_accuracy": 0.8499101454010782,
+          "exact": {
+            "brier": "78262125493/524690530000",
+            "coverage": "18363/19208",
+            "wrong_mass": "27561/192080",
+            "payoff": "-657/1372",
+            "decisive_accuracy": "52023/61210"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.1289898470656468,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "32238679483/249931914925",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a80-s75-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "1/5",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "3/20",
+      "local_error": "1/14",
+      "histories": 4096,
+      "mass": "1",
+      "root_accuracy": "4/5",
+      "metrics": {
+        "headcount": {
+          "brier": 0.14995470353854448,
+          "coverage": 0.9996765278124642,
+          "wrong_mass": 0.14996665068293957,
+          "payoff": -0.4999899790169315,
+          "decisive_accuracy": 0.8499848235797802,
+          "exact": {
+            "brier": "46223798301364248753810244582700290202273/308251740096187433345005140185894492767232",
+            "coverage": "10327181755/10330523392",
+            "wrong_mass": "15492339929/103305233920",
+            "payoff": "-2582579087/5165261696",
+            "decisive_accuracy": "7979952511/9388347050"
+          }
+        },
+        "receipts": {
+          "brier": 0.14995470353854448,
+          "coverage": 0.9996765278124642,
+          "wrong_mass": 0.14996665068293957,
+          "payoff": -0.4999899790169315,
+          "decisive_accuracy": 0.8499848235797802,
+          "exact": {
+            "brier": "46223798301364248753810244582700290202273/308251740096187433345005140185894492767232",
+            "coverage": "10327181755/10330523392",
+            "wrong_mass": "15492339929/103305233920",
+            "payoff": "-2582579087/5165261696",
+            "decisive_accuracy": "7979952511/9388347050"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.1275501856183515,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "145402323755216077690428567619/1139961679007514444438139952500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s00-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "3/10",
+      "histories": 4,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.299874645099199,
+          "coverage": 1.0,
+          "wrong_mass": 0.3,
+          "payoff": -2.0,
+          "decisive_accuracy": 0.7,
+          "exact": {
+            "brier": "23937682330032681/79825629546352804",
+            "coverage": "1",
+            "wrong_mass": "3/10",
+            "payoff": "-2",
+            "decisive_accuracy": "7/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.21,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/100",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.21,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/100",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s00-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "3/10",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.29790023622430667,
+          "coverage": 1.0,
+          "wrong_mass": 0.3,
+          "payoff": -2.0,
+          "decisive_accuracy": 0.7,
+          "exact": {
+            "brier": "824889640067912932913051686727167377/2769013044510662196613913679293249764",
+            "coverage": "1",
+            "wrong_mass": "3/10",
+            "payoff": "-2",
+            "decisive_accuracy": "7/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.15732972972972972,
+          "coverage": 0.37,
+          "wrong_mass": 0.027,
+          "payoff": 0.1,
+          "decisive_accuracy": 0.927027027027027,
+          "exact": {
+            "brier": "14553/92500",
+            "coverage": "37/100",
+            "wrong_mass": "27/1000",
+            "payoff": "1/10",
+            "decisive_accuracy": "343/370"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.15732972972972972,
+          "coverage": 0.37,
+          "wrong_mass": 0.027,
+          "payoff": 0.1,
+          "decisive_accuracy": 0.927027027027027,
+          "exact": {
+            "brier": "14553/92500",
+            "coverage": "37/100",
+            "wrong_mass": "27/1000",
+            "payoff": "1/10",
+            "decisive_accuracy": "343/370"
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s00-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "3/10",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.19496240576016285,
+          "coverage": 0.58,
+          "wrong_mass": 0.09,
+          "payoff": -0.32,
+          "decisive_accuracy": 0.8448275862068966,
+          "exact": {
+            "brier": "536655061299189/2752607915391476",
+            "coverage": "29/50",
+            "wrong_mass": "9/100",
+            "payoff": "-8/25",
+            "decisive_accuracy": "49/58"
+          }
+        },
+        "receipts": {
+          "brier": 0.1810344827586207,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/116",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.1810344827586207,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/116",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s00-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "3/10",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.1752920568810649,
+          "coverage": 0.7018,
+          "wrong_mass": 0.1089,
+          "payoff": -0.3872,
+          "decisive_accuracy": 0.8448275862068966,
+          "exact": {
+            "brier": "747533744103631801388890114235650194871857/4264504378603025146423352793119627389790884",
+            "coverage": "3509/5000",
+            "wrong_mass": "1089/10000",
+            "payoff": "-242/625",
+            "decisive_accuracy": "49/58"
+          }
+        },
+        "receipts": {
+          "brier": 0.13785462224568618,
+          "coverage": 0.2482,
+          "wrong_mass": 0.0081,
+          "payoff": 0.1672,
+          "decisive_accuracy": 0.967365028203062,
+          "exact": {
+            "brier": "19845/143956",
+            "coverage": "1241/5000",
+            "wrong_mass": "81/10000",
+            "payoff": "209/1250",
+            "decisive_accuracy": "2401/2482"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.13785462224568618,
+          "coverage": 0.2482,
+          "wrong_mass": 0.0081,
+          "payoff": 0.1672,
+          "decisive_accuracy": 0.967365028203062,
+          "exact": {
+            "brier": "19845/143956",
+            "coverage": "1241/5000",
+            "wrong_mass": "81/10000",
+            "payoff": "209/1250",
+            "decisive_accuracy": "2401/2482"
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s00-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "3/10",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.13230454112229303,
+          "coverage": 0.559,
+          "wrong_mass": 0.03078,
+          "payoff": 0.2512,
+          "decisive_accuracy": 0.9449373881932022,
+          "exact": {
+            "brier": "43994978780785034045337/332528108314280494919524",
+            "coverage": "559/1000",
+            "wrong_mass": "1539/50000",
+            "payoff": "157/625",
+            "decisive_accuracy": "26411/27950"
+          }
+        },
+        "receipts": {
+          "brier": 0.12128658337164143,
+          "coverage": 0.559,
+          "wrong_mass": 0.03078,
+          "payoff": 0.2512,
+          "decisive_accuracy": 0.9449373881932022,
+          "exact": {
+            "brier": "478210257/3942812500",
+            "coverage": "559/1000",
+            "wrong_mass": "1539/50000",
+            "payoff": "157/625",
+            "decisive_accuracy": "26411/27950"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.12128658337164143,
+          "coverage": 0.559,
+          "wrong_mass": 0.03078,
+          "payoff": 0.2512,
+          "decisive_accuracy": 0.9449373881932022,
+          "exact": {
+            "brier": "478210257/3942812500",
+            "coverage": "559/1000",
+            "wrong_mass": "1539/50000",
+            "payoff": "157/625",
+            "decisive_accuracy": "26411/27950"
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s00-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "0",
+      "shared_fault_probability": "0",
+      "local_error": "3/10",
+      "histories": 2048,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.06707232844879858,
+          "coverage": 0.6602027968,
+          "wrong_mass": 0.0105920784,
+          "payoff": 0.5542820128,
+          "decisive_accuracy": 0.9839563260692931,
+          "exact": {
+            "brier": "277017790714608647781/4130135290085798216756",
+            "coverage": "103156687/156250000",
+            "wrong_mass": "6620049/625000000",
+            "payoff": "173213129/312500000",
+            "decisive_accuracy": "406006699/412626748"
+          }
+        },
+        "receipts": {
+          "brier": 0.06707232844879858,
+          "coverage": 0.6602027968,
+          "wrong_mass": 0.0105920784,
+          "payoff": 0.5542820128,
+          "decisive_accuracy": 0.9839563260692931,
+          "exact": {
+            "brier": "277017790714608647781/4130135290085798216756",
+            "coverage": "103156687/156250000",
+            "wrong_mass": "6620049/625000000",
+            "payoff": "173213129/312500000",
+            "decisive_accuracy": "406006699/412626748"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.06707232844879858,
+          "coverage": 0.6602027968,
+          "wrong_mass": 0.0105920784,
+          "payoff": 0.5542820128,
+          "decisive_accuracy": 0.9839563260692931,
+          "exact": {
+            "brier": "277017790714608647781/4130135290085798216756",
+            "coverage": "103156687/156250000",
+            "wrong_mass": "6620049/625000000",
+            "payoff": "173213129/312500000",
+            "decisive_accuracy": "406006699/412626748"
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s25-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "9/34",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.299874645099199,
+          "coverage": 1.0,
+          "wrong_mass": 0.3,
+          "payoff": -2.0,
+          "decisive_accuracy": 0.7,
+          "exact": {
+            "brier": "23937682330032681/79825629546352804",
+            "coverage": "1",
+            "wrong_mass": "3/10",
+            "payoff": "-2",
+            "decisive_accuracy": "7/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.21,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/100",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.21,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/100",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s25-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "9/34",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.29804468136196566,
+          "coverage": 1.0,
+          "wrong_mass": 0.3,
+          "payoff": -2.0,
+          "decisive_accuracy": 0.7,
+          "exact": {
+            "brier": "238508697445570639740554381926152717969/800244769863581374821421053315749181796",
+            "coverage": "1",
+            "wrong_mass": "3/10",
+            "payoff": "-2",
+            "decisive_accuracy": "7/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.16495370803329282,
+          "coverage": 0.41608996539792387,
+          "wrong_mass": 0.046972318339100344,
+          "payoff": -0.05363321799307959,
+          "decisive_accuracy": 0.8871101871101871,
+          "exact": {
+            "brier": "35277/213860",
+            "coverage": "481/1156",
+            "wrong_mass": "543/11560",
+            "payoff": "-31/578",
+            "decisive_accuracy": "4267/4810"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.16429072937723457,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "2283789/13900900",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s25-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "9/34",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.202637646206123,
+          "coverage": 0.610726643598616,
+          "wrong_mass": 0.10536332179930796,
+          "payoff": -0.4429065743944637,
+          "decisive_accuracy": 0.8274787535410765,
+          "exact": {
+            "brier": "4674770848998319809/23069606938895960356",
+            "coverage": "353/578",
+            "wrong_mass": "609/5780",
+            "payoff": "-128/289",
+            "decisive_accuracy": "2921/3530"
+          }
+        },
+        "receipts": {
+          "brier": 0.18468806701529322,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "179553/972196",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.1845042492917847,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "6513/35300",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s25-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "9/34",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.18585934281082864,
+          "coverage": 0.7295964487973085,
+          "wrong_mass": 0.12587088875851582,
+          "payoff": -0.5291124387878497,
+          "decisive_accuracy": 0.8274787535410765,
+          "exact": {
+            "brier": "229060816572886159186880519433819264307125489/1232441765416274267316348957211572315649565476",
+            "coverage": "487493/668168",
+            "wrong_mass": "841029/6681680",
+            "payoff": "-44192/83521",
+            "decisive_accuracy": "2921/3530"
+          }
+        },
+        "receipts": {
+          "brier": 0.14990051953908182,
+          "coverage": 0.2972201601992313,
+          "wrong_mass": 0.026464751379892484,
+          "payoff": 0.03257264640030651,
+          "decisive_accuracy": 0.9109590972491478,
+          "exact": {
+            "brier": "64863200462313/432708309896164",
+            "coverage": "198593/668168",
+            "wrong_mass": "176829/6681680",
+            "payoff": "5441/167042",
+            "decisive_accuracy": "1809101/1985930"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.14881176455971157,
+          "coverage": 0.2972201601992313,
+          "wrong_mass": 0.026464751379892484,
+          "payoff": 0.03257264640030651,
+          "decisive_accuracy": 0.9109590972491478,
+          "exact": {
+            "brier": "1043220009/7010332900",
+            "coverage": "198593/668168",
+            "wrong_mass": "176829/6681680",
+            "payoff": "5441/167042",
+            "decisive_accuracy": "1809101/1985930"
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s25-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "9/34",
+      "histories": 128,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.14998128036780076,
+          "coverage": 0.6211656349900025,
+          "wrong_mass": 0.06303489541552423,
+          "payoff": -0.00918331916523988,
+          "decisive_accuracy": 0.898521598966854,
+          "exact": {
+            "brier": "320418624487107286246583037/2136390779578232401244120308",
+            "coverage": "415043/668168",
+            "wrong_mass": "421179/6681680",
+            "payoff": "-767/83521",
+            "decisive_accuracy": "3729251/4150430"
+          }
+        },
+        "receipts": {
+          "brier": 0.1376249791814451,
+          "coverage": 0.6211656349900025,
+          "wrong_mass": 0.06303489541552423,
+          "payoff": -0.00918331916523988,
+          "decisive_accuracy": 0.898521598966854,
+          "exact": {
+            "brier": "123635572022793/898351249592500",
+            "coverage": "415043/668168",
+            "wrong_mass": "421179/6681680",
+            "payoff": "-767/83521",
+            "decisive_accuracy": "3729251/4150430"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.13604195542038738,
+          "coverage": 0.21623379150153854,
+          "wrong_mass": 0.017322215370984544,
+          "payoff": 0.043011637791693105,
+          "decisive_accuracy": 0.9198912656033167,
+          "exact": {
+            "brier": "157925717678181/1160860391856100",
+            "coverage": "288961/1336336",
+            "wrong_mass": "231483/13363360",
+            "payoff": "28739/668168",
+            "decisive_accuracy": "2658127/2889610"
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s25-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/4",
+      "shared_fault_probability": "3/40",
+      "local_error": "9/34",
+      "histories": 4096,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.10255472253097467,
+          "coverage": 0.745545571072459,
+          "wrong_mass": 0.06014829880873507,
+          "payoff": 0.14406258298510832,
+          "decisive_accuracy": 0.9193231089519955,
+          "exact": {
+            "brier": "881684979963477695995339910676618929972917616985263649/8597214815701751682728844339221216192202057117623706916",
+            "coverage": "48096490361243/64511804814368",
+            "wrong_mass": "19401376563327/322559024071840",
+            "payoff": "9293737234589/64511804814368",
+            "decisive_accuracy": "221081075242888/240482451806215"
+          }
+        },
+        "receipts": {
+          "brier": 0.10255472253097467,
+          "coverage": 0.745545571072459,
+          "wrong_mass": 0.06014829880873507,
+          "payoff": 0.14406258298510832,
+          "decisive_accuracy": 0.9193231089519955,
+          "exact": {
+            "brier": "881684979963477695995339910676618929972917616985263649/8597214815701751682728844339221216192202057117623706916",
+            "coverage": "48096490361243/64511804814368",
+            "wrong_mass": "19401376563327/322559024071840",
+            "payoff": "9293737234589/64511804814368",
+            "decisive_accuracy": "221081075242888/240482451806215"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.09914130502775585,
+          "coverage": 0.745545571072459,
+          "wrong_mass": 0.06014829880873507,
+          "payoff": 0.14406258298510832,
+          "decisive_accuracy": 0.9193231089519955,
+          "exact": {
+            "brier": "2483114813721552003470206994453502417/25046218758431441201814149010624457700",
+            "coverage": "48096490361243/64511804814368",
+            "wrong_mass": "19401376563327/322559024071840",
+            "payoff": "9293737234589/64511804814368",
+            "decisive_accuracy": "221081075242888/240482451806215"
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s50-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "3/20",
+      "local_error": "3/14",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.299874645099199,
+          "coverage": 1.0,
+          "wrong_mass": 0.3,
+          "payoff": -2.0,
+          "decisive_accuracy": 0.7,
+          "exact": {
+            "brier": "23937682330032681/79825629546352804",
+            "coverage": "1",
+            "wrong_mass": "3/10",
+            "payoff": "-2",
+            "decisive_accuracy": "7/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.21,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/100",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.21,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/100",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s50-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "3/20",
+      "local_error": "3/14",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.2982916642228276,
+          "coverage": 1.0,
+          "wrong_mass": 0.3,
+          "payoff": -2.0,
+          "decisive_accuracy": 0.7,
+          "exact": {
+            "brier": "825973509301804072564238424649959921/2769013044510662196613913679293249764",
+            "coverage": "1",
+            "wrong_mass": "3/10",
+            "payoff": "-2",
+            "decisive_accuracy": "7/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.17798974374263948,
+          "coverage": 0.49489795918367346,
+          "wrong_mass": 0.08112244897959184,
+          "payoff": -0.3163265306122449,
+          "decisive_accuracy": 0.8360824742268042,
+          "exact": {
+            "brier": "1193973/6708100",
+            "coverage": "97/196",
+            "wrong_mass": "159/1960",
+            "payoff": "-31/98",
+            "decisive_accuracy": "811/970"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.1738964864296234,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "82653/475300",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s50-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "3/20",
+      "local_error": "3/14",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.21576133367577352,
+          "coverage": 0.6632653061224489,
+          "wrong_mass": 0.13163265306122449,
+          "payoff": -0.6530612244897959,
+          "decisive_accuracy": 0.8015384615384615,
+          "exact": {
+            "brier": "843940930329036369/3911455847771287396",
+            "coverage": "65/98",
+            "wrong_mass": "129/980",
+            "payoff": "-32/49",
+            "decisive_accuracy": "521/650"
+          }
+        },
+        "receipts": {
+          "brier": 0.1909352325948215,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "31473/164836",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.1896923076923077,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "1233/6500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s50-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "3/20",
+      "local_error": "3/14",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.20339664401921206,
+          "coverage": 0.7749375260308204,
+          "wrong_mass": 0.15379529362765515,
+          "payoff": -0.7630154102457309,
+          "decisive_accuracy": 0.8015384615384615,
+          "exact": {
+            "brier": "160199499654648508965108005463399554922663477/787621154848143336658651542790786566375993268",
+            "coverage": "14885/19208",
+            "wrong_mass": "29541/192080",
+            "payoff": "-1832/2401",
+            "decisive_accuracy": "521/650"
+          }
+        },
+        "receipts": {
+          "brier": 0.16993490875445372,
+          "coverage": 0.38322573927530196,
+          "wrong_mass": 0.05895980841316118,
+          "payoff": -0.20637234485630987,
+          "decisive_accuracy": 0.8461486211112621,
+          "exact": {
+            "brier": "124344159609/731716399652",
+            "coverage": "7361/19208",
+            "wrong_mass": "2265/38416",
+            "payoff": "-991/4802",
+            "decisive_accuracy": "12457/14722"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.16346694115557042,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "7821321/47846500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s50-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "3/20",
+      "local_error": "3/14",
+      "histories": 128,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.17822484986976378,
+          "coverage": 0.71652436484798,
+          "wrong_mass": 0.1135932944606414,
+          "payoff": -0.419408579758434,
+          "decisive_accuracy": 0.8414662500908232,
+          "exact": {
+            "brier": "142294718008475846364967161/798399988062587468301777124",
+            "coverage": "13763/19208",
+            "wrong_mass": "3117/27440",
+            "payoff": "-1007/2401",
+            "decisive_accuracy": "115811/137630"
+          }
+        },
+        "receipts": {
+          "brier": 0.16414442713064142,
+          "coverage": 0.71652436484798,
+          "wrong_mass": 0.1135932944606414,
+          "payoff": -0.419408579758434,
+          "decisive_accuracy": 0.8414662500908232,
+          "exact": {
+            "brier": "156844941809901/955530105722500",
+            "coverage": "13763/19208",
+            "wrong_mass": "3117/27440",
+            "payoff": "-1007/2401",
+            "decisive_accuracy": "115811/137630"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.1550859552736663,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "41612761797/268320633700",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s50-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "1/2",
+      "shared_fault_probability": "3/20",
+      "local_error": "3/14",
+      "histories": 4096,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.15296868358756896,
+          "coverage": 0.8539772425114315,
+          "wrong_mass": 0.1290337520199867,
+          "payoff": -0.43636027768843566,
+          "decisive_accuracy": 0.8489025870987897,
+          "exact": {
+            "brier": "119113553302487859251882333185372908193150660467/778679338207808532895409204687338224769489344428",
+            "coverage": "1102753985/1291315424",
+            "wrong_mass": "833116371/6456577120",
+            "payoff": "-563478757/1291315424",
+            "decisive_accuracy": "4680653554/5513769925"
+          }
+        },
+        "receipts": {
+          "brier": 0.15296868358756896,
+          "coverage": 0.8539772425114315,
+          "wrong_mass": 0.1290337520199867,
+          "payoff": -0.43636027768843566,
+          "decisive_accuracy": 0.8489025870987897,
+          "exact": {
+            "brier": "119113553302487859251882333185372908193150660467/778679338207808532895409204687338224769489344428",
+            "coverage": "1102753985/1291315424",
+            "wrong_mass": "833116371/6456577120",
+            "payoff": "-563478757/1291315424",
+            "decisive_accuracy": "4680653554/5513769925"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.1358634362412978,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "1895193113675460543682755249/13949250557078043730338822500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s75-choir",
+      "topology": "choir",
+      "copies": [
+        10
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "9/40",
+      "local_error": "3/22",
+      "histories": 8,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.299874645099199,
+          "coverage": 1.0,
+          "wrong_mass": 0.3,
+          "payoff": -2.0,
+          "decisive_accuracy": 0.7,
+          "exact": {
+            "brier": "23937682330032681/79825629546352804",
+            "coverage": "1",
+            "wrong_mass": "3/10",
+            "payoff": "-2",
+            "decisive_accuracy": "7/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.21,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/100",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.21,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "21/100",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s75-loud_minority",
+      "topology": "loud_minority",
+      "copies": [
+        8,
+        1,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "9/40",
+      "local_error": "3/22",
+      "histories": 32,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.2987673910076124,
+          "coverage": 1.0,
+          "wrong_mass": 0.3,
+          "payoff": -2.0,
+          "decisive_accuracy": 0.7,
+          "exact": {
+            "brier": "100102187159914048611329722606585230441/335050578385790125790283555194483221444",
+            "coverage": "1",
+            "wrong_mass": "3/10",
+            "payoff": "-2",
+            "decisive_accuracy": "7/10"
+          }
+        },
+        "receipts": {
+          "brier": 0.20309914336941365,
+          "coverage": 0.6466942148760331,
+          "wrong_mass": 0.146900826446281,
+          "payoff": -0.8223140495867769,
+          "decisive_accuracy": 0.7728434504792332,
+          "exact": {
+            "brier": "305847/1505900",
+            "coverage": "313/484",
+            "wrong_mass": "711/4840",
+            "payoff": "-199/242",
+            "decisive_accuracy": "2419/3130"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.18772555646502787,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "710973/3787300",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s75-two_sources",
+      "topology": "two_sources",
+      "copies": [
+        5,
+        5
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "9/40",
+      "local_error": "3/22",
+      "histories": 16,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.24103956400587886,
+          "coverage": 0.7644628099173554,
+          "wrong_mass": 0.18223140495867768,
+          "payoff": -1.0578512396694215,
+          "decisive_accuracy": 0.7616216216216216,
+          "exact": {
+            "brier": "19241134942347681/79825629546352804",
+            "coverage": "185/242",
+            "wrong_mass": "441/2420",
+            "payoff": "-128/121",
+            "decisive_accuracy": "1409/1850"
+          }
+        },
+        "receipts": {
+          "brier": 0.20296822947887697,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "82617/407044",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        },
+        "shared_cause": {
+          "brier": 0.19767567567567568,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "3657/18500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s75-mixed",
+      "topology": "mixed",
+      "copies": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "9/40",
+      "local_error": "3/22",
+      "histories": 64,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.23528627202023739,
+          "coverage": 0.8544925210026637,
+          "wrong_mass": 0.20369254149306742,
+          "payoff": -1.1824328939280104,
+          "decisive_accuracy": 0.7616216216216216,
+          "exact": {
+            "brier": "14690476876757552020988613387544391786992509441/62436608607126891168784308244064464613928332644",
+            "coverage": "100085/117128",
+            "wrong_mass": "238581/1171280",
+            "payoff": "-17312/14641",
+            "decisive_accuracy": "1409/1850"
+          }
+        },
+        "receipts": {
+          "brier": 0.20652353106655852,
+          "coverage": 0.5566645037907246,
+          "wrong_mass": 0.12543968991189128,
+          "payoff": -0.697732395328188,
+          "decisive_accuracy": 0.7746583641355194,
+          "exact": {
+            "brier": "15665340266073/75852568398244",
+            "coverage": "65201/117128",
+            "wrong_mass": "29385/234256",
+            "payoff": "-20431/29282",
+            "decisive_accuracy": "101017/130402"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.18335813038848267,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "221169969/1206218500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s75-five_pairs",
+      "topology": "five_pairs",
+      "copies": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "9/40",
+      "local_error": "3/22",
+      "histories": 128,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.22557972007796476,
+          "coverage": 0.8613055802199303,
+          "wrong_mass": 0.1946409056758418,
+          "payoff": -1.0851034765384877,
+          "decisive_accuracy": 0.7740164348800095,
+          "exact": {
+            "brier": "99840436394407006940352891/442594912166307338737886444",
+            "coverage": "100883/117128",
+            "wrong_mass": "227979/1171280",
+            "payoff": "-15887/14641",
+            "decisive_accuracy": "780851/1008830"
+          }
+        },
+        "receipts": {
+          "brier": 0.2101851300640001,
+          "coverage": 0.8613055802199303,
+          "wrong_mass": 0.1946409056758418,
+          "payoff": -1.0851034765384877,
+          "decisive_accuracy": 0.7740164348800095,
+          "exact": {
+            "brier": "39506017283811/187958193197500",
+            "coverage": "100883/117128",
+            "wrong_mass": "227979/1171280",
+            "payoff": "-15887/14641",
+            "decisive_accuracy": "780851/1008830"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.17978014887948962,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "9273523069053/51582575311300",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    },
+    {
+      "id": "a70-s75-ten_roots",
+      "topology": "ten_roots",
+      "copies": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "marginal_error": "3/10",
+      "shared_fraction": "3/4",
+      "shared_fault_probability": "9/40",
+      "local_error": "3/22",
+      "histories": 4096,
+      "mass": "1",
+      "root_accuracy": "7/10",
+      "metrics": {
+        "headcount": {
+          "brier": 0.22165026210988545,
+          "coverage": 0.9634099961925418,
+          "wrong_mass": 0.21680681070498198,
+          "payoff": -1.204658110857278,
+          "decisive_accuracy": 0.7749589359028696,
+          "exact": {
+            "brier": "145069782805171166950068396870194381086145731892529/654498584500889481928181644361911757372281011284836",
+            "coverage": "799627972355/829997587232",
+            "wrong_mass": "899745648903/4149987936160",
+            "payoff": "-999863325451/829997587232",
+            "decisive_accuracy": "3098394212872/3998139861775"
+          }
+        },
+        "receipts": {
+          "brier": 0.22165026210988545,
+          "coverage": 0.9634099961925418,
+          "wrong_mass": 0.21680681070498198,
+          "payoff": -1.204658110857278,
+          "decisive_accuracy": 0.7749589359028696,
+          "exact": {
+            "brier": "145069782805171166950068396870194381086145731892529/654498584500889481928181644361911757372281011284836",
+            "coverage": "799627972355/829997587232",
+            "wrong_mass": "899745648903/4149987936160",
+            "payoff": "-999863325451/829997587232",
+            "decisive_accuracy": "3098394212872/3998139861775"
+          }
+        },
+        "shared_cause": {
+          "brier": 0.17505017705590892,
+          "coverage": 0.0,
+          "wrong_mass": 0.0,
+          "payoff": 0.0,
+          "decisive_accuracy": null,
+          "exact": {
+            "brier": "3777882270954346833831745964050761/21581710652870330913710255346402500",
+            "coverage": "0",
+            "wrong_mass": "0",
+            "payoff": "0",
+            "decisive_accuracy": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cells": 72,
+  "positive_probability_histories": 45612,
+  "joint_mass_posterior_checks": 45612,
+  "rule_evaluations": 136836,
+  "all_probability_masses_one": true,
+  "all_marginal_accuracies_preserved": true,
+  "all_metrics_reconstructed": true,
+  "oracle_brier_and_utility_controls": true,
+  "scope": "Same-author deterministic verification, not independent review."
+}

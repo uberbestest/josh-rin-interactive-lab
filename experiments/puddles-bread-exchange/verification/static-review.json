@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "script_network_or_tracking_calls": false,
+  "scope": "Inspected engine.js, app.js and results-data.js for network clients, cookies and browser storage; public-scope files only.",
+  "publisher_transform_unit_tests": 10,
+  "publisher_authenticated_execution": false,
+  "live_deployment": false
+}

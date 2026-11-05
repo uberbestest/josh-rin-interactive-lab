@@ -104,6 +104,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <section class="start" aria-labelledby="start-title">
 <h2 id="start-title">Choose a door into the lab</h2>
 <div class="start-grid">
+<a href="experiments/puddles-bread-exchange/index.html"><strong>New: Visit Puddle's Bread Exchange ↗</strong><span>Ten goblins agree. Trace the receipts before you trust the chorus.</span></a>
 <a href="projects/rle-castle/index.html"><strong>In development: RLE Castle — The Faire ↗</strong><span>A first look at the adventure, the local footrace playtest, and the research questions underneath.</span></a>
 <a href="agent-attention/index.html"><strong>New: Map a real agent shopping journey ↗</strong><span>Fifteen recorded browser operations. Separate opened pages from search results and uncertainty.</span></a>
 <a href="experiments/two-candy-revolt/index.html"><strong>New: The Two-Candy Revolt ↗</strong><span>Start with the TL;DR, watch the goblins learn, and test whether a generous deal survives an incentive to break it.</span></a>
@@ -131,8 +132,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <a href="experiments/goblin-shopping/notes/crowd-feedback/index.html"><strong>03 · Challenge the mechanism</strong><span>See when crowd feedback amplifies, changes or suppresses a reroute.</span></a>
 </div></section>
 <section id="experiments" aria-labelledby="experiments-title">
-<div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>10 instruments · latest addition 2026-10-31</p></div>
-<div id="labFilters" class="lab-filters" aria-label="Filter experiment topics" hidden><button type="button" data-filter="all" aria-pressed="true">All experiments</button><button type="button" data-filter="incentives" aria-pressed="false">Rewards &amp; choices</button><button type="button" data-filter="attention" aria-pressed="false">Attention</button><button type="button" data-filter="language" aria-pressed="false">Language</button><button type="button" data-filter="reasoning" aria-pressed="false">Reasoning</button><button type="button" data-filter="verification" aria-pressed="false">Verification</button></div><p id="labFilterStatus" class="lab-filter-status" aria-live="polite" hidden></p><div class="lab-experiment-grid"><article class="card" data-topic="incentives" id="two-candy-revolt">
+<div class="section-head"><h2 id="experiments-title">Experiment log</h2><p>11 instruments · newest study 2026-11-04</p></div>
+<div id="labFilters" class="lab-filters" aria-label="Filter experiment topics" hidden><button type="button" data-filter="all" aria-pressed="true">All experiments</button><button type="button" data-filter="incentives" aria-pressed="false">Rewards &amp; choices</button><button type="button" data-filter="attention" aria-pressed="false">Attention</button><button type="button" data-filter="language" aria-pressed="false">Language</button><button type="button" data-filter="reasoning" aria-pressed="false">Reasoning</button><button type="button" data-filter="verification" aria-pressed="false">Verification</button></div><p id="labFilterStatus" class="lab-filter-status" aria-live="polite" hidden></p><div class="lab-experiment-grid">
+<article class="card" data-topic="reasoning" id="puddles-bread-exchange">
+<div><div class="meta"><span>11 / Evidence dependence &amp; confidence</span><span>Study 2026-11-04 · v0.1.0</span></div>
+<h3>Puddle's Bread Exchange</h3>
+<p>Ten goblins agree the bread is fresh. Did ten goblins actually check? Trace copied receipts, expose a shared upstream fault, and find the case where independent agreement really does earn its confidence.</p>
+<p><strong>Play five inspections, then rewire the witnesses.</strong> A fully enumerated synthetic model holds individual accuracy fixed across 72 conditions and 45,612 weighted histories. No external model agents were run.</p>
+<div class="actions"><a class="open" href="experiments/puddles-bread-exchange/index.html">Open Puddle's Bread Exchange ↗</a><a class="quiet" href="experiments/puddles-bread-exchange/method.html">Methods, results &amp; limits</a><a class="quiet" href="experiments/puddles-bread-exchange/evidence.zip">Source &amp; evidence ↓</a></div></div>
+<details class="lab-evidence"><summary>Evidence &amp; limitations</summary><p class="eyebrow">Evidence label · Exact synthetic enumeration</p><dl><dt>Executed</dt><dd>72 cells; 45,612 weighted histories; 136,836 rule evaluations</dd><dt>Controls</dt><dd>Fixed root accuracy; independent-evidence positive control; shared-cause counterexample</dd><dt>Boundary</dt><dd>Known true provenance and dependence model supplied; same-author checks, not a live model-agent trial or independent validation.</dd></dl></details>
+</article><article class="card" data-topic="incentives" id="two-candy-revolt">
 <div><div class="meta"><span>10 / Learning, bargaining &amp; unstable agreements</span><span>Halloween 2026-10-31 · v0.1.2</span></div>
 <h3>The Two-Candy Revolt</h3>
 <p>Ten goblins can collect every candy and still leave someone in the two-candy job. We let the two unequal roles bargain. Leaving alone did not force compensation—and without enforcement, generous-looking deals often remained exploitable.</p>

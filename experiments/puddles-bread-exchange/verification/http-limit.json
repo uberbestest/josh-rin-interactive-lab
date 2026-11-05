@@ -1,0 +1,11 @@
+{
+  "attempt": "Local HTTP-served Chromium navigation",
+  "status": "BLOCKED",
+  "error": "net::ERR_BLOCKED_BY_ADMINISTRATOR",
+  "response": "No network-policy bypass attempted. Browser checks rendered the authored local files inline instead.",
+  "not_verified": [
+    "HTTP-serving behavior",
+    "GitHub Pages deployment",
+    "live published controls"
+  ]
+}

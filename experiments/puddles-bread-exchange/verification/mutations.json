@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "mutants_detected": 8,
+  "mutants": [
+    {
+      "mutant": "count_copies_as_roots",
+      "detected": true,
+      "returncode": 1
+    },
+    {
+      "mutant": "deduplicate_headcount",
+      "detected": true,
+      "returncode": 1
+    },
+    {
+      "mutant": "ignore_shared_fault",
+      "detected": true,
+      "returncode": 1
+    },
+    {
+      "mutant": "wrong_local_calibration",
+      "detected": true,
+      "returncode": 1
+    },
+    {
+      "mutant": "wrong_truth_signal",
+      "detected": true,
+      "returncode": 1
+    },
+    {
+      "mutant": "exclude_boundary_buy",
+      "detected": true,
+      "returncode": 1
+    },
+    {
+      "mutant": "cheap_wrong_decision",
+      "detected": true,
+      "returncode": 1
+    },
+    {
+      "mutant": "drop_truth_prior",
+      "detected": true,
+      "returncode": 1
+    }
+  ]
+}

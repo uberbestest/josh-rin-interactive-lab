@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "byte_identical_reproduction": {
+    "results.json": true,
+    "results-data.js": true,
+    "histories.csv.gz": true
+  },
+  "sha256": {
+    "results.json": "387f652e3b7aa278b9f49a447d038c6c868eb18a88e1e2976970ff7d148864c8",
+    "results-data.js": "f9f4eee5c0ca3f78695e7497329954da89f2bc7dde30e02f2660c0cbbaade5c7",
+    "histories.csv.gz": "a450e5c7fe1a1814a4d8a1511ca9603c99022d6af1ae138b2cc06857d9982037"
+  }
+}
