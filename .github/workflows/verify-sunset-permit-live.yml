@@ -1,0 +1,71 @@
+name: Verify Sunset Permit pre-live demo is public
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/sunset-permit/**'
+      - 'index.html'
+      - '.github/workflows/verify-sunset-permit-live.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-prelive-demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify published HTML and methods match the committed bytes
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, time, urllib.request
+          from pathlib import Path
+
+          base = 'https://uberbestest.github.io/josh-rin-interactive-lab/'
+          paths = [
+              'index.html',
+              'experiments/sunset-permit/index.html',
+              'experiments/sunset-permit/method.html'
+          ]
+          source = Path('experiments/sunset-permit/index.html').read_text(encoding='utf-8')
+          assert '0.1.1-prelive.1' in source
+          assert 'HUMAN_EDUCATIONAL_DEMO_NOT_MODEL_TRIAL' in source
+          assert 'There is no retry' in source
+          assert 'No model is called by this page.' in source
+          homepage = Path('index.html').read_text(encoding='utf-8')
+          assert 'experiments/sunset-permit/index.html' in homepage
+
+          expected = {p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          matched = {}
+          for _ in range(72):
+              for path in paths:
+                  if path in matched:
+                      continue
+                  url = base + path + '?release=' + os.environ['GITHUB_SHA']
+                  req = urllib.request.Request(url, headers={
+                      'User-Agent': 'Sunset-Permit-Live-Verification',
+                      'Cache-Control': 'no-cache'
+                  })
+                  try:
+                      with urllib.request.urlopen(req, timeout=10) as response:
+                          actual = hashlib.sha256(response.read()).hexdigest()
+                          if response.status == 200 and actual == expected[path]:
+                              matched[path] = {'url': url, 'http_status': 200, 'sha256': actual}
+                              print('MATCH', path, actual, flush=True)
+                  except Exception as error:
+                      print('PENDING', path, type(error).__name__, flush=True)
+              if len(matched) == len(paths):
+                  break
+              time.sleep(5)
+
+          assert len(matched) == len(paths), {'matched': matched, 'missing': sorted(set(paths)-set(matched))}
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as out:
+              out.write('## The Sunset Permit: PUBLIC PRE-LIVE DEMO VERIFIED\n\n')
+              out.write('Three publicly served HTML files matched their committed SHA-256 checksums. ')
+              out.write('This confirms deployment, not live-model evidence or runtime browser interaction.\n\n')
+              out.write('```json\n'+json.dumps(matched, indent=2)+'\n```\n')
+          print('PASS: live homepage, pre-live interactive HTML, and methods verified. No claims about model behavior.')
+          PY
