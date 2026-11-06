@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": 1827,
+  "viewports": [
+    "1440x1050",
+    "390x844"
+  ],
+  "page_errors": [],
+  "independent_review": false,
+  "transport": "HTTP"
+}

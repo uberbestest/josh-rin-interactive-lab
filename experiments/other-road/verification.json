@@ -1,0 +1,10 @@
+{
+  "event_bytes_replayed": 4608000,
+  "learned_policies_recomputed": 1536,
+  "learning_snapshots_checked": 18432,
+  "exact_cells_checked": 38178,
+  "costless_checkpoint_paired_seed_controls": 256,
+  "invalid_records_rejected": 6,
+  "status": "PASS",
+  "independent_review": false
+}

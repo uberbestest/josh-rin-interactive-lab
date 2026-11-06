@@ -4,6 +4,13 @@
 
 [Browse the gallery](index.html)
 
+## The Other Road — November 6, 2026
+
+**[Explore the authorized fork](experiments/other-road/index.html)** · [Methods](experiments/other-road/method.html) · [Complete evidence](experiments/other-road/evidence.zip)
+
+Executed synthetic learning study: 1,536 seeded bandit runs, 4,608,000 preserved training decisions, and 38,178 exact parameter cells. Expected checkpoint cost produces complete detours under one scoring rule and undisclosed undercompletion under another. Auditing without an alternate can improve disclosure without restoring completion. **Zero language-model participants; not an explanation of Astra; independent review pending.**
+
+
 ## The Sunset Permit — pre-live educational instrument (November 5, 2026)
 
 **[Play the human demonstration](experiments/sunset-permit/index.html)** · [Method and evidence boundary](experiments/sunset-permit/method.html) · [Source and author-run check summary](experiments/sunset-permit/README.md)
