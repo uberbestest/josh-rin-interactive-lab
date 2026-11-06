@@ -4,6 +4,12 @@
 
 [Browse the gallery](index.html)
 
+## The Sunset Permit — pre-live educational instrument (November 5, 2026)
+
+**[Play the human demonstration](experiments/sunset-permit/index.html)** · [Method and evidence boundary](experiments/sunset-permit/method.html) · [Source and author-run check summary](experiments/sunset-permit/README.md)
+
+An intentionally small Castle-adjacent puzzle about whether a successful route establishes the necessity of its steps. Three gate rules, optional mechanical hold, and separate deadline/help narratives expose the difference between prudent preparation and an unsupported categorical rule. **Status: INSTRUMENT_TESTED / LIVE_MODEL_PILOT_NOT_RUN.** The public file calls no AI model, sends no telemetry, and contains no actual model-agent behavioral results. This is a pre-live human demonstration, not a new independent empirical finding or a playable RLE Castle release.
+
 ## Agent Attention — new research section (October 31, 2026)
 
 **[Open the interactive Agent Attention map](agent-attention/index.html)** · [Methods and trace boundaries](agent-attention/method.html) · [Structured E01–E15 pilot reconstruction](agent-attention/pilot-trace.json)
