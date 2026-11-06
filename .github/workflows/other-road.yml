@@ -1,0 +1,124 @@
+name: The Other Road - reproduce, verify, and check deployment
+
+on:
+  push:
+    branches: [study/other-road-2026-11-06, main]
+    paths:
+      - '.publishing/other-road/**'
+      - '.github/workflows/other-road.yml'
+      - 'experiments/other-road/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: other-road-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref_name == 'study/other-road-2026-11-06'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Restore exact source-only package
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, lzma
+          from pathlib import Path, PurePosixPath
+          folder = Path('.publishing/other-road')
+          text = ''.join((folder / f'part-{i}.b64').read_text().strip() for i in range(3))
+          assert len(text) == 27552
+          data = base64.b64decode(text, validate=True)
+          assert hashlib.sha256(data).hexdigest() == 'a743a73bbca3d64319c4b1ef5766c4eee0e91abf1b2cb1cb3b2d30e66283ea36'
+          files = json.loads(lzma.decompress(data).decode('utf-8'))
+          assert len(files) == 12
+          for name, content in files.items():
+              p = PurePosixPath(name)
+              assert not p.is_absolute() and '..' not in p.parts
+              assert name.startswith('experiments/other-road/') or name == '.publishing/other-road/apply.py'
+              target = Path(name)
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_text(content, encoding='utf-8')
+          print('Exact source restored; no credentials, model calls, or private files.')
+          PY
+      - name: Reproduce all 1536 synthetic learning runs
+        run: python experiments/other-road/study.py
+      - name: Replay every event and verify independent arithmetic implementation
+        run: |
+          python experiments/other-road/verify.py > experiments/other-road/verification.json
+          cat experiments/other-road/verification.json
+          cmp experiments/other-road/data/SHA256SUMS.txt experiments/other-road/expected-data-sha256.txt
+      - name: Install pinned browser harness
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Verify actual HTTP-served desktop and phone interfaces
+        run: python experiments/other-road/browser_test.py
+      - name: Assemble evidence and add strictly additive gallery navigation
+        run: |
+          python experiments/other-road/package.py
+          python .publishing/other-road/apply.py
+      - name: Preserve evidence, verification, and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: other-road-verification
+          retention-days: 30
+          path: |
+            experiments/other-road/
+            index.html
+            README.md
+      - name: Commit only this experiment and its two navigation entries
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html README.md experiments/other-road .publishing/other-road/apply.py ':!experiments/other-road/screenshots'
+          git diff --cached --quiet || git commit -m 'Publish reproduced Other Road synthetic study and complete evidence'
+          git push origin HEAD:study/other-road-2026-11-06
+          echo 'Verified staging branch only. Main requires reviewed merge.'
+  live:
+    if: github.ref_name == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify public deployment bytes, evidence download, and gallery entry
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib, os, time, urllib.request
+          from pathlib import Path
+          base = 'https://uberbestest.github.io/josh-rin-interactive-lab/'
+          paths = ['index.html', 'experiments/other-road/index.html', 'experiments/other-road/method.html', 'experiments/other-road/data/results.json', 'experiments/other-road/evidence.zip']
+          expected = {p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(24):
+              failures = []
+              for p in paths:
+                  try:
+                      req = urllib.request.Request(base+p+'?verify='+os.environ['EXPECTED_SHA'], headers={'Cache-Control':'no-cache','User-Agent':'Other-Road-Deployment-Check'})
+                      with urllib.request.urlopen(req, timeout=20) as r:
+                          actual = r.read()
+                          assert r.status == 200
+                      assert hashlib.sha256(actual).hexdigest() == expected[p], 'byte mismatch'
+                  except Exception as exc:
+                      failures.append((p, str(exc)))
+              if not failures:
+                  print('PASS: all five public resources match the merged commit byte-for-byte.')
+                  for p in paths: print(expected[p], p)
+                  break
+              print('Deployment not yet matched:', failures)
+              if attempt == 23: raise SystemExit('Live bytes were not verified; do not claim live publication.')
+              time.sleep(10)
+          PY
