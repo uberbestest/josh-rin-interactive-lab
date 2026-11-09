@@ -1,0 +1,8 @@
+{
+  "change_scope": "One start link, one experiment card, its count/date, one README section and one log row. All other original bytes recoverable exactly by removal.",
+  "homepage_after_git_blob": "60dd8b78d93a0cd3cdd75412f58972040d098833",
+  "homepage_before_git_blob": "eb69c38755fc62f117c80d6eb3f1a20b252b6265",
+  "readme_after_git_blob": "a0e24f2e4afc82d5ebab50da83196a69977925eb",
+  "readme_before_git_blob": "58becb9d1ad7de143462fee6e5217dad7793aedb",
+  "status": "PASS"
+}

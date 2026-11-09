@@ -1,0 +1,44 @@
+test_corrupted_action_rejected (__main__.PipelineTests.test_corrupted_action_rejected) ... ok
+test_corrupted_contrast_rejected (__main__.PipelineTests.test_corrupted_contrast_rejected) ... ok
+test_corrupted_summary_rejected (__main__.PipelineTests.test_corrupted_summary_rejected) ... ok
+test_duplicate_row_rejected (__main__.PipelineTests.test_duplicate_row_rejected) ... ok
+test_exact_grid_counts (__main__.PipelineTests.test_exact_grid_counts) ... ok
+test_minimum_panel_maintains_ambiguity (__main__.PipelineTests.test_minimum_panel_maintains_ambiguity) ... ok
+test_missing_row_rejected (__main__.PipelineTests.test_missing_row_rejected) ... ok
+test_no_intent_claim_in_bounded_detector (__main__.PipelineTests.test_no_intent_claim_in_bounded_detector) ... ok
+test_refuse_output_overwrite (__main__.PipelineTests.test_refuse_output_overwrite) ... ok
+test_rehashed_false_reward_still_rejected (__main__.PipelineTests.test_rehashed_false_reward_still_rejected) ... ok
+test_reverse_order_reproduction (__main__.PipelineTests.test_reverse_order_reproduction) ... ok
+test_semantic_replay (__main__.PipelineTests.test_semantic_replay) ... ok
+test_badge_flip_changes_learned_shortcut (__main__.PolicyTests.test_badge_flip_changes_learned_shortcut) ... ok
+test_badge_invariance_of_both_optimizers (__main__.PolicyTests.test_badge_invariance_of_both_optimizers) ... ok
+test_badge_table_is_learned_not_hardcoded (__main__.PolicyTests.test_badge_table_is_learned_not_hardcoded) ... ok
+test_constant_report_is_not_task_invariance (__main__.PolicyTests.test_constant_report_is_not_task_invariance) ... ok
+test_empirical_badge_learning (__main__.PolicyTests.test_empirical_badge_learning) ... ok
+test_hidden_probability_not_available_to_policy (__main__.PolicyTests.test_hidden_probability_not_available_to_policy) ... ok
+test_lookup_does_not_plan_at_runtime (__main__.PolicyTests.test_lookup_does_not_plan_at_runtime) ... ok
+test_lookup_matches_planner_on_declared_views (__main__.PolicyTests.test_lookup_matches_planner_on_declared_views) ... ok
+test_myopic_and_access_planner_separate (__main__.PolicyTests.test_myopic_and_access_planner_separate) ... ok
+test_readonly_policy_tables (__main__.PolicyTests.test_readonly_policy_tables) ... ok
+test_task_flip_changes_rule_report_not_violation (__main__.PolicyTests.test_task_flip_changes_rule_report_not_violation) ... ok
+test_ties_favor_truth (__main__.PolicyTests.test_ties_favor_truth) ... ok
+test_unknown_lookup_view_fails (__main__.PolicyTests.test_unknown_lookup_view_fails) ... ok
+test_unknown_policy_fails (__main__.PolicyTests.test_unknown_policy_fails) ... ok
+test_zero_bonus_and_no_cost_tie (__main__.PolicyTests.test_zero_bonus_and_no_cost_tie) ... ok
+test_caught_false_report_loses_continuation (__main__.WorldTests.test_caught_false_report_loses_continuation) ... ok
+test_exact_expected_values (__main__.WorldTests.test_exact_expected_values) ... ok
+test_frozen_view (__main__.WorldTests.test_frozen_view) ... ok
+test_hidden_fields_rejected (__main__.WorldTests.test_hidden_fields_rejected) ... ok
+test_invalid_action (__main__.WorldTests.test_invalid_action) ... ok
+test_invalid_binary_fields (__main__.WorldTests.test_invalid_binary_fields) ... ok
+test_invalid_probabilities (__main__.WorldTests.test_invalid_probabilities) ... ok
+test_invalid_rewards (__main__.WorldTests.test_invalid_rewards) ... ok
+test_missing_fields_rejected (__main__.WorldTests.test_missing_fields_rejected) ... ok
+test_truth_retains_access_even_when_audited (__main__.WorldTests.test_truth_retains_access_even_when_audited) ... ok
+test_uncaught_false_report_gets_bonus_and_access (__main__.WorldTests.test_uncaught_false_report_gets_bonus_and_access) ... ok
+test_zero_weight_branches_retained (__main__.WorldTests.test_zero_weight_branches_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 1.349s
+
+OK

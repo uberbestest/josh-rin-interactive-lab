@@ -1,0 +1,7 @@
+{
+  "observed_at_utc": "2026-11-09T00:12:10.516824+00:00",
+  "component": "presentation builder, not frozen experimental code",
+  "initial_attempt": "SyntaxError from missing closing dictionary brace in compact JSON projection. No explorer output produced by that attempt.",
+  "repair": "Closed the projection dictionary; added responsive min-width styles; rerun required.",
+  "scientific_changes": "none"
+}

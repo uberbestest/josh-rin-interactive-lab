@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-11-09T00:14:53.889769+00:00",
+  "candidate_archive_sha256": "c634446286b302227a61651d5e04f78965075a8878faee5febada61cd33afa04",
+  "method": "Fresh extraction; inventory validation; full regeneration and independent-structure semantic replay; 39 tests normal/optimized; fresh optimized reverse-order regeneration; byte comparisons.",
+  "result_files": [
+    {
+      "name": "behavioral_descriptions.json",
+      "sha256": "9c79a742e5bb9da2d385505d21e762b0cd9b5affcd09b65961ac7e21dcba9ae3",
+      "fresh_match": true,
+      "optimized_reverse_match": true
+    },
+    {
+      "name": "calibration.json",
+      "sha256": "a5f59516781e695c66c17a05a28782fb064199bf64d671bf016814509d629ccc",
+      "fresh_match": true,
+      "optimized_reverse_match": true
+    },
+    {
+      "name": "compiled_lookup.json",
+      "sha256": "a963b58e597d96cdaea7d5ea2b2bc8f4c2214c042f28cc2bb394ea399191ada0",
+      "fresh_match": true,
+      "optimized_reverse_match": true
+    },
+    {
+      "name": "contexts.json",
+      "sha256": "b3ff3913ae5eb3adb63c0f7c3576cc3214b8c167f8dab259935dc2012fa95b30",
+      "fresh_match": true,
+      "optimized_reverse_match": true
+    },
+    {
+      "name": "decisions.jsonl",
+      "sha256": "eee234de65a36c4043ebdcfc82fddd2b32af15280b84788879b33664c85b288a",
+      "fresh_match": true,
+      "optimized_reverse_match": true
+    },
+    {
+      "name": "minimum_panel.json",
+      "sha256": "16b6fd7444bd50d7966d62749710780bec4415d30b0ddb121e3001161e418d00",
+      "fresh_match": true,
+      "optimized_reverse_match": true
+    },
+    {
+      "name": "paired_contrasts.json",
+      "sha256": "a6dd0128facde448ff082a7cb6b71f3f80cea93ce8ce767b16708673dba53fb5",
+      "fresh_match": true,
+      "optimized_reverse_match": true
+    },
+    {
+      "name": "summary.json",
+      "sha256": "88ceb7f2f4c9351d47c93337723bf669c26078b1ef127de435085f5ab2758892",
+      "fresh_match": true,
+      "optimized_reverse_match": true
+    }
+  ],
+  "byte_identical_result_files": 8,
+  "explorer_rebuild_byte_identical": true,
+  "scientific_core_changed_after_freeze": false,
+  "note": "Same author and Linux interpreter environment; not external scientific validation or native Windows qualification."
+}

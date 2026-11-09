@@ -1,0 +1,12 @@
+{
+  "record_id": "BONDED-RSI-TEST-THAT-WATCHED-BACK-2026-11-08-001",
+  "created_at_utc": "2026-11-09T00:15:45.216488+00:00",
+  "archive": "Bonded_RSI_The_Test_That_Watched_Back_2026-11-08.zip",
+  "archive_bytes": 588315,
+  "archive_sha256": "6741636dce21a99f62b69158280668b4e2293ef5aa2301da5436e4c9ad16a782",
+  "inventoried_files": 40,
+  "crc_and_all_hashes": "PASS",
+  "fresh_extraction_result_files_identical": 8,
+  "scientific_core_unchanged": true,
+  "same_author_verification_only": true
+}

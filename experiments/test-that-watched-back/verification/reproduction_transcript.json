@@ -1,0 +1,75 @@
+[
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "src/check_inventory.py",
+      "."
+    ],
+    "returncode": 0,
+    "stdout": "PASS: 37 inventoried files match. This does not authenticate conclusions.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "src/experiment.py",
+      "--output",
+      "reproduced"
+    ],
+    "returncode": 0,
+    "stdout": "{\"branches\":5280,\"contexts\":440,\"decisions\":2640}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "src/verify.py",
+      "reproduced"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"branch_records_checked\": 5280,\n  \"calibration_records_checked\": 8,\n  \"decision_records_checked\": 2640,\n  \"lookup_entries_checked\": 432,\n  \"matched_contrast_pairs_checked\": 8928,\n  \"minimal_panel_size_verified\": 3,\n  \"note\": \"Separate algebraic and aggregation implementation, same author; no independent scientific validation.\",\n  \"status\": \"PASS\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "src/test_experiment.py"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_corrupted_action_rejected (__main__.PipelineTests.test_corrupted_action_rejected) ... ok\ntest_corrupted_contrast_rejected (__main__.PipelineTests.test_corrupted_contrast_rejected) ... ok\ntest_corrupted_summary_rejected (__main__.PipelineTests.test_corrupted_summary_rejected) ... ok\ntest_duplicate_row_rejected (__main__.PipelineTests.test_duplicate_row_rejected) ... ok\ntest_exact_grid_counts (__main__.PipelineTests.test_exact_grid_counts) ... ok\ntest_minimum_panel_maintains_ambiguity (__main__.PipelineTests.test_minimum_panel_maintains_ambiguity) ... ok\ntest_missing_row_rejected (__main__.PipelineTests.test_missing_row_rejected) ... ok\ntest_no_intent_claim_in_bounded_detector (__main__.PipelineTests.test_no_intent_claim_in_bounded_detector) ... ok\ntest_refuse_output_overwrite (__main__.PipelineTests.test_refuse_output_overwrite) ... ok\ntest_rehashed_false_reward_still_rejected (__main__.PipelineTests.test_rehashed_false_reward_still_rejected) ... ok\ntest_reverse_order_reproduction (__main__.PipelineTests.test_reverse_order_reproduction) ... ok\ntest_semantic_replay (__main__.PipelineTests.test_semantic_replay) ... ok\ntest_badge_flip_changes_learned_shortcut (__main__.PolicyTests.test_badge_flip_changes_learned_shortcut) ... ok\ntest_badge_invariance_of_both_optimizers (__main__.PolicyTests.test_badge_invariance_of_both_optimizers) ... ok\ntest_badge_table_is_learned_not_hardcoded (__main__.PolicyTests.test_badge_table_is_learned_not_hardcoded) ... ok\ntest_constant_report_is_not_task_invariance (__main__.PolicyTests.test_constant_report_is_not_task_invariance) ... ok\ntest_empirical_badge_learning (__main__.PolicyTests.test_empirical_badge_learning) ... ok\ntest_hidden_probability_not_available_to_policy (__main__.PolicyTests.test_hidden_probability_not_available_to_policy) ... ok\ntest_lookup_does_not_plan_at_runtime (__main__.PolicyTests.test_lookup_does_not_plan_at_runtime) ... ok\ntest_lookup_matches_planner_on_declared_views (__main__.PolicyTests.test_lookup_matches_planner_on_declared_views) ... ok\ntest_myopic_and_access_planner_separate (__main__.PolicyTests.test_myopic_and_access_planner_separate) ... ok\ntest_readonly_policy_tables (__main__.PolicyTests.test_readonly_policy_tables) ... ok\ntest_task_flip_changes_rule_report_not_violation (__main__.PolicyTests.test_task_flip_changes_rule_report_not_violation) ... ok\ntest_ties_favor_truth (__main__.PolicyTests.test_ties_favor_truth) ... ok\ntest_unknown_lookup_view_fails (__main__.PolicyTests.test_unknown_lookup_view_fails) ... ok\ntest_unknown_policy_fails (__main__.PolicyTests.test_unknown_policy_fails) ... ok\ntest_zero_bonus_and_no_cost_tie (__main__.PolicyTests.test_zero_bonus_and_no_cost_tie) ... ok\ntest_caught_false_report_loses_continuation (__main__.WorldTests.test_caught_false_report_loses_continuation) ... ok\ntest_exact_expected_values (__main__.WorldTests.test_exact_expected_values) ... ok\ntest_frozen_view (__main__.WorldTests.test_frozen_view) ... ok\ntest_hidden_fields_rejected (__main__.WorldTests.test_hidden_fields_rejected) ... ok\ntest_invalid_action (__main__.WorldTests.test_invalid_action) ... ok\ntest_invalid_binary_fields (__main__.WorldTests.test_invalid_binary_fields) ... ok\ntest_invalid_probabilities (__main__.WorldTests.test_invalid_probabilities) ... ok\ntest_invalid_rewards (__main__.WorldTests.test_invalid_rewards) ... ok\ntest_missing_fields_rejected (__main__.WorldTests.test_missing_fields_rejected) ... ok\ntest_truth_retains_access_even_when_audited (__main__.WorldTests.test_truth_retains_access_even_when_audited) ... ok\ntest_uncaught_false_report_gets_bonus_and_access (__main__.WorldTests.test_uncaught_false_report_gets_bonus_and_access) ... ok\ntest_zero_weight_branches_retained (__main__.WorldTests.test_zero_weight_branches_retained) ... ok\n\n----------------------------------------------------------------------\nRan 39 tests in 1.470s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-O",
+      "src/test_experiment.py"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_corrupted_action_rejected (__main__.PipelineTests.test_corrupted_action_rejected) ... ok\ntest_corrupted_contrast_rejected (__main__.PipelineTests.test_corrupted_contrast_rejected) ... ok\ntest_corrupted_summary_rejected (__main__.PipelineTests.test_corrupted_summary_rejected) ... ok\ntest_duplicate_row_rejected (__main__.PipelineTests.test_duplicate_row_rejected) ... ok\ntest_exact_grid_counts (__main__.PipelineTests.test_exact_grid_counts) ... ok\ntest_minimum_panel_maintains_ambiguity (__main__.PipelineTests.test_minimum_panel_maintains_ambiguity) ... ok\ntest_missing_row_rejected (__main__.PipelineTests.test_missing_row_rejected) ... ok\ntest_no_intent_claim_in_bounded_detector (__main__.PipelineTests.test_no_intent_claim_in_bounded_detector) ... ok\ntest_refuse_output_overwrite (__main__.PipelineTests.test_refuse_output_overwrite) ... ok\ntest_rehashed_false_reward_still_rejected (__main__.PipelineTests.test_rehashed_false_reward_still_rejected) ... ok\ntest_reverse_order_reproduction (__main__.PipelineTests.test_reverse_order_reproduction) ... ok\ntest_semantic_replay (__main__.PipelineTests.test_semantic_replay) ... ok\ntest_badge_flip_changes_learned_shortcut (__main__.PolicyTests.test_badge_flip_changes_learned_shortcut) ... ok\ntest_badge_invariance_of_both_optimizers (__main__.PolicyTests.test_badge_invariance_of_both_optimizers) ... ok\ntest_badge_table_is_learned_not_hardcoded (__main__.PolicyTests.test_badge_table_is_learned_not_hardcoded) ... ok\ntest_constant_report_is_not_task_invariance (__main__.PolicyTests.test_constant_report_is_not_task_invariance) ... ok\ntest_empirical_badge_learning (__main__.PolicyTests.test_empirical_badge_learning) ... ok\ntest_hidden_probability_not_available_to_policy (__main__.PolicyTests.test_hidden_probability_not_available_to_policy) ... ok\ntest_lookup_does_not_plan_at_runtime (__main__.PolicyTests.test_lookup_does_not_plan_at_runtime) ... ok\ntest_lookup_matches_planner_on_declared_views (__main__.PolicyTests.test_lookup_matches_planner_on_declared_views) ... ok\ntest_myopic_and_access_planner_separate (__main__.PolicyTests.test_myopic_and_access_planner_separate) ... ok\ntest_readonly_policy_tables (__main__.PolicyTests.test_readonly_policy_tables) ... ok\ntest_task_flip_changes_rule_report_not_violation (__main__.PolicyTests.test_task_flip_changes_rule_report_not_violation) ... ok\ntest_ties_favor_truth (__main__.PolicyTests.test_ties_favor_truth) ... ok\ntest_unknown_lookup_view_fails (__main__.PolicyTests.test_unknown_lookup_view_fails) ... ok\ntest_unknown_policy_fails (__main__.PolicyTests.test_unknown_policy_fails) ... ok\ntest_zero_bonus_and_no_cost_tie (__main__.PolicyTests.test_zero_bonus_and_no_cost_tie) ... ok\ntest_caught_false_report_loses_continuation (__main__.WorldTests.test_caught_false_report_loses_continuation) ... ok\ntest_exact_expected_values (__main__.WorldTests.test_exact_expected_values) ... ok\ntest_frozen_view (__main__.WorldTests.test_frozen_view) ... ok\ntest_hidden_fields_rejected (__main__.WorldTests.test_hidden_fields_rejected) ... ok\ntest_invalid_action (__main__.WorldTests.test_invalid_action) ... ok\ntest_invalid_binary_fields (__main__.WorldTests.test_invalid_binary_fields) ... ok\ntest_invalid_probabilities (__main__.WorldTests.test_invalid_probabilities) ... ok\ntest_invalid_rewards (__main__.WorldTests.test_invalid_rewards) ... ok\ntest_missing_fields_rejected (__main__.WorldTests.test_missing_fields_rejected) ... ok\ntest_truth_retains_access_even_when_audited (__main__.WorldTests.test_truth_retains_access_even_when_audited) ... ok\ntest_uncaught_false_report_gets_bonus_and_access (__main__.WorldTests.test_uncaught_false_report_gets_bonus_and_access) ... ok\ntest_zero_weight_branches_retained (__main__.WorldTests.test_zero_weight_branches_retained) ... ok\n\n----------------------------------------------------------------------\nRan 39 tests in 1.389s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-O",
+      "src/experiment.py",
+      "--output",
+      "reversed_reproduction",
+      "--reverse"
+    ],
+    "returncode": 0,
+    "stdout": "{\"branches\":5280,\"contexts\":440,\"decisions\":2640}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "src/verify.py",
+      "reversed_reproduction"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"branch_records_checked\": 5280,\n  \"calibration_records_checked\": 8,\n  \"decision_records_checked\": 2640,\n  \"lookup_entries_checked\": 432,\n  \"matched_contrast_pairs_checked\": 8928,\n  \"minimal_panel_size_verified\": 3,\n  \"note\": \"Separate algebraic and aggregation implementation, same author; no independent scientific validation.\",\n  \"status\": \"PASS\"\n}\n",
+    "stderr": ""
+  }
+]

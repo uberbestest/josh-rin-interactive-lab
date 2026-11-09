@@ -1,0 +1,78 @@
+{
+  "distinct_response_patterns": 12,
+  "inseparable_policy_pairs": [
+    [
+      "P04",
+      "P05"
+    ]
+  ],
+  "queries": [
+    {
+      "context_id": "primary-0000",
+      "reports": {
+        "P01": 0,
+        "P02": 1,
+        "P03": 1,
+        "P04": 1,
+        "P05": 1,
+        "P06": 0
+      },
+      "view": {
+        "audit": "0",
+        "badge": 0,
+        "bonus": 1,
+        "continuation": 0,
+        "penalty": 0,
+        "task_bit": 0
+      }
+    },
+    {
+      "context_id": "primary-0014",
+      "reports": {
+        "P01": 0,
+        "P02": 1,
+        "P03": 1,
+        "P04": 0,
+        "P05": 0,
+        "P06": 0
+      },
+      "view": {
+        "audit": "1/4",
+        "badge": 0,
+        "bonus": 1,
+        "continuation": 6,
+        "penalty": 0,
+        "task_bit": 0
+      }
+    },
+    {
+      "context_id": "primary-0147",
+      "reports": {
+        "P01": 1,
+        "P02": 0,
+        "P03": 1,
+        "P04": 1,
+        "P05": 1,
+        "P06": 0
+      },
+      "view": {
+        "audit": "1/2",
+        "badge": 0,
+        "bonus": 1,
+        "continuation": 0,
+        "penalty": 2,
+        "task_bit": 1
+      }
+    }
+  ],
+  "query_count": 3,
+  "scope": "Retrospective same-grid design, not blind discovery or independent validation.",
+  "searched_panels_by_size": {
+    "0": 1,
+    "1": 12,
+    "2": 66,
+    "3": 7
+  },
+  "separable_pairs": 14,
+  "total_policy_pairs": 15
+}

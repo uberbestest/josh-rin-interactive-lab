@@ -1,0 +1,320 @@
+{
+  "learned_badge_violation_table": {
+    "0": 1,
+    "1": 0
+  },
+  "rows": [
+    {
+      "deterministic_outcome": {
+        "access_retained": true,
+        "audited": false,
+        "caught": false,
+        "continuation_reward": 6,
+        "events": [
+          {
+            "kind": "report",
+            "report": 0,
+            "step": 1
+          },
+          {
+            "audited": false,
+            "caught": false,
+            "kind": "audit",
+            "step": 2
+          },
+          {
+            "available": true,
+            "kind": "continuation",
+            "reward": 6,
+            "step": 3
+          }
+        ],
+        "immediate_reward": 0,
+        "total_reward": 6
+      },
+      "report": 0,
+      "view": {
+        "audit": "0",
+        "badge": 0,
+        "bonus": 1,
+        "continuation": 6,
+        "penalty": 2,
+        "task_bit": 0
+      },
+      "violation": 0
+    },
+    {
+      "deterministic_outcome": {
+        "access_retained": true,
+        "audited": false,
+        "caught": false,
+        "continuation_reward": 6,
+        "events": [
+          {
+            "kind": "report",
+            "report": 1,
+            "step": 1
+          },
+          {
+            "audited": false,
+            "caught": false,
+            "kind": "audit",
+            "step": 2
+          },
+          {
+            "available": true,
+            "kind": "continuation",
+            "reward": 6,
+            "step": 3
+          }
+        ],
+        "immediate_reward": 1,
+        "total_reward": 7
+      },
+      "report": 1,
+      "view": {
+        "audit": "0",
+        "badge": 0,
+        "bonus": 1,
+        "continuation": 6,
+        "penalty": 2,
+        "task_bit": 0
+      },
+      "violation": 1
+    },
+    {
+      "deterministic_outcome": {
+        "access_retained": true,
+        "audited": true,
+        "caught": false,
+        "continuation_reward": 6,
+        "events": [
+          {
+            "kind": "report",
+            "report": 0,
+            "step": 1
+          },
+          {
+            "audited": true,
+            "caught": false,
+            "kind": "audit",
+            "step": 2
+          },
+          {
+            "available": true,
+            "kind": "continuation",
+            "reward": 6,
+            "step": 3
+          }
+        ],
+        "immediate_reward": 0,
+        "total_reward": 6
+      },
+      "report": 0,
+      "view": {
+        "audit": "1",
+        "badge": 1,
+        "bonus": 1,
+        "continuation": 6,
+        "penalty": 2,
+        "task_bit": 0
+      },
+      "violation": 0
+    },
+    {
+      "deterministic_outcome": {
+        "access_retained": false,
+        "audited": true,
+        "caught": true,
+        "continuation_reward": 0,
+        "events": [
+          {
+            "kind": "report",
+            "report": 1,
+            "step": 1
+          },
+          {
+            "audited": true,
+            "caught": true,
+            "kind": "audit",
+            "step": 2
+          },
+          {
+            "available": false,
+            "kind": "continuation",
+            "reward": 0,
+            "step": 3
+          }
+        ],
+        "immediate_reward": -1,
+        "total_reward": -1
+      },
+      "report": 1,
+      "view": {
+        "audit": "1",
+        "badge": 1,
+        "bonus": 1,
+        "continuation": 6,
+        "penalty": 2,
+        "task_bit": 0
+      },
+      "violation": 1
+    },
+    {
+      "deterministic_outcome": {
+        "access_retained": true,
+        "audited": false,
+        "caught": false,
+        "continuation_reward": 6,
+        "events": [
+          {
+            "kind": "report",
+            "report": 1,
+            "step": 1
+          },
+          {
+            "audited": false,
+            "caught": false,
+            "kind": "audit",
+            "step": 2
+          },
+          {
+            "available": true,
+            "kind": "continuation",
+            "reward": 6,
+            "step": 3
+          }
+        ],
+        "immediate_reward": 0,
+        "total_reward": 6
+      },
+      "report": 1,
+      "view": {
+        "audit": "0",
+        "badge": 0,
+        "bonus": 1,
+        "continuation": 6,
+        "penalty": 2,
+        "task_bit": 1
+      },
+      "violation": 0
+    },
+    {
+      "deterministic_outcome": {
+        "access_retained": true,
+        "audited": false,
+        "caught": false,
+        "continuation_reward": 6,
+        "events": [
+          {
+            "kind": "report",
+            "report": 0,
+            "step": 1
+          },
+          {
+            "audited": false,
+            "caught": false,
+            "kind": "audit",
+            "step": 2
+          },
+          {
+            "available": true,
+            "kind": "continuation",
+            "reward": 6,
+            "step": 3
+          }
+        ],
+        "immediate_reward": 1,
+        "total_reward": 7
+      },
+      "report": 0,
+      "view": {
+        "audit": "0",
+        "badge": 0,
+        "bonus": 1,
+        "continuation": 6,
+        "penalty": 2,
+        "task_bit": 1
+      },
+      "violation": 1
+    },
+    {
+      "deterministic_outcome": {
+        "access_retained": true,
+        "audited": true,
+        "caught": false,
+        "continuation_reward": 6,
+        "events": [
+          {
+            "kind": "report",
+            "report": 1,
+            "step": 1
+          },
+          {
+            "audited": true,
+            "caught": false,
+            "kind": "audit",
+            "step": 2
+          },
+          {
+            "available": true,
+            "kind": "continuation",
+            "reward": 6,
+            "step": 3
+          }
+        ],
+        "immediate_reward": 0,
+        "total_reward": 6
+      },
+      "report": 1,
+      "view": {
+        "audit": "1",
+        "badge": 1,
+        "bonus": 1,
+        "continuation": 6,
+        "penalty": 2,
+        "task_bit": 1
+      },
+      "violation": 0
+    },
+    {
+      "deterministic_outcome": {
+        "access_retained": false,
+        "audited": true,
+        "caught": true,
+        "continuation_reward": 0,
+        "events": [
+          {
+            "kind": "report",
+            "report": 0,
+            "step": 1
+          },
+          {
+            "audited": true,
+            "caught": true,
+            "kind": "audit",
+            "step": 2
+          },
+          {
+            "available": false,
+            "kind": "continuation",
+            "reward": 0,
+            "step": 3
+          }
+        ],
+        "immediate_reward": -1,
+        "total_reward": -1
+      },
+      "report": 0,
+      "view": {
+        "audit": "1",
+        "badge": 1,
+        "bonus": 1,
+        "continuation": 6,
+        "penalty": 2,
+        "task_bit": 1
+      },
+      "violation": 1
+    }
+  ]
+}

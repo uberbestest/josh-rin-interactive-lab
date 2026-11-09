@@ -1,0 +1,46 @@
+{
+  "accessed_local_date": "2026-11-08",
+  "coverage": "Selected primary-source context, not an exhaustive literature review or a priority claim.",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Decomposing and Measuring Evaluation Awareness",
+      "authors": "Changling Li et al.",
+      "version": "arXiv:2605.23055v3, 2026-09-29",
+      "url": "https://arxiv.org/html/2605.23055v3",
+      "basis": "Abstract and conceptual framework accessed as HTML.",
+      "use": "Separates evaluation-related environmental cues, recognition, and propensity to change behavior. Factor-controlled evaluation is prior work, not claimed as our invention.",
+      "boundary": "Their frontier-model study is not reproduced here; our known-source toy policies do not validate or refute its empirical results."
+    },
+    {
+      "id": "S2",
+      "title": "Alignment faking in large language models",
+      "authors": "Anthropic and Redwood Research",
+      "version": "Official research summary, 2024-12-18; updated 2024-12-20",
+      "url": "https://www.anthropic.com/research/alignment-faking",
+      "basis": "Official setup and caveats accessed as HTML.",
+      "use": "Provides a real-model comparator involving information about training conditions, behavioral differences, and additional reasoning evidence.",
+      "boundary": "Our output-only constructive counterexample is not a reproduction, a disproof, or an estimate of alignment-faking prevalence."
+    },
+    {
+      "id": "S3",
+      "title": "Specification gaming: the flip side of AI ingenuity",
+      "authors": "Victoria Krakovna et al., Google DeepMind",
+      "version": "2020-04-21",
+      "url": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+      "basis": "Primary research-team article accessed as HTML.",
+      "use": "Motivates separating the intended task from a reward or evaluation proxy.",
+      "boundary": "No empirical rate from that article is imported into this finite toy experiment."
+    },
+    {
+      "id": "S4",
+      "title": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
+      "authors": "Rudolf Laine et al.",
+      "version": "arXiv:2407.04694, 2024",
+      "url": "https://arxiv.org/abs/2407.04694",
+      "basis": "Primary abstract accessed.",
+      "use": "Evaluation-context recognition is a measured capability distinct from the task-compliance outcomes in this toy study.",
+      "boundary": "This experiment has no learned evaluation recognizer and does not measure situational awareness."
+    }
+  ]
+}

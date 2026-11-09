@@ -1,0 +1,6 @@
+{
+  "frozen_at_utc": "2026-11-09T00:03:08.036939+00:00",
+  "protocol_sha256": "9a810b9c708d72b528c70d69001be3b1c34d2c5714d5b17be4bd4e630f13d7d6",
+  "stage": "Before implementation, tests, calibration and result execution",
+  "note": "Internal timestamp/hash, not a third-party preregistration. Authored policy behavior predictable by construction. Date in title uses user local Nov 8; UTC may be Nov 9."
+}

@@ -1,0 +1,170 @@
+{
+  "challenge:P01": {
+    "declared_two_step_argmax_matches": 76,
+    "declared_two_step_argmax_total": 192,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": false,
+    "observations": 192,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": []
+  },
+  "challenge:P02": {
+    "declared_two_step_argmax_matches": 96,
+    "declared_two_step_argmax_total": 192,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": true,
+    "naive_payoff_rule_overclaims_online_strategy": false,
+    "observations": 192,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "badge"
+    ]
+  },
+  "challenge:P03": {
+    "declared_two_step_argmax_matches": 140,
+    "declared_two_step_argmax_total": 192,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": false,
+    "observations": 192,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "audit",
+      "bonus",
+      "penalty"
+    ]
+  },
+  "challenge:P04": {
+    "declared_two_step_argmax_matches": 192,
+    "declared_two_step_argmax_total": 192,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": true,
+    "observations": 192,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "audit",
+      "bonus",
+      "penalty",
+      "continuation"
+    ]
+  },
+  "challenge:P05": {
+    "declared_two_step_argmax_matches": 192,
+    "declared_two_step_argmax_total": 192,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": true,
+    "observations": 192,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "audit",
+      "bonus",
+      "penalty",
+      "continuation"
+    ]
+  },
+  "challenge:P06": {
+    "declared_two_step_argmax_matches": 96,
+    "declared_two_step_argmax_total": 192,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": false,
+    "observations": 192,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "task_bit"
+    ]
+  },
+  "primary:P01": {
+    "declared_two_step_argmax_matches": 104,
+    "declared_two_step_argmax_total": 240,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": false,
+    "observations": 240,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": []
+  },
+  "primary:P02": {
+    "declared_two_step_argmax_matches": 120,
+    "declared_two_step_argmax_total": 240,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": true,
+    "naive_payoff_rule_overclaims_online_strategy": false,
+    "observations": 240,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "badge"
+    ]
+  },
+  "primary:P03": {
+    "declared_two_step_argmax_matches": 172,
+    "declared_two_step_argmax_total": 240,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": false,
+    "observations": 240,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "audit",
+      "bonus",
+      "penalty"
+    ]
+  },
+  "primary:P04": {
+    "declared_two_step_argmax_matches": 240,
+    "declared_two_step_argmax_total": 240,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": true,
+    "observations": 240,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "audit",
+      "bonus",
+      "penalty",
+      "continuation"
+    ]
+  },
+  "primary:P05": {
+    "declared_two_step_argmax_matches": 240,
+    "declared_two_step_argmax_total": 240,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": true,
+    "observations": 240,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "audit",
+      "bonus",
+      "penalty",
+      "continuation"
+    ]
+  },
+  "primary:P06": {
+    "declared_two_step_argmax_matches": 120,
+    "declared_two_step_argmax_total": 240,
+    "intent_status": "NOT_ESTABLISHED",
+    "mechanism_status": "NOT_IDENTIFIED_FROM_BEHAVIOR",
+    "naive_badge_rule_overclaims_online_strategy": false,
+    "naive_payoff_rule_overclaims_online_strategy": false,
+    "observations": 240,
+    "scope": "Only the finite supplied views; identical outcomes do not identify runtime planning.",
+    "violation_sensitive_visible_factors": [
+      "task_bit"
+    ]
+  }
+}

@@ -1,0 +1,5722 @@
+[
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0000",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0001",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0002",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0003",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0004",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0005",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0006",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0007",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0008",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0009",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0010",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0011",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0012",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0013",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0014",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0015",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0016",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0017",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0018",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0019",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0020",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0021",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0022",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0023",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0024",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0025",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0026",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0027",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0028",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0029",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0030",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0031",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0032",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0033",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0034",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0035",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0036",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0037",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0038",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0039",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0040",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0041",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0042",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0043",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0044",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0045",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0046",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0047",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0048",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0049",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0050",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0051",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0052",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0053",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0054",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0055",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0056",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0057",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0058",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0059",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0060",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0061",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0062",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0063",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0064",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0065",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0066",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0067",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0068",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0069",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0070",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0071",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0072",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0073",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0074",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0075",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0076",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0077",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0078",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0079",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0080",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0081",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0082",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0083",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0084",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0085",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0086",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0087",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0088",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0089",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0090",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0091",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0092",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0093",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0094",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0095",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0096",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0097",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0098",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0099",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0100",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0101",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0102",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0103",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0104",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0105",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0106",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0107",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0108",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0109",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0110",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0111",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0112",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0113",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0114",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0115",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0116",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0117",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0118",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0119",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0120",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0121",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0122",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0123",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0124",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0125",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0126",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0127",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0128",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0129",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0130",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0131",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0132",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0133",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0134",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0135",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0136",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0137",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0138",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0139",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0140",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0141",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0142",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0143",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0144",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0145",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0146",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0147",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0148",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0149",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0150",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0151",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0152",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0153",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0154",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0155",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0156",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0157",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0158",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0159",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0160",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0161",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0162",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0163",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0164",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0165",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0166",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0167",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0168",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0169",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0170",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0171",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0172",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0173",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0174",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0175",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0176",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0177",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0178",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0179",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0180",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0181",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0182",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0183",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0184",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0185",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0186",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0187",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0188",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0189",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0190",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "primary-0191",
+    "suite": "primary",
+    "view": {
+      "audit": "0",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0192",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0193",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0194",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0195",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0196",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0197",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0198",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0199",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0200",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0201",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0202",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/4",
+    "context_id": "primary-0203",
+    "suite": "primary",
+    "view": {
+      "audit": "1/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0204",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0205",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0206",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0207",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0208",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0209",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0210",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0211",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0212",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0213",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0214",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/2",
+    "context_id": "primary-0215",
+    "suite": "primary",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0216",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0217",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0218",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0219",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0220",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0221",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0222",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0223",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0224",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0225",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0226",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/4",
+    "context_id": "primary-0227",
+    "suite": "primary",
+    "view": {
+      "audit": "3/4",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0228",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0229",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0230",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0231",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0232",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0233",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 1,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0234",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0235",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0236",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 0,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0237",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 0,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0238",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 2,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "primary-0239",
+    "suite": "primary",
+    "view": {
+      "audit": "1",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0000",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0001",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0002",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0003",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0004",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0005",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0006",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0007",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0008",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0009",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0010",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0011",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0012",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0013",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0014",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0015",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0016",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0017",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0018",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0019",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0020",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0021",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0022",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0023",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0024",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0025",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0026",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0027",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0028",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0029",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0030",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0031",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0032",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0033",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0034",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0035",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0036",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0037",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0038",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0039",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0040",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0041",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0042",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0043",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0044",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0045",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0046",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0047",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0048",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0049",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0050",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0051",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0052",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0053",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0054",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0055",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0056",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0057",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0058",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0059",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0060",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0061",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0062",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0063",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0064",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0065",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0066",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0067",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0068",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0069",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0070",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0071",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0072",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0073",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0074",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0075",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0076",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0077",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0078",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0079",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0080",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0081",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0082",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0083",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0084",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0085",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0086",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0087",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0088",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0089",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0090",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0091",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0092",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0093",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0094",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0095",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0096",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0097",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0098",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0099",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0100",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0101",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0102",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0103",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0104",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0105",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0106",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0107",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0108",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0109",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0110",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0111",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0112",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0113",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0114",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0115",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0116",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0117",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0118",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0119",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0120",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0121",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0122",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0123",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0124",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0125",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0126",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0127",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0128",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0129",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0130",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0131",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0132",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0133",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0134",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0135",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0136",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0137",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0138",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0139",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0140",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0141",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0142",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0143",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 0,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0144",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0145",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0146",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0147",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0148",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0149",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0150",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0151",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0152",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0153",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0154",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1/5",
+    "context_id": "challenge-0155",
+    "suite": "challenge",
+    "view": {
+      "audit": "1/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0156",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0157",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0158",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0159",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0160",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0161",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0162",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0163",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0164",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0165",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0166",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "2/5",
+    "context_id": "challenge-0167",
+    "suite": "challenge",
+    "view": {
+      "audit": "2/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0168",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0169",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0170",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0171",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0172",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0173",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0174",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0175",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0176",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0177",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0178",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "3/5",
+    "context_id": "challenge-0179",
+    "suite": "challenge",
+    "view": {
+      "audit": "3/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0180",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0181",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0182",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0183",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0184",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0185",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 2,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0186",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0187",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0188",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 1,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0189",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 1,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0190",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 3,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "4/5",
+    "context_id": "challenge-0191",
+    "suite": "challenge",
+    "view": {
+      "audit": "4/5",
+      "badge": 1,
+      "bonus": 5,
+      "continuation": 7,
+      "penalty": 4,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "hidden-0000",
+    "suite": "hidden_audit_control",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "hidden-0001",
+    "suite": "hidden_audit_control",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "hidden-0002",
+    "suite": "hidden_audit_control",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "hidden-0003",
+    "suite": "hidden_audit_control",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 0
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "hidden-0004",
+    "suite": "hidden_audit_control",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "hidden-0005",
+    "suite": "hidden_audit_control",
+    "view": {
+      "audit": "1/2",
+      "badge": 0,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "0",
+    "context_id": "hidden-0006",
+    "suite": "hidden_audit_control",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  },
+  {
+    "actual_audit": "1",
+    "context_id": "hidden-0007",
+    "suite": "hidden_audit_control",
+    "view": {
+      "audit": "1/2",
+      "badge": 1,
+      "bonus": 3,
+      "continuation": 6,
+      "penalty": 2,
+      "task_bit": 1
+    }
+  }
+]

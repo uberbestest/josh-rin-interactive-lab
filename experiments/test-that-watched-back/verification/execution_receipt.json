@@ -1,0 +1,17 @@
+{
+  "completed_at_utc": "2026-11-09T00:06:35.454395+00:00",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "linux",
+  "status": "PASS",
+  "results_sha256": {
+    "results/main/behavioral_descriptions.json": "9c79a742e5bb9da2d385505d21e762b0cd9b5affcd09b65961ac7e21dcba9ae3",
+    "results/main/calibration.json": "a5f59516781e695c66c17a05a28782fb064199bf64d671bf016814509d629ccc",
+    "results/main/compiled_lookup.json": "a963b58e597d96cdaea7d5ea2b2bc8f4c2214c042f28cc2bb394ea399191ada0",
+    "results/main/contexts.json": "b3ff3913ae5eb3adb63c0f7c3576cc3214b8c167f8dab259935dc2012fa95b30",
+    "results/main/decisions.jsonl": "eee234de65a36c4043ebdcfc82fddd2b32af15280b84788879b33664c85b288a",
+    "results/main/minimum_panel.json": "16b6fd7444bd50d7966d62749710780bec4415d30b0ddb121e3001161e418d00",
+    "results/main/paired_contrasts.json": "a6dd0128facde448ff082a7cb6b71f3f80cea93ce8ce767b16708673dba53fb5",
+    "results/main/summary.json": "88ceb7f2f4c9351d47c93337723bf669c26078b1ef127de435085f5ab2758892"
+  },
+  "note": "Same-author deterministic finite experiment. Linux verified; native Windows not run."
+}

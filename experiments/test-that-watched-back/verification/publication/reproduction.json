@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-11-09T01:13:06.727578+00:00",
+  "normal_tests": 39,
+  "optimized_reverse_results_identical": 8,
+  "optimized_tests": 39,
+  "original_archive_sha256": "6741636dce21a99f62b69158280668b4e2293ef5aa2301da5436e4c9ad16a782",
+  "original_capture_files_omitted": [
+    "verification/explorer_desktop_controls.png",
+    "verification/explorer_desktop_top.png",
+    "verification/explorer_mobile_controls.png",
+    "verification/explorer_mobile_top.png"
+  ],
+  "original_files_verified": 36,
+  "result_files_matched": {
+    "results/main/behavioral_descriptions.json": "9c79a742e5bb9da2d385505d21e762b0cd9b5affcd09b65961ac7e21dcba9ae3",
+    "results/main/calibration.json": "a5f59516781e695c66c17a05a28782fb064199bf64d671bf016814509d629ccc",
+    "results/main/compiled_lookup.json": "a963b58e597d96cdaea7d5ea2b2bc8f4c2214c042f28cc2bb394ea399191ada0",
+    "results/main/contexts.json": "b3ff3913ae5eb3adb63c0f7c3576cc3214b8c167f8dab259935dc2012fa95b30",
+    "results/main/decisions.jsonl": "eee234de65a36c4043ebdcfc82fddd2b32af15280b84788879b33664c85b288a",
+    "results/main/minimum_panel.json": "16b6fd7444bd50d7966d62749710780bec4415d30b0ddb121e3001161e418d00",
+    "results/main/paired_contrasts.json": "a6dd0128facde448ff082a7cb6b71f3f80cea93ce8ce767b16708673dba53fb5",
+    "results/main/summary.json": "88ceb7f2f4c9351d47c93337723bf669c26078b1ef127de435085f5ab2758892"
+  },
+  "same_author_only": true,
+  "scientific_core_unchanged": true,
+  "semantic_verifier": {
+    "branch_records_checked": 5280,
+    "calibration_records_checked": 8,
+    "decision_records_checked": 2640,
+    "lookup_entries_checked": 432,
+    "matched_contrast_pairs_checked": 8928,
+    "minimal_panel_size_verified": 3,
+    "note": "Separate algebraic and aggregation implementation, same author; no independent scientific validation.",
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

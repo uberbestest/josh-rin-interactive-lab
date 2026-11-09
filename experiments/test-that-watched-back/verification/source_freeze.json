@@ -1,0 +1,9 @@
+{
+  "frozen_at_utc": "2026-11-09T00:05:59.124066+00:00",
+  "before": "first test or numerical execution",
+  "hashes": {
+    "src/experiment.py": "2cfc9120be856ebf2bdb957a7da178b8778cc241e82717bba3d3949181019f4b",
+    "src/test_experiment.py": "4c3549773b0aac97ef74442e52148f3aa932c5db2aaa3f780cb60e334cd12fbc",
+    "src/verify.py": "e07ec2d820eee758bb6dde35ca696d8ab5813d07a05fa9ed44ad60b4b71a31df"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "branch_records_checked": 5280,
+  "calibration_records_checked": 8,
+  "decision_records_checked": 2640,
+  "lookup_entries_checked": 432,
+  "matched_contrast_pairs_checked": 8928,
+  "minimal_panel_size_verified": 3,
+  "note": "Separate algebraic and aggregation implementation, same author; no independent scientific validation.",
+  "status": "PASS"
+}

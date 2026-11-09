@@ -4,6 +4,12 @@
 
 [Browse the gallery](index.html)
 
+## The Test That Watched Back — November 8, 2026
+
+**[Explore the evaluation](experiments/test-that-watched-back/index.html)** · [Methods and limits](experiments/test-that-watched-back/method.html) · [Five-minute portfolio case study](experiments/test-that-watched-back/portfolio.html) · [Public source and evidence](experiments/test-that-watched-back/evidence.zip)
+
+Executed offline synthetic calibration: 2,640 decisions and 5,280 probability-weighted outcome branches across six authored implementations. Crossed cues and incentives separate five behavioral classes, but a precomputed lookup matches the planner on all 432 visible contexts. **Not an intent detector; no live-model trial; independent review pending.** The source, all eight result files, and original explorer match the retained study hashes. The [publication note](experiments/test-that-watched-back/PUBLICATION.md) distinguishes the public distribution and new HTTP presentation checks from the original conversation archive.
+
 ## The Other Road — November 6, 2026
 
 **[Explore the authorized fork](experiments/other-road/index.html)** · [Methods](experiments/other-road/method.html) · [Complete evidence](experiments/other-road/evidence.zip)
@@ -30,6 +36,7 @@ This section adds a reproducible source-to-map audit, a navigation schematic pre
 
 | Published | Instrument | What visitors can try | Evidence status |
 | --- | --- | --- | --- |
+| 2026-11-08 study; publication timestamp in commit | [The Test That Watched Back](experiments/test-that-watched-back/index.html) | Independently change evaluation cues and incentives; inspect a planner and its nonplanning behavioral twin. | Executed synthetic calibration; no live-model trial; mechanism and intent not identified from behavior alone. |
 | 2026-11-04 study; publication date recorded by the publishing commit | [Puddle's Bread Exchange](experiments/puddles-bread-exchange/index.html) | Play five bread inspections, trace copied evidence, change shared faults, and compare all result cells. | Executed exact synthetic model: 72 cells, 45,612 weighted histories; no external model agents or independent review. |
 | 2026-10-31 | [The Two-Candy Revolt](experiments/two-candy-revolt/index.html) | Read the TL;DR, replay recorded learning, compare refusal and enforcement, and test a hypothetical contract. | Executed synthetic pilot: 24 bargaining cells x 64 seeds; complete records; 58/64 unenforced veto policies admit a profitable proposer deviation. Independent review pending. |
 | 2026-10-31 | [The Porch That Ate Halloween](experiments/halloween-porches/index.html) | Change the reward signal across ten goblins and six porches; check crowding, payoffs, stable equilibria, and rotated roles. | 3,003 finite allocations exhaustively verified; earlier learning averages reported but **not reproduced**; zero external model-agent runs. |

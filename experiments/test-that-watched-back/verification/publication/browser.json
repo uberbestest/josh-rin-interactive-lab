@@ -1,0 +1,45 @@
+{
+  "checked_at_utc": "2026-11-09T01:13:36.271235+00:00",
+  "checks": [
+    {
+      "future_witness_toggle": "PASS",
+      "gallery_entry": "PASS",
+      "height": 1000,
+      "http_status": 200,
+      "lookup_equality": "PASS",
+      "methods_and_portfolio": "PASS",
+      "navigation_and_download_links_present": true,
+      "no_page_overflow": true,
+      "retained_data_checks": {
+        "contexts": 432,
+        "reports": 2592
+      },
+      "suite_switch": "PASS",
+      "viewport": "desktop",
+      "width": 1365
+    },
+    {
+      "future_witness_toggle": "PASS",
+      "gallery_entry": "PASS",
+      "height": 844,
+      "http_status": 200,
+      "lookup_equality": "PASS",
+      "methods_and_portfolio": "PASS",
+      "navigation_and_download_links_present": true,
+      "no_page_overflow": true,
+      "retained_data_checks": {
+        "contexts": 432,
+        "reports": 2592
+      },
+      "suite_switch": "PASS",
+      "viewport": "mobile",
+      "width": 390
+    }
+  ],
+  "external_requests": [],
+  "failed_http_responses": [],
+  "javascript_errors": [],
+  "published_index_sha256": "3150e0349d77650dc9120613818a773103b6d1610f7433d2a7b62c413c521802",
+  "qualification": "Fresh Chromium/Linux check of HTTP-served staging files in the publication runner. Not the original authored-string captures, not native Windows, not all mobile browsers, and not independent scientific validation.",
+  "status": "PASS"
+}

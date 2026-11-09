@@ -1,0 +1,6 @@
+{
+  "observed_at_utc": "2026-11-09T00:12:32.760875+00:00",
+  "attempt": "Chromium page.goto of authored explorer file URI",
+  "result": "net::ERR_BLOCKED_BY_ADMINISTRATOR",
+  "disposition": "No file URL retry, policy change, or alternate host used. Presentation will be tested by providing the already-authored HTML string as page content; this does not qualify local file launch."
+}

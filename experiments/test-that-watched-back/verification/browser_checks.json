@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-09T00:14:03.311025+00:00",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "width": 1365,
+      "height": 1000,
+      "no_page_overflow": true,
+      "policy_rows": 6,
+      "presentation_render": "PASS",
+      "local_file_launch": "UNQUALIFIED: file URI blocked by administrator",
+      "future_witness_toggle": "PASS",
+      "lookup_equality": "PASS",
+      "suite_switch": "PASS",
+      "minimum_panel_rows": 6,
+      "retained_case_display_checks": {
+        "contexts": 432,
+        "reports": 2592
+      }
+    },
+    {
+      "viewport": "mobile",
+      "width": 390,
+      "height": 844,
+      "no_page_overflow": true,
+      "policy_rows": 6,
+      "presentation_render": "PASS",
+      "local_file_launch": "UNQUALIFIED: file URI blocked by administrator",
+      "future_witness_toggle": "PASS",
+      "lookup_equality": "PASS",
+      "suite_switch": "PASS",
+      "minimum_panel_rows": 6,
+      "retained_case_display_checks": {
+        "contexts": 432,
+        "reports": 2592
+      }
+    }
+  ],
+  "javascript_errors": [],
+  "external_requests": [],
+  "html_sha256": "c970a528e97393eb2ab8af803f654bd2334fe0f6c581912d0f868fd33f8e25d2",
+  "qualification": "Chromium/Linux rendering of the supplied authored HTML string at two viewport sizes. Direct file-URI launch was blocked and is unqualified; no browser policy change or host-route retry. Not native Windows or all mobile browsers."
+}

@@ -1,0 +1,27 @@
+{
+  "archive_bytes": 638342,
+  "archive_sha256": "182038e1bb963b207afb447066aee9d825668e8d3637faaf558275feaebc7849",
+  "created_at_utc": "2026-11-09T01:13:36.520672+00:00",
+  "eight_results_and_original_explorer": "BYTE_IDENTICAL_TO_ORIGINAL",
+  "independent_review": "PENDING",
+  "inventory_excludes": [
+    "SHA256SUMS.json",
+    "evidence.zip",
+    "publication_receipt.json"
+  ],
+  "live_model_trials": 0,
+  "not_original_archive_bytes": true,
+  "original_conversation_archive_sha256": "6741636dce21a99f62b69158280668b4e2293ef5aa2301da5436e4c9ad16a782",
+  "original_files_byte_verified": 36,
+  "original_pngs_not_transferred": [
+    "verification/explorer_desktop_controls.png",
+    "verification/explorer_desktop_top.png",
+    "verification/explorer_mobile_controls.png",
+    "verification/explorer_mobile_top.png"
+  ],
+  "public_inventory_sha256": "98152b8592eae98eeb57853f82a69e4dffe48205d2b9ddc5c978e200472e5c7b",
+  "published_artifact": "evidence.zip",
+  "record_id": "BONDED-RSI-TEST-THAT-WATCHED-BACK-2026-11-08-001",
+  "same_author_engineering_checks_only": true,
+  "status": "PASS"
+}
