@@ -1,0 +1,130 @@
+name: The Test That Watched Back - reproduce and verify publication
+
+on:
+  push:
+    branches: [study/test-that-watched-back-2026-11-08, main]
+    paths:
+      - '.publishing/test-that-watched-back/**'
+      - '.github/workflows/test-that-watched-back.yml'
+      - 'experiments/test-that-watched-back/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: watched-back-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref_name == 'study/test-that-watched-back-2026-11-08'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Restore hash-bound source-only publication package
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, lzma
+          from pathlib import Path, PurePosixPath
+          folder = Path('.publishing/test-that-watched-back')
+          text = ''.join((folder / f'part-{i}.b64').read_text().strip() for i in range(8))
+          assert len(text) == 63776, 'Transport length mismatch'
+          data = base64.b64decode(text, validate=True)
+          assert hashlib.sha256(data).hexdigest() == '42c687c1eebd02ec286d34bef4dadfcdb3d0bf94ab291392aea9bd8a35a4dbf1'
+          files = json.loads(lzma.decompress(data).decode('utf-8'))
+          assert len(files) == 36
+          glue = {'.publishing/test-that-watched-back/publish.py', '.publishing/test-that-watched-back/browser_check.py'}
+          for name, content in files.items():
+              p = PurePosixPath(name)
+              assert not p.is_absolute() and '..' not in p.parts
+              assert name.startswith('experiments/test-that-watched-back/') or name in glue
+              target = Path(name)
+              assert not target.exists(), 'Refusing to overwrite an existing source: ' + name
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_text(content, encoding='utf-8')
+          print('Restored 36 source files; no model calls, secrets, or private lab data.')
+          PY
+      - name: Reproduce all decisions and verify original source and results
+        run: python .publishing/test-that-watched-back/publish.py prepare
+      - name: Add only this study to gallery and README
+        run: python .publishing/test-that-watched-back/publish.py integrate
+      - name: Install pinned browser harness
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Check HTTP-served explorer, methods, portfolio, and gallery
+        run: python .publishing/test-that-watched-back/browser_check.py
+      - name: Assemble and verify the public evidence distribution
+        run: python .publishing/test-that-watched-back/publish.py package
+      - name: Preserve results, receipts, and new HTTP screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: watched-back-publication-verification
+          retention-days: 30
+          path: |
+            experiments/test-that-watched-back/
+            index.html
+            README.md
+      - name: Commit verified exhibit to staging branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/test-that-watched-back index.html README.md .publishing/test-that-watched-back/publish.py .publishing/test-that-watched-back/browser_check.py
+          python - <<'PY'
+          import subprocess
+          paths = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '-z']).decode().split('\0')
+          allowed = {'index.html', 'README.md', '.publishing/test-that-watched-back/publish.py', '.publishing/test-that-watched-back/browser_check.py'}
+          assert all(not p or p.startswith('experiments/test-that-watched-back/') or p in allowed for p in paths), paths
+          PY
+          git diff --cached --quiet || git commit -m 'Publish reproduced Test That Watched Back with public evidence and navigation'
+          git push origin HEAD:study/test-that-watched-back-2026-11-08
+          echo 'Verified staging branch only. Main still requires reviewed publication.'
+  live:
+    if: github.ref_name == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify live site and evidence bytes against the published commit
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib, os, time, urllib.request
+          from pathlib import Path
+          base = 'https://uberbestest.github.io/josh-rin-interactive-lab/'
+          prefix = 'experiments/test-that-watched-back/'
+          paths = ['index.html'] + [prefix + p for p in ['index.html', 'method.html', 'portfolio.html', 'evidence.zip', 'publication_receipt.json', 'results/main/summary.json']]
+          expected = {p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(24):
+              failures = []
+              for p in paths:
+                  try:
+                      req = urllib.request.Request(base + p + '?verify=' + os.environ['EXPECTED_SHA'], headers={'Cache-Control': 'no-cache', 'User-Agent': 'Watched-Back-Publication-Check'})
+                      with urllib.request.urlopen(req, timeout=15) as response:
+                          actual = response.read()
+                          assert response.status == 200
+                      assert hashlib.sha256(actual).hexdigest() == expected[p], 'byte mismatch'
+                  except Exception as exc:
+                      failures.append((p, str(exc)))
+              if not failures:
+                  print('PASS: all seven live resources match the published commit byte-for-byte.')
+                  for p in paths:
+                      print(expected[p], base + p)
+                  break
+              print('Deployment not yet matched:', failures, flush=True)
+              if attempt == 23:
+                  raise SystemExit('Live bytes unverified; do not claim live publication.')
+              time.sleep(10)
+          PY
