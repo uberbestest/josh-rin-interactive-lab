@@ -1,0 +1,48 @@
+name: Bounded shadow reconstruction pilot
+
+on:
+  push:
+    branches: ['research/shadow-reconstruction-2026-11-10']
+    paths: ['.github/workflows/shadow-reconstruction-pilot-2026-11-10.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  pilot:
+    if: github.repository == 'uberbestest/josh-rin-interactive-lab'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      HF_HUB_DISABLE_XET: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Check frozen source and engineering tests
+        run: |
+          mkdir -p pilot-evidence
+          echo '7d9d89a461c5950ec196f72d82f8c6191a7e2f40d17320ab48d2570fadabfa10  research/shadow-reconstruction-2026-11-10/pilot.py' | sha256sum -c -
+          python3 research/shadow-reconstruction-2026-11-10/pilot.py --self-test > pilot-evidence/selftest.log 2>&1
+          python3 -O research/shadow-reconstruction-2026-11-10/pilot.py --self-test > pilot-evidence/selftest-optimized.log 2>&1
+      - name: Install pinned CPU inference dependencies
+        run: |
+          python3 -m venv /tmp/shadow-venv
+          /tmp/shadow-venv/bin/python -m pip install 'torch==2.8.0' --index-url https://download.pytorch.org/whl/cpu
+          /tmp/shadow-venv/bin/python -m pip install 'transformers==4.57.1' 'tokenizers==0.22.1' 'huggingface-hub==0.36.0' 'safetensors==0.6.2'
+          /tmp/shadow-venv/bin/python -m pip freeze > pilot-evidence/dependencies.txt
+      - name: Execute fixed live panel
+        run: |
+          set -o pipefail
+          timeout 600 /tmp/shadow-venv/bin/python research/shadow-reconstruction-2026-11-10/pilot.py --live pilot-evidence/live 2>&1 | tee pilot-evidence/execution.log
+      - name: Preserve evidence including failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: shadow-reconstruction-pilot-evidence
+          path: pilot-evidence/
+          retention-days: 1
+          if-no-files-found: error
