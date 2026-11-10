@@ -1,0 +1,22 @@
+{
+  "record": "BONDED-RSI-RESET-DIAGNOSTICS-2026-11-10-001",
+  "title": "Which Reset Would Tell?",
+  "version": "0.1.0",
+  "status": "finite diagnostic-access audit; not a live-model experiment",
+  "lineage": "The Shape That Remains, Suite C, v0.1.0",
+  "question": "Which allowed source interventions distinguish otherwise identical dynamical mechanisms?",
+  "carrier_order": ["learned", "context", "world", "prior"],
+  "carrier_values": [-1, 0, 1],
+  "hypothesis_count": 81,
+  "initial_state_for_each_diagnostic_query": 0,
+  "probes": [-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8],
+  "interventions": ["none", "clear_context", "clear_world", "clear_learned"],
+  "intervention_semantics": "Clone the original carrier tuple separately for every query; clear only the named carrier; reset dynamic x to zero; apply one probe; observe sign with thresholds +/-3. Clearing one component cannot silently clear another.",
+  "panels": [["none"], ["none", "clear_context"], ["none", "clear_context", "clear_world"], ["none", "clear_context", "clear_world", "clear_learned"]],
+  "main_rows": 5508,
+  "known_prior_control": "Repeat partitions with common prior fixed at zero (27 hypotheses).",
+  "contrasts": ["zero-output cancellation and source-removal unmasking", "matched versus mismatched common priors", "acquired-versus-prior alias under inaccessible learned-state interventions"],
+  "verification": ["independent analytic partition key", "parent transition parity", "normal and optimized unittest", "forward/reverse execution order", "fresh extraction reproduction"],
+  "limitations": ["Complete candidate family is stipulated, not inferred from a commercial system.", "Reset, source removal, and matched branching are assumed perfectly available.", "Learned carrier is assigned, not acquired by training here.", "No stochastic noise, wall-clock or API-cost model.", "The intervention ranking depends on this additive mechanism and is not a minimal-query or general memory-detection guarantee."],
+  "design_status": "Frozen after reading parent results and deriving expected algebraic counts; before new enumeration. Same-author design, not blind discovery or external preregistration."
+}

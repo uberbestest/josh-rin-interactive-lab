@@ -1,0 +1,36 @@
+{
+  "record": "BONDED-RSI-RESET-DIAGNOSTICS-2026-11-10-001",
+  "version": "0.1.0",
+  "executed_at_utc": "2026-11-10T12:36:34.612464+00:00",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "hypotheses": 81,
+  "recorded_responses": 5508,
+  "equivalence_classes": [
+    9,
+    21,
+    45,
+    81
+  ],
+  "known_zero_prior_classes": [
+    7,
+    15,
+    27,
+    27
+  ],
+  "named_tests": 24,
+  "normal_tests": "passed",
+  "optimized_tests": "passed",
+  "parent_transition_parity_inputs": 12393,
+  "scientific_source_sha256": {
+    "audit.py": "35d6fd1358e87540fb6b2de2fb100bd440300f7ec07df5229f834acc5f4b64be",
+    "test_audit.py": "600c4761a9b14fd083ca84cb638b24d0e7f8760f6b96b088d0f99ccf3cc83168",
+    "protocol.json": "cfbb3cfbed6dc334424790894efe650b28db4d98e411152d17bd77e3204615fb"
+  },
+  "result_sha256": {
+    "hashes.json": "a2f583cd05d8844d6944a320b34db799239b998edab84f20582b7fa78b9c59cd",
+    "observations.jsonl": "ac89e24a6e19f5ba3480b11e905d2e86f9609c10453a6249302b70a9d688954b",
+    "summary.json": "3e1bcaf5a6227acbcd228fc2e1eff4782aa0d7771ff6c25b5101dc1b0bde5450"
+  },
+  "scope": "Deterministic authored finite diagnostic audit; same-author verification; not independent review or a live-model forgetting result."
+}
