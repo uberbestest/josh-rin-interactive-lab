@@ -1,0 +1,25 @@
+{
+  "evidence_status": "same-author exact synthetic; no live models or independent validation",
+  "modes": [
+    "normal",
+    "optimized"
+  ],
+  "named_tests_per_mode": 22,
+  "original_archive_sha256": "8056adc22b8972b6eb69fe8543cfc73f785a9426785c10f993caf8a6918cebaf",
+  "output_sha256": {
+    "calibration.json": "1326c273ecf172fa3b1322f4df540ff8495e49cad9d6fc83988b07b7a4b47309",
+    "miswire.jsonl": "6801462fe0b37afe6d6e588931c05c7fb3d6bb396552a07e45035aaea21df8ef",
+    "raw_half_two.jsonl": "9e7392f3a9886ac3be47d6ca8dc4be6724a70187d21395cf4510c214ae694436",
+    "results.json": "1c0567ef8a0bd2d9d6bb4a47ac19b9e1a73e5ad3082f346a79ff500c1547ce7c"
+  },
+  "record": "BONDED-RSI-RESET-RELIABILITY-2026-11-11-001",
+  "source_sha256": {
+    "README.md": "909f69bd9282c52a500a1ec3c61a83e37496ace2b6a7ffdeeb476f8b2a64e97a",
+    "audit.py": "26d98d771b7cee365de19f602310d91b6bdd53f3f3fa7f65176cd15f45a8dfe5",
+    "protocol.json": "ab0196ab6bcd7218e21c03d17919a85a9b3a4a36307da9ad0f94b79cafc13bc9",
+    "test_audit.py": "d6deb081e0fcc03f6a6135c9a6b0cc908c6ac17eb970265568eed47e62dfcb9f",
+    "verify_public.py": "40a7eb4d3e68801403229870ebab75c3f38d57a27bffeac3e0096c087d5fd5ac"
+  },
+  "tested_python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "version": "v0.1.1-public"
+}

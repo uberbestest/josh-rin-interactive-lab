@@ -1,0 +1,22 @@
+{
+  "record": "BONDED-RSI-RESET-RELIABILITY-2026-11-11-001",
+  "version": "v0.1.1-public",
+  "date": "2026-11-11",
+  "design_status": "Source-informed publication review, correction and exact finite extension. Original results and preliminary half-efficacy/two-repeat strict-decoder result were known before this protocol. Not blind, externally preregistered or independently reviewed.",
+  "original_archive_sha256": "8056adc22b8972b6eb69fe8543cfc73f785a9426785c10f993caf8a6918cebaf",
+  "original_experiment_sha256": "71c497cdbbe2ac39e32cb0974ee47a7f6a6dcf75122578a19fae3c2ada7f60b7",
+  "parent_commit": "557c335f6d7ad7e4a884351354740ea98dc2e229",
+  "parent_path": "notes/which-reset-would-tell-2026-11-10/audit.py",
+  "worlds": "All 81 tuples (L,C,W,P) in {-1,0,1}^4; uniform prior",
+  "queries": "Baseline plus L/C/W cuts. Each scan uses 17 separate x=0 branches with the same post-actuation source snapshot; probes -8 through 8. No evolving probe history.",
+  "observation": "clip(sum(carriers)+probe,-4,4), threshold at -3 and +3",
+  "efficacy": ["0", "1/4", "1/2", "3/4", "1"],
+  "attempts_per_target": [1,2,4,8],
+  "failure_models": ["Independent across targets and attempts", "Independent across targets, but one fixed success/failure draw per target reused across attempts"],
+  "decoders": ["Bayes optimal under the true known q and failure model", "Lossy any-change decoder, retaining a changed value and dropping within-target contradictions", "Strict perfect-actuation decoder, requiring every individual attempt to fit one nominal tuple"],
+  "reference": "Enumerate ordered success bits for all five q at one and two attempts, plus q=1/2 at three attempts. Retain all 5,184 latent events at q=1/2, m=2. Zero-valued fields can conceal success bits.",
+  "miswire": "Nominal L cut actually cuts P, with C and W correct; all 81 cases and all probe signatures checked",
+  "calibration": "Two newly granted, trusted prepared states (1,0,-1,0) and (0,1,0,-1); five fixed deterministic candidates: no operation or cut L/C/W/P. Same actuator assumed for both preparations and later use. Not provider authentication.",
+  "execution_boundary": "Offline standard-library enumeration only. No model calls, credentials, operational relay changes, or guard installation. Publication is a separate authorized action.",
+  "verification": "Both Python modes, reversed enumeration, frozen source and result hashes, fresh extraction; same-author checks only"
+}
