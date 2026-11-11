@@ -1,0 +1,143 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Can an AI handoff keep every word but still silently upgrade observed evidence into verification or authority? A playable, reproducible synthetic experiment from Josh & Rin's Lab.">
+<title>The Handoff That Never Lost a Word — Josh & Rin's Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0e1826;--ink:#f1f4f0;--muted:#b0c4c9;--gold:#f6cb7d;--mint:#9be0c8;--line:#405967;--panel:#192c39;--violet:#cab4e4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 80% 500px at 82% 0%,#244052,transparent),var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--mint)}a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1050px,calc(100% - 36px));margin:auto}
+nav{padding:23px 0;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-bottom:1px solid var(--line);font-size:.9rem}
+.hero{padding:48px 0 34px;max-width:875px}.eyebrow{color:var(--mint);font:.8rem ui-monospace,Consolas,monospace;letter-spacing:.15em;text-transform:uppercase}
+h1{font:500 clamp(2.6rem,6vw,4.8rem)/1.06 Georgia,serif;letter-spacing:-.04em;margin:14px 0 20px}
+h1 em{color:var(--gold);font-style:normal}.lead{color:var(--muted);font-size:clamp(1.08rem,2vw,1.28rem);max-width:750px}
+.fact{background:linear-gradient(115deg,#283647,#1c333c);border-left:4px solid var(--gold);padding:18px 24px;border-radius:5px;margin:18px 0 38px}
+.workbench{display:grid;grid-template-columns:minmax(240px,.84fr) minmax(0,1.5fr);gap:18px;margin:0 0 46px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px;min-width:0}
+h2{font-size:1.4rem;line-height:1.3;letter-spacing:-.02em;margin:0 0 17px}
+label{display:block;margin:17px 0 4px;color:var(--muted);font-size:.9rem}
+select{width:100%;padding:11px 12px;color:var(--ink);background:#0f1e2a;border:1px solid #5a7781;border-radius:7px;font:inherit}
+button{border:0;border-radius:7px;background:var(--gold);color:#18212b;font-weight:800;font-size:1rem;padding:12px 16px;margin-top:22px;cursor:pointer}
+button:hover{background:#ffe1aa}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.stat{border:1px solid var(--line);border-radius:8px;background:#12232d;padding:16px;min-width:0}
+.stat span{display:block;color:var(--muted);font:.72rem/1.5 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase}
+.stat strong{display:block;font-size:1.08rem;margin-top:7px;overflow-wrap:anywhere}
+.stat strong[data-kind="unsafe"]{color:#ffc0ab}.stat strong[data-kind="blocked"]{color:var(--gold)}.stat strong[data-kind="safe"]{color:var(--mint)}
+.insight{margin-top:17px;border-left:3px solid var(--violet);padding:0 0 0 14px;color:var(--muted)}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}.record{font:12px/1.75 ui-monospace,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#0e1c26;border:1px solid var(--line);border-radius:8px;padding:14px;color:#d4e5e5}
+.chain{list-style:none;margin:20px 0 0;padding:0}.chain li{position:relative;border-left:3px solid #5c7c80;padding:8px 18px 20px;margin-left:10px}.chain li:before{position:absolute;content:"";width:9px;height:9px;top:15px;left:-6px;background:var(--gold);border-radius:50%}.chain strong{font-family:ui-monospace,monospace;font-size:.9rem}.chain p{margin:4px 0;color:var(--muted);font-size:.9rem}
+section{margin:36px 0 52px}.prose{color:var(--muted);max-width:850px}.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;color:var(--muted);font-size:.88rem}
+@media(max-width:800px){.workbench{grid-template-columns:1fr}.columns{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.panel{padding:19px}.hero{padding-top:30px}}
+@media(max-width:460px){.stats{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<div class="wrap"><nav aria-label="Site navigation"><a href="../../index.html">← Josh & Rin's Lab</a><span><a href="method.html">Methods</a> · <a href="README.md">Evidence and source</a> · <a href="results.json">Complete counts</a></span></nav>
+<header class="hero"><p class="eyebrow">Executed synthetic experiment · November 11, 2026</p>
+<h1>The Handoff That <em>Never Lost a Word.</em></h1>
+<p class="lead">Every original sentence can survive. Every hop can be logged. And the last receiver can still turn <strong>“observed”</strong> into <strong>“authorized.”</strong> Change a handoff, then see which receivers notice.</p></header>
+<div class="fact"><strong>A counterexample, not an AI-agent prevalence measurement.</strong> 3,584 scripted chains, 14,336 deterministic decisions. No live models participated; the trusted source registry is deliberately supplied by the experiment.</div>
+<div class="workbench" id="workbench">
+<div class="panel"><h2>Set up the handoff</h2>
+<label for="condition">What happens along the chain?</label><select id="condition"></select>
+<label for="policy">How does the last receiver decide?</label><select id="policy"></select>
+<label for="hops">How long is the chain?</label><select id="hops"></select>
+<label for="insertion">When does it happen?</label><select id="insertion"></select>
+<label for="seed">Which synthetic observation?</label><select id="seed"></select>
+<button id="check" type="button">Check original provenance</button>
+<p class="prose" style="font-size:.88rem">All controls run entirely in this page. No login, telemetry, or external model calls.</p>
+</div>
+<div class="panel" aria-live="polite"><h2>Final receiver</h2>
+<div class="stats">
+<div class="stat"><span>Original evidence</span><strong id="statusEvidence"></strong></div>
+<div class="stat"><span>Surface label</span><strong id="statusSurface"></strong></div>
+<div class="stat"><span>Warranted tier</span><strong id="statusWarrant"></strong></div>
+<div class="stat"><span>Receiver decision</span><strong id="statusDecision"></strong></div>
+</div>
+<p class="insight" id="decisionExplanation"></p><p id="why" class="prose"></p><p id="sourceBoundary" class="prose"></p>
+</div></div>
+<div class="columns">
+<section class="panel"><h2>Original source record</h2><div id="sourceText" class="record"></div><p class="prose">This synthetic source only asserts an observation. It contains no independent review or deployment grant.</p></section>
+<section class="panel"><h2>Appended receipts</h2><div id="receiptsText" class="record"></div><p class="prose">An integrity check can be accurate about bytes and still say nothing about scientific verification.</p></section>
+</div>
+<section class="panel"><h2>Follow the handoff chain</h2><ol id="chain" class="chain"></ol></section>
+<section><h2>Why this matters</h2>
+<p class="prose">Four deliberately constructed misleading conditions keep the entire original record unchanged. A surface-trusting receiver upgrades the warrant in every one of those scripted cases. Merely checking that the source is still there does not fix that inference. A separate, trusted and correctly bound source/receipt registry can prevent the promotion—but only if that registry actually deserves trust.</p>
+<p class="prose">We also include two genuine positive controls. The recovery design must admit real independent verification and authorization, not simply refuse everything. The observed rates describe our authored interfaces; they are not estimates for actual AI agents.</p>
+<div class="links"><a href="method.html">Read methods and limits ↗</a><a href="engine.js">Inspect simulator ↗</a><a href="test.js">Reproduce tests ↗</a><a href="results.json">Full aggregate and witness records ↗</a></div>
+</section>
+<footer>Josh & Rin's Lab · Independent research · Keep the evidence, preserve the warrant. <em>The sky is not for sale.</em></footer></div>
+<script src="engine.js"></script><script>
+const E=window.HandoffLab;
+const $=(id)=>document.getElementById(id);
+const c=$("condition"),p=$("policy"),h=$("hops"),at=$("insertion"),seed=$("seed");
+const conditionTitles={
+clean:"Clean custody",missing_source:"Source goes missing",
+promoted_verified:"Observed → Verified (unearned)",
+promoted_authorized:"Observed → Authorized (unearned)",
+misleading_receipt:"All bytes present, misleading receipt",
+legitimate_verification:"Independent verification control",
+legitimate_authorization:"Valid authorization control",
+stale_receipt:"Verified receipt, wrong source"
+};
+const policyTitles={latest:"Trust latest surface",archive_only:"Archive present? Trust surface",
+strict:"Quarantine contradictions",recovery:"Recover warranted tier"};
+for(const id of E.CONDITIONS){const o=document.createElement("option");o.value=id;o.textContent=conditionTitles[id];c.append(o);}
+for(const id of E.POLICIES){const o=document.createElement("option");o.value=id;o.textContent=policyTitles[id];p.append(o);}
+for(const x of E.HOPS){const o=document.createElement("option");o.value=x;o.textContent=x+" relay hops";h.append(o);}
+for(let i=1;i<=32;i++){const o=document.createElement("option");o.value=i;o.textContent="Fixture "+String(i).padStart(2,"0");seed.append(o);}
+c.value="promoted_authorized";p.value="latest";h.value="4";seed.value="11";
+function tier(n){return n<0?"QUARANTINED":E.TIER_NAMES[n];}
+function text(node,msg){node.textContent=msg;}
+function render(){
+  const hops=Number(h.value);
+  const prev=Number(at.value)||2;
+  at.replaceChildren();
+  for(let i=1;i<=hops;i++){const o=document.createElement("option");o.value=i;o.textContent="Insert at handoff "+i;at.append(o);}
+  at.value=String(Math.max(1,Math.min(hops,prev)));
+  const t=E.makeHandoff(c.value,Number(seed.value),hops,Number(at.value));
+  const d=E.handoffDecision(t,p.value);
+  text($("statusEvidence"),t.packet.archive.length?"EXACT SOURCE RETAINED":"SOURCE UNAVAILABLE");
+  text($("statusSurface"),tier(d.surfaced));
+  text($("statusWarrant"),tier(d.supported));
+  text($("statusDecision"),tier(d.tier));
+  $("statusDecision").dataset.kind=d.false_elevation?"unsafe":d.tier===-1?"blocked":"safe";
+  text($("decisionExplanation"),d.false_elevation?
+    "UNWARRANTED UPGRADE: this scripted reader accepted a stronger tier than the evidence permits.":
+    d.tier===-1?"NO CLAIM ADMITTED: the source is missing or the claimed authority contradicts the trusted reference.":
+    "BOUNDED DECISION: this reader retained only the tier supported by its assumed evidence access.");
+  text($("sourceText"),t.anchor.source);
+  const observed=t.packet.receipts.length?
+    t.packet.receipts.map(r=>r.text+" [issuer: "+r.issuer+"; binding: "+r.binding+"]").join("\n"):
+    "No additional receipts.";
+  text($("receiptsText"),observed);
+  const chain=$("chain");chain.replaceChildren();
+  for(const hop of t.packet.hops){
+    const item=document.createElement("li");
+    const heading=document.createElement("strong");
+    heading.textContent="Relay "+hop.hop+" · "+hop.displayed_tier;
+    item.append(heading);
+    const body=document.createElement("p");
+    body.textContent=(hop.hop===t.injectionHop?"Intervention applied. ":"")+
+       (hop.source_in_archive?"Original source still present. ":"Original source unavailable. ")+
+       "Prior notes retained. Receipts: "+hop.receipt_count+".";
+    item.append(body);chain.append(item);
+  }
+  text($("sourceBoundary"),d.source_preserved?
+    "The original record is byte-identical; that alone does not warrant the displayed conclusion.":
+    "The original record is absent. No inference can be grounded in its contents.");
+  text($("why"),p.value==="latest"?
+    "This policy reads the most conspicuous status or receipt phrase. It never independently checks the source.":
+    p.value==="archive_only"?
+    "This policy checks only whether some original source is retained; it does not validate the upgrade.":
+    p.value==="strict"?
+    "This policy checks the separately supplied trusted source and registry and quarantines inconsistent statuses.":
+    "This policy reads the separately supplied trusted source and registry, then reconstructs the highest warranted tier.");
+}
+for(const x of [c,p,h,at,seed]) x.addEventListener("change",render);
+$("check").addEventListener("click",()=>{
+  p.value="recovery";render();
+  $("statusDecision").scrollIntoView({behavior:"smooth",block:"center"});
+});
+render();
+</script></body></html>

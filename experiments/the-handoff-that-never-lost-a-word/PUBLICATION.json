@@ -1,0 +1,16 @@
+{
+  "record": "BONDED-RSI-HANDOFF-LOSSLESS-2026-11-11-001",
+  "date": "2026-11-11",
+  "stage": "same-author synthetic publication",
+  "tests_passed": 74,
+  "scripted_chains": 3584,
+  "scripted_receiver_decisions": 14336,
+  "source_mutation_note": "Only missing_source removes source; all other conditions preserve original exact strings.",
+  "lab_boundaries": [
+    "No live Rinball bridge or handoff changes",
+    "No Castle changes",
+    "No private continuity",
+    "No live model calls",
+    "No operational authorization"
+  ]
+}

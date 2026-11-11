@@ -1,0 +1,40 @@
+{
+  "record": "BONDED-RSI-HANDOFF-LOSSLESS-2026-11-11-001",
+  "version": "v0.1.0",
+  "date": "2026-11-11",
+  "question": "Can an append-only relay promote epistemic or authority status without removing source bytes?",
+  "conditions": [
+    "clean",
+    "missing_source",
+    "promoted_verified",
+    "promoted_authorized",
+    "misleading_receipt",
+    "legitimate_verification",
+    "legitimate_authorization",
+    "stale_receipt"
+  ],
+  "policies": [
+    "latest",
+    "archive_only",
+    "strict",
+    "recovery"
+  ],
+  "seeds": 32,
+  "hop_lengths": [
+    2,
+    4,
+    8
+  ],
+  "insertion_positions": "Every hop from 1 through hop_length",
+  "source_status": "Observed in authored scripted fixture, not independently checked or authorized",
+  "measurement": {
+    "original_preserved": "exact string equality to separately held source",
+    "false_elevation": "receiver assigned a tier strictly above externally stipulated warranted tier",
+    "receiver_correct": "assigned exactly warranted tier, including quarantine=-1",
+    "strict_quarantine": "receiver abstained because surface and warrant conflict"
+  },
+  "trust_model": "The fixture supplies an out-of-band exact source reference and independent trusted receipt registry to strict/recovery; the handoff packet does not.",
+  "independence": "All conditions and policies are designed interventions; textual seeds and hop positions are correlated cells.",
+  "execution": "Pure deterministic JavaScript; no network, humans, model inference, actual authority, or private data",
+  "publication": "Public interactive exhibit and reproducible aggregate; no adoption or operational changes"
+}
