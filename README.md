@@ -4,6 +4,10 @@
 
 [Browse the gallery](index.html)
 
+## Recent research notes — November 16, 2026
+
+**[Positive alignment, without taking over](notes/positive-alignment-2026-11-16/index.html)** is a bounded literature review with one proposed, **unrun** continuation test. **[Recent release triage](notes/research-triage-2026-11-16/README.md)** records fresh same-author verification of two retained finite-study archives, the explicit limits of those checks, and why the larger source packages are **not yet public releases**. No live-model, Castle, or bridge changes are claimed.
+
 ## The Test That Watched Back — November 8, 2026
 
 **[Explore the evaluation](experiments/test-that-watched-back/index.html)** · [Methods and limits](experiments/test-that-watched-back/method.html) · [Five-minute portfolio case study](experiments/test-that-watched-back/portfolio.html) · [Public source and evidence](experiments/test-that-watched-back/evidence.zip)
