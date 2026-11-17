@@ -186,7 +186,7 @@ Record: <code>BONDED-RSI-CHECK-USE-GAP-2026-11-16-002</code><br />
 <p>Pang et al., <strong>Zanzibar: Google's Consistent, Global Authorization System</strong> (USENIX ATC 2019), address consistent authorization amid ACL and content changes. Our one-bit finite simulator is not an implementation, benchmark, or replacement for Zanzibar.</p>
 <p>Sources: <a href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>; <a href="https://arxiv.org/abs/1708.08611">shielding paper</a>; <a href="https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/">Zanzibar primary publication</a>. Our contribution is the joint, reproducible evaluator: exact interface-specific coverage/cost ceilings, proof certificates, source-preserving continuation lineage, and an operator/actor-separated replay.</p>
 <h2>10. Reproduce</h2>
-<p>Python 3.10+ and Node.js 18+; numerical code uses only standard libraries. Browser smoke checks additionally use Playwright, pinned in the publication workflow. From this directory:</p>
+<p>Python 3.13 and Node.js 18+ for exact archived-byte reproduction; numerical code uses only standard libraries. Browser smoke checks additionally use Playwright, pinned in the publication workflow. From this directory:</p>
 <pre><code>python -m unittest -v test_study
 python -O -m unittest -v test_study
 python study.py --out results

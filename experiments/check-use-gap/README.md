@@ -165,7 +165,7 @@ Sources: [CWE-367](https://cwe.mitre.org/data/definitions/367.html); [shielding 
 
 ## 10. Reproduce
 
-Python 3.10+ and Node.js 18+; numerical code uses only standard libraries. Browser smoke checks additionally use Playwright, pinned in the publication workflow. From this directory:
+Python 3.13 and Node.js 18+ for exact archived-byte reproduction; numerical code uses only standard libraries. Browser smoke checks additionally use Playwright, pinned in the publication workflow. From this directory:
 
 ```
 python -m unittest -v test_study
