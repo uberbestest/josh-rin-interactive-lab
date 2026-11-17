@@ -1,0 +1,152 @@
+name: Gate Between Check and Act - reproduce and publish
+
+on:
+  push:
+    branches: [study/gate-between-check-and-act-2026-11-16, main]
+    paths:
+      - '.publishing/gate-between-check-and-act/**'
+      - '.github/workflows/gate-between-check-and-act.yml'
+      - 'experiments/gate-between-check-and-act/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gate-check-act-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+  STUDY: experiments/gate-between-check-and-act
+
+jobs:
+  build:
+    if: github.ref_name == 'study/gate-between-check-and-act-2026-11-16'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Restore hash-bound public-only source
+        run: |
+          python - <<'PY'
+          import hashlib, json, lzma
+          from pathlib import Path, PurePosixPath
+          folder = Path('.publishing/gate-between-check-and-act')
+          data = b''.join((folder / f'part-{i}.bin').read_bytes() for i in range(6))
+          if len(data) != 32980 or hashlib.sha256(data).hexdigest() != 'c7f515562365e094aa4b78e31f1bbbaafff175a63136987c293cd52033fb202e':
+              raise SystemExit('Transport hash or length mismatch')
+          files = json.loads(lzma.decompress(data))
+          if len(files) != 17:
+              raise SystemExit('Unexpected source count')
+          for name, content in files.items():
+              p = PurePosixPath(name)
+              if p.is_absolute() or '..' in p.parts or not name.startswith('experiments/gate-between-check-and-act/'):
+                  raise SystemExit('Out-of-scope source path: ' + name)
+              target = Path(name)
+              if target.exists() and target.read_text(encoding='utf-8') != content:
+                  raise SystemExit('Refusing to overwrite different source: ' + name)
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_text(content, encoding='utf-8')
+          print('Restored 17 public-only source files. No model calls, secrets, private continuity, or Castle changes.')
+          PY
+      - name: Reproduce exact results, reference solver, audits, and both language engines
+        run: python "$STUDY/build_release.py" verify
+      - name: Install pinned browser harness
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Check actual HTTP-served interactive exhibit
+        run: python "$STUDY/browser_check.py"
+      - name: Assemble checked evidence and add only this exhibit to navigation
+        run: |
+          python "$STUDY/build_release.py" package
+          python "$STUDY/build_release.py" integrate --repo .
+      - name: Preserve publication checks and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate-check-act-publication-verification
+          retention-days: 30
+          path: |
+            experiments/gate-between-check-and-act/
+            index.html
+            README.md
+      - name: Commit verified exhibit to staging branch only
+        run: |
+          python - <<'PY'
+          import shutil
+          from pathlib import Path
+          root = Path('experiments/gate-between-check-and-act')
+          for p in root.rglob('__pycache__'):
+              shutil.rmtree(p)
+          shutil.rmtree(root / 'screenshots', ignore_errors=True)
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$STUDY" index.html README.md
+          python - <<'PY'
+          import subprocess
+          paths = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '-z']).decode().split('\0')
+          if any(p and not (p.startswith('experiments/gate-between-check-and-act/') or p in {'index.html','README.md'}) for p in paths):
+              raise SystemExit('Unexpected staged paths: ' + repr(paths))
+          PY
+          git diff --cached --quiet || git commit -m 'Publish reproduced Gate Between Check and Act with proof, full traces, exact synthesis and HTTP checks'
+          git push origin HEAD:study/gate-between-check-and-act-2026-11-16
+          echo 'Staging only; main requires reviewed fast-forward publication.'
+  live:
+    if: github.ref_name == 'main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify live Pages resources match the published commit
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, time, urllib.request
+          from pathlib import Path
+          base = 'https://uberbestest.github.io/josh-rin-interactive-lab/'
+          prefix = 'experiments/gate-between-check-and-act/'
+          paths = ['index.html'] + [prefix + p for p in ['index.html','method.html','explorer.js','evidence.zip','PUBLICATION.json','download.json','results/summary.json']]
+          expected = {p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(24):
+              failures = []
+              for p in paths:
+                  try:
+                      request = urllib.request.Request(base + p + '?verify=' + os.environ['EXPECTED_SHA'], headers={'Cache-Control':'no-cache','User-Agent':'Gate-Check-Act-Publication-Verification'})
+                      with urllib.request.urlopen(request, timeout=15) as response:
+                          data = response.read()
+                          if response.status != 200:
+                              raise ValueError('HTTP status ' + str(response.status))
+                      if hashlib.sha256(data).hexdigest() != expected[p]:
+                          raise ValueError('Byte mismatch')
+                  except Exception as exc:
+                      failures.append([p,str(exc)])
+              if not failures:
+                  receipt = {'status':'PASS','commit':os.environ['EXPECTED_SHA'],'resources':expected,'evidence_tier':'Live deployment byte verification, not scientific independent validation'}
+                  Path('gate-live-verification.json').write_text(json.dumps(receipt,indent=2))
+                  print(json.dumps(receipt,indent=2))
+                  break
+              print('Deployment not yet matched:', failures, flush=True)
+              if attempt == 23:
+                  raise SystemExit('Live publication not verified')
+              time.sleep(10)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gate-check-act-live-verification
+          retention-days: 30
+          path: gate-live-verification.json
