@@ -1,0 +1,41 @@
+test_actor_cannot_mutate_retained_history (__main__.Tests.test_actor_cannot_mutate_retained_history) ... ok
+test_aggregate_counts_zero_lag (__main__.Tests.test_aggregate_counts_zero_lag) ... ok
+test_all_traces_audited (__main__.Tests.test_all_traces_audited) ... ok
+test_ambiguous_initial_histories_same_action (__main__.Tests.test_ambiguous_initial_histories_same_action) ... ok
+test_blocking_only_changes_effect_not_request (__main__.Tests.test_blocking_only_changes_effect_not_request) ... ok
+test_blocking_zero_unsafe_effects (__main__.Tests.test_blocking_zero_unsafe_effects) ... ok
+test_count (__main__.Tests.test_count) ... ok
+test_every_blocked_primary_completes (__main__.Tests.test_every_blocked_primary_completes) ... ok
+test_evidence_counter_mutation_rejected (__main__.Tests.test_evidence_counter_mutation_rejected) ... ok
+test_failure_not_free_efficiency (__main__.Tests.test_failure_not_free_efficiency) ... ok
+test_false_current_receipt_rejected (__main__.Tests.test_false_current_receipt_rejected) ... ok
+test_guard_ignore_epoch_mutation_rejected (__main__.Tests.test_guard_ignore_epoch_mutation_rejected) ... ok
+test_guard_ignore_permission_mutation_rejected (__main__.Tests.test_guard_ignore_permission_mutation_rejected) ... ok
+test_guard_zero_forbidden_requests_and_effects (__main__.Tests.test_guard_zero_forbidden_requests_and_effects) ... ok
+test_input_interface_not_cosmetic (__main__.Tests.test_input_interface_not_cosmetic) ... ok
+test_invalid_config (__main__.Tests.test_invalid_config) ... ok
+test_missing_blocked_request_rejected (__main__.Tests.test_missing_blocked_request_rejected) ... ok
+test_monotone_impossibility_and_bound (__main__.Tests.test_monotone_impossibility_and_bound) ... ok
+test_nonatomic_guard_witness_exists (__main__.Tests.test_nonatomic_guard_witness_exists) ... ok
+test_one_change_count (__main__.Tests.test_one_change_count) ... ok
+test_one_spare_tick_exact_formula (__main__.Tests.test_one_spare_tick_exact_formula) ... ok
+test_primary_solver_predictions_match_executions (__main__.Tests.test_primary_solver_predictions_match_executions) ... ok
+test_public_packet_has_no_actual_future_or_world_id (__main__.Tests.test_public_packet_has_no_actual_future_or_world_id) ... ok
+test_raw_can_use_regrant_after_change_budget_exhausted (__main__.Tests.test_raw_can_use_regrant_after_change_budget_exhausted) ... ok
+test_reordered_primary (__main__.Tests.test_reordered_primary) ... ok
+test_revoke_regrant_changes_epoch (__main__.Tests.test_revoke_regrant_changes_epoch) ... ok
+test_round_one_origin_hash_documented (__main__.Tests.test_round_one_origin_hash_documented) ... ok
+test_same_time_guard_control (__main__.Tests.test_same_time_guard_control) ... ok
+test_small_exact_policy_tree_enumeration (__main__.Tests.test_small_exact_policy_tree_enumeration) ... ok
+test_static_authority_positive_control (__main__.Tests.test_static_authority_positive_control) ... ok
+test_strict_action_validation (__main__.Tests.test_strict_action_validation) ... ok
+test_synthesized_is_safe (__main__.Tests.test_synthesized_is_safe) ... ok
+test_tight_deadline_disables_probe_advantage (__main__.Tests.test_tight_deadline_disables_probe_advantage) ... ok
+test_truncated_history_rejected (__main__.Tests.test_truncated_history_rejected) ... ok
+test_unauthorized_entry_not_a_legitimate_completion (__main__.Tests.test_unauthorized_entry_not_a_legitimate_completion) ... ok
+test_world_count (__main__.Tests.test_world_count) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.598s
+
+OK

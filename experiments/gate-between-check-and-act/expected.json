@@ -1,0 +1,9 @@
+{
+  "sha256": {
+    "results/frontier.csv": "83e4a9334873d8f1ff74d0dff1de342aecd0d2fdf0c7ffb2eca39c3fa827f77b",
+    "results/summary.json": "87c390a5f78bbb976f7dd64608b5509650446471dd73963c9abb6edae439630f",
+    "results/traces.jsonl.gz": "fbf1bedfca87e351a1d7ed42a5a5a3ffb2d6574c0086899d4b69fc732cb65189",
+    "results/witnesses.json": "2d0b3739b592b66a29a21fb2fdb626a2acb4354067fdfa6ca4d8da21ef8181a0"
+  },
+  "gzip_note": "Hash decompressed canonical JSONL; compression-library differences do not change the data."
+}

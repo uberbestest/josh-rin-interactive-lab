@@ -1,0 +1,22 @@
+{
+  "episodes": 13824,
+  "outputs": {
+    "frontier.csv": {
+      "bytes": 35608,
+      "sha256": "83e4a9334873d8f1ff74d0dff1de342aecd0d2fdf0c7ffb2eca39c3fa827f77b"
+    },
+    "summary.json": {
+      "bytes": 223019,
+      "sha256": "87c390a5f78bbb976f7dd64608b5509650446471dd73963c9abb6edae439630f"
+    },
+    "traces.jsonl.gz": {
+      "bytes": 108912,
+      "sha256": "04d2a1807e89473e6c64e5b1672961e4e76eaee265d9b3b889d70d87c180802d"
+    },
+    "witnesses.json": {
+      "bytes": 5144,
+      "sha256": "2d0b3739b592b66a29a21fb2fdb626a2acb4354067fdfa6ca4d8da21ef8181a0"
+    }
+  },
+  "panels": 1050
+}

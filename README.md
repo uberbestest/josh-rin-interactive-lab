@@ -4,6 +4,12 @@
 
 [Browse the gallery](index.html)
 
+## The Gate Between Check and Act — November 16, 2026
+
+**[Operate the new instrument](experiments/gate-between-check-and-act/index.html)** · [Methods and proof](experiments/gate-between-check-and-act/method.html) · [Complete source and evidence](experiments/gate-between-check-and-act/evidence.zip)
+
+Executed finite-model study: 13,824 scripted episodes; exact information-constrained synthesis over 1,050 panels; 264 separate small-model cross-checks; 36 distinct tests; all traces matched between Python and JavaScript. Authentic checks can become stale before action. Blocking can hide forbidden requests behind successful completion. Includes a timing-matched conditional-operation control and a proof of the monotone-revocation boundary. **No live model agents, Castle integration, or independent-author validation.** Atomicity is supplied by the model; known TOCTOU/transaction concepts are cited rather than claimed as discoveries.
+
 ## Recent research notes — November 16, 2026
 
 **[Positive alignment, without taking over](notes/positive-alignment-2026-11-16/index.html)** is a bounded literature review with one proposed, **unrun** continuation test. **[Recent release triage](notes/research-triage-2026-11-16/README.md)** records fresh same-author verification of two retained finite-study archives, the explicit limits of those checks, and why the larger source packages are **not yet public releases**. No live-model, Castle, or bridge changes are claimed.

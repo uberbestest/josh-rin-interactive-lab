@@ -1,0 +1,17 @@
+{
+  "baseline_byte_reproduced": true,
+  "baseline_tests": 16,
+  "cross_language_full_trace_matches": 13824,
+  "damaged_transcript_classes_rejected": 6,
+  "evidence_tier": "same-author offline synthetic checks; not independent validation",
+  "full_grid_reverse_equal": true,
+  "normal_tests": 36,
+  "optimized_tests": 36,
+  "platform": "Linux-7.0.0-1014-aws-x86_64-with-glibc2.39",
+  "primary_episodes": 13824,
+  "python": "3.13.18",
+  "reference_enumeration_panels": 264,
+  "status": "PASS",
+  "synthesis_panels": 1050,
+  "tests_distinct": 36
+}

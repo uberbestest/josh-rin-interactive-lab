@@ -1,0 +1,91 @@
+{
+  "record": "BONDED-RSI-GATE-BETWEEN-CHECK-AND-ACT-2026-11-16-002",
+  "version": "1.0.0",
+  "status": "locally frozen design; not externally preregistered",
+  "question": "When authority can change after an authentic read, which safe/efficient outcomes are achievable with raw entry versus a version-bound conditional entry interface?",
+  "initial_state": "Granted at tick 0, revision 0; first decision at tick 1.",
+  "primary": {
+    "horizon": 8,
+    "main_duration": 4,
+    "lags": [
+      0,
+      1,
+      2
+    ],
+    "maximum_changes": 8,
+    "enforcement": [
+      "block",
+      "observe"
+    ],
+    "policies": [
+      "always_main",
+      "trust_initial",
+      "inspect_once",
+      "inspect_twice",
+      "inspect_guard",
+      "atomic_once",
+      "atomic_refresh",
+      "belief_raw",
+      "belief_guard"
+    ]
+  },
+  "synthesis_grid": {
+    "horizons": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "main_durations": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "lags": [
+      0,
+      1,
+      2
+    ],
+    "maximum_changes": "distinct values in [0,1,2,horizon]",
+    "interfaces": [
+      "raw",
+      "guard"
+    ]
+  },
+  "schedule_measure": "Equal weight on all binary schedules satisfying the panel's declared maximum number of changes; design measure, not an empirical probability.",
+  "synthesis_objective": "Zero raw requests made when permission is false on every consistent schedule; maximize number of on-time legitimate completions, then minimize summed terminal tick. Noncompletion has terminal penalty horizon+1.",
+  "actions": {
+    "inspect": "At tick t read authentic snapshot max(0,t-lag); deliver it for decision t+1.",
+    "raw": "Request side entry at t. Permission judged at t; optional blocking changes effect, never erases the raw request.",
+    "guard": "An explicitly permitted conditional request: atomically enter iff permission at t is granted and revision equals supplied previously received grant revision. Otherwise no side effect and deliver conflict at t+1.",
+    "main": "Always permitted; completes at t+main_duration-1 if within horizon.",
+    "wait": "Advance one tick.",
+    "stop": "No completion."
+  },
+  "guard_scope": "Atomicity, authentic snapshots, shared authority/effect state and non-forgeable receipts are stipulated. This is not a distributed implementation.",
+  "controls": [
+    "round-one byte reproduction",
+    "normal/optimized Python",
+    "forward/reverse schedule enumeration",
+    "separate tuple-based exhaustive solver on small panels",
+    "mutation witnesses",
+    "browser/Python parity",
+    "blocked-versus-observed paired traces"
+  ],
+  "nonclaims": [
+    "No live language models",
+    "No Castle integration",
+    "No new discovery of TOCTOU or transactions",
+    "No independent-author replication",
+    "No inferred motives or human-welfare measurement"
+  ],
+  "round_one_archive_sha256": "56fbd00ab661f17d8fdb2f45d6160b9619ef63b796a9c339b275ebfeb5ed0c28",
+  "design_amendment": "After initial local analysis, add inspect_guard as a ninth timing-matched control: identical read and action times to inspect_once, different raw versus conditional request semantics. Original design and freeze hash retained; neither design is externally preregistered."
+}

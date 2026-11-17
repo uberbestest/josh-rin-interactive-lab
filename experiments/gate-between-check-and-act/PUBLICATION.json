@@ -1,0 +1,34 @@
+{
+  "browser_checks": 70,
+  "browser_transport": "HTTP",
+  "limits": [
+    "No live model trials",
+    "No Castle or bridge changes",
+    "No independent-author replication",
+    "Atomic conditional operation is a supplied contract, not a distributed implementation"
+  ],
+  "live_pages": "Separate HTTP verification required; this record does not claim it.",
+  "manifest_sha256": "8fa183f2e1871081a743f52d38e8c9aa9fa7b163bf250a585b6ef78c85de9220",
+  "record": "BONDED-RSI-GATE-BETWEEN-CHECK-AND-ACT-2026-11-16-002",
+  "repository_publication": "Established by containing Git commit, not by this artifact receipt.",
+  "source_commit": "ca3a931b96576d0d224a7b1ba8b48549455cae48",
+  "status": "VERIFIED_RELEASE_ARTIFACT",
+  "verification": {
+    "baseline_byte_reproduced": true,
+    "baseline_tests": 16,
+    "cross_language_full_trace_matches": 13824,
+    "damaged_transcript_classes_rejected": 6,
+    "evidence_tier": "same-author offline synthetic checks; not independent validation",
+    "full_grid_reverse_equal": true,
+    "normal_tests": 36,
+    "optimized_tests": 36,
+    "platform": "Linux-7.0.0-1014-aws-x86_64-with-glibc2.39",
+    "primary_episodes": 13824,
+    "python": "3.13.18",
+    "reference_enumeration_panels": 264,
+    "status": "PASS",
+    "synthesis_panels": 1050,
+    "tests_distinct": 36
+  },
+  "version": "1.0.0"
+}

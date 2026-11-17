@@ -1,0 +1,9 @@
+{
+  "status": "RERUN_AND_BYTE_MATCHED",
+  "original_archive_sha256": "56fbd00ab661f17d8fdb2f45d6160b9619ef63b796a9c339b275ebfeb5ed0c28",
+  "source_sha256": "0a35b5fa708bab8d23459960f41f3c03beee39ea9b3d237cc593365b0c3020c4",
+  "results_sha256": "d7b96a056cbbf46f70b3292cf5c14aeb5ad18cc71f4c4a78fec5336d0d94b4d1",
+  "tests": 16,
+  "episodes": 224,
+  "scope": "Historical static baseline, preserved unmodified. No Quiet Gate or private source bundle included."
+}

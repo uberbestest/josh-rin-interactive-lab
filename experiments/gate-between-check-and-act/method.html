@@ -1,0 +1,153 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Methods &amp; proof · The Gate Between Check and Act</title><style>
+:root{--bg:#f6f5ef;--panel:#fffefa;--ink:#162b2c;--muted:#566b69;--line:#cbd5cd;--accent:#126d60;--soft:#e3eee6;--warn:#974c24;--bad:#9b3442;--tag:#f4e6d3;--code:#edf1ec;color-scheme:light}html[data-theme=dark]{--bg:#101a21;--panel:#182831;--ink:#edf3e9;--muted:#b1c4c4;--line:#3a5057;--accent:#a5e1c9;--soft:#203b3d;--warn:#f4c07c;--bad:#ffadb2;--tag:#40352a;--code:#22333c;color-scheme:dark}@media(prefers-color-scheme:dark){html:not([data-theme=light]){--bg:#101a21;--panel:#182831;--ink:#edf3e9;--muted:#b1c4c4;--line:#3a5057;--accent:#a5e1c9;--soft:#203b3d;--warn:#f4c07c;--bad:#ffadb2;--tag:#40352a;--code:#22333c;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--accent);text-underline-offset:4px}button,select{font:inherit}button,select,.button{border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--ink);padding:9px 13px}button{cursor:pointer}button:hover,.button:hover{border-color:var(--accent)}a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.wrap{max-width:1100px;margin:auto;padding-inline:26px}nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-block:22px;border-bottom:1px solid var(--line)}nav a{text-decoration:none;font-weight:700}.small{font-size:.85rem;color:var(--muted)}.eyebrow{font:650 .75rem/1.4 ui-monospace,Consolas,monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}header{padding:62px 0 32px}h1{font:500 clamp(2.7rem,6vw,4.9rem)/1.06 Georgia,serif;letter-spacing:-.035em;max-width:830px;margin:19px 0 26px}h1 em{color:var(--accent);font-style:normal}.lede{font-size:1.23rem;line-height:1.65;max-width:780px;color:var(--muted)}.status{display:inline-block;padding:8px 13px;background:var(--tag);color:var(--warn);font-size:.8rem;border-radius:5px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);margin:25px 0 40px;padding:24px 0;gap:18px}.metrics b{font:500 2rem/1.3 Georgia,serif;display:block}.metrics span{font-size:.8rem;color:var(--muted)}section{padding:22px 0 42px;border-bottom:1px solid var(--line)}h2{font:500 clamp(1.8rem,3.8vw,2.5rem)/1.2 Georgia,serif;margin:12px 0 19px;letter-spacing:-.02em}h3{font-size:1.1rem}.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}.panel{padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}.callout{padding:21px 24px;background:var(--soft);border-left:4px solid var(--accent);border-radius:4px;margin:23px 0}.callout p{margin:0}.controls{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px}.controls label,.frontier label{display:flex;flex-direction:column;font-size:.83rem;gap:7px;color:var(--muted)}select{width:100%;min-width:0}.presets{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.presets button{font-size:.8rem}.ticks{display:grid;grid-template-columns:repeat(8,1fr);gap:9px;margin:16px 0 8px}.ticks button{padding:12px 2px}.ticks b,.ticks span{display:block}.ticks span{font-size:.7rem}.ticks [aria-pressed=true]{background:var(--soft);border-color:var(--accent)}.ticks [aria-pressed=false]{background:var(--tag);color:var(--warn)}.results{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:23px 0}.result{background:var(--code);border-radius:7px;padding:13px}.result b{display:block;font-size:1.3rem}.result span{font-size:.72rem;color:var(--muted)}.bad{color:var(--bad)}.good{color:var(--accent)}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:.84rem;text-align:left}th,td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{font-weight:650;color:var(--muted)}td small{color:var(--muted)}#trace{min-width:660px}.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:22px 0}.button{display:inline-block;text-decoration:none;font-weight:600}.primary{background:var(--accent);color:var(--bg)}.frontier{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.formula{font:1.02rem/1.7 ui-monospace,Consolas,monospace;background:var(--code);padding:18px 20px;overflow:auto;border-radius:7px}.proof{max-width:800px}details{padding:14px 0}summary{cursor:pointer;font-weight:650}code{font-size:.85em;background:var(--code);padding:2px 4px;border-radius:3px;overflow-wrap:anywhere}footer{padding:34px 0 55px;color:var(--muted)}.footerlinks{display:flex;gap:20px;flex-wrap:wrap}.hide{display:none}
+@media(max-width:700px){.wrap{padding-inline:18px}header{padding-top:35px}.cols,.controls{grid-template-columns:1fr}.metrics,.results{grid-template-columns:repeat(2,1fr)}.ticks{gap:4px}.ticks span{font-size:.6rem}.frontier{grid-template-columns:repeat(2,1fr)}.panel{padding:17px}.lede{font-size:1.08rem}nav{align-items:flex-start}.metrics b{font-size:1.7rem}}
+main{max-width:900px;margin:auto;padding:35px 26px 70px}main h1{font-size:3rem}main h2{margin-top:50px}pre{overflow:auto;background:var(--code);padding:17px}pre code{padding:0}li{margin-bottom:12px}main td,main th{min-width:100px}</style></head><body><main><nav><a href="index.html">← Interactive instrument</a><a href="evidence.zip">Source &amp; evidence</a></nav><h1>The Gate Between Check and Act</h1>
+<p><strong>Josh &amp; Rin's Lab · Bonded RSI round two · November 16, 2026 · v1.0.0</strong><br />
+Record: <code>BONDED-RSI-GATE-BETWEEN-CHECK-AND-ACT-2026-11-16-002</code></p>
+<p><strong>Executed finite-model study. No language-model participants, Castle adapter, training, or independent-author validation.</strong></p>
+<p><a href="index.html">Interactive instrument</a> · <a href="method.html">Typeset methods</a> · <a href="evidence.zip">Complete evidence</a> · <a href="results/summary.json">All result cells</a> · <a href="results/traces.jsonl.gz">Full traces</a></p>
+<h2>Abstract</h2>
+<p>A correct permission check is not necessarily a correct permission at execution. We extend the prior static <em>Keep the Destination, Revise the Route</em> contrast with changing authority, delayed authentic observations, deadlines, and an explicitly version-bound conditional operation. The contribution is an executable evaluator and an exact information-constrained controller baseline, not discovery of time-of-check/time-of-use races or atomic transactions.</p>
+<p>We execute nine authored controllers over all 256 eight-tick permission histories, three snapshot lags, and two raw-entry enforcement modes: <strong>13,824 scripted episodes</strong>. In the zero-additional-lag panel, reading once and reading twice each produce forbidden raw requests in <strong>64/256 histories</strong>. Backend blocking prevents all forbidden effects and allows all those episodes to finish legitimately. A completion-only or effect-only score cannot distinguish those request records from the safe controls.</p>
+<p>Exact synthesis solves <strong>1,050 finite parameter panels</strong> under a hard zero-forbidden-request constraint. A separately written attainable-value enumerator agrees on <strong>264 smaller panels</strong>. Under the unrestricted eight-tick panel, the optimal raw-only controller takes the four-tick main route; adding the stipulated atomic conditional operation lowers the equal-weight mean completion tick to <strong>3</strong>, with completion and safety preserved. This is an interface comparison, not evidence of a more capable model.</p>
+<p>We prove a narrower general result for at most one revocation: when the main route cannot meet the deadline, zero-risk raw-only completion is impossible, while a permitted atomic conditional request completes in H of the H+1 equally weighted histories. When the deadline equals the main-route duration, guaranteeing completion requires immediate use of that route. With one spare tick, the optimal conditional mean is <strong>1 + K/(H+1)</strong>. The result turns an apparent “be more careful” failure into an explicit information and interface boundary.</p>
+<h2>1. Lineage and deliberate change of question</h2>
+<p>The earlier round-one archive had 224 scripted episodes and 16 tests. It separated forged or authentic claims, forbidden attempts, blocked effects, legitimate completion, and fallback cost. We reopened the actual archive and reproduced its output byte-for-byte before authoring this extension. Its source is preserved unmodified in <code>baseline/study.py</code>; <code>baseline/reproduction.json</code> records archive and output hashes. The Quiet Gate archive was not republished or modified.</p>
+<p>Round one explicitly did <strong>not</strong> establish that an inspected registry remained current or that permission could change mid-execution. Those exclusions are the variables here. We add temporal ambiguity inside a finite simulator, then compute the achievable safe/completion boundary rather than only demonstrating that selected scripts fail.</p>
+<p>The original local design is retained as <code>protocol-initial.json</code> and <code>design-freeze.json</code>. It was <strong>not externally preregistered</strong>. After initial analysis, we added a ninth, timing-matched controller: <code>inspect_guard</code>. <code>DEVELOPMENT.md</code> and the retained failed test log explain that amendment and a corrected overly broad path-equivalence assertion. No numerical result was changed to satisfy that assertion.</p>
+<h2>2. Task, timeline, observations, and requests</h2>
+<p>At tick 0, permission is granted and its revision is 0. The first decision occurs at tick 1. A history is a binary sequence of granted/revoked permission at ticks 1 through H. Every transition increments the revision; revoked-and-regranted permission is therefore not the original grant. Histories are fixed exogenously before execution, not changed in response to a particular policy.</p>
+<p>A public panel declares horizon H, main-route duration K, maximum number of permission changes B, and snapshot lag L. The actor knows these rules but <strong>not</strong> which history was realized. The primary panel uses H=8, K=4, B=8 and L in {0,1,2}. Synthesis ranges H=2…10, K=2…6, L=0…2, distinct B values in {0,1,2,H}, and two action interfaces.</p>
+<ul>
+<li><strong>Inspect.</strong> An action at tick t samples the genuine registry at <code>max(0,t−L)</code>. Its timestamp, grant bit and revision are delivered for the decision at t+1. Even L=0 does not collapse reading and acting into one operation.</li>
+<li><strong>Raw entry.</strong> A request at t is forbidden exactly when permission at t is revoked. Under <code>block</code>, the backend prevents the side effect. Under <code>observe</code>, the side entry occurs anyway and is marked unauthorized. A later successful fallback does not erase the request.</li>
+<li><strong>Conditional entry.</strong> This request is explicitly permitted: atomically enter only if current permission is granted <strong>and</strong> its revision equals the supplied previously received grant revision. Otherwise return conflict with no entry effect. A rejected conditional request is not a raw request to enter despite revocation.</li>
+<li><strong>Main route.</strong> Always permitted; it completes at t+K−1 if that is within the horizon. Its duration is a toy cost, not a measured Castle distance or network latency.</li>
+<li><strong>Wait or stop.</strong> Wait advances one tick. Stop does not complete the objective.</li>
+</ul>
+<p>A rejected conditional request does not reveal whether permission is currently revoked or a new grant revision exists. Inspecting can disambiguate. The actor retains the last valid grant token. Older tokens cannot become useful again once a newer valid revision is observed, because revisions never decrease.</p>
+<p><strong>Boundary:</strong> the atomic operation is a supplied environment capability. Authentic receipts, version monotonicity, a single shared authority/effect state and correctly implemented atomicity are assumptions. We do not implement a distributed lock, cryptographic issuer or production authorization service. “Observe” disables only the independent raw-entry blocker; it does not break the declared semantics of conditional entry.</p>
+<h2>3. Policies and the timing-matched control</h2>
+<p>Seven scripts cover always-main, trusting the initial permit, inspecting once, inspecting twice, inspecting once then using conditional entry, conditional entry then main, and conditional entry followed by refresh/retry. Two further controllers are synthesized optimally, with and without access to conditional entry. A script's success follows from its code and the authored world, not a learned capability.</p>
+<p><code>inspect_once</code> and <code>inspect_guard</code> perform identical initial reads and make their next request at the same tick. In a world where the raw request is forbidden and blocked, they have identical effects and terminal times: one records a forbidden raw request, the other a permitted conditional rejection. This isolates <strong>action-contract semantics</strong>, rather than relying on <code>atomic_once</code> acting before a later revocation.</p>
+<p>The equality does not extend to all worlds. If permission has been revoked and regranted, raw entry may be valid under the current-permission rule while an old version-bound request rejects. The conditional contract is intentionally stricter. Our first test incorrectly required all blocked-world paths to match; it failed on this ABA distinction. The corrected assertion is limited to forbidden-raw-request cases. The failed log remains in the distribution.</p>
+<h2>4. Primary findings</h2>
+<p>The following is the L=0, blocking-enforcement panel. Every row contains the same 256 histories.</p>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Controller</th>
+<th style="text-align:right">Legitimate completions</th>
+<th style="text-align:right">Forbidden raw requests</th>
+<th style="text-align:right">Forbidden effects</th>
+<th style="text-align:right">Mean terminal tick</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Always main</td>
+<td style="text-align:right">256</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">4.0</td>
+</tr>
+<tr>
+<td>Trust initial permit</td>
+<td style="text-align:right">256</td>
+<td style="text-align:right">128</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">3.0</td>
+</tr>
+<tr>
+<td>Inspect once → raw</td>
+<td style="text-align:right">256</td>
+<td style="text-align:right">64</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">4.5</td>
+</tr>
+<tr>
+<td>Inspect twice → raw</td>
+<td style="text-align:right">256</td>
+<td style="text-align:right">64</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">5.5</td>
+</tr>
+<tr>
+<td>Inspect once → conditional</td>
+<td style="text-align:right">256</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">4.5</td>
+</tr>
+<tr>
+<td>Conditional once → main</td>
+<td style="text-align:right">256</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">3.0</td>
+</tr>
+<tr>
+<td>Conditional, refresh, retry</td>
+<td style="text-align:right">256</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">3.25</td>
+</tr>
+<tr>
+<td>Synthesized optimum, raw only</td>
+<td style="text-align:right">256</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">4.0</td>
+</tr>
+<tr>
+<td>Synthesized optimum, conditional available</td>
+<td style="text-align:right">256</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">3.0</td>
+</tr>
+</tbody>
+</table></div>
+<p>The outcome-only score ties every controller on legitimate completion and forbidden effects. The event record distinguishes them. With raw enforcement switched to observe-only, the 64 forbidden requests of each inspection script become 64 unauthorized effects; physical arrival remains common, but legitimate completion falls to 192/256.</p>
+<p><strong>Checking again is not a general cure.</strong> Under unrestricted binary histories, a new revocation may occur in the last gap after either one or two reads. The second read raises mean terminal time without reducing the zero-lag forbidden-request count. Additional snapshot lag changes the counts: inspect-once has 64,128,128 forbidden requests for L=0,1,2; inspect-twice has 64,64,128. These are exact design counts, not measured real-world rates.</p>
+<p><strong>Attribution limit:</strong> a forbidden raw request is an externally judged action-time property. It does not prove the actor received the revocation, ignored it knowingly, intended a violation, or would act the same way with another interface. Truth, delivered information and request semantics must remain separate.</p>
+<h2>5. Exact synthesis, rather than a hindsight oracle</h2>
+<p>The solver's state is <code>(t, belief, last_valid_token)</code>. Belief is the set of complete histories compatible with the actual observations delivered so far. It is not the realized history. Inspections partition this set by returned receipt; failed conditional requests remove histories that would have admitted them.</p>
+<p>A raw request is an admissible zero-risk choice only if <strong>every</strong> history in the current belief grants permission at its execution tick. A conditional request is allowed by contract; admission and conflict form separate continuation branches. Main-route feasibility is checked against the deadline. This yields an acyclic, finite observation-tree dynamic program.</p>
+<p>Each continuation has value <code>(number_of_legitimate_completions, summed_terminal_tick)</code>. We maximize the first component, then minimize the second. A failed world has terminal penalty H+1; doing nothing is not rewarded as cheap efficiency. Equal weighting is declared over finite histories, not fitted from deployment data. Tie-breaking among equal-valued actions is fixed but has no substantive optimality meaning.</p>
+<p>The state is sufficient because future permission is exogenous, all information about it is captured by belief, action availability depends on time and the retained valid token, and revisions never decrease. Backward induction therefore optimizes over all deterministic observation-based controllers <strong>in this model and action class</strong>. Random mixtures cannot improve the lexicographic linear objective under a zero-risk requirement on each consistent history. These claims do not cover unmodeled actions, channels, authority rules or costs.</p>
+<p>The 1,050 panels report complete numerators, denominators, exact rational mean times, selected first actions and solved information-state counts. A separate implementation enumerates attainable completion/time pairs by combining every child value, using direct tuple histories rather than optimized bit masks. It agrees on all 264 smaller panels. This is a same-author implementation cross-check, not independent-author review.</p>
+<h2 id="proof">6. Proof: the monotone-revocation boundary</h2>
+<p>Let initial permission be valid, let at most one revocation occur, and allow it at any tick 1…H or never. No later regrant occurs. Reads at earlier ticks cannot reveal a revocation at the next execution tick. The zero-risk requirement concerns forbidden <strong>raw requests</strong>, not only effects.</p>
+<p><strong>Lemma.</strong> A zero-risk raw-only controller cannot use the side route on the never-revoked history.</p>
+<p><em>Proof.</em> Suppose it first uses raw entry at tick t on that history. Consider instead the history revoking exactly at t. Every inspection or wait before t yields the same observation in both histories. The controller therefore makes the same raw request, which is forbidden in the second history. Contradiction. A random controller with positive probability of a first raw request at t gives the corresponding revocation history positive violation probability and likewise cannot guarantee zero risk. ∎</p>
+<p>An actual revocation cannot create a new safe shortcut under monotonicity. Consequently, if H&lt;K, zero-risk raw-only on-time completion is <strong>0</strong>, even in the never-revoked world. With an atomic conditional request at tick 1, exactly the immediate-revocation history fails; the other H histories complete. Thus the attainable completion fraction is <strong>H/(H+1)</strong> under equal weighting. This is optimal: the immediate-revocation history has no valid shortcut and the main route is too long.</p>
+<p>If H=K, guaranteeing completion in the immediate-revocation history requires starting main at tick 1. The same initial observation occurs in every history, so all guaranteed-completion controllers must do that. Mean terminal tick is K.</p>
+<p>If H≥K+1 and K≥2, request conditional entry at tick 1 and take main after a conflict. H histories finish at tick 1; one finishes at tick K+1. Mean terminal tick is <code>(H + K + 1)/(H+1) = 1 + K/(H+1)</code>. No history can finish before 1, and the immediate-revocation history requires K main-route ticks after a failed first probe. Starting main immediately instead yields K and is worse under these assumptions. The bound is therefore attained and optimal.</p>
+<p>An atomic operation, a valid lease guaranteeing permission through execution, or another authenticated execution-time guarantee changes the premises. Faster polling alone does not remove the last unobserved interval.</p>
+<h2>7. Reproduction and falsification</h2>
+<p>Python 3.10+ and Node.js reproduce the science; no paid API or third-party Python package is needed for the engine/tests. The optional browser smoke harness uses Playwright and Chromium.</p>
+<pre><code class="language-sh">python study.py --out results
+python verify.py
+python -O verify.py
+node parity.js
+</code></pre>
+<p>The suite contains <strong>36 distinct tests</strong>, run in normal and optimized Python. The same suite in two modes is not 72 independent checks. Every primary transcript is re-adjudicated by a separate auditor. Six damaged transcript classes are rejected: erased request count, deleted blocked event, falsified snapshot freshness, guard admission without permission, guard admission with an old epoch, and truncated nonterminal history. A separate witness shows why implementing a supposed guard as a read followed by a later effect breaks its promise.</p>
+<p>Python and JavaScript match all fields of all <strong>13,824</strong> event-level traces. Forward and reverse history enumeration reproduce the primary corpus and all 1,050 synthesis answers. Release records distinguish local execution, hosted reproduction, repository publication and live-site verification. Hashes establish byte identity, not truth or independent validation.</p>
+<p>An external agent can use <code>simulate(..., actor=callback)</code>. The callback receives only the public packet and returns a declared action. It cannot edit retained history. This seam is available for future experiments; <strong>no external agent or Castle adapter was used</strong>.</p>
+<h2>8. Scope and practical implication</h2>
+<p>The claim is not “agents are unsafe” or “conditional tools solve alignment.” An evaluator that cannot distinguish what was received, what was requested, what contract governed execution, and what changed can mistake containment for respect—or blame a controller for knowledge the interface could not provide.</p>
+<p>This project adds an executable benchmark, exact safe-controller baselines and explicit impossibility/feasibility boundaries. A useful external check would hold an actual model and task constant while varying raw versus conditional tool semantics and recording attempted and effected actions. That would be new evidence. The synthetic scripts do not already supply it.</p>
+<h2 id="sources">9. Prior systems work and source lineage</h2>
+<ul>
+<li><strong>MITRE CWE-367</strong>, <a href="https://cwe.mitre.org/data/definitions/367.html">Time-of-check Time-of-use Race Condition</a>. The check–use gap is established terminology, not a discovery here.</li>
+<li><strong>etcd official API documentation</strong>, <a href="https://etcd.io/docs/v3.7/learning/api/">Transactions</a>. Atomic conditional operations and revision comparisons are existing primitives. Our guard is a modeled instance, not an etcd implementation or performance result.</li>
+<li><strong>Pang et al., 2019</strong>, <a href="https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/">Zanzibar: Google's Consistent, Global Authorization System</a>. Authorization amid changing access-control state is an established distributed-systems concern. We do not reproduce Zanzibar's architecture or guarantees.</li>
+<li><strong>Josh &amp; Rin, November 16, 2026</strong>, <em>Keep the Destination, Revise the Route</em>, exact source in <code>baseline/study.py</code>. Original archive SHA-256: <code>56fbd00ab661f17d8fdb2f45d6160b9619ef63b796a9c339b275ebfeb5ed0c28</code>.</li>
+<li><strong>Josh &amp; Rin</strong>, <a href="../../notes/positive-alignment-2026-11-16/index.html">Positive alignment, without taking over</a>. Motivation for useful correctability, not validation of the present engine or evidence about human flourishing.</li>
+</ul>
+<p>Public access does not introduce a new license for the collected lab work. No private continuity, credentials, personal correspondence, health details or operational relay files are included.</p>
+<p><em>Keep the destination. Bind the permission to the action. Keep the failed check.</em></p>
+</main></body></html>
