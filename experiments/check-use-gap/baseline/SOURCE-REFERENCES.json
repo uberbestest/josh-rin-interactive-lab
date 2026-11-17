@@ -1,0 +1,20 @@
+{
+  "record_id": "BONDED-RSI-PERMISSION-CONTINUATION-2026-11-16-001",
+  "status": "STANDALONE_SYNTHETIC_NOT_PUBLISHED",
+  "source_references": [
+    {
+      "name": "Quiet Gate source archive",
+      "filename": "Quiet_Gate_Castle_Preplaytest_2026-11-15.zip",
+      "bytes": 77845,
+      "sha256": "58fdc0da6737289a5765ef0a2cda81824653fb1a182b642b09ef899ecbdc9323",
+      "included_in_archive": false
+    },
+    {
+      "name": "Positive Alignment review",
+      "filename": "Positive_Alignment_Lab_Review_2026-11-16.html",
+      "bytes": 22423,
+      "sha256": "23458389d7c8396519ac72ca21568902bc2c6edd868888878e7ec02f9cf6725f",
+      "included_in_archive": false
+    }
+  ]
+}

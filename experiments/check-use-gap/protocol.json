@@ -1,0 +1,83 @@
+{
+  "record": "BONDED-RSI-CHECK-USE-GAP-2026-11-16-002",
+  "title": "The Check That Arrived Too Early",
+  "version": "1.0.0",
+  "study_date": "2026-11-16 America/New_York",
+  "publication_date_utc": "2026-11-17",
+  "status": "EXECUTED_FINITE_GAME_AND_POLICY_SYNTHESIS",
+  "preregistered": false,
+  "design_note": "Protocol documented during development; results are exhaustive within declared finite model, not a prospective live-agent test.",
+  "predecessor": {
+    "record": "BONDED-RSI-PERMISSION-CONTINUATION-2026-11-16-001",
+    "archive_sha256": "56fbd00ab661f17d8fdb2f45d6160b9619ef63b796a9c339b275ebfeb5ed0c28",
+    "results_sha256": "d7b96a056cbbf46f70b3292cf5c14aeb5ad18cc71f4c4a78fec5336d0d94b4d1",
+    "episodes": 224,
+    "tests": 16
+  },
+  "primary_grid": {
+    "horizon": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "switch_cap": "all integers 0..horizon",
+    "main_cost": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "initial_permission": [
+      0,
+      1
+    ],
+    "interfaces": [
+      "snapshot",
+      "compare",
+      "atomic"
+    ]
+  },
+  "worlds": "All binary authority histories a[0..H] with known a[0] and at most K transitions. Every transition increments a monotonic version; versions do not wrap. Target, scope, principal and operation are fixed.",
+  "observation": "Initial authentic snapshot (a[0],0). Inspect consumes one tick and returns authentic, current (a[t+1],version[t+1]); no permission lease. Silence does not announce changes. A rejected conditional or compare request returns only denied.",
+  "actions": {
+    "raw": "one tick; unconditional side request forbidden if a[t+1]=0; admitted only when valid in optimal-policy simulator",
+    "inspect": "one tick; updates observed bit and version",
+    "main": "M ticks; always authorized; action unavailable when it cannot finish by H",
+    "wait": "one tick; no observation",
+    "stop": "zero additional ticks, no completion",
+    "compare": "one tick, authorized conditional request; execution iff current grant is valid and current version equals last inspected token; compare and execute atomic",
+    "conditional": "one tick, authorized request; execution iff current grant valid; check and execution atomic"
+  },
+  "objective_order": [
+    "zero forbidden unconditional attempts on every compatible schedule",
+    "maximize completed schedules, with each designed schedule counted once per cell",
+    "minimize sum of ticks spent over all schedules, including failures",
+    "tie-break raw, conditional, compare, main, inspect, wait, stop"
+  ],
+  "feasibility_reference": "Clairvoyant physical bound: main_cost <= H OR any a[1..H]=1. Not a fair obligation for an agent without the same interface/information.",
+  "proof_method": "Exact belief-state Bellman recursion; compact machine-checkable certificates of all admissible action values; standalone checker reconstructs worlds from transition-time combinations.",
+  "cross_checks": [
+    "Independent implementation in JavaScript, same author, all cells and replays",
+    "Explicit contingent policy-tree score enumeration for all H<=3 cells",
+    "Full reverse case/action enumeration and a different PYTHONHASHSEED",
+    "Unit tests in ordinary and optimized Python",
+    "Authored gateway and reporting faults, including safe but useless refusal"
+  ],
+  "limits": [
+    "Zero live models or human subjects",
+    "Known switch cap is supplied; not learned",
+    "Authenticity and versions stipulated, not cryptographically implemented",
+    "No network delay, alternate endpoint, target substitution, crashes, or malicious registry",
+    "Atomicity is a declared trusted interface guarantee; mutants deliberately break it",
+    "Hard forbidden-attempt rule is task-specific, not a universal rule that denied API calls are misconduct",
+    "No Castle, bridge, automation, credential or model changes",
+    "Same-author checks, not independent external validation",
+    "No novelty claim for TOCTOU, belief-state planning or shielding",
+    "Designed overlapping families are not independent observations or empirical failure rates"
+  ]
+}

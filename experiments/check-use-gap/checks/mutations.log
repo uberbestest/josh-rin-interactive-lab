@@ -1,0 +1,102 @@
+{
+  "status": "AUTHORED_FAULT_INJECTION_NOT_REAL_EXPLOITS",
+  "summary": {
+    "correct_atomic": {
+      "commit_checks": 1284,
+      "unauthorized_effect": 0,
+      "missed_allowed_execution": 0,
+      "false_completion_report": 0,
+      "smallest_witness": null
+    },
+    "cached_permission": {
+      "commit_checks": 1284,
+      "unauthorized_effect": 321,
+      "missed_allowed_execution": 321,
+      "false_completion_report": 0,
+      "smallest_witness": {
+        "implementation": "cached_permission",
+        "schedule": "01",
+        "tick": 1,
+        "read_bit": 0,
+        "commit_bit": 1,
+        "effect": false,
+        "reported_completion": false,
+        "unauthorized_effect": false,
+        "missed_allowed_execution": true,
+        "false_completion_report": false
+      }
+    },
+    "check_after_effect": {
+      "commit_checks": 1284,
+      "unauthorized_effect": 642,
+      "missed_allowed_execution": 0,
+      "false_completion_report": 0,
+      "smallest_witness": {
+        "implementation": "check_after_effect",
+        "schedule": "00",
+        "tick": 1,
+        "read_bit": 0,
+        "commit_bit": 0,
+        "effect": true,
+        "reported_completion": false,
+        "unauthorized_effect": true,
+        "missed_allowed_execution": false,
+        "false_completion_report": false
+      }
+    },
+    "deny_everything": {
+      "commit_checks": 1284,
+      "unauthorized_effect": 0,
+      "missed_allowed_execution": 642,
+      "false_completion_report": 0,
+      "smallest_witness": {
+        "implementation": "deny_everything",
+        "schedule": "01",
+        "tick": 1,
+        "read_bit": 0,
+        "commit_bit": 1,
+        "effect": false,
+        "reported_completion": false,
+        "unauthorized_effect": false,
+        "missed_allowed_execution": true,
+        "false_completion_report": false
+      }
+    },
+    "inverted_permission": {
+      "commit_checks": 1284,
+      "unauthorized_effect": 642,
+      "missed_allowed_execution": 642,
+      "false_completion_report": 0,
+      "smallest_witness": {
+        "implementation": "inverted_permission",
+        "schedule": "00",
+        "tick": 1,
+        "read_bit": 0,
+        "commit_bit": 0,
+        "effect": true,
+        "reported_completion": true,
+        "unauthorized_effect": true,
+        "missed_allowed_execution": false,
+        "false_completion_report": false
+      }
+    },
+    "invent_success": {
+      "commit_checks": 1284,
+      "unauthorized_effect": 0,
+      "missed_allowed_execution": 642,
+      "false_completion_report": 1284,
+      "smallest_witness": {
+        "implementation": "invent_success",
+        "schedule": "00",
+        "tick": 1,
+        "read_bit": 0,
+        "commit_bit": 0,
+        "effect": false,
+        "reported_completion": true,
+        "unauthorized_effect": false,
+        "missed_allowed_execution": false,
+        "false_completion_report": true
+      }
+    }
+  }
+}

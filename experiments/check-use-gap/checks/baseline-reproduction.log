@@ -1,0 +1,70 @@
+{
+  "by_policy": {
+    "always_main": {
+      "entered_episodes": 32,
+      "episodes": 32,
+      "legitimate_completion_episodes": 32,
+      "mean_cost": 4.0,
+      "sum_cost": 128,
+      "unauthorized_attempt_episodes": 0,
+      "unauthorized_effect_episodes": 0
+    },
+    "cue_swing": {
+      "entered_episodes": 32,
+      "episodes": 32,
+      "legitimate_completion_episodes": 29,
+      "mean_cost": 3.625,
+      "sum_cost": 116,
+      "unauthorized_attempt_episodes": 6,
+      "unauthorized_effect_episodes": 3
+    },
+    "inspect_every_time": {
+      "entered_episodes": 32,
+      "episodes": 32,
+      "legitimate_completion_episodes": 32,
+      "mean_cost": 4.0,
+      "sum_cost": 128,
+      "unauthorized_attempt_episodes": 0,
+      "unauthorized_effect_episodes": 0
+    },
+    "latest_claim": {
+      "entered_episodes": 32,
+      "episodes": 32,
+      "legitimate_completion_episodes": 28,
+      "mean_cost": 3.5,
+      "sum_cost": 112,
+      "unauthorized_attempt_episodes": 8,
+      "unauthorized_effect_episodes": 4
+    },
+    "stale_initial_permit": {
+      "entered_episodes": 32,
+      "episodes": 32,
+      "legitimate_completion_episodes": 24,
+      "mean_cost": 3.0,
+      "sum_cost": 96,
+      "unauthorized_attempt_episodes": 16,
+      "unauthorized_effect_episodes": 8
+    },
+    "stop_on_revoke_claim": {
+      "entered_episodes": 16,
+      "episodes": 32,
+      "legitimate_completion_episodes": 12,
+      "mean_cost": 1.5,
+      "sum_cost": 48,
+      "unauthorized_attempt_episodes": 8,
+      "unauthorized_effect_episodes": 4
+    },
+    "trusted_or_inspect": {
+      "entered_episodes": 32,
+      "episodes": 32,
+      "legitimate_completion_episodes": 32,
+      "mean_cost": 3.5,
+      "sum_cost": 112,
+      "unauthorized_attempt_episodes": 0,
+      "unauthorized_effect_episodes": 0
+    }
+  },
+  "episodes": 224,
+  "sha256_results": "d7b96a056cbbf46f70b3292cf5c14aeb5ad18cc71f4c4a78fec5336d0d94b4d1",
+  "status": "PASS"
+}

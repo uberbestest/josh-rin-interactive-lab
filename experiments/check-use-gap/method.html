@@ -1,0 +1,203 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><title>Methods &amp; proof — The Check That Arrived Too Early</title><link rel="stylesheet" href="style.css"></head><body><header class="wrap"><nav><a href="index.html">← Back to the instrument</a><div class="nav-right"><a href="../../index.html">Lab</a><a href="evidence.zip">Evidence ZIP</a><button id="theme" class="small-button" type="button">Light / dark</button></div></nav></header><main class="wrap text"><h1>The Check That Arrived Too Early</h1>
+<p><strong>Josh &amp; Rin's Lab · Bonded RSI round two · November 16, 2026 (US Eastern) · v1.0.0</strong><br />
+Record: <code>BONDED-RSI-CHECK-USE-GAP-2026-11-16-002</code><br />
+<strong>Executed finite-game policy synthesis. Zero live models. Same-author verification; external independent review pending.</strong></p>
+<p><a href="index.html">Operate the instrument</a> · <a href="method.html">Readable methods</a> · <a href="evidence.zip">Complete source and evidence</a> · <a href="results/frontier.csv">Every result cell</a> · <a href="verification.json">Verification receipt</a></p>
+<h2>Abstract</h2>
+<p>A permission-sensitive agent can receive an authentic, current authorization snapshot and still lack a safe unconditional action at the next decision boundary. We study the resulting <strong>interface-dependent safety–progress ceiling</strong>, rather than treating a low completion rate as direct evidence of weak reasoning or unwillingness to help.</p>
+<p>We solve a finite, partially observed permission-continuation game exactly across <strong>1,056 parameter cells</strong>. One optimizer is supplied with three different action interfaces: read-then-act snapshots, atomic comparison against an inspected authorization version, and atomic conditional execution under current authority. All policies must make zero forbidden unconditional requests on every compatible authority history. Among those safe policies, the optimizer maximizes the number of histories completed, then minimizes total elapsed ticks.</p>
+<p>In a representative four-tick case with at most two authority changes and a six-tick ordinary route, the best snapshot policy completes <strong>3 of 10 physically feasible histories</strong>, the version-bound interface completes <strong>9</strong>, and the current-authority atomic interface completes <strong>all 10</strong>. The eleventh history has no feasible authorized route before the deadline. These are exact optima for the declared model, not hand-picked weak policies or estimated model failure rates.</p>
+<p>The evidence package includes all <strong>55,272 schedule–policy replays</strong>, certificates covering <strong>1,587,332 belief states</strong> and <strong>3,328,347 admissible action alternatives</strong>, a standalone proof checker, a JavaScript implementation, and explicit tiny-horizon policy-tree enumeration. The contribution is an executable evaluation instrument and quantified counterexample; we do <strong>not</strong> claim to have invented check/use races, belief-state planning, or runtime shielding.</p>
+<h2>1. What changed from round one</h2>
+<p>The retained predecessor, <em>Keep the Destination, Revise the Route</em>, distinguished forbidden attempts from blocked effects and eventual legitimate completion in 224 authored scripted episodes. Its source is retained under <code>baseline/</code>. Its original result hash reproduces exactly, and its 16 named tests pass. The historical <code>NOT PUBLISHED</code> label in its original README describes its status at creation; the supplied evidence bundle includes that retained baseline.</p>
+<p>Round one explicitly did <strong>not</strong> establish that inspected permission remains current or that permission can change during action execution. Its ordinary route also remained feasible without a finite deadline. Round two changes these assumptions openly:</p>
+<ul>
+<li>Permission may change between a genuine observation and the next consequential action.</li>
+<li>A publicly declared finite deadline can make the ordinary route too slow, although it remains authorized.</li>
+<li>Policies are synthesized for the whole observation-consistent history set, not chosen as seven manually written examples.</li>
+</ul>
+<p>This is a separate finite instrument. It is not a Castle adapter, a Castle playtest, a live model experiment, or a mutation of Quiet Gate. The design was documented during development, not independently preregistered.</p>
+<h2>2. The finite task</h2>
+<p>A world is a binary authority sequence <code>a[0], …, a[H]</code>. A one means the side route is authorized at that tick. The initial bit is authentically observed. At most <code>K</code> adjacent transitions are allowed, and each transition increments an unbounded-within-the-study monotonic version. The actor knows <code>H</code>, <code>K</code>, the initial bit, and the route costs; it does not know the future sequence.</p>
+<p>The principal, target, operation, and authorization scope are fixed within each run. There are no forged snapshots, compromised registries, target substitutions, alternate endpoints, network outages, or wraparound versions. These exclusions make the model easier, not harder, than a deployed authorization system.</p>
+<table>
+<thead>
+<tr>
+  <th>Action</th>
+  <th style="text-align:right">Ticks</th>
+  <th>Delivered information or effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Inspect</td>
+  <td style="text-align:right">1</td>
+  <td>Genuine current bit and version at the end of the tick. No lease on the next tick.</td>
+</tr>
+<tr>
+  <td>Unconditional side action</td>
+  <td style="text-align:right">1</td>
+  <td>Completes only when the permission at execution is valid. Requesting it when invalid violates this task's strict attempt rule.</td>
+</tr>
+<tr>
+  <td>Ordinary route</td>
+  <td style="text-align:right">M</td>
+  <td>Always authorized. Available only when it can finish by the deadline.</td>
+</tr>
+<tr>
+  <td>Wait</td>
+  <td style="text-align:right">1</td>
+  <td>No authority observation. Silence is not confirmation.</td>
+</tr>
+<tr>
+  <td>Stop</td>
+  <td style="text-align:right">0</td>
+  <td>No completion and no additional cost.</td>
+</tr>
+<tr>
+  <td>Version-bound conditional request</td>
+  <td style="text-align:right">1</td>
+  <td>Permitted request. Executes atomically iff current permission is valid <strong>and</strong> the current version equals the last inspected version. Otherwise returns only <code>denied</code>.</td>
+</tr>
+<tr>
+  <td>Current-authority conditional request</td>
+  <td style="text-align:right">1</td>
+  <td>Permitted request. Checks current permission and executes as one indivisible operation; otherwise returns only <code>denied</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Every interface has inspect, unconditional side action, ordinary route, wait, and stop. The version-bound interface adds its compare request; the current-authority interface adds its conditional request.</p>
+<p><strong>The distinction between a forbidden unconditional action and a permitted conditional request is declared in the task contract.</strong> A denied API call is not universally misconduct. In systems where denied attempts are expressly permitted probes, this study's strict unconditional-attempt rule must not be imported unchanged. Revocation is evaluated at execution; a subsequent revocation does not retroactively invalidate an already authorized completed action.</p>
+<p>The two conditional interfaces have different semantics. Version-binding can deliberately reject a newly valid grant until the actor refreshes its token. That is a narrower contract, not an implementation bug. Current-authority execution grants more flexibility but is appropriate only when that flexibility is authorized by the user.</p>
+<h2>3. What is optimized</h2>
+<p>The primary grid is <code>H = 1…8</code>; <code>K = 0…H</code>; <code>M ∈ {2,4,6,8}</code>; initial permission in <code>{0,1}</code>; and the three interfaces. This gives 1,056 cells. Each cell contains every binary authority sequence consistent with its initial state and transition cap.</p>
+<p>The objective is lexicographic:</p>
+<ol>
+<li><strong>Safety:</strong> no forbidden unconditional request in any compatible history.</li>
+<li><strong>Coverage:</strong> maximize completed histories, counting each designed history once within its cell.</li>
+<li><strong>Cost:</strong> minimize total ticks spent over all histories, including unsuccessful ones.</li>
+<li><strong>Deterministic tie-break:</strong> unconditional side, current-conditional, version-compare, ordinary route, inspect, wait, stop.</li>
+</ol>
+<p>Uniform counting is a declared design measure, not an inferred distribution of real revocations. Overlapping cells reuse histories; neither 1,056 nor 55,272 is a count of independent experimental subjects. A low-cost policy that stops everywhere does not win over one that safely completes more histories.</p>
+<p>The physical-feasibility reference is deliberately stronger than the actor: a clairvoyant can finish iff <code>M ≤ H</code> or at least one of <code>a[1…H]</code> is valid. This is an upper bound, <strong>not an obligation to impose on an agent lacking that information or interface</strong>. We report both all-history denominators and feasible-history denominators.</p>
+<h2>4. The observation-class obstruction</h2>
+<p>Let <code>B(h)</code> be the set of worlds consistent with the actor's delivered observation history <code>h</code>. An unconditional action is admissible under zero-violation safety only when it is authorized in every world in <code>B(h)</code> at that action's execution boundary.</p>
+<p><strong>Necessity.</strong> Suppose two compatible worlds deliver the same history, but the next unconditional side action is forbidden in one. A policy using only the delivered history has the same action distribution in both worlds. If it assigns positive probability to that action, it has positive violation probability in the forbidden world. Therefore a zero-violation policy cannot select it there.</p>
+<p><strong>Sufficiency within this model.</strong> If an unconditional side action is valid in every compatible next state, selecting it cannot violate the stipulated permission predicate. This says nothing about an incorrect world model, compromised registry, unmodeled endpoint, or other safety predicates.</p>
+<p>The smallest witness is the pair <code>11</code> and <code>10</code>: both start with the same genuine <code>(valid, version 0)</code> snapshot; the next grant differs. Another genuine read may refine the history set, but when a revocation remains possible after that read, it creates another check/use gap. Authenticity alone is not a lease.</p>
+<p>A useful special case follows. With initial permission valid, at most one transition, and an ordinary route longer than the deadline, <strong>no snapshot-only policy can safely complete any history</strong>. Before revocation, a next-tick revocation remains possible; after revocation, no later grant is allowed. The all-valid actual history is not an exception: the actor cannot know that it is the actual future.</p>
+<p>Randomization does not evade the obstruction. Positive probability of the unsafe action still violates zero-violation safety. Among the remaining actions, the finite linear coverage objective attains an optimum at a deterministic observation-history policy.</p>
+<h2>5. Exact policy synthesis and proof certificates</h2>
+<p>The sufficient planning state is <code>(tick, compatible schedules, last inspected version)</code>. It includes no selected true future. Every action either terminates or advances time, so the problem is an acyclic finite dynamic program.</p>
+<p>For each admissible action, the solver adds immediate successes and elapsed cost to the optimal values of each observation-contingent child. Inspection partitions compatible schedules by the delivered bit/version. A conditional denial refines the belief only by the denied response, not by evaluator-only state.</p>
+<p>The certificate includes every reached planning state, every admissible action alternative, its exact integer value, and references to all its continuation states. The standalone checker reconstructs schedules using combinations of transition times rather than the optimizer's binary enumeration. It verifies completeness of the action set, child state bindings, value arithmetic, strict time advance, and the lexicographically optimal choice. It does not import the planner.</p>
+<p>The compact <code>compact-v1</code> node format is:</p>
+<pre><code>[tick, belief_bitset_hex, last_seen_version, wins, total_ticks, chosen_action_index,
+ [[action_index, wins, total_ticks, [[observation_label, child_node_index], ...]], ...]]
+</code></pre>
+<p>World IDs are the lexicographic ordering of permitted bit sequences. The bitset's bit <code>i</code> denotes world <code>i</code>. Action indices follow the tie-break order in section 3. Root belief includes every world in its cell. A proof is only as sound as its task model and checker; a second implementation is not external independent validation.</p>
+<h2>6. Results and interpretations</h2>
+<h3>A constrained deadline exposes different ceilings</h3>
+<p><code>H=4, K=2, M=6, initial=valid</code>: 11 histories; 10 physically feasible.</p>
+<table>
+<thead>
+<tr>
+  <th>Interface</th>
+  <th style="text-align:right">Best safe completions</th>
+  <th style="text-align:right">Forbidden unconditional attempts</th>
+  <th style="text-align:right">Total ticks across all 11 histories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Snapshot</td>
+  <td style="text-align:right">3/10 feasible; 3/11 total</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">31</td>
+</tr>
+<tr>
+  <td>Version-bound compare</td>
+  <td style="text-align:right">9/10 feasible; 9/11 total</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">20</td>
+</tr>
+<tr>
+  <td>Current-authority atomic</td>
+  <td style="text-align:right">10/10 feasible; 10/11 total</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">20</td>
+</tr>
+</tbody>
+</table>
+<p>The version-bound policy misses <code>10001</code>: permission returns only at the final tick under a new version. A current-authority request can execute at that tick; a stale version token cannot, and reading the new version leaves no time for another action. This is a contract/latency difference, not bad reasoning.</p>
+<h3>Enough time removes the completion gap, not all friction</h3>
+<p><code>H=8, K=8, M=4, initial=valid</code>: all 256 histories can complete by the ordinary route.</p>
+<table>
+<thead>
+<tr>
+  <th>Interface</th>
+  <th style="text-align:right">Completions</th>
+  <th style="text-align:right">Mean ticks spent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Snapshot</td>
+  <td style="text-align:right">256/256</td>
+  <td style="text-align:right">4.000</td>
+</tr>
+<tr>
+  <td>Version-bound compare</td>
+  <td style="text-align:right">256/256</td>
+  <td style="text-align:right">3.000</td>
+</tr>
+<tr>
+  <td>Current-authority atomic</td>
+  <td style="text-align:right">256/256</td>
+  <td style="text-align:right">2.125</td>
+</tr>
+</tbody>
+</table>
+<p>These artificial units are not measured tool latency or claimed real-world speedups. They show why a completion-only scoreboard can hide avoidable cost after all policies become feasible.</p>
+<h3>Current-atomic execution reaches the physical bound</h3>
+<p>In all 352 current-atomic cells, the optimizer reaches the physical-feasibility bound. There is also a direct model-level argument: when the main route fits, taking it guarantees completion. When it does not fit, conditional requests at every remaining tick succeed iff some authorized tick exists. Denied requests remain permitted and consume one tick each.</p>
+<p>This does <strong>not</strong> mean that agents have learned corrigibility or that atomic authorization solves alignment. The useful guarantee comes from trusted, correctly mediated infrastructure and an explicitly authorized request contract. It can fail if check and effect are separated, the target changes, a route bypasses the guard, or the registry is wrong.</p>
+<h2>7. Verification and negative controls</h2>
+<p>The publication pipeline must successfully perform all of the following before this exhibit is promoted:</p>
+<ul>
+<li>Reproduce the original round-one result bytes and run its 16 tests.</li>
+<li>Run the 31 new tests in ordinary and optimized Python. These are the same 31 tests in two modes, not 62 distinct tests.</li>
+<li>Regenerate the full primary result set, then regenerate it with reversed case/action enumeration and a different hash seed; compare all canonical result files byte-for-byte.</li>
+<li>Verify 1,056 certificates, 1,587,332 states, and 3,328,347 admissible alternatives using the standalone checker.</li>
+<li>Recompute every primary optimum and all 55,272 trajectories in JavaScript; compare with Python.</li>
+<li>Explicitly enumerate all distinct attainable score pairs from contingent policy trees in the 216 primary cells with <code>H≤3</code>, without using the planner's transition routine.</li>
+<li>Exercise five deliberately defective gateway/reporting variants alongside a correct control. Stale checks, checks after effects, inverted permission, universal denial, and invented success must be detected on the appropriate safety, utility, or reporting dimension.</li>
+<li>Serve the explorer over HTTP and check controls, replay, both reading themes, mobile overflow, navigation, and downloads.</li>
+</ul>
+<p>The raw fault-injection rows and smallest counterexamples are included in the evidence bundle. A safe-but-useless deny-everything implementation must not pass the utility check, and a claimed completion without an effect must not pass the reporting check. These are authored negative controls, not discoveries of five real vulnerabilities.</p>
+<p>The first whole-corpus implementation tried to retain all certificates in memory and exceeded its execution budget. The implementation was changed to stream bounded per-cell files before canonical assembly. This was a storage correction, not a change to the model, grid, objective, or reported successful result set.</p>
+<h2>8. What this warrants</h2>
+<p>Before interpreting refusal, incompletion, or correction-handling scores, specify the actor's information, the timing of permission changes, the action interface, the fallback's deadline feasibility, and whether denied requests are permitted. Compute or bound what a safe policy could achieve under that contract. Record attempted action, admission, realized effect, and report separately.</p>
+<p>The executable instrument supports that methodological claim. It does not establish behavior in real LLMs, human flourishing, intent, an internal attractor, a production authorization implementation, a new general planning algorithm, or independent adoption. The transition cap is known and may provide unrealistically helpful information; the unrestricted-change cells are included to expose that dependence.</p>
+<p>The next empirical bridge would be a separately specified adapter or live-agent study with actual delivered observations and no hidden evaluator truth. No such trial was run here. No live Castle, Rinball bridge, schedule, credential, or model configuration was changed.</p>
+<h2>9. Related work and contribution boundary</h2>
+<p>MITRE's <strong>CWE-367</strong> describes the established check/use race: resource state can change between a check and its use. We apply that known distinction to an agent-evaluation contract, not claim the race as a discovery.</p>
+<p>Alshiekh et al., <strong>Safe Reinforcement Learning via Shielding</strong> (AAAI 2018), study synthesized runtime shields. Our work is not a learning algorithm; its conditional gateway is a stipulated action mechanism, and the separate attempt/effect accounting asks what its presence does and does not establish about the policy.</p>
+<p>Pang et al., <strong>Zanzibar: Google's Consistent, Global Authorization System</strong> (USENIX ATC 2019), address consistent authorization amid ACL and content changes. Our one-bit finite simulator is not an implementation, benchmark, or replacement for Zanzibar.</p>
+<p>Sources: <a href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>; <a href="https://arxiv.org/abs/1708.08611">shielding paper</a>; <a href="https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/">Zanzibar primary publication</a>. Our contribution is the joint, reproducible evaluator: exact interface-specific coverage/cost ceilings, proof certificates, source-preserving continuation lineage, and an operator/actor-separated replay.</p>
+<h2>10. Reproduce</h2>
+<p>Python 3.10+ and Node.js 18+; numerical code uses only standard libraries. Browser smoke checks additionally use Playwright, pinned in the publication workflow. From this directory:</p>
+<pre><code>python -m unittest -v test_study
+python -O -m unittest -v test_study
+python study.py --out results
+python audit.py
+python verify_certificates.py
+node verify_js.cjs
+</code></pre>
+<p>For order invariance:</p>
+<pre><code>PYTHONHASHSEED=29 python study.py --reverse --out alternate-results
+</code></pre>
+<p>Compare each file against <code>results/</code> for the outputs of <code>study.py</code>. The full publication procedure is preserved in <code>.publishing/check-use-gap/publish.py</code> in the supplied publication bundle (intended repository path). <code>MANIFEST.json</code> binds the study artifact bytes; <code>verification.json</code> distinguishes completed local checks from unexecuted HTTP and publication checks. The publication pipeline creates the site evidence ZIP only after those checks pass; that archive excludes itself and its checksum manifest to avoid a circular digest.</p>
+<p>Public access is not a grant of an open-source license; the repository has not selected one for the collected exhibits.</p>
+<p><em>Keep the destination. Respect the correction. Do not confuse an impossible contract with an unhelpful agent.</em></p>
+</main><script src="theme.js"></script></body></html>

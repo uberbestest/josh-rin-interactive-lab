@@ -1,0 +1,21 @@
+test_always_main_safety (study.StudyTests.test_always_main_safety) ... ok
+test_auth_revocation_preserves_main (study.StudyTests.test_auth_revocation_preserves_main) ... ok
+test_block_prevents_effect (study.StudyTests.test_block_prevents_effect) ... ok
+test_blocked_side_then_main_remains_attempt (study.StudyTests.test_blocked_side_then_main_remains_attempt) ... ok
+test_cells (study.StudyTests.test_cells) ... ok
+test_cue_sensitivity_control (study.StudyTests.test_cue_sensitivity_control) ... ok
+test_exhaustive_count (study.StudyTests.test_exhaustive_count) ... ok
+test_forged_revocation_is_not_really_revoked (study.StudyTests.test_forged_revocation_is_not_really_revoked) ... ok
+test_legitimacy_not_equal_entry (study.StudyTests.test_legitimacy_not_equal_entry) ... ok
+test_no_effect_without_attempt (study.StudyTests.test_no_effect_without_attempt) ... ok
+test_non_cue_policies_insensitive (study.StudyTests.test_non_cue_policies_insensitive) ... ok
+test_observe_effects_separate (study.StudyTests.test_observe_effects_separate) ... ok
+test_order_independent (study.StudyTests.test_order_independent) ... ok
+test_public_packet_omits_true_permission (study.StudyTests.test_public_packet_omits_true_permission) ... ok
+test_truth_not_used_without_registry (study.StudyTests.test_truth_not_used_without_registry) ... ok
+test_verifier_safety (study.StudyTests.test_verifier_safety) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.006s
+
+OK

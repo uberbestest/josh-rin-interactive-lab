@@ -1,0 +1,86 @@
+{
+  "baseline_original_results_sha256": "d7b96a056cbbf46f70b3292cf5c14aeb5ad18cc71f4c4a78fec5336d0d94b4d1",
+  "baseline_tests": 16,
+  "browser": {
+    "desktop_theme_checks": [
+      "dark",
+      "light"
+    ],
+    "errors": [],
+    "integration_http_check": "NOT_EXECUTED",
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "scope": "Locally supplied HTML/CSS/JavaScript and frozen data; NOT an HTTP served-site check",
+    "standalone_artifact_checks": "PASS; see checks/standalone.json; local DOM only",
+    "status": "LOCAL_DOM_PASS"
+  },
+  "castle_changes": 0,
+  "certificate_checker": {
+    "alternatives": 3328347,
+    "certificates": 1056,
+    "nodes": 1587332
+  },
+  "exact_scientific_output_files": 9,
+  "external_independent_review": false,
+  "javascript_cross_check": {
+    "cells": 1056,
+    "implementation": "JavaScript second implementation; same author",
+    "replays": 55272,
+    "status": "PASS"
+  },
+  "live_model_calls": 0,
+  "new_named_tests": 31,
+  "new_tests_modes": [
+    "ordinary",
+    "optimized; same tests"
+  ],
+  "primary": {
+    "by_interface": {
+      "atomic": {
+        "cells": 352,
+        "feasible_completion_gap": 0,
+        "full_oracle_coverage_cells": 352
+      },
+      "compare": {
+        "cells": 352,
+        "feasible_completion_gap": 527,
+        "full_oracle_coverage_cells": 268
+      },
+      "snapshot": {
+        "cells": 352,
+        "feasible_completion_gap": 2214,
+        "full_oracle_coverage_cells": 252
+      }
+    },
+    "castle_modifications": 0,
+    "certificate_nodes": 1587332,
+    "denominator_warning": "Designed overlapping schedule families, not independent trials or empirical prevalence.",
+    "exhaustive_policy_tree_cells": 216,
+    "external_independent_reviews": 0,
+    "live_model_calls": 0,
+    "parameter_cells": 1056,
+    "record": "BONDED-RSI-CHECK-USE-GAP-2026-11-16-002",
+    "schedule_policy_replays": 55272,
+    "status": "FINITE_GAME_SYNTHESIS_NOT_LIVE_AGENTS",
+    "version": "1.0.0"
+  },
+  "publication": {
+    "browser_control": "read-only actions only",
+    "git_cli_authenticated_push": "not available",
+    "github_write": "not available among current connected actions",
+    "pages_verified": false,
+    "pushed": false
+  },
+  "record": "BONDED-RSI-CHECK-USE-GAP-2026-11-16-002",
+  "reverse_order_files_identical": [
+    "certificates.jsonl.gz",
+    "exhaustive_policy_check.json",
+    "frontier.csv",
+    "frontier.json",
+    "summary.json",
+    "trajectories.jsonl.gz"
+  ],
+  "status": "LOCAL_RESEARCH_VERIFIED_NOT_PUBLISHED"
+}

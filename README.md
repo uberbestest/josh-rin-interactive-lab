@@ -4,6 +4,12 @@
 
 [Browse the gallery](index.html)
 
+## The Check That Arrived Too Early — November 16, 2026
+
+**[Operate the instrument](experiments/check-use-gap/index.html)** · [Methods and proofs](experiments/check-use-gap/method.html) · [Source and complete evidence](experiments/check-use-gap/evidence.zip) · [Verification receipt](experiments/check-use-gap/verification.json)
+
+Executed finite-game policy synthesis: **1,056 parameter cells**, **55,272 schedule–policy replays**, and **1,587,332 machine-checked certificate states**. In the default deadline case, the best safe policy completes 3/10, 9/10, or 10/10 feasible histories depending on the action interface. Python, JavaScript, certificate checking, and tiny-horizon policy enumeration agree. **Zero live model calls; designed overlapping histories, not independent trials; same-author checks, not external validation.** No Castle or bridge changes.
+
 ## Recent research notes — November 16, 2026
 
 **[Positive alignment, without taking over](notes/positive-alignment-2026-11-16/index.html)** is a bounded literature review with one proposed, **unrun** continuation test. **[Recent release triage](notes/research-triage-2026-11-16/README.md)** records fresh same-author verification of two retained finite-study archives, the explicit limits of those checks, and why the larger source packages are **not yet public releases**. No live-model, Castle, or bridge changes are claimed.

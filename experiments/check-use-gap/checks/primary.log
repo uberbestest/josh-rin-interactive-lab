@@ -1,0 +1,30 @@
+{
+  "record": "BONDED-RSI-CHECK-USE-GAP-2026-11-16-002",
+  "version": "1.0.0",
+  "status": "FINITE_GAME_SYNTHESIS_NOT_LIVE_AGENTS",
+  "parameter_cells": 1056,
+  "schedule_policy_replays": 55272,
+  "certificate_nodes": 1587332,
+  "exhaustive_policy_tree_cells": 216,
+  "by_interface": {
+    "snapshot": {
+      "cells": 352,
+      "feasible_completion_gap": 2214,
+      "full_oracle_coverage_cells": 252
+    },
+    "compare": {
+      "cells": 352,
+      "feasible_completion_gap": 527,
+      "full_oracle_coverage_cells": 268
+    },
+    "atomic": {
+      "cells": 352,
+      "feasible_completion_gap": 0,
+      "full_oracle_coverage_cells": 352
+    }
+  },
+  "denominator_warning": "Designed overlapping schedule families, not independent trials or empirical prevalence.",
+  "live_model_calls": 0,
+  "external_independent_reviews": 0,
+  "castle_modifications": 0
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "self-contained local HTML DOM only; no HTTP or deployment verification",
+  "checks": [
+    "default three optima match frozen table",
+    "snapshot cannot assume its all-valid selected future",
+    "last-tick restored grant separates version and current-atomic contracts",
+    "long-budget equal completion, unequal mean costs",
+    "zero-feasibility control",
+    "both themes",
+    "mobile and landscape page width",
+    "embedded complete methods and nonpublication label"
+  ],
+  "errors": []
+}

@@ -1,0 +1,36 @@
+test_action_enumeration_order_does_not_change_certificate (test_study.PermissionTests.test_action_enumeration_order_does_not_change_certificate) ... ok
+test_atomic_reaches_oracle_in_every_small_cell (test_study.PermissionTests.test_atomic_reaches_oracle_in_every_small_cell) ... ok
+test_baseline_reproduces_original_result_hash (test_study.PermissionTests.test_baseline_reproduces_original_result_hash) ... ok
+test_certificate_checker_accepts_valid_proof (test_study.PermissionTests.test_certificate_checker_accepts_valid_proof) ... ok
+test_certificate_checker_rejects_future_information_leak (test_study.PermissionTests.test_certificate_checker_rejects_future_information_leak) ... ok
+test_certificate_checker_rejects_inflated_success (test_study.PermissionTests.test_certificate_checker_rejects_inflated_success) ... ok
+test_certificate_checker_rejects_omitted_better_action (test_study.PermissionTests.test_certificate_checker_rejects_omitted_better_action) ... ok
+test_conditional_denial_is_authorized_request_not_forbidden_attempt (test_study.PermissionTests.test_conditional_denial_is_authorized_request_not_forbidden_attempt) ... ok
+test_cost_difference_not_safety_difference (test_study.PermissionTests.test_cost_difference_not_safety_difference) ... ok
+test_deadline_excludes_long_main_route (test_study.PermissionTests.test_deadline_excludes_long_main_route) ... ok
+test_direct_replay_equals_planner_value (test_study.PermissionTests.test_direct_replay_equals_planner_value) ... ok
+test_exact_compare_rejects_changed_version_even_when_valid (test_study.PermissionTests.test_exact_compare_rejects_changed_version_even_when_valid) ... ok
+test_explicit_policy_trees_match_bellman_solution (test_study.PermissionTests.test_explicit_policy_trees_match_bellman_solution) ... ok
+test_fresh_query_does_not_stop_next_tick_revocation (test_study.PermissionTests.test_fresh_query_does_not_stop_next_tick_revocation) ... ok
+test_fully_unconstrained_churn_blocks_snapshot_shortcut (test_study.PermissionTests.test_fully_unconstrained_churn_blocks_snapshot_shortcut) ... ok
+test_gateway_negative_controls_detected (test_study.PermissionTests.test_gateway_negative_controls_detected) ... ok
+test_h4_k2_exhibit_counts (test_study.PermissionTests.test_h4_k2_exhibit_counts) ... ok
+test_invalid_inputs_are_rejected (test_study.PermissionTests.test_invalid_inputs_are_rejected) ... ok
+test_last_known_switch_can_license_safe_raw (test_study.PermissionTests.test_last_known_switch_can_license_safe_raw) ... ok
+test_main_route_always_available_when_budget_suffices (test_study.PermissionTests.test_main_route_always_available_when_budget_suffices) ... ok
+test_minimal_counterexample_is_one_action (test_study.PermissionTests.test_minimal_counterexample_is_one_action) ... ok
+test_no_churn_snapshot_reaches_physical_ceiling (test_study.PermissionTests.test_no_churn_snapshot_reaches_physical_ceiling) ... ok
+test_primary_grid_has_1056_cells (test_study.PermissionTests.test_primary_grid_has_1056_cells) ... ok
+test_raw_not_admissible_under_ambiguous_next_permission (test_study.PermissionTests.test_raw_not_admissible_under_ambiguous_next_permission) ... ok
+test_runtime_checks_survive_python_optimization (test_study.PermissionTests.test_runtime_checks_survive_python_optimization) ... ok
+test_schedule_counts_equal_transition_combinations (test_study.PermissionTests.test_schedule_counts_equal_transition_combinations) ... ok
+test_single_revocation_blocks_every_attempt_strict_shortcut (test_study.PermissionTests.test_single_revocation_blocks_every_attempt_strict_shortcut) ... ok
+test_snapshot_does_not_reveal_realized_future (test_study.PermissionTests.test_snapshot_does_not_reveal_realized_future) ... ok
+test_stable_revocation_has_no_false_obligation (test_study.PermissionTests.test_stable_revocation_has_no_false_obligation) ... ok
+test_stable_valid_grant_permits_raw (test_study.PermissionTests.test_stable_valid_grant_permits_raw) ... ok
+test_versions_count_transitions_not_validity (test_study.PermissionTests.test_versions_count_transitions_not_validity) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.440s
+
+OK

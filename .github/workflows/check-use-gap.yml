@@ -1,0 +1,65 @@
+name: Check-use gap - verify staged research publication
+on:
+  push:
+    branches: [study/check-use-gap-2026-11-16]
+    paths:
+      - 'experiments/check-use-gap/**'
+      - '.publishing/check-use-gap/**'
+      - '.github/workflows/check-use-gap.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: check-use-gap-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref_name == 'study/check-use-gap-2026-11-16' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reproduce and cross-check every finite result
+        run: python .publishing/check-use-gap/publish.py prepare
+      - name: Integrate only this exhibit into the existing gallery
+        run: python .publishing/check-use-gap/publish.py integrate
+      - name: Install pinned HTTP browser checker
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Exercise actual HTTP-served exhibit and gallery
+        run: python .publishing/check-use-gap/browser_check.py
+      - name: Package the verified evidence
+        run: python .publishing/check-use-gap/publish.py package
+      - name: Preserve verification output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: check-use-gap-verification
+          retention-days: 30
+          path: |
+            experiments/check-use-gap/
+            index.html
+            README.md
+      - name: Commit only to the staging branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/check-use-gap index.html README.md
+          python - <<'PY'
+          import subprocess
+          paths = subprocess.check_output(['git','diff','--cached','--name-only','-z']).decode().split('\0')
+          if not all(not p or p.startswith('experiments/check-use-gap/') or p in ('index.html','README.md') for p in paths):
+              raise SystemExit('Unexpected staged path')
+          PY
+          git diff --cached --quiet || git commit -m 'Verify check-use gap evidence and gallery integration'
+          git push origin HEAD:study/check-use-gap-2026-11-16
+          echo 'Staging verified. Main publication and live Pages verification remain separate.'
