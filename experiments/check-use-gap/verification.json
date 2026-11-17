@@ -2,19 +2,23 @@
   "baseline_original_results_sha256": "d7b96a056cbbf46f70b3292cf5c14aeb5ad18cc71f4c4a78fec5336d0d94b4d1",
   "baseline_tests": 16,
   "browser": {
-    "desktop_theme_checks": [
-      "dark",
-      "light"
+    "checks": [
+      "default_frontier_matches_frozen_table",
+      "all_granted_actual_world_not_leaked_into_policy",
+      "late_restored_grant_distinguishes_interface_contracts",
+      "evaluator_only_trace_toggle",
+      "controls_recompute_long_budget_cost_frontier",
+      "zero_feasible_histories_not_misreported_as_failures",
+      "reading_theme_toggle",
+      "mobile_and_landscape_no_document_overflow",
+      "methods_and_data_routes",
+      "real_gallery_navigation",
+      "no_uncaught_browser_errors"
     ],
-    "errors": [],
-    "integration_http_check": "NOT_EXECUTED",
-    "mobile_viewport": [
-      390,
-      844
-    ],
-    "scope": "Locally supplied HTML/CSS/JavaScript and frozen data; NOT an HTTP served-site check",
-    "standalone_artifact_checks": "PASS; see checks/standalone.json; local DOM only",
-    "status": "LOCAL_DOM_PASS"
+    "count": 11,
+    "scope": "exhibit and integrated repository gallery",
+    "status": "PASS",
+    "uncaught_errors": []
   },
   "castle_changes": 0,
   "certificate_checker": {
@@ -22,7 +26,7 @@
     "certificates": 1056,
     "nodes": 1587332
   },
-  "exact_scientific_output_files": 9,
+  "exact_outputs_matched": 9,
   "external_independent_review": false,
   "javascript_cross_check": {
     "cells": 1056,
@@ -34,7 +38,7 @@
   "new_named_tests": 31,
   "new_tests_modes": [
     "ordinary",
-    "optimized; same tests"
+    "optimized (same tests)"
   ],
   "primary": {
     "by_interface": {
@@ -66,13 +70,6 @@
     "status": "FINITE_GAME_SYNTHESIS_NOT_LIVE_AGENTS",
     "version": "1.0.0"
   },
-  "publication": {
-    "browser_control": "read-only actions only",
-    "git_cli_authenticated_push": "not available",
-    "github_write": "not available among current connected actions",
-    "pages_verified": false,
-    "pushed": false
-  },
   "record": "BONDED-RSI-CHECK-USE-GAP-2026-11-16-002",
   "reverse_order_files_identical": [
     "certificates.jsonl.gz",
@@ -82,5 +79,5 @@
     "summary.json",
     "trajectories.jsonl.gz"
   ],
-  "status": "LOCAL_RESEARCH_VERIFIED_NOT_PUBLISHED"
+  "status": "PUBLIC_PACKAGE_VERIFIED"
 }

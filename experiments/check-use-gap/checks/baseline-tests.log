@@ -16,6 +16,6 @@ test_truth_not_used_without_registry (study.StudyTests.test_truth_not_used_witho
 test_verifier_safety (study.StudyTests.test_verifier_safety) ... ok
 
 ----------------------------------------------------------------------
-Ran 16 tests in 0.006s
+Ran 16 tests in 0.005s
 
 OK

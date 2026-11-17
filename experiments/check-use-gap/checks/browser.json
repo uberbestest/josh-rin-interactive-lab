@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "exhibit and integrated repository gallery",
+  "checks": [
+    "default_frontier_matches_frozen_table",
+    "all_granted_actual_world_not_leaked_into_policy",
+    "late_restored_grant_distinguishes_interface_contracts",
+    "evaluator_only_trace_toggle",
+    "controls_recompute_long_budget_cost_frontier",
+    "zero_feasible_histories_not_misreported_as_failures",
+    "reading_theme_toggle",
+    "mobile_and_landscape_no_document_overflow",
+    "methods_and_data_routes",
+    "real_gallery_navigation",
+    "no_uncaught_browser_errors"
+  ],
+  "count": 11,
+  "uncaught_errors": []
+}

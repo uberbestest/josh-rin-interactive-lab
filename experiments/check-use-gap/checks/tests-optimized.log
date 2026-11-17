@@ -31,6 +31,6 @@ test_stable_valid_grant_permits_raw (test_study.PermissionTests.test_stable_vali
 test_versions_count_transitions_not_validity (test_study.PermissionTests.test_versions_count_transitions_not_validity) ... ok
 
 ----------------------------------------------------------------------
-Ran 31 tests in 0.440s
+Ran 31 tests in 0.266s
 
 OK
