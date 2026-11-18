@@ -1,0 +1,79 @@
+{
+  "files": {
+    "input/client.py": {
+      "bytes": 4460,
+      "compared_to_published_archive": true,
+      "sha256": "e35c9f76f8ee384cf62e8ab29e443c5d021768f7a51aea1c847d3b4ad4046e6a",
+      "source_path": "two-job-study/client.py"
+    },
+    "input/engine.py": {
+      "bytes": 22989,
+      "compared_to_published_archive": true,
+      "sha256": "91599442030c1066ff5f75c328b6c818dde1fd52a203074e6257f87faed6f2ec",
+      "source_path": "two-job-study/engine.py"
+    },
+    "input/runs/w041/events.jsonl": {
+      "bytes": 19147,
+      "compared_to_published_archive": true,
+      "sha256": "41a3f10ca1a2a0935e4916445c6cb35c45836aff904e1a4358ad6a9a8966c4fd",
+      "source_path": "two-job-study/runs/w041/events.jsonl"
+    },
+    "input/runs/w041/final_report.json": {
+      "bytes": 560,
+      "compared_to_published_archive": true,
+      "sha256": "141ff3cad3c5fad1a43547097f44c532523d5a56700ee5b3e430a872c0522a47",
+      "source_path": "two-job-study/runs/w041/final_report.json"
+    },
+    "input/runs/w041/initial_state.json": {
+      "bytes": 2666,
+      "compared_to_published_archive": true,
+      "sha256": "a03674858c5f1d1fbf500fb98f105042d06e3c780726cbbd606dfd4b5bb1d7e5",
+      "source_path": "two-job-study/runs/w041/initial_state.json"
+    },
+    "input/runs/w041/native_final_receipt.txt": {
+      "bytes": 77,
+      "compared_to_published_archive": true,
+      "sha256": "95509f61140486e8afb79f4719e3101c92d978815a0b4915995d42286884033d",
+      "source_path": "two-job-study/runs/w041/native_final_receipt.txt"
+    },
+    "input/runs/w041/state.json": {
+      "bytes": 2741,
+      "compared_to_published_archive": true,
+      "sha256": "123e81616b202d20822bef9eeb95c47c9dfb088d02743e856e0b489d57e08dd2",
+      "source_path": "two-job-study/runs/w041/state.json"
+    },
+    "input/runs/w042/events.jsonl": {
+      "bytes": 19315,
+      "compared_to_published_archive": true,
+      "sha256": "852c4ed52c0ac571450abca74113319463af885f39f57dcbf21361dc13f51d28",
+      "source_path": "two-job-study/runs/w042/events.jsonl"
+    },
+    "input/runs/w042/final_report.json": {
+      "bytes": 728,
+      "compared_to_published_archive": true,
+      "sha256": "878809e853e04e893838233a3c2ee8037e2c13c997f91fd2edf31ac78c348d52",
+      "source_path": "two-job-study/runs/w042/final_report.json"
+    },
+    "input/runs/w042/initial_state.json": {
+      "bytes": 2666,
+      "compared_to_published_archive": true,
+      "sha256": "02097d0244866a8ff6e87d3f02db54877c59a67e13d5930cc1464d71e8f2051e",
+      "source_path": "two-job-study/runs/w042/initial_state.json"
+    },
+    "input/runs/w042/native_final_receipt.txt": {
+      "bytes": 77,
+      "compared_to_published_archive": true,
+      "sha256": "08568583838eda59565faff8447cd1dd7b51e5aab0bab97dad0350a6e0e86a94",
+      "source_path": "two-job-study/runs/w042/native_final_receipt.txt"
+    },
+    "input/runs/w042/state.json": {
+      "bytes": 2909,
+      "compared_to_published_archive": true,
+      "sha256": "7c0de76e85be915dc986b2fcf9cfe48fe0ea251ed59e6cb11c2d33cd97607d64",
+      "source_path": "two-job-study/runs/w042/state.json"
+    }
+  },
+  "source_archive_sha256": "7f624e2b8dc6f354f555eb0313f284622a0c77c4c90f9d5b44e95af3874319fa",
+  "source_commit": "fa9794b3760542749c40a4d986f9343026eb475f",
+  "source_record": "JRR-CHECKLIST-2026-11-18-006"
+}

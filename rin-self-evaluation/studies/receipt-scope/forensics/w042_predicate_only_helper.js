@@ -1,0 +1,1 @@
+for(const j of ["B","A"]){let r=async c=>(await tools.exec_command({cmd:load("p")+c+" --job "+j})).output;let v=await r("receipt");text(v);if(JSON.parse(v).status==="ABSENT")text(await r("commit"));if(!/ABSENT|COMMITTED/.test(v))break;text(await r("finalize"))}

@@ -1,0 +1,1 @@
+for(const j of ["B","A"]){const run=async s=>JSON.parse((await tools.exec_command({cmd:load("p")+s+" --job "+j})).output);const r=await run("receipt");text(r);if(r.job!==j)throw new Error("RECEIPT_JOB_MISMATCH");if(r.status==="ABSENT")text(await run("commit"));if(r.status!=="ABSENT"&&r.status!=="COMMITTED")break;text(await run("finalize"))}

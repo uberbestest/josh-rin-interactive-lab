@@ -1,0 +1,7 @@
+{
+  "interpretation": "A response-scope and redundant-detail exposure intervention; response length also changes. Not a pure visual-layout intervention or unique test of internal cognitive mechanism.",
+  "normalized_prompt_sha256": "f70940a5ebd16e99e1a2e8d64ea5d02f2d7b758361d0515b72e1bbc57286ed29",
+  "only_response_change": "For receipt actions, target scope retains only the selected job in local_status.jobs; top-level receipt fields and global status fields are unchanged. All other command responses, including free status, remain full.",
+  "prompt_variants": 1,
+  "record": "JRR-RECEIPT-SCOPE-2026-11-18-007"
+}

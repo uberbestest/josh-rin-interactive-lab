@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        }
+      },
+      "case_id": "C11",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          },
+          "B": {
+            "deadline": 4,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F02",
+      "orientation": "original",
+      "stratum": "joint_feasible",
+      "title": "Urgent B requires immediate evidence"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        }
+      },
+      "case_id": "C11R",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 4,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          },
+          "B": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "A",
+        "uses_remaining": 6
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F02",
+      "orientation": "reflected",
+      "stratum": "joint_feasible",
+      "title": "Urgent A requires immediate evidence"
+    }
+  ],
+  "native_task_families": 1,
+  "orientations": 2,
+  "record": "JRR-RECEIPT-SCOPE-2026-11-18-007",
+  "source_case": "Round06 C11/F02"
+}

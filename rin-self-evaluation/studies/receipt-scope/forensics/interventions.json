@@ -1,0 +1,15 @@
+{
+  "kind": "explicit post-run authored code interventions",
+  "no_post_commit_exactly_one_recheck_added": true,
+  "original_helpers_unchanged": true,
+  "predicate_only": {
+    "w041": "Replace JSON.stringify(r).includes(\"ABSENT\") with r.status === \"ABSENT\"; all other helper logic unchanged.",
+    "w042": "Replace v.includes(\"ABSENT\") with JSON.parse(v).status === \"ABSENT\"; all other helper logic unchanged."
+  },
+  "projection": "Original helper text unchanged; only receipt local_status.jobs is projected to the selected job. Other responses and fields unchanged.",
+  "scoped_parser_hardening": {
+    "both": "Read selected top-level status and require returned job to equal requested job.",
+    "w041": "Also add a stop unless the selected receipt status is ABSENT or COMMITTED.",
+    "w042": "Also replace the whole-response ABSENT|COMMITTED regex guard with equality checks on selected receipt status."
+  }
+}

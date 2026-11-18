@@ -1,0 +1,82 @@
+{
+  "copied_byte_identically": {
+    "engine.py": {
+      "sha256": "91599442030c1066ff5f75c328b6c818dde1fd52a203074e6257f87faed6f2ec",
+      "source": "engine.py"
+    },
+    "inherited_scoring.py": {
+      "sha256": "b07a6c9b12509fdab1f9e7d48f37cec2853bc7b08c28b24bc049d356de31c2b9",
+      "source": "scoring.py"
+    },
+    "protocol/CHECKLIST_REQUIREMENTS.md": {
+      "sha256": "19c8815054ee983631ef71345f361ec7952d254f465c43c690b2e212c902e59a",
+      "source": "protocol/CHECKLIST_REQUIREMENTS.md"
+    },
+    "protocol/COMMON_CONTRACT.md": {
+      "sha256": "ac4529053ceb6f255301ade6a28fcfbb46009bcf0d0b0e7f54f0a9450e6b143b",
+      "source": "protocol/COMMON_CONTRACT.md"
+    },
+    "test_engine.py": {
+      "sha256": "03ffd95c6ae7cdd02efab9646a8cad0245facd9641e6dfe4853632c3f6bb6460",
+      "source": "test_engine.py"
+    }
+  },
+  "native_scope": "One F02 task family in original and fully label-reflected orientation; four fresh repetitions per model/scope/orientation.",
+  "normalized_prompt_scope": "Round06 w041 checklist prompt; only run ID replaced with <RUN_ID> and two-job-study directory with delivery-study.",
+  "normalized_round06_checklist_prompt_sha256": "f70940a5ebd16e99e1a2e8d64ea5d02f2d7b758361d0515b72e1bbc57286ed29",
+  "regression_fixture_scope": "engine_regression_cases.json retains the earlier twelve-case catalog only for inherited engine regression tests, not as native Round07 assignments.",
+  "source_C11": {
+    "actual_world": {
+      "A": {
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      },
+      "B": {
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      }
+    },
+    "case_id": "C11",
+    "config": {
+      "jobs": {
+        "A": {
+          "deadline": 8,
+          "initial_receipt": null,
+          "prior_options": [
+            0,
+            1
+          ],
+          "query_cost": 1,
+          "ready_options": [
+            1
+          ]
+        },
+        "B": {
+          "deadline": 4,
+          "initial_receipt": null,
+          "prior_options": [
+            0,
+            1
+          ],
+          "query_cost": 1,
+          "ready_options": [
+            1
+          ]
+        }
+      },
+      "max_actions": 32,
+      "priority": "B",
+      "uses_remaining": 6
+    },
+    "expected_initial_value": [
+      2,
+      1
+    ],
+    "family_id": "F02",
+    "stratum": "joint_feasible",
+    "title": "Urgent B requires immediate evidence"
+  },
+  "source_case_catalog_sha256": "7154aa0995722a8529f71786f3ed3aaafcf15f3341afaeafdd0b7ddd41f7b16a",
+  "source_freeze_sha256": "9d955e9b498702ce8e6869197674f079a729c6234190ad900c3328570a080c50",
+  "source_record": "JRR-CHECKLIST-2026-11-18-006"
+}
