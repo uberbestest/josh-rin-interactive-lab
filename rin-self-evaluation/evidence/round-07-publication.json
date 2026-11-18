@@ -1,0 +1,533 @@
+{
+  "canonical_archive": {
+    "identical_to_public_archive": true,
+    "sha256": "1b366454ef94d537d7466bea2c6ead9076e7b619815aa4c7ae4275959209982e"
+  },
+  "canonical_frozen_sha256": "f1c4198fe4aea2ff91834f11fb43d42d8bcc7d368c68c48418e55a56a2e21b0f",
+  "kind": "post-run canonical archive publication",
+  "pre_run_commit": "a7085f9483faf5811ecc2bbf0de9852a892da4ca",
+  "public_archive_sha256": "1b366454ef94d537d7466bea2c6ead9076e7b619815aa4c7ae4275959209982e",
+  "public_copy_changes": "None. The canonical ZIP and public ZIP are the same file bytes.",
+  "report_sha256": "f4a772863b087f27dbea1269c76894f96af17bff378741197bb571aa1ae75476",
+  "scientific_records_byte_identical_to_canonical_at_export": true,
+  "scope": "Same-lab archive integrity and event replay; no new participants, backend attestation or external replication.",
+  "status": "PASS",
+  "verification": {
+    "all_frozen_hashes_match": true,
+    "all_presented_stdout_exact": true,
+    "all_public_files_unchanged_during_verification": true,
+    "assignment_cells_verified": 32,
+    "assignment_families_verified": 1,
+    "assignment_settings_verified": 2,
+    "canonical_frozen_sha256": "f1c4198fe4aea2ff91834f11fb43d42d8bcc7d368c68c48418e55a56a2e21b0f",
+    "events_replayed": 226,
+    "exact_stdout_records_verified": 226,
+    "final_reports_exact": 32,
+    "fresh_extraction": true,
+    "independent_analytic_reference_audit": {
+      "authored_witness_worlds_checked": 8,
+      "cases_sha256": "7e433f011048150c8d7c74c1f50f059c399c5b800bf7d6f8e1008c50f5ace861",
+      "hidden_worlds_per_orientation": 4,
+      "initial_oracle_value_both_orientations": [
+        2,
+        1
+      ],
+      "orientation_settings": 2,
+      "record": "JRR-RECEIPT-SCOPE-2026-11-18-007",
+      "scope": "An independently calculated feasible schedule proves the maximum two safe completions and priority completion in all four public-consistent hidden worlds for each orientation; engine execution and initial oracle values are cross-checked. This is a finite authored witness, not an independent general oracle implementation.",
+      "status": "PASS",
+      "underlying_task_families": 1,
+      "witnesses": [
+        {
+          "case_id": "C11",
+          "orientation": "original",
+          "safe_joint_completion": true,
+          "schedule": [
+            {
+              "action": "receipt",
+              "job": "B",
+              "status": "ABSENT",
+              "tick": 2,
+              "uses_remaining": 5
+            },
+            {
+              "action": "commit",
+              "job": "B",
+              "status": "APPLIED",
+              "tick": 3,
+              "uses_remaining": 4
+            },
+            {
+              "action": "finalize",
+              "job": "B",
+              "status": "FINALIZED",
+              "tick": 4,
+              "uses_remaining": 3
+            },
+            {
+              "action": "receipt",
+              "job": "A",
+              "status": "ABSENT",
+              "tick": 6,
+              "uses_remaining": 2
+            },
+            {
+              "action": "commit",
+              "job": "A",
+              "status": "APPLIED",
+              "tick": 7,
+              "uses_remaining": 1
+            },
+            {
+              "action": "finalize",
+              "job": "A",
+              "status": "FINALIZED",
+              "tick": 8,
+              "uses_remaining": 0
+            }
+          ],
+          "terminal_tick": 8,
+          "terminal_uses": 0,
+          "world": {
+            "A": {
+              "prior_delivered": 0,
+              "receipt_ready": 1
+            },
+            "B": {
+              "prior_delivered": 0,
+              "receipt_ready": 1
+            }
+          }
+        },
+        {
+          "case_id": "C11",
+          "orientation": "original",
+          "safe_joint_completion": true,
+          "schedule": [
+            {
+              "action": "receipt",
+              "job": "B",
+              "status": "COMMITTED",
+              "tick": 2,
+              "uses_remaining": 5
+            },
+            {
+              "action": "finalize",
+              "job": "B",
+              "status": "FINALIZED",
+              "tick": 3,
+              "uses_remaining": 4
+            },
+            {
+              "action": "receipt",
+              "job": "A",
+              "status": "ABSENT",
+              "tick": 5,
+              "uses_remaining": 3
+            },
+            {
+              "action": "commit",
+              "job": "A",
+              "status": "APPLIED",
+              "tick": 6,
+              "uses_remaining": 2
+            },
+            {
+              "action": "finalize",
+              "job": "A",
+              "status": "FINALIZED",
+              "tick": 7,
+              "uses_remaining": 1
+            }
+          ],
+          "terminal_tick": 7,
+          "terminal_uses": 1,
+          "world": {
+            "A": {
+              "prior_delivered": 0,
+              "receipt_ready": 1
+            },
+            "B": {
+              "prior_delivered": 1,
+              "receipt_ready": 1
+            }
+          }
+        },
+        {
+          "case_id": "C11",
+          "orientation": "original",
+          "safe_joint_completion": true,
+          "schedule": [
+            {
+              "action": "receipt",
+              "job": "B",
+              "status": "ABSENT",
+              "tick": 2,
+              "uses_remaining": 5
+            },
+            {
+              "action": "commit",
+              "job": "B",
+              "status": "APPLIED",
+              "tick": 3,
+              "uses_remaining": 4
+            },
+            {
+              "action": "finalize",
+              "job": "B",
+              "status": "FINALIZED",
+              "tick": 4,
+              "uses_remaining": 3
+            },
+            {
+              "action": "receipt",
+              "job": "A",
+              "status": "COMMITTED",
+              "tick": 6,
+              "uses_remaining": 2
+            },
+            {
+              "action": "finalize",
+              "job": "A",
+              "status": "FINALIZED",
+              "tick": 7,
+              "uses_remaining": 1
+            }
+          ],
+          "terminal_tick": 7,
+          "terminal_uses": 1,
+          "world": {
+            "A": {
+              "prior_delivered": 1,
+              "receipt_ready": 1
+            },
+            "B": {
+              "prior_delivered": 0,
+              "receipt_ready": 1
+            }
+          }
+        },
+        {
+          "case_id": "C11",
+          "orientation": "original",
+          "safe_joint_completion": true,
+          "schedule": [
+            {
+              "action": "receipt",
+              "job": "B",
+              "status": "COMMITTED",
+              "tick": 2,
+              "uses_remaining": 5
+            },
+            {
+              "action": "finalize",
+              "job": "B",
+              "status": "FINALIZED",
+              "tick": 3,
+              "uses_remaining": 4
+            },
+            {
+              "action": "receipt",
+              "job": "A",
+              "status": "COMMITTED",
+              "tick": 5,
+              "uses_remaining": 3
+            },
+            {
+              "action": "finalize",
+              "job": "A",
+              "status": "FINALIZED",
+              "tick": 6,
+              "uses_remaining": 2
+            }
+          ],
+          "terminal_tick": 6,
+          "terminal_uses": 2,
+          "world": {
+            "A": {
+              "prior_delivered": 1,
+              "receipt_ready": 1
+            },
+            "B": {
+              "prior_delivered": 1,
+              "receipt_ready": 1
+            }
+          }
+        },
+        {
+          "case_id": "C11R",
+          "orientation": "reflected",
+          "safe_joint_completion": true,
+          "schedule": [
+            {
+              "action": "receipt",
+              "job": "A",
+              "status": "ABSENT",
+              "tick": 2,
+              "uses_remaining": 5
+            },
+            {
+              "action": "commit",
+              "job": "A",
+              "status": "APPLIED",
+              "tick": 3,
+              "uses_remaining": 4
+            },
+            {
+              "action": "finalize",
+              "job": "A",
+              "status": "FINALIZED",
+              "tick": 4,
+              "uses_remaining": 3
+            },
+            {
+              "action": "receipt",
+              "job": "B",
+              "status": "ABSENT",
+              "tick": 6,
+              "uses_remaining": 2
+            },
+            {
+              "action": "commit",
+              "job": "B",
+              "status": "APPLIED",
+              "tick": 7,
+              "uses_remaining": 1
+            },
+            {
+              "action": "finalize",
+              "job": "B",
+              "status": "FINALIZED",
+              "tick": 8,
+              "uses_remaining": 0
+            }
+          ],
+          "terminal_tick": 8,
+          "terminal_uses": 0,
+          "world": {
+            "A": {
+              "prior_delivered": 0,
+              "receipt_ready": 1
+            },
+            "B": {
+              "prior_delivered": 0,
+              "receipt_ready": 1
+            }
+          }
+        },
+        {
+          "case_id": "C11R",
+          "orientation": "reflected",
+          "safe_joint_completion": true,
+          "schedule": [
+            {
+              "action": "receipt",
+              "job": "A",
+              "status": "ABSENT",
+              "tick": 2,
+              "uses_remaining": 5
+            },
+            {
+              "action": "commit",
+              "job": "A",
+              "status": "APPLIED",
+              "tick": 3,
+              "uses_remaining": 4
+            },
+            {
+              "action": "finalize",
+              "job": "A",
+              "status": "FINALIZED",
+              "tick": 4,
+              "uses_remaining": 3
+            },
+            {
+              "action": "receipt",
+              "job": "B",
+              "status": "COMMITTED",
+              "tick": 6,
+              "uses_remaining": 2
+            },
+            {
+              "action": "finalize",
+              "job": "B",
+              "status": "FINALIZED",
+              "tick": 7,
+              "uses_remaining": 1
+            }
+          ],
+          "terminal_tick": 7,
+          "terminal_uses": 1,
+          "world": {
+            "A": {
+              "prior_delivered": 0,
+              "receipt_ready": 1
+            },
+            "B": {
+              "prior_delivered": 1,
+              "receipt_ready": 1
+            }
+          }
+        },
+        {
+          "case_id": "C11R",
+          "orientation": "reflected",
+          "safe_joint_completion": true,
+          "schedule": [
+            {
+              "action": "receipt",
+              "job": "A",
+              "status": "COMMITTED",
+              "tick": 2,
+              "uses_remaining": 5
+            },
+            {
+              "action": "finalize",
+              "job": "A",
+              "status": "FINALIZED",
+              "tick": 3,
+              "uses_remaining": 4
+            },
+            {
+              "action": "receipt",
+              "job": "B",
+              "status": "ABSENT",
+              "tick": 5,
+              "uses_remaining": 3
+            },
+            {
+              "action": "commit",
+              "job": "B",
+              "status": "APPLIED",
+              "tick": 6,
+              "uses_remaining": 2
+            },
+            {
+              "action": "finalize",
+              "job": "B",
+              "status": "FINALIZED",
+              "tick": 7,
+              "uses_remaining": 1
+            }
+          ],
+          "terminal_tick": 7,
+          "terminal_uses": 1,
+          "world": {
+            "A": {
+              "prior_delivered": 1,
+              "receipt_ready": 1
+            },
+            "B": {
+              "prior_delivered": 0,
+              "receipt_ready": 1
+            }
+          }
+        },
+        {
+          "case_id": "C11R",
+          "orientation": "reflected",
+          "safe_joint_completion": true,
+          "schedule": [
+            {
+              "action": "receipt",
+              "job": "A",
+              "status": "COMMITTED",
+              "tick": 2,
+              "uses_remaining": 5
+            },
+            {
+              "action": "finalize",
+              "job": "A",
+              "status": "FINALIZED",
+              "tick": 3,
+              "uses_remaining": 4
+            },
+            {
+              "action": "receipt",
+              "job": "B",
+              "status": "COMMITTED",
+              "tick": 5,
+              "uses_remaining": 3
+            },
+            {
+              "action": "finalize",
+              "job": "B",
+              "status": "FINALIZED",
+              "tick": 6,
+              "uses_remaining": 2
+            }
+          ],
+          "terminal_tick": 6,
+          "terminal_uses": 2,
+          "world": {
+            "A": {
+              "prior_delivered": 1,
+              "receipt_ready": 1
+            },
+            "B": {
+              "prior_delivered": 1,
+              "receipt_ready": 1
+            }
+          }
+        }
+      ]
+    },
+    "inventory_sha256": "32134c3662bbe14e9ab2c210d8ac4a02dc4f1d959f2462dd494646a99b3737c0",
+    "label_masked_review_verification": {
+      "identity_mapping_cells_verified": 32,
+      "mapping_sha256": "b22f0b298ad4a066b31bf79a30700d746b1200ce6286fb70d29f59ee878c3f39",
+      "masked_judgments_bound": 32,
+      "masked_review_sha256": "9f42be7324282c8a83455121906c540e0ddcf2dddf6f7aa7314e24bce8059601",
+      "native_review_receipt_sha256": "a98349100d922332042aec101cc06cedd10225043027a001113d2bcdb41cc929",
+      "packet_sha256": "66650d2968b9a325c3b3fdaefc390a6dc66c8963d20ec083d97d685a37432d1a",
+      "review_packet_records_verified": 32,
+      "scope": "Recomputed packet and identity bindings, not a new semantic judgment or external review.",
+      "status": "PASS",
+      "verification_wrote_no_files": true
+    },
+    "mechanical_results_exact": 32,
+    "native_report_seals_verified": 32,
+    "observed_results_recomputed_exactly": true,
+    "presentation_events_replayed": 226,
+    "presentation_record_files_verified": 32,
+    "preserved_scientific_record_files": 96,
+    "public_archive": "round-07.zip",
+    "public_archive_identical_to_canonical": true,
+    "public_archive_sha256": "1b366454ef94d537d7466bea2c6ead9076e7b619815aa4c7ae4275959209982e",
+    "public_inventory_files": 434,
+    "receipt_scopes_verified": [
+      "combined",
+      "target"
+    ],
+    "repetitions_per_model_scope_orientation": 4,
+    "retrospective_forensic_verification": {
+      "inputs_verified": 12,
+      "original_combined_full_states_exact_after_archived_finish": 2,
+      "original_combined_prefixes_exact": 2,
+      "parser_routing_fixtures": 12,
+      "predicate_only_counterfactual_safe_joint_completions": 2,
+      "projection_counterfactual_safe_joint_completions": 2,
+      "retained_result_sha256": "27908ee4b1d9c12becbe9e03163e7a8259a8281834df4ea5631844498b1a989e",
+      "retained_scientific_results_exact": true,
+      "scope": "Retrospective authored helper/service replays and mocked parser-routing fixtures; not native participant contexts or prospective native outcomes.",
+      "scoped_parser_counterfactual_safe_joint_completions": 2,
+      "scripted_service_replays": 8,
+      "status": "PASS"
+    },
+    "round": "round-07",
+    "runs_replayed": 32,
+    "scope": "Same-lab replay and integrity checks of the frozen instrument and recorded native runs. No new participant trials, backend attestation, or external replication.",
+    "semantic_tests": {
+      "status": "PASS",
+      "tests": 60
+    },
+    "status": "PASS",
+    "stdout_utf8_bytes_verified": 268416,
+    "temporary_extraction_removed": true,
+    "transport_records_verified": 32,
+    "unchanged_frozen_sources_verified": 247,
+    "verification_kind": "receipt-scope-v1",
+    "verified_at_utc": "2026-11-18T23:23:42.957987+00:00"
+  },
+  "verified_at_utc": "2026-11-18T23:23:42.967154+00:00"
+}

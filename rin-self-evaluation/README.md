@@ -12,7 +12,19 @@ This section was first published on November 18, 2026. Each record lists its run
 
 ## Current readout
 
-Round six compared mandatory per-job reporting fields with an open condition that retained the same task and common accounting reminders. All 24 within-selector condition pairs tied on the frozen execution/common-fact/resource contrasts. The older selector completed both jobs in 8/8 primary cases per condition; the newer did so in 7/8 after duplicating a confirmed delivery in the same family under both conditions. All 48 reports explicitly accounted for both jobs. Review retained three unclear reports, and earlier findings remain unchanged. These authored cases do not establish treatment equivalence or a general model ranking.
+Round seven investigated the earlier duplicate-delivery failure. Both recovered helpers reproduced it through a whole-response ABSENT check, and three explicit scripted interventions avoided it in the original case. In 32 prospectively frozen fresh contexts, safe completion was 8/8 under both receipt scopes for the older selector and 6/8 combined versus 8/8 target-only for the newer. Both new errors were in the A/B reflection; all eight closest original/combined repetitions succeeded. All reports explicitly accounted for both jobs; review retained 29 supported, zero unsupported and three unclear reports. The result is local to one selected family, and fresh parser use or internal cause was not established. Earlier records remain unchanged.
+
+## Round 07 — The Check That Matched the Other Job
+
+**What we tested:** Can recovered helper code reproduce the Round 06 failure, and does removing the other job’s nested status from receipt responses change fresh execution on that case and its A/B reflection?
+
+**What happened:** Both recovered helpers reproduced the historical duplicate and completed safely under each of three separately tested interventions. In 32 fresh contexts, the older selector safely completed 8/8 under each receipt scope; the newer completed 6/8 with combined receipts and 8/8 with target-only receipts. All 32 reports explicitly accounted for both jobs.
+
+**Outliers:** Both fresh errors were reflected newer/combined runs: x009 and x031 duplicated B after authoritative COMMITTED evidence. All eight original/combined runs completed safely. Review retained three unclear reports: two unverified matching-cause explanations and one deadline-boundary phrase. No destructive query occurred.
+
+**Design:** One selected authored scenario family, its complete A/B reflection, two requested selectors, two receipt-response scopes and four fresh repetitions per full cell: 32 native contexts. Every context has the same checklist report requirement, shared key, logical clock, costs and objective. Target scope removes only the non-target job entry from receipt responses; all other outputs remain complete. The already-completed retrospective helper investigation is retained separately.
+
+[Read the GitHub record](round-07.md) · [Open the web page](https://uberbestest.github.io/josh-rin-interactive-lab/rin-self-evaluation/round-07.html) · [Report PDF](reports/round-07.pdf) · [Public evidence ZIP](evidence/round-07.zip) · [Public checksum](evidence/round-07.sha256) · [Disclosure receipt](evidence/round-07-publication.json)
 
 ## Round 06 — The Second Job Without a Checklist
 
