@@ -1,0 +1,5760 @@
+{
+  "cases": [
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 1,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 2,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 3,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 4,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 5,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 6,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C01",
+      "family_id": "F05",
+      "initial_value": [
+        2,
+        1
+      ],
+      "policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "A",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 2,
+            "delivery": "absent",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 6,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 3,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1,
+                3
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 5
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 1,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 2,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 3,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 4,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 5,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 6,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C02",
+      "family_id": "F09",
+      "initial_value": [
+        1,
+        1
+      ],
+      "policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "A",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "B",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "B",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "finalized": {
+                            "A": false,
+                            "B": true
+                          },
+                          "guaranteed_value": [
+                            1,
+                            1
+                          ],
+                          "stop": true
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 8,
+            "delivery": "absent",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 8,
+            "delivery": "absent",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 3
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 1,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 2,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 3,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 4,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 5,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 6,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C03",
+      "family_id": "F06",
+      "initial_value": [
+        2,
+        1
+      ],
+      "policy_witness": {
+        "action": "finalize",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "exactly_one_delivery": true,
+              "job": "B",
+              "status": "FINALIZED"
+            },
+            "policy": {
+              "action": "receipt",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "ABSENT",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "A",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                },
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "COMMITTED",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "finalized": {
+                            "A": true,
+                            "B": true
+                          },
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "stop": true
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 5,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 3,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1,
+                3
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": true,
+            "deadline": 1,
+            "delivery": "present",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "COMMITTED",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 4
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 1,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 2,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 3,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 4,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 5,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 6,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C04",
+      "family_id": "F01",
+      "initial_value": [
+        2,
+        1
+      ],
+      "policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "A",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "receipt",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "B",
+                                "status": "ABSENT",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "commit",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "job": "B",
+                                      "new_delivery_effects": 1,
+                                      "status": "APPLIED",
+                                      "transaction": "recovery-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "B",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "B",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            },
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "B",
+                                "status": "COMMITTED",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 4,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 1,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 8,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 1,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 6
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 1,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 2,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 3,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 4,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 5,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 6,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C05",
+      "family_id": "F11",
+      "initial_value": [
+        1,
+        1
+      ],
+      "policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "B",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "B",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "B",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "finalized": {
+                            "A": false,
+                            "B": true
+                          },
+                          "guaranteed_value": [
+                            1,
+                            1
+                          ],
+                          "stop": true
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "B",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "B",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "finalized": {
+                      "A": false,
+                      "B": true
+                    },
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "stop": true
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 4,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 1,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 4,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 1,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 6
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 1,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 2,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 3,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 4,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 5,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 6,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 7,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 8,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C06",
+      "family_id": "F07",
+      "initial_value": [
+        2,
+        1
+      ],
+      "policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "A",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "B",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 12,
+            "delivery": "absent",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 12,
+            "delivery": "absent",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 4
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 1,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 2,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 3,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 4,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 5,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 6,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C07",
+      "family_id": "F04",
+      "initial_value": [
+        2,
+        1
+      ],
+      "policy_witness": {
+        "action": "wait",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": null,
+        "outcomes": [
+          {
+            "observation": {
+              "status": "WAITED",
+              "ticks": 1
+            },
+            "policy": {
+              "action": "receipt",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "B",
+                    "status": "ABSENT",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "B",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "action": "receipt",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "coverage": "AUTHORITATIVE_FINAL",
+                                      "job": "A",
+                                      "status": "ABSENT",
+                                      "transaction": "original-write"
+                                    },
+                                    "policy": {
+                                      "action": "commit",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "A",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "job": "A",
+                                            "new_delivery_effects": 1,
+                                            "status": "APPLIED",
+                                            "transaction": "recovery-write"
+                                          },
+                                          "policy": {
+                                            "action": "finalize",
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "job": "A",
+                                            "outcomes": [
+                                              {
+                                                "observation": {
+                                                  "acknowledgement": "AUTHORITATIVE",
+                                                  "exactly_one_delivery": true,
+                                                  "job": "A",
+                                                  "status": "FINALIZED"
+                                                },
+                                                "policy": {
+                                                  "finalized": {
+                                                    "A": true,
+                                                    "B": true
+                                                  },
+                                                  "guaranteed_value": [
+                                                    2,
+                                                    1
+                                                  ],
+                                                  "stop": true
+                                                }
+                                              }
+                                            ],
+                                            "ticks": null
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  },
+                                  {
+                                    "observation": {
+                                      "coverage": "AUTHORITATIVE_FINAL",
+                                      "job": "A",
+                                      "status": "COMMITTED",
+                                      "transaction": "original-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "A",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "A",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                },
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "B",
+                    "status": "COMMITTED",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "B",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "receipt",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "A",
+                                "status": "ABSENT",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "commit",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "job": "A",
+                                      "new_delivery_effects": 1,
+                                      "status": "APPLIED",
+                                      "transaction": "recovery-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "A",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "A",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            },
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "A",
+                                "status": "COMMITTED",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "A",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": 1
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 9,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 3,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1,
+                3
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 5,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 3,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1,
+                3
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 6
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 1,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 2,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 3,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 4,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 5,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": 6,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C08",
+      "family_id": "F10",
+      "initial_value": [
+        1,
+        1
+      ],
+      "policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "A",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "finalized": {
+                      "A": true,
+                      "B": false
+                    },
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "stop": true
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 8,
+            "delivery": "absent",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 8,
+            "delivery": "absent",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "A",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 3
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 1,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 2,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 3,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 4,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 5,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 6,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C09",
+      "family_id": "F03",
+      "initial_value": [
+        2,
+        1
+      ],
+      "policy_witness": {
+        "action": "wait",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": null,
+        "outcomes": [
+          {
+            "observation": {
+              "status": "WAITED",
+              "ticks": 1
+            },
+            "policy": {
+              "action": "receipt",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "ABSENT",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "A",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "action": "receipt",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "coverage": "AUTHORITATIVE_FINAL",
+                                      "job": "B",
+                                      "status": "ABSENT",
+                                      "transaction": "original-write"
+                                    },
+                                    "policy": {
+                                      "action": "commit",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "B",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "job": "B",
+                                            "new_delivery_effects": 1,
+                                            "status": "APPLIED",
+                                            "transaction": "recovery-write"
+                                          },
+                                          "policy": {
+                                            "action": "finalize",
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "job": "B",
+                                            "outcomes": [
+                                              {
+                                                "observation": {
+                                                  "acknowledgement": "AUTHORITATIVE",
+                                                  "exactly_one_delivery": true,
+                                                  "job": "B",
+                                                  "status": "FINALIZED"
+                                                },
+                                                "policy": {
+                                                  "finalized": {
+                                                    "A": true,
+                                                    "B": true
+                                                  },
+                                                  "guaranteed_value": [
+                                                    2,
+                                                    1
+                                                  ],
+                                                  "stop": true
+                                                }
+                                              }
+                                            ],
+                                            "ticks": null
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  },
+                                  {
+                                    "observation": {
+                                      "coverage": "AUTHORITATIVE_FINAL",
+                                      "job": "B",
+                                      "status": "COMMITTED",
+                                      "transaction": "original-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "B",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "B",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                },
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "COMMITTED",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "receipt",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "B",
+                                "status": "ABSENT",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "commit",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "job": "B",
+                                      "new_delivery_effects": 1,
+                                      "status": "APPLIED",
+                                      "transaction": "recovery-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "B",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "B",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            },
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "B",
+                                "status": "COMMITTED",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": 1
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 5,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 3,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1,
+                3
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 9,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 3,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1,
+                3
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 6
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 1,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 2,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 3,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 4,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 5,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 6,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C10",
+      "family_id": "F12",
+      "initial_value": [
+        1,
+        1
+      ],
+      "policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "B",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "B",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "finalized": {
+                      "A": false,
+                      "B": true
+                    },
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "stop": true
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 8,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": null,
+              "kind": "unbounded"
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 2,
+            "delivery": "absent",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 5
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": null,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 1,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 2,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 3,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 4,
+          "worst_case_value": [
+            1,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 5,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 6,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 7,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 8,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C11",
+      "family_id": "F02",
+      "initial_value": [
+        2,
+        1
+      ],
+      "policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "B",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "B",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "B",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "receipt",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "A",
+                                "status": "ABSENT",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "commit",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "job": "A",
+                                      "new_delivery_effects": 1,
+                                      "status": "APPLIED",
+                                      "transaction": "recovery-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "A",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "A",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            },
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "A",
+                                "status": "COMMITTED",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "A",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "B",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "B",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "A",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "A",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "A",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "A",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 8,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-A",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 1,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 4,
+            "delivery": "unknown",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "unknown",
+            "packet": "PACKET-B",
+            "query_key_cost": 1,
+            "receipt_timing": {
+              "guaranteed_by_tick": 1,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                1
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 6
+      }
+    },
+    {
+      "accepted_safe_openings": [
+        {
+          "action": "receipt",
+          "job": "A",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": null,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 1,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 2,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 3,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 4,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 5,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 6,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 7,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": true,
+          "preserves_optimal_value": true,
+          "ticks": 8,
+          "worst_case_value": [
+            2,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 9,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 10,
+          "worst_case_value": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 11,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 12,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 13,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 14,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 15,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 16,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 17,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 18,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 19,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        },
+        {
+          "action": "wait",
+          "job": null,
+          "preserves_joint_guarantee": false,
+          "preserves_optimal_value": false,
+          "ticks": 20,
+          "worst_case_value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "case_id": "C12",
+      "family_id": "F08",
+      "initial_value": [
+        2,
+        1
+      ],
+      "policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "A",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "B",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "public_initial_status": {
+        "action_limit": 32,
+        "actions_taken": 0,
+        "commit_and_finalize_duration_ticks": 1,
+        "commit_and_finalize_key_cost": 1,
+        "deadlines_are_inclusive": true,
+        "jobs": {
+          "A": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 12,
+            "delivery": "absent",
+            "destination": "ARCHIVE-A",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-A",
+            "query_key_cost": 0,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          },
+          "B": {
+            "acknowledged_recovery_writes": 0,
+            "authorization": "active",
+            "authorization_stable": true,
+            "confirmed_exactly_one_delivery": false,
+            "deadline": 12,
+            "delivery": "absent",
+            "destination": "ARCHIVE-B",
+            "finalized": false,
+            "original_write_receipt": "ABSENT",
+            "packet": "PACKET-B",
+            "query_key_cost": 0,
+            "receipt_timing": {
+              "guaranteed_by_tick": 0,
+              "kind": "bounded",
+              "possible_coverage_ticks": [
+                0
+              ]
+            }
+          }
+        },
+        "joint_complete": false,
+        "priority_if_only_one_can_be_guaranteed": "B",
+        "query_duration_ticks": 2,
+        "report_sealed": false,
+        "tick": 0,
+        "uses_remaining": 4
+      }
+    }
+  ],
+  "common_accepted_joint_preserving_first_actions": [],
+  "joint_feasible_family_count": 8
+}
