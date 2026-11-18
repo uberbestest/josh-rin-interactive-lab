@@ -1,0 +1,825 @@
+{
+  "cases": [
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": null
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C01",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 2
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 5
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": null
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 2
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 5
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": null
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "unbounded_control"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C02",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C03",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": 3
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C04",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 1,
+        "receipt_ready": 3
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C05",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C06",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 0,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": 3
+      },
+      "authorization_known": false,
+      "budget": 4,
+      "case_id": "C07",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "revoked",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "revoked",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "revoked",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "revoked",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "authorization_control"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 1,
+        "receipt_ready": 3
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C08",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C09",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "revoked",
+        "prior_delivered": 0,
+        "receipt_ready": 3
+      },
+      "authorization_known": false,
+      "budget": 4,
+      "case_id": "C10",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "revoked",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "revoked",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "revoked",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "revoked",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "authorization_control"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": 3
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C11",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 1,
+        "receipt_ready": 3
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C12",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 0,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": 3
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C13",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 0,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 1,
+        "receipt_ready": null
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C14",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 2
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 5
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": null
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 2
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 5
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": null
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "unbounded_control"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 1,
+        "receipt_ready": 3
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C15",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 0,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C16",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 0,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 0,
+        "receipt_ready": 3
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C17",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 0,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C18",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 0,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C19",
+      "deadline": 20,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 1,
+      "stratum": "primary"
+    },
+    {
+      "actual_world": {
+        "authority": "active",
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      },
+      "authorization_known": true,
+      "budget": 3,
+      "case_id": "C20",
+      "deadline": 5,
+      "initial_worlds": [
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        {
+          "authority": "active",
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      ],
+      "query_cost": 0,
+      "stratum": "primary"
+    }
+  ],
+  "design": "16 factorial + 4 diagnostic controls"
+}
