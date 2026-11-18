@@ -1,0 +1,625 @@
+{
+  "case_array_serializer": "engine.report_bytes: sorted-key, indented UTF-8 JSON with trailing newline",
+  "case_array_sha256": "d40d82b886ad54605a131a81dc05439b7b4fff8b918d44eef59a5a47a55d6bd4",
+  "cases": [
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        }
+      },
+      "case_id": "C01",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 2,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1,
+              3
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 5
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F05",
+      "stratum": "joint_feasible",
+      "title": "Known absence at A makes a check too late"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        }
+      },
+      "case_id": "C02",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 8,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 3
+      },
+      "expected_initial_value": [
+        1,
+        1
+      ],
+      "family_id": "F09",
+      "stratum": "joint_budget_control",
+      "title": "Insufficient joint budget with B priority"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        }
+      },
+      "case_id": "C03",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 5,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1,
+              3
+            ]
+          },
+          "B": {
+            "deadline": 1,
+            "initial_receipt": 1,
+            "prior_options": [
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 4
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F06",
+      "stratum": "joint_feasible",
+      "title": "Known delivery at B requires immediate finalization"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        }
+      },
+      "case_id": "C04",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 4,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          },
+          "B": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F01",
+      "stratum": "joint_feasible",
+      "title": "Urgent A requires immediate evidence"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        }
+      },
+      "case_id": "C05",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 4,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          },
+          "B": {
+            "deadline": 4,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "expected_initial_value": [
+        1,
+        1
+      ],
+      "family_id": "F11",
+      "stratum": "joint_deadline_control",
+      "title": "Joint deadline ceiling with B priority"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        }
+      },
+      "case_id": "C06",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 12,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 12,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 4
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F07",
+      "stratum": "joint_feasible",
+      "title": "Charged redundant receipt spends the other job key"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 3
+        }
+      },
+      "case_id": "C07",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 9,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1,
+              3
+            ]
+          },
+          "B": {
+            "deadline": 5,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1,
+              3
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F04",
+      "stratum": "joint_feasible",
+      "title": "Urgent B requires a delayed first check"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        }
+      },
+      "case_id": "C08",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 8,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "A",
+        "uses_remaining": 3
+      },
+      "expected_initial_value": [
+        1,
+        1
+      ],
+      "family_id": "F10",
+      "stratum": "joint_budget_control",
+      "title": "Insufficient joint budget with A priority"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 3
+        }
+      },
+      "case_id": "C09",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 5,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1,
+              3
+            ]
+          },
+          "B": {
+            "deadline": 9,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1,
+              3
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F03",
+      "stratum": "joint_feasible",
+      "title": "Urgent A requires a delayed first check"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": null
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        }
+      },
+      "case_id": "C10",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              null
+            ]
+          },
+          "B": {
+            "deadline": 2,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 5
+      },
+      "expected_initial_value": [
+        1,
+        1
+      ],
+      "family_id": "F12",
+      "stratum": "unbounded_control",
+      "title": "Unbounded receipt must not consume urgent B"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        }
+      },
+      "case_id": "C11",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          },
+          "B": {
+            "deadline": 4,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F02",
+      "stratum": "joint_feasible",
+      "title": "Urgent B requires immediate evidence"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        }
+      },
+      "case_id": "C12",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 12,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 0,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 12,
+            "initial_receipt": 0,
+            "prior_options": [
+              0
+            ],
+            "query_cost": 0,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 4
+      },
+      "expected_initial_value": [
+        2,
+        1
+      ],
+      "family_id": "F08",
+      "stratum": "joint_feasible",
+      "title": "Free redundant receipt cost control"
+    }
+  ],
+  "design": "12 inherited cases, two reporting conditions and two requested selectors, one fresh context per family/model/condition cell (48 contexts).",
+  "record": "JRR-CHECKLIST-2026-11-18-006",
+  "source_case_catalog_sha256": "47bbe22b72934dac7d878605b1be05cdeb4ef3ac94eddba1caa3ae428ec8398b",
+  "source_record": "JRR-SECOND-DOOR-2026-11-18-005"
+}

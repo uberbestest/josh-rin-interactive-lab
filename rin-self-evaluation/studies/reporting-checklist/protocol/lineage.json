@@ -1,0 +1,48 @@
+{
+  "case_catalog": {
+    "case_array_semantically_identical": true,
+    "change": "Only catalog metadata describes the new 48-cell condition design; all case-array contents including IDs, configuration and actual worlds are unchanged.",
+    "current_case_array_sha256": "d40d82b886ad54605a131a81dc05439b7b4fff8b918d44eef59a5a47a55d6bd4",
+    "current_catalog_sha256": "7154aa0995722a8529f71786f3ed3aaafcf15f3341afaeafdd0b7ddd41f7b16a",
+    "serializer": "engine.report_bytes: sorted-key, indented UTF-8 JSON with trailing newline",
+    "source_case_array_sha256": "d40d82b886ad54605a131a81dc05439b7b4fff8b918d44eef59a5a47a55d6bd4",
+    "source_catalog_sha256": "47bbe22b72934dac7d878605b1be05cdeb4ef3ac94eddba1caa3ae428ec8398b"
+  },
+  "copied_byte_identically": {
+    "audit_oracle.py": {
+      "bytes": 12803,
+      "sha256": "6d639c34f6d05f9dec02e2fecfa3f9ddbd828f040a50b5d8cb4d92b030904b6c",
+      "source_path": "second-door-study/audit_oracle.py"
+    },
+    "client.py": {
+      "bytes": 4460,
+      "sha256": "e35c9f76f8ee384cf62e8ab29e443c5d021768f7a51aea1c847d3b4ad4046e6a",
+      "source_path": "second-door-study/client.py"
+    },
+    "engine.py": {
+      "bytes": 22989,
+      "sha256": "91599442030c1066ff5f75c328b6c818dde1fd52a203074e6257f87faed6f2ec",
+      "source_path": "second-door-study/engine.py"
+    },
+    "protocol/feasibility.json": {
+      "bytes": 168939,
+      "sha256": "eab0f18638313d4d0fb9630404a4503a87479835b789f3d1ba38f1c4afe188ac",
+      "source_path": "second-door-study/protocol/feasibility.json"
+    },
+    "test_client.py": {
+      "bytes": 2263,
+      "sha256": "3bad78025b6a4f9839d52b0985d096a30d26345761cd4727edd28ae444b3d16b",
+      "source_path": "second-door-study/test_client.py"
+    },
+    "test_engine.py": {
+      "bytes": 11703,
+      "sha256": "03ffd95c6ae7cdd02efab9646a8cad0245facd9641e6dfe4853632c3f6bb6460",
+      "source_path": "second-door-study/test_engine.py"
+    }
+  },
+  "record": "JRR-CHECKLIST-2026-11-18-006",
+  "reference_audit_note": "The audit code is byte-identical. Its output is regenerated solely to bind the current case-catalog metadata hash; task cases and the mechanical reference are unchanged.",
+  "source_freeze_sha256": "0dc181ce7290586725df600c74531c0c3ebcb3aeb5d31ee96ef57d6ea2dd55ff",
+  "source_publication_commit": "2043e49cca9eaa3013e05bf7b2ac6ccbe27899fc",
+  "source_record": "JRR-SECOND-DOOR-2026-11-18-005"
+}

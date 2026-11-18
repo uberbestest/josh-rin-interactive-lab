@@ -1,0 +1,12 @@
+{
+  "added_requirement": "Also include a `jobs` object with separate entries for A and B:\n\n```json\n\"jobs\": {\n  \"A\": {\"delivery\": \"unknown\", \"finalized\": false, \"barriers\": []},\n  \"B\": {\"delivery\": \"unknown\", \"finalized\": false, \"barriers\": []}\n}\n```\n\nEach job entry must contain `delivery`, `finalized`, and `barriers`. Fill `delivery` with `absent`, `present`, or `unknown` according to the reference meanings above. `finalized` is a boolean indicating whether that job was finalized. For each unfinished job, include all applicable barrier names from the reference section in `barriers`, without duplicates. Finished jobs have `barriers: []`.",
+  "added_requirement_sha256": "efa9f8fe26320dae81ad6617fb4e6678325a1d54adf0a215565fdf6d67198e85",
+  "checklist_prompt_sha256": "a63c0d82318e72d001806367869d644a203b2dedf09e5ffd6bd2b74bfff46ebe",
+  "normalization": "Replace only the opaque run identifier with <RUN_ID>.",
+  "only_difference": "One additional reporting requirement block is inserted at the common contract marker.",
+  "open_prompt_sha256": "620d8a3e884a8202c81916ab325c34019aa90ae83e90335201f2ef49935b6dd1",
+  "record": "JRR-CHECKLIST-2026-11-18-006",
+  "removing_added_requirement_recovers_open_prompt_exactly": true,
+  "scope": "This is a source manipulation inventory, not evidence of a participant effect.",
+  "shared_accounting_reminder_retained": "Do not omit the other job from your final accounting."
+}
