@@ -146,14 +146,23 @@ def detail(study, data):
     observations = ''.join('<p>' + esc(text) + '</p>' for text in study['observations'])
     verification = ''.join('<li>' + esc(text) + '</li>' for text in study['verification_notes'])
     caveats = ''.join('<li>' + esc(text) + '</li>' for text in study['scope_caveats'])
+    identical_archive = study.get('public_archive_identical_to_canonical', False)
+    evidence_explanation = ('The complete canonical evidence archive, published byte for byte without path redaction or repackaging.'
+                            if identical_archive else 'Source, recorded observations and supporting records in a separately identified public disclosure copy.')
+    disclosure_explanation = ('The unchanged archive identity and the checks performed for this publication.'
+                              if identical_archive else 'What differs from the retained original archive and what was checked for this publication.')
+    evidence_note = ('The public evidence ZIP is byte-identical to the retained canonical archive. Its public checksum is therefore also the canonical archive checksum. The report has its own digest; the publication receipt records the replay and integrity checks.'
+                     if identical_archive else 'The original report and the public evidence copy have separate identities. Use the public ZIP’s own checksum and publication receipt when checking the download; its packaging and path disclosures differ from the retained original archive.')
+    archive_digest_label = ('Canonical and public archive SHA-256'
+                            if identical_archive else 'Retained original archive SHA-256 — not the public ZIP checksum')
     download_items = [
         ('report', 'Original report · PDF', f'{study["pdf_pages"]} pages. The retained report is published without changing its bytes.'),
-        ('evidence', 'Public evidence · ZIP', 'Source, recorded observations and supporting records in a separately identified public disclosure copy.'),
+        ('evidence', 'Public evidence · ZIP', evidence_explanation),
         ('checksum', 'Public archive checksum', 'SHA-256 for the downloadable public ZIP.'),
-        ('publication', 'Disclosure and verification receipt', 'What differs from the retained original archive and what was checked for this publication.')]
+        ('publication', 'Disclosure and verification receipt', disclosure_explanation)]
     downloads = ''.join(f'<a class="download" href="{local_path(study["files"][key])}"><strong>{label}</strong><span>{esc(explanation)}</span></a>' for key, label, explanation in download_items)
     digests = ''.join(f'<dt>{esc(label)}</dt><dd><code>{esc(study["original_digests"][key])}</code></dd>' for key, label in [
-        ('report_sha256', 'Original PDF SHA-256'), ('archive_sha256', 'Retained original archive SHA-256 — not the public ZIP checksum'), ('protocol_sha256', 'Retained original frozen-protocol SHA-256')])
+        ('report_sha256', 'Original PDF SHA-256'), ('archive_sha256', archive_digest_label), ('protocol_sha256', 'Retained original frozen-protocol SHA-256')])
     neighboring = sorted(data['studies'], key=lambda s: s['round'])
     nav = []
     pos = next(i for i, s in enumerate(neighboring) if s['round'] == number)
@@ -180,12 +189,15 @@ def detail(study, data):
 <section class="content-section" id="results" aria-labelledby="results-heading"><h2 id="results-heading">Results, with their denominators</h2>{result}<p class="fine">{esc(study['denominator_note'])}</p><p class="prose"><strong>{esc(study['interpretation'])}</strong></p></section>
 <section class="content-section" aria-labelledby="differences-heading"><h2 id="differences-heading">Outliers and informative differences</h2><div class="prose">{observations}</div></section>
 <section class="content-section" aria-labelledby="verification-heading"><h2 id="verification-heading">What was checked</h2><ul class="detail-list">{verification}</ul><p class="fine">These are retained same-lab checks, including separate model reviewers where recorded. They are not external scientific replication.</p><details class="read-more"><summary>Scope and limits of this result</summary><ul class="detail-list">{caveats}</ul></details></section>
-<section class="content-section" id="evidence" aria-labelledby="evidence-heading"><h2 id="evidence-heading">Open the evidence</h2><p class="prose">The original report and the public evidence copy have separate identities. Use the public ZIP’s own checksum and publication receipt when checking the download; its packaging and path disclosures differ from the retained original archive.</p><div class="downloads">{downloads}</div><details class="read-more"><summary>Original artifact identities</summary><dl class="hashes">{digests}</dl></details><div class="actions"><a href="studies.json">Structured study record</a><a href="{REPO_URL}">Browse the committed files ↗</a></div></section>
+<section class="content-section" id="evidence" aria-labelledby="evidence-heading"><h2 id="evidence-heading">Open the evidence</h2><p class="prose">{esc(evidence_note)}</p><div class="downloads">{downloads}</div><details class="read-more"><summary>Original artifact identities</summary><dl class="hashes">{digests}</dl></details><div class="actions"><a href="studies.json">Structured study record</a><a href="{REPO_URL}">Browse the committed files ↗</a></div></section>
 <nav class="next-links" aria-label="Adjacent evaluations">{''.join(nav)}</nav>'''
     return document(study['title'], study['tldr']['tested'], body)
 
 
 def readme(data):
+    archive_policy = ('The original PDFs remain unchanged. Each study states whether its public ZIP is byte-identical to its canonical archive or a separately identified disclosure copy. Check the archive’s own checksum and publication receipt. Separate model review and independently written checks within this lab are same-lab verification, not external replication.'
+                      if any(s.get('public_archive_identical_to_canonical', False) for s in data['studies'])
+                      else 'The original PDFs remain unchanged. Evidence ZIPs are explicitly identified public disclosure copies; their own checksums and disclosure receipts distinguish them from canonical retained archives. Separate model review and independently written checks within this lab are same-lab verification, not external replication.')
     output = [f'# {data["title"]}', '', data['description'], '',
               f'[Open the evaluation notebook]({SITE_URL}) · [Structured index](studies.json) · [Next-entry template](ENTRY_TEMPLATE.md)', '',
               '## Model identity', '', data['identity_note'], '',
@@ -200,7 +212,7 @@ def readme(data):
                        f'[Read the GitHub record](round-{study["round"]:02d}.md) · [Open the web page]({SITE_URL}{page_name(study)}) · [Report PDF]({study["files"]["report"]}) · [Public evidence ZIP]({study["files"]["evidence"]}) · [Public checksum]({study["files"]["checksum"]}) · [Disclosure receipt]({study["files"]["publication"]})', ''])
     output.extend(['## Ongoing publication format', '',
                    'Start every new test with **What we tested**, **What happened**, and **Outliers**. Record actual requested selectors, serving-snapshot uncertainty, control conditions, execution status, run date, publication date, eligible denominators, protocol, raw evidence, and verification scope. Preserve negative results and earlier versions. Label an unrun protocol as planned.', '',
-                   'The original PDFs remain unchanged. Evidence ZIPs are explicitly identified public disclosure copies; their own checksums and disclosure receipts distinguish them from canonical retained archives. Separate model review and independently written checks within this lab are same-lab verification, not external replication.', '',
+                   archive_policy, '',
                    '## Maintain the pages', '',
                    '`studies.json` is the reviewed presentation record. After updating it, run `python3 rin-self-evaluation/build.py` from the repository root to generate the hub, HTML and Markdown study records, and this README. Run `python3 rin-self-evaluation/build.py --check` to check for stale generated pages without writing. The generator launches no models and changes no evidence.', '',
                    'See [the entry template](ENTRY_TEMPLATE.md) and [section instructions](AGENTS.md) before adding another result. Publication checks and public evidence verification are supplied separately; passing a presentation check does not create an additional experiment.', '',
@@ -209,6 +221,11 @@ def readme(data):
 
 
 def markdown_record(study):
+    identical_archive = study.get('public_archive_identical_to_canonical', False)
+    evidence_note = ('The public evidence ZIP is byte-identical to the retained canonical archive, without path redaction or repackaging. Its public checksum is also the canonical archive checksum. The report has its own digest; the publication receipt records the replay and integrity checks.'
+                     if identical_archive else 'The original report and public evidence copy have separate identities. Use the public ZIP’s own checksum and disclosure receipt when checking the download. Its packaging and path disclosures differ from the retained original archive.')
+    archive_identity = (f'- Canonical and public archive SHA-256: `{study["original_digests"]["archive_sha256"]}`.'
+                        if identical_archive else f'- Retained original archive SHA-256: `{study["original_digests"]["archive_sha256"]}`. This is not the public ZIP checksum.')
     output = [f'# Round {study["round"]:02d} — {study["title"]}', '', '## TL;DR', '',
               f'**What we tested:** {study["tldr"]["tested"]}', '',
               f'**What happened:** {study["tldr"]["happened"]}', '',
@@ -234,7 +251,7 @@ def markdown_record(study):
     output += ['', 'These are retained same-lab checks, including separate model reviewers where recorded. They are not external scientific replication.', '', '## Scope and limits', '']
     output += ['- ' + text for text in study['scope_caveats']]
     output += ['', '## Evidence and publication provenance', '',
-               'The original report and public evidence copy have separate identities. Use the public ZIP’s own checksum and disclosure receipt when checking the download. Its packaging and path disclosures differ from the retained original archive.', '',
+               evidence_note, '',
                f'- [Original report PDF]({study["files"]["report"]}) — {study["pdf_pages"]} pages, unchanged bytes.',
                f'- [Public evidence ZIP]({study["files"]["evidence"]}).',
                f'- [Public archive checksum]({study["files"]["checksum"]}).',
@@ -242,7 +259,7 @@ def markdown_record(study):
                '- [Structured study index](studies.json).', '',
                '### Original artifact identities', '',
                f'- Original PDF SHA-256: `{study["original_digests"]["report_sha256"]}`.',
-               f'- Retained original archive SHA-256: `{study["original_digests"]["archive_sha256"]}`. This is not the public ZIP checksum.',
+               archive_identity,
                f'- Retained original frozen-protocol SHA-256: `{study["original_digests"]["protocol_sha256"]}`.', '',
                'Further studies and dated corrections belong in this series. The entry template preserves the same three-field TLDR and provenance structure.', '']
     return '\n'.join(output)

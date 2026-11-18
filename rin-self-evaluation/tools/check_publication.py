@@ -100,7 +100,7 @@ def check(output_dir):
             assert f"**{label}:**" in (SECTION / (number + ".md")).read_text()
         if study["round"] == 1:
             assert study["kind"] == "baseline" and study["selectors"] == []
-        elif study["round"] in (2, 3):
+        elif study["kind"] == "matched":
             assert study["selectors"] == ["gpt-6-astra", "gpt-6.2-astra"]
 
         files = {key: SECTION / value for key, value in study["files"].items()}
@@ -116,10 +116,19 @@ def check(output_dir):
         assert receipt["canonical_frozen_sha256"] == study["original_digests"]["protocol_sha256"]
         assert receipt["scientific_records_byte_identical_to_canonical_at_export"] is True
         check_path = output_dir / (number + "-replay.json")
-        subprocess.run([
-            sys.executable, str(SECTION / "tools" / "verify_public_evidence.py"),
-            str(files["evidence"]), "--output", str(check_path),
-        ], check=True)
+        verification_kind = study.get("verification_kind", "public-disclosure-v1")
+        if verification_kind == "public-disclosure-v1":
+            command = [sys.executable, str(SECTION / "tools" / "verify_public_evidence.py"),
+                       str(files["evidence"]), "--output", str(check_path)]
+        elif verification_kind == "consumable-key-v1":
+            assert study.get("public_archive_identical_to_canonical") is True
+            assert archive_sha == study["original_digests"]["archive_sha256"]
+            command = [sys.executable, str(SECTION / "tools" / "verify_key_evidence.py"),
+                       str(files["evidence"]), "--frozen-sha256", study["original_digests"]["protocol_sha256"],
+                       "--output", str(check_path)]
+        else:
+            raise ValueError("Unsupported publication verification kind: " + str(verification_kind))
+        subprocess.run(command, check=True)
         replay = json.loads(check_path.read_text())
         for field in ("runs_replayed", "events_replayed", "mechanical_results_exact", "final_reports_exact",
                       "preserved_scientific_record_files"):

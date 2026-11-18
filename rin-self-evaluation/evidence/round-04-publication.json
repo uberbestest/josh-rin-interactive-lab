@@ -1,0 +1,63 @@
+{
+  "canonical_archive": {
+    "identical_to_public_archive": true,
+    "sha256": "3f6ac2dfeb99c563a728351605cd97ce96451fddefea7c19038f6b25f7a1cba5"
+  },
+  "canonical_frozen_sha256": "e2baa0af1c43e64961c31ec90e97d8a9a1ebd3b6f86b3ed5249190a6bc2f561e",
+  "kind": "post-run canonical archive publication",
+  "pre_run_commit": "4a230054390ac84557dd71398dce60f6a4a0d219",
+  "public_archive_sha256": "3f6ac2dfeb99c563a728351605cd97ce96451fddefea7c19038f6b25f7a1cba5",
+  "public_copy_changes": "None. The canonical ZIP and public ZIP are the same file bytes.",
+  "report_sha256": "a9a57429b7c6279c7e82a8b3da6124f9d28f51bd3b83c9dfb62e6060dc7b3a4c",
+  "scientific_records_byte_identical_to_canonical_at_export": true,
+  "scope": "Same-lab archive integrity and event replay; no new participants, backend attestation or external replication.",
+  "status": "PASS",
+  "verification": {
+    "all_frozen_hashes_match": true,
+    "all_public_files_unchanged_during_verification": true,
+    "canonical_frozen_sha256": "e2baa0af1c43e64961c31ec90e97d8a9a1ebd3b6f86b3ed5249190a6bc2f561e",
+    "events_replayed": 214,
+    "final_reports_exact": 40,
+    "fresh_extraction": true,
+    "independent_analytic_oracle_audit": {
+      "engine_sha256": "c612aa367eaa7f14473fc7e4da90e6e74426bda4db833972320cffa08f105065",
+      "failures": [],
+      "format_version": 1,
+      "kind": "separate_closed_form_initial_belief_oracle_audit",
+      "known_authority_threshold": {
+        "minimum_deadline": 5,
+        "minimum_uses": "2 + query_cost"
+      },
+      "scope": "Same-lab source verification; no live participant trials or external replication.",
+      "states_checked": 216,
+      "states_failed": 0,
+      "states_passed": 216,
+      "status": "PASS",
+      "unknown_authority_threshold": {
+        "minimum_deadline": 6,
+        "minimum_uses": "2 + 2 * query_cost"
+      }
+    },
+    "inventory_sha256": "403aa09d3941dfb720fd2c9fbad3e8dc2c003e3f141be9fc000f448c526691f3",
+    "mechanical_results_exact": 40,
+    "observed_results_recomputed_exactly": true,
+    "preserved_scientific_record_files": 120,
+    "public_archive": "round-04.zip",
+    "public_archive_identical_to_canonical": true,
+    "public_archive_sha256": "3f6ac2dfeb99c563a728351605cd97ce96451fddefea7c19038f6b25f7a1cba5",
+    "public_inventory_files": 307,
+    "round": "round-04",
+    "runs_replayed": 40,
+    "scope": "Same-lab replay and integrity checks of the frozen instrument and recorded native runs. No new participant trials, backend attestation, or external replication.",
+    "semantic_tests": {
+      "status": "PASS",
+      "tests": 28
+    },
+    "status": "PASS",
+    "temporary_extraction_removed": true,
+    "unchanged_frozen_sources_verified": 135,
+    "verification_kind": "consumable-key-v1",
+    "verified_at_utc": "2026-11-18T17:02:14.284566+00:00"
+  },
+  "verified_at_utc": "2026-11-18T17:02:14.295000+00:00"
+}

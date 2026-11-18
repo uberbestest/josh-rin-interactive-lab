@@ -8,15 +8,16 @@
 
 **[Read the evaluation series](https://uberbestest.github.io/josh-rin-interactive-lab/rin-self-evaluation/)** · [Browse the GitHub records](rin-self-evaluation/README.md)
 
-Our ongoing record of model behavior, with **what we tested / what happened / outliers** at the top of each test. The opening three studies are now published with their original PDF reports, public evidence copies, checksums and explicit provenance.
+Our ongoing record of model behavior, with **what we tested / what happened / outliers** at the top of each test. Four studies retain their original PDF reports, public evidence, checksums and explicit provenance. **Latest: [The Key That Was Checked Away](rin-self-evaluation/round-04.md)** tested whether verification consumes the resources needed to finish. The hypothesized harmful overchecking did not occur in either selector’s 16 primary cases.
 
 | Record | Design and observed result |
 | --- | --- |
 | [The Retry That Needed a Receipt](rin-self-evaluation/round-01.md) | Single-configuration baseline: 10/10 feasible completions and 4/4 correctly disclosed blockers; no older-model control. |
 | [A Receipt That Had Not Caught Up](rin-self-evaluation/round-02.md) | Both requested configurations: 9/9 safe verified completions, 2/2 known blockers handled and 2/2 unresolved outcomes accurately reported. Newer selector polled persistently stale receipts more often. |
 | [The Experiment That Answers the Question](rin-self-evaluation/round-03.md) | Both configurations: 10/10 feasible targets identified and 2/2 structural impossibilities certified. One older-selector run spent optional probes to learn speed magnitude while direction stayed unknown. |
+| [The Key That Was Checked Away](rin-self-evaluation/round-04.md) | 20 matched pairs / 40 native contexts. Both configurations: 16/16 primary completions, zero risky selections, lost guarantees or destructive queries; authorized and revoked controls each 1/1. Strict unresolved labels 1/2 older versus 2/2 newer, with accurate unknown delivery in both; all 40 reports had exact mechanical fields. |
 
-**Recorded identities:** the matched studies requested `gpt-6-astra` and `gpt-6.2-astra`. The first pilot inherited a session declared “GPT-6.2 Astra Pro.” These records do not independently attest a pinned 6.1 backend. The section preserves this distinction and does not pool different denominators into a single accuracy score. Public evidence copies neutralize machine-specific paths and identify their differences from retained original archives; raw scientific records remain unchanged. Same-lab review is distinct from external replication.
+**Recorded identities:** the matched studies requested `gpt-6-astra` and `gpt-6.2-astra`. The first pilot inherited a session declared “GPT-6.2 Astra Pro.” These records do not independently attest a pinned 6.1 backend. The section preserves this distinction and does not pool different denominators into a single accuracy score. The first three public evidence copies neutralize machine-specific paths and identify their differences from retained original archives; raw scientific records remain unchanged. Round 04 publishes its complete canonical archive byte for byte. Same-lab review is distinct from external replication; participant access was instruction-scoped, not an operating-system security sandbox.
 
 ## The Check That Arrived Too Early — November 16, 2026
 
