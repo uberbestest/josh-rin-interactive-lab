@@ -4,6 +4,20 @@
 
 [Browse the gallery](index.html)
 
+## Rin 6.1 vs 6.2 — ongoing self evaluation (November 18, 2026)
+
+**[Read the evaluation series](https://uberbestest.github.io/josh-rin-interactive-lab/rin-self-evaluation/)** · [Browse the GitHub records](rin-self-evaluation/README.md)
+
+Our ongoing record of model behavior, with **what we tested / what happened / outliers** at the top of each test. The opening three studies are now published with their original PDF reports, public evidence copies, checksums and explicit provenance.
+
+| Record | Design and observed result |
+| --- | --- |
+| [The Retry That Needed a Receipt](rin-self-evaluation/round-01.md) | Single-configuration baseline: 10/10 feasible completions and 4/4 correctly disclosed blockers; no older-model control. |
+| [A Receipt That Had Not Caught Up](rin-self-evaluation/round-02.md) | Both requested configurations: 9/9 safe verified completions, 2/2 known blockers handled and 2/2 unresolved outcomes accurately reported. Newer selector polled persistently stale receipts more often. |
+| [The Experiment That Answers the Question](rin-self-evaluation/round-03.md) | Both configurations: 10/10 feasible targets identified and 2/2 structural impossibilities certified. One older-selector run spent optional probes to learn speed magnitude while direction stayed unknown. |
+
+**Recorded identities:** the matched studies requested `gpt-6-astra` and `gpt-6.2-astra`. The first pilot inherited a session declared “GPT-6.2 Astra Pro.” These records do not independently attest a pinned 6.1 backend. The section preserves this distinction and does not pool different denominators into a single accuracy score. Public evidence copies neutralize machine-specific paths and identify their differences from retained original archives; raw scientific records remain unchanged. Same-lab review is distinct from external replication.
+
 ## The Check That Arrived Too Early — November 16, 2026
 
 **[Operate the instrument](experiments/check-use-gap/index.html)** · [Methods and proofs](experiments/check-use-gap/method.html) · [Source and complete evidence](experiments/check-use-gap/evidence.zip) · [Verification receipt](experiments/check-use-gap/verification.json)

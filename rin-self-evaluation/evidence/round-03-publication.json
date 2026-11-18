@@ -1,0 +1,233 @@
+{
+  "status": "PASS",
+  "publication_kind": "path-neutralized post-run public disclosure",
+  "round": "round-03",
+  "record": "JRR-SCIENTIFIC-IDENTIFICATION-2026-11-17-003",
+  "created_at_utc": "2026-11-18T09:41:08.712139+00:00",
+  "public_archive": "round-03.zip",
+  "public_archive_sha256": "dfcb002e3b62f50f15e056339219a40874e4440fa037c8b1d9dd40043dc2e648",
+  "public_archive_bytes": 2391251,
+  "public_report": "../reports/round-03.pdf",
+  "report_sha256": "3ddb04548d12b6d8f81b03f302a98fee6d35e62b84a6eb99f9f38028d8ad65ab",
+  "report_byte_identical_to_canonical": true,
+  "canonical_archive": {
+    "name": "Scientific_Identification_Evidence.zip",
+    "sha256": "6294e44f587d2ec27ec6d04a77ba4cccdfbe4e423dda010345e135001d15360b",
+    "bytes": 2369122
+  },
+  "canonical_frozen_sha256": "356522c068aa6285326d32803c02ec6d23e8f3fa74d045f1c607fea764466d42",
+  "changed_file_count": 51,
+  "preserved_scientific_record_files": 72,
+  "scientific_records_byte_identical_to_canonical_at_export": true,
+  "verification": {
+    "status": "PASS",
+    "verification_kind": "post-run public disclosure verification",
+    "round": "round-03",
+    "record": "JRR-SCIENTIFIC-IDENTIFICATION-2026-11-17-003",
+    "python_version": "3.12.14",
+    "canonical_archive": {
+      "name": "Scientific_Identification_Evidence.zip",
+      "sha256": "6294e44f587d2ec27ec6d04a77ba4cccdfbe4e423dda010345e135001d15360b",
+      "bytes": 2369122
+    },
+    "canonical_frozen_sha256": "356522c068aa6285326d32803c02ec6d23e8f3fa74d045f1c607fea764466d42",
+    "public_manifest_sha256": "6d8d04b58770604773215aa14f84f5db4ad285e10f40d800d53abc0eb84b34cf",
+    "public_inventory_files": 202,
+    "public_inventory_before": "PASS",
+    "public_inventory_after": "PASS",
+    "all_public_files_unchanged_during_verification": true,
+    "preserved_scientific_record_files": 72,
+    "unchanged_frozen_sources_verified": 12,
+    "path_redacted_frozen_contracts_verified_against_disclosure": 1,
+    "changed_prompt_or_launch_files_verified_against_disclosure": 48,
+    "semantic_tests": {
+      "status": "PASS",
+      "tests": 33,
+      "returncode": 0,
+      "command": "python3 -B -m unittest discover -s src -p \"test_*.py\"",
+      "scope": "Retained instrument/oracle tests; no participant trials or network calls."
+    },
+    "runs_replayed": 24,
+    "events_replayed": 78,
+    "mechanical_results_exact": 24,
+    "mechanical_field_comparisons": 672,
+    "final_reports_exact": 24,
+    "runs": [
+      {
+        "run_id": "s8891aa5f00",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 4,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "sd2a53a01b4",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 4,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s1f595d5b9b",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s2ae3de5f60",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s5e1283ff40",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 4,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "sa2ed536090",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 4,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "saa73f90f47",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s138d69a54c",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s208a9a8a79",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "sa33dc331c8",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s98f5accdc4",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "sba5f79c020",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s9a91d69bba",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 2,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "se5d6b63d56",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 2,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s31593c0fe4",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 2,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "sb80b775402",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 4,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s7ab134edbe",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "sbc89497644",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "sbbe600b790",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 4,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s1783d62c96",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 4,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "sce0eacc6f0",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 4,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s03810224dd",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 4,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s3372bfbc0e",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "s1f09f5e1aa",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 3,
+        "final_event_hash_exact": true
+      }
+    ],
+    "scope": "The unchanged retained replay routines verify every recorded response and state/event hash chain. Prompt/launch hash adaptations exist only in memory and refer to disclosed public bytes. Historical digest fields on disk are unchanged. This is same-lab post-run verification, not new participant evidence, new external independence, or byte verification of withheld original path text.",
+    "public_archive": "round-03.zip",
+    "public_archive_sha256": "dfcb002e3b62f50f15e056339219a40874e4440fa037c8b1d9dd40043dc2e648",
+    "fresh_extraction": true,
+    "temporary_extraction_removed": true,
+    "verified_at_utc": "2026-11-18T09:41:17.957309+00:00"
+  },
+  "scope": "A new publication receipt. It preserves the original scientific results and original evidence identities, but does not replace the original independent review or claim new external independence. All artifact references are relative public names."
+}

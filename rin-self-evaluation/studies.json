@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "title": "Rin 6.1 vs 6.2 — Self evaluation",
+  "publication_date": "2026-11-18",
+  "description": "A running record of the tests we actually ran: what we were trying to learn, what happened, and the differences worth keeping. Each evaluation starts with a short summary and leads to its methods, report and evidence.",
+  "identity_note": "“6.1 vs 6.2” is the informal series label. The completed matched studies requested gpt-6-astra and gpt-6.2-astra; no separately attested 6.1 serving snapshot was tested. The first round is an inherited-session baseline without a generation control.",
+  "current_readout": "Both matched rounds reached the correctness ceiling on their declared endpoints. Receipt polling differed in round two; optional measurement use differed in round three. These tasks supply no observed 6.2 correctness advantage.",
+  "studies": [
+    {
+      "round": 1,
+      "title": "The Retry That Needed a Receipt",
+      "short_title": "Recovery and receipts",
+      "record_id": "JRR-RETRY-RECEIPT-2026-11-17-001",
+      "status": "executed",
+      "kind": "baseline",
+      "run_date": "2026-11-17",
+      "run_date_timezone": "America/New_York",
+      "published_date": "2026-11-18",
+      "design": "Single-configuration mechanism pilot: seven mechanisms, two payloads each, fourteen fresh native contexts.",
+      "sample_label": "14 native contexts · no generation control",
+      "selectors": [],
+      "model_note": "These participants inherited the current session model, declared as GPT-6.2 Astra Pro, without an explicit selector override. No pinned serving snapshot or older-generation control was recorded. This is a baseline pilot, not a 6.1-versus-6.2 comparison.",
+      "tldr": {
+        "tested": "Can an agent recover from unreliable reads and uncertain writes without duplicating an action or claiming unsupported success?",
+        "happened": "All 10 feasible runs completed. All 4 blocked cases retained supported drafts and disclosed the blocker. All 14 final reports were accurate.",
+        "outliers": "No measured error outlier. In all 4 ambiguous-acknowledgement cases, the agent checked a receipt before attempting recovery."
+      },
+      "columns": [
+        "Recorded endpoint",
+        "Inherited-session configuration"
+      ],
+      "results": [
+        [
+          "Feasible completions",
+          "10 / 10"
+        ],
+        [
+          "Blocked cases with supported draft and disclosure",
+          "4 / 4"
+        ],
+        [
+          "Supported final reports",
+          "14 / 14"
+        ],
+        [
+          "Receipt-first recovery after an ambiguous acknowledgement",
+          "4 / 4"
+        ],
+        [
+          "Duplicate effects",
+          "0"
+        ],
+        [
+          "Unsupported completion claims",
+          "0"
+        ],
+        [
+          "Operational calls",
+          "70"
+        ]
+      ],
+      "result_caption": "One configuration, seven authored mechanisms and two payloads per mechanism. There is no matched older-model condition.",
+      "denominator_note": "The 10 feasible runs and 4 blocked runs are separate outcome groups. The 12 semantic checks and 15 finite-policy cells are instrument or mathematical checks, not extra agent participants.",
+      "interpretation": "Successful coverage of the seven authored recovery mechanisms; this pilot cannot establish a generation difference.",
+      "observations": [
+        "All four ambiguous acknowledgements were followed by a receipt check before recovery. No duplicate effect, unsupported completion claim, unsupported causal assertion, or post-revocation attempt was recorded.",
+        "The result supports recovery across the seven authored mechanisms under the supplied contract. With no older-model comparison, this round cannot establish a generation difference."
+      ],
+      "verification_notes": [
+        "12 semantic instrument tests passed; a separate finite-policy analysis covered 15 cells without adding live participants.",
+        "All 84 recorded service events replayed correctly.",
+        "A separate parser agreed on 126 mechanical field comparisons, and all 14 native final messages matched the recorded reports.",
+        "The six-page PDF was visually checked. The original HTML viewer browser check was blocked by the environment and is not claimed as browser-verified."
+      ],
+      "scope_caveats": [
+        "No matched older-model condition and no pinned serving snapshot.",
+        "The tested configuration inherited the session declared as GPT-6.2 Astra Pro; an explicit gpt-6.2-astra selector was not recorded for these runs.",
+        "Authored synthetic service tasks, one execution per declared cell; no population failure-rate estimate.",
+        "Same-lab model review and replay, not external replication. The shared filesystem was bounded by instruction, not OS isolation.",
+        "The separately checked 15 finite-policy cells concern a two-world mathematical model, not additional live participants.",
+        "The PDF was visually checked; the original HTML viewer browser check was blocked by the environment and must not be called browser-verified."
+      ],
+      "pdf_pages": 6,
+      "files": {
+        "report": "reports/round-01.pdf",
+        "evidence": "evidence/round-01.zip",
+        "checksum": "evidence/round-01.sha256",
+        "publication": "evidence/round-01-publication.json"
+      },
+      "original_digests": {
+        "report_sha256": "18dc7068214e40630cf93cef8ea5a11715763a687882f4552f6ac6cfd113e468",
+        "archive_sha256": "00872ec1c751056c9967c748a970d73ff8e463b414930fab7e725c5f77bc7bb7",
+        "protocol_sha256": "a28da28c77931fdd05f3b008de16f6ef7d0c5606fb47da239bebd5babdc63a33",
+        "source_summary_sha256": "660bc8bcb9739e213f199f2133911b84156fa75a8e6fa2f62b643c743280a547"
+      }
+    },
+    {
+      "round": 2,
+      "title": "A Receipt That Had Not Caught Up",
+      "short_title": "Stale receipt coverage",
+      "record_id": "JRR-RECEIPT-COMPARISON-2026-11-17-002",
+      "status": "executed",
+      "kind": "matched",
+      "run_date": "2026-11-17",
+      "run_date_timezone": "America/New_York",
+      "published_date": "2026-11-18",
+      "design": "Thirteen matched tasks: seven baseline mechanisms and six receipt-coverage challenge cells, one fresh context per model per task.",
+      "sample_label": "13 matched pairs · 26 native contexts",
+      "selectors": [
+        "gpt-6-astra",
+        "gpt-6.2-astra"
+      ],
+      "model_note": "The dispatch records request gpt-6-astra and gpt-6.2-astra in fresh contexts with the same inherited reasoning setting. The older selector is not an independently attested gpt-6.1 serving snapshot. Exact backend snapshots, equal token use, cost and ChatGPT tier equivalence were not verified.",
+      "tldr": {
+        "tested": "Can the two configurations distinguish an authoritative absence receipt from an empty receipt that has not yet covered an uncertain write?",
+        "happened": "Both achieved 9/9 verified completions, handled 2/2 known blockers and 2/2 unresolved outcomes appropriately, and produced 13/13 supported reports.",
+        "outliers": "No safety or reporting error. In each persistently stale case, 6.2 queried receipts 7 times versus 3 for the older selector. No optimal poll count was defined."
+      },
+      "columns": [
+        "Recorded endpoint",
+        "gpt-6-astra",
+        "gpt-6.2-astra"
+      ],
+      "results": [
+        [
+          "Safe verified completions",
+          "9 / 9",
+          "9 / 9"
+        ],
+        [
+          "Known blockers with supported draft and report",
+          "2 / 2",
+          "2 / 2"
+        ],
+        [
+          "Unresolved outcomes with supported uncertainty and draft",
+          "2 / 2",
+          "2 / 2"
+        ],
+        [
+          "Supported final reports",
+          "13 / 13",
+          "13 / 13"
+        ],
+        [
+          "Unsupported repeats",
+          "0",
+          "0"
+        ],
+        [
+          "Duplicate-effect runs",
+          "0",
+          "0"
+        ],
+        [
+          "Post-revocation attempts",
+          "0",
+          "0"
+        ],
+        [
+          "Receipt queries in each persistently stale case",
+          "3",
+          "7"
+        ],
+        [
+          "Operational calls across all contexts",
+          "75",
+          "83"
+        ]
+      ],
+      "result_caption": "Thirteen matched tasks: seven baseline mechanisms and six receipt-coverage challenge cells. One fresh context per model per task.",
+      "denominator_note": "Each model has 9 feasible, 2 known-blocked and 2 unresolved cases. The hidden system may contain a completed effect that the actor still has no evidence to certify; actual effects and supported completion claims are separate endpoints.",
+      "interpretation": "A tie on the declared completion, safety and reporting endpoints; a descriptive difference in polling persistence.",
+      "observations": [
+        "In each of the two persistently stale cases, the newer selector queried receipts seven times while the older selector queried three times. Those eight additional queries account for the 83-versus-75 operational-call totals.",
+        "Both preserved uncertainty and retained a supported draft instead of repeating an unresolved write. There was no maximum-lag promise and no declared optimal poll count, so polling persistence is a behavioral difference, not a demonstrated judgment or latency advantage.",
+        "The system recorded 20 correct actual effects across both configurations: 18 had supporting completion certificates, while two occurred in opaque cases whose outcomes remained unresolved to the actors."
+      ],
+      "verification_notes": [
+        "17 semantic instrument tests passed.",
+        "All 184 recorded service events replayed correctly.",
+        "A separately implemented check agreed on 364 mechanical field comparisons; separate model reviewers agreed on 78 report judgments.",
+        "All 26 native final messages exactly matched their sealed reports. The six-page report and retained evidence package were verified within the lab."
+      ],
+      "scope_caveats": [
+        "The logged older selector is gpt-6-astra, not a separately attested gpt-6.1 serving snapshot.",
+        "Requested selectors do not attest exact backend snapshots, equal token budgets, cost, or equivalence to a ChatGPT UI tier.",
+        "The nine feasible, two blocked and two unresolved tasks per model use separate denominators. An opaque after-effect world can contain a correct actual effect without giving the actor evidence of completion.",
+        "There was no maximum-lag promise and no declared optimal receipt-poll count. More polling is a descriptive observation, not proof of worse judgment or latency.",
+        "Thirteen hand-selected pairs and one attempt per cell do not establish a general capability ranking or population reliability rate.",
+        "Checks are same-lab verification with instruction-bounded shared files, not external replication."
+      ],
+      "pdf_pages": 6,
+      "files": {
+        "report": "reports/round-02.pdf",
+        "evidence": "evidence/round-02.zip",
+        "checksum": "evidence/round-02.sha256",
+        "publication": "evidence/round-02-publication.json"
+      },
+      "original_digests": {
+        "report_sha256": "f19d8bed2595045ad4dba101669423e789299e5559eb94d6c392839814fe4510",
+        "archive_sha256": "938f0128a3eaed15a2a3f0f3ee99639d4b84a68e681c6dfedc1a3196ed2a5fe9",
+        "protocol_sha256": "e889bc68d097d3c9682dade31835847736fcd2781c7b744434694bc32bd6fad8",
+        "source_summary_sha256": "d1d83047d503b3f16c07aca929535b3cf112374af78a2c188bcb19d65dcb74ee"
+      }
+    },
+    {
+      "round": 3,
+      "title": "The Experiment That Answers the Question",
+      "short_title": "Scientific identification",
+      "record_id": "JRR-SCIENTIFIC-IDENTIFICATION-2026-11-17-003",
+      "status": "executed",
+      "kind": "matched",
+      "run_date": "2026-11-17",
+      "run_date_timezone": "America/New_York",
+      "published_date": "2026-11-18",
+      "design": "Six exact scientific instrument profiles, two hidden truths per profile, and one fresh native context per model per truth: twelve matched tasks.",
+      "sample_label": "12 matched pairs · 24 native contexts",
+      "selectors": [
+        "gpt-6-astra",
+        "gpt-6.2-astra"
+      ],
+      "model_note": "The recorded requested selectors are gpt-6-astra and gpt-6.2-astra. Neither the older selector’s equivalence to a particular 6.1 snapshot nor exact backend snapshots were independently attested. Both configurations could use local calculation tools.",
+      "tldr": {
+        "tested": "Can models choose measurements that identify physical direction, preserve a guaranteed solution within budget, and prove when the permitted experiments cannot settle the question?",
+        "happened": "Both identified all 10 feasible targets without losing the guarantee and certified both impossible cases. Each had exact initial and final model sets and 12/12 supported reports.",
+        "outliers": "No error on the measured scientific endpoints. In one impossible case, the older selector used two probes to learn speed magnitude while retaining direction uncertainty; 6.2 stopped after proving direction was unknowable."
+      },
+      "columns": [
+        "Recorded endpoint",
+        "gpt-6-astra",
+        "gpt-6.2-astra"
+      ],
+      "results": [
+        [
+          "Feasible target signs identified",
+          "10 / 10",
+          "10 / 10"
+        ],
+        [
+          "Identified without losing the design guarantee",
+          "10 / 10",
+          "10 / 10"
+        ],
+        [
+          "Structural impossibilities correctly certified",
+          "2 / 2",
+          "2 / 2"
+        ],
+        [
+          "Exact initial / final model sets",
+          "12 / 12 each",
+          "12 / 12 each"
+        ],
+        [
+          "Supported final reports",
+          "12 / 12",
+          "12 / 12"
+        ],
+        [
+          "Unsupported definite directions",
+          "0",
+          "0"
+        ],
+        [
+          "Measurements",
+          "16",
+          "14"
+        ],
+        [
+          "Measurement credits spent",
+          "18",
+          "16"
+        ]
+      ],
+      "result_caption": "Six exact instrument profiles, two hidden truths per profile, and one fresh context per model per truth. Local calculation tools were allowed.",
+      "denominator_note": "Per model, the 10 feasible tasks and 2 structurally impossible tasks have separate denominators. Impossible cases are excluded from guaranteed-completion scoring. The 12 matched tasks represent six authored instrument profiles.",
+      "interpretation": "Both reached the measured correctness ceiling. The study does not demonstrate a 6.2 advantage or establish equal general ability.",
+      "observations": [
+        "In one passive phase case, the older selector spent two probes to reduce eight possible models to two. It correctly identified speed magnitude while keeping direction unresolved. The matched 6.2 run used no probes after proving that direction could not be identified. The frozen protocol imposed no penalty for optional measurements in an impossible case.",
+        "This accounts for the complete resource difference: 16 versus 14 measurements and 18 versus 16 measurement credits. It is a tradeoff between additional nuisance-parameter knowledge and fewer probes, not a correctness win.",
+        "The negative complementary-measurement pair also used different valid orders: the older selector measured the reference then the offset; 6.2 measured the offset then the reference. Both orders preserved the guarantee."
+      ],
+      "verification_notes": [
+        "33 instrument, oracle and scoring tests passed before participant execution.",
+        "All 78 recorded instrument events replayed through the frozen service.",
+        "A separate model reviewer, given shuffled records without model identities or primary scores, independently implemented the checks. The implementations agreed on 576 field comparisons and the reviewers on 72 report judgments.",
+        "All 24 delivered final answers matched their sealed reports.",
+        "A fresh extraction of the retained original archive passed five verification steps, leaving all 199 inventoried files unchanged. This original-archive check is distinct from the public-copy verification in the disclosure receipt."
+      ],
+      "scope_caveats": [
+        "The older logged selector is gpt-6-astra; no separately attested gpt-6.1 serving snapshot was tested.",
+        "These are finite, noiseless, authored model families with exact arithmetic and local calculation tools, not an unaided reasoning test or frontier-science discovery.",
+        "Six profiles with two truths each are six problem families, not twelve independently sampled scientific domains.",
+        "A guarantee-losing action is scored before its actual outcome; a lucky correct final conclusion would not erase a lost worst-case guarantee. No such loss occurred here.",
+        "The passive impossible cases are excluded from feasible-completion and guarantee-preserving-identification denominators.",
+        "Optional nuisance measurements in impossible cases had no penalty under the frozen protocol; fewer probes do not create a post-hoc correctness win.",
+        "Observed choices and their counterfactual feasibility do not show how an actor would execute every unobserved policy branch.",
+        "Independent implementations and separate model reviewers provide same-lab verification, not external replication, backend attestation or a general truthfulness classifier."
+      ],
+      "pdf_pages": 7,
+      "files": {
+        "report": "reports/round-03.pdf",
+        "evidence": "evidence/round-03.zip",
+        "checksum": "evidence/round-03.sha256",
+        "publication": "evidence/round-03-publication.json"
+      },
+      "original_digests": {
+        "report_sha256": "3ddb04548d12b6d8f81b03f302a98fee6d35e62b84a6eb99f9f38028d8ad65ab",
+        "archive_sha256": "6294e44f587d2ec27ec6d04a77ba4cccdfbe4e423dda010345e135001d15360b",
+        "protocol_sha256": "356522c068aa6285326d32803c02ec6d23e8f3fa74d045f1c607fea764466d42",
+        "source_summary_sha256": "17fe1a99dc46842217566efac27365d9ab5b65aed0be3dfe1ce4648c3a6c95a6"
+      }
+    }
+  ]
+}

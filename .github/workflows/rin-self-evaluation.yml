@@ -1,0 +1,61 @@
+name: Rin self evaluation publication
+
+on:
+  push:
+    branches:
+      - main
+      - 'publish/rin-self-evaluation-*'
+    paths:
+      - 'rin-self-evaluation/**'
+      - '.publishing/rin-self-evaluation/**'
+      - '.github/workflows/rin-self-evaluation.yml'
+      - 'index.html'
+      - 'README.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rin-self-evaluation-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check publication and replay retained evidence
+        run: python3 rin-self-evaluation/tools/check_publication.py --output-dir /tmp/rin-publication-checks
+      - name: Install pinned browser harness
+        run: |
+          python3 -m pip install playwright==1.57.0
+          python3 -m playwright install --with-deps chromium
+      - name: Operate the section at desktop and phone widths
+        env:
+          PUBLICATION_REVISION: ${{ github.sha }}
+        run: python3 rin-self-evaluation/tools/browser_check.py --output-dir /tmp/rin-publication-browser --revision "$PUBLICATION_REVISION"
+      - name: Verify the actual public Pages deployment
+        if: github.ref_name == 'main'
+        env:
+          PUBLICATION_REVISION: ${{ github.sha }}
+        run: >-
+          python3 rin-self-evaluation/tools/browser_check.py
+          --base-url https://uberbestest.github.io/josh-rin-interactive-lab/
+          --output-dir /tmp/rin-publication-live
+          --revision "$PUBLICATION_REVISION"
+          --wait-seconds 240
+      - name: Preserve check receipts and browser captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rin-self-evaluation-publication-${{ github.sha }}
+          retention-days: 30
+          path: |
+            /tmp/rin-publication-checks/
+            /tmp/rin-publication-browser/
+            /tmp/rin-publication-live/

@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "publication_kind": "path-neutralized post-run public disclosure",
+  "round": "round-01",
+  "record": "JRR-RETRY-RECEIPT-2026-11-17-001",
+  "created_at_utc": "2026-11-18T09:41:08.712139+00:00",
+  "public_archive": "round-01.zip",
+  "public_archive_sha256": "3d8bde44b30438ec332ebc5da1ad9941004af7e9aafaa26e205ab03e01a204ee",
+  "public_archive_bytes": 256373,
+  "public_report": "../reports/round-01.pdf",
+  "report_sha256": "18dc7068214e40630cf93cef8ea5a11715763a687882f4552f6ac6cfd113e468",
+  "report_byte_identical_to_canonical": true,
+  "canonical_archive": {
+    "name": "Retry_Receipt_Evidence.zip",
+    "sha256": "00872ec1c751056c9967c748a970d73ff8e463b414930fab7e725c5f77bc7bb7",
+    "bytes": 240910
+  },
+  "canonical_frozen_sha256": "a28da28c77931fdd05f3b008de16f6ef7d0c5606fb47da239bebd5babdc63a33",
+  "changed_file_count": 30,
+  "preserved_scientific_record_files": 42,
+  "scientific_records_byte_identical_to_canonical_at_export": true,
+  "verification": {
+    "status": "PASS",
+    "verification_kind": "post-run public disclosure verification",
+    "round": "round-01",
+    "record": "JRR-RETRY-RECEIPT-2026-11-17-001",
+    "python_version": "3.12.14",
+    "canonical_archive": {
+      "name": "Retry_Receipt_Evidence.zip",
+      "sha256": "00872ec1c751056c9967c748a970d73ff8e463b414930fab7e725c5f77bc7bb7",
+      "bytes": 240910
+    },
+    "canonical_frozen_sha256": "a28da28c77931fdd05f3b008de16f6ef7d0c5606fb47da239bebd5babdc63a33",
+    "public_manifest_sha256": "90da0544696099b41041854e0d3dfc0fed473e3024ae44d0917b8ded3c8315cc",
+    "public_inventory_files": 106,
+    "public_inventory_before": "PASS",
+    "public_inventory_after": "PASS",
+    "all_public_files_unchanged_during_verification": true,
+    "preserved_scientific_record_files": 42,
+    "unchanged_frozen_sources_verified": 7,
+    "path_redacted_frozen_contracts_verified_against_disclosure": 1,
+    "changed_prompt_or_launch_files_verified_against_disclosure": 28,
+    "semantic_tests": {
+      "status": "PASS",
+      "tests": 12,
+      "returncode": 0,
+      "command": "python3 -B -m unittest discover -s src -p \"test_*.py\"",
+      "scope": "Retained instrument/oracle tests; no participant trials or network calls."
+    },
+    "runs_replayed": 14,
+    "events_replayed": 84,
+    "mechanical_results_exact": 14,
+    "mechanical_field_comparisons": 182,
+    "final_reports_exact": 14,
+    "runs": [
+      {
+        "run_id": "u6c82fa525c",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "ud76bdc96d8",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "ue092db9964",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 7,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "u3b079a63d2",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "u52ff188293",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "u36cf134a32",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 5,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "ufb80f8505e",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "uffd5fad4f3",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "ue255606bf5",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "u55e5508723",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 7,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "u2bd494e56d",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "ue53af4fe23",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 5,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "u8cd8c18420",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "ud8689e6f38",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      }
+    ],
+    "scope": "The unchanged retained replay routines verify every recorded response and state/event hash chain. Prompt/launch hash adaptations exist only in memory and refer to disclosed public bytes. Historical digest fields on disk are unchanged. This is same-lab post-run verification, not new participant evidence, new external independence, or byte verification of withheld original path text.",
+    "public_archive": "round-01.zip",
+    "public_archive_sha256": "3d8bde44b30438ec332ebc5da1ad9941004af7e9aafaa26e205ab03e01a204ee",
+    "fresh_extraction": true,
+    "temporary_extraction_removed": true,
+    "verified_at_utc": "2026-11-18T09:41:08.976939+00:00"
+  },
+  "scope": "A new publication receipt. It preserves the original scientific results and original evidence identities, but does not replace the original independent review or claim new external independence. All artifact references are relative public names."
+}

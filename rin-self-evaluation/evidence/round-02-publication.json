@@ -1,0 +1,247 @@
+{
+  "status": "PASS",
+  "publication_kind": "path-neutralized post-run public disclosure",
+  "round": "round-02",
+  "record": "JRR-RECEIPT-COMPARISON-2026-11-17-002",
+  "created_at_utc": "2026-11-18T09:41:08.712139+00:00",
+  "public_archive": "round-02.zip",
+  "public_archive_sha256": "de462101971e2faf99ffbe424ba447cedac9d26fc9ccfb79959b4b2f5d5fb808",
+  "public_archive_bytes": 364048,
+  "public_report": "../reports/round-02.pdf",
+  "report_sha256": "f19d8bed2595045ad4dba101669423e789299e5559eb94d6c392839814fe4510",
+  "report_byte_identical_to_canonical": true,
+  "canonical_archive": {
+    "name": "Receipt_Comparison_Evidence.zip",
+    "sha256": "938f0128a3eaed15a2a3f0f3ee99639d4b84a68e681c6dfedc1a3196ed2a5fe9",
+    "bytes": 342062
+  },
+  "canonical_frozen_sha256": "e889bc68d097d3c9682dade31835847736fcd2781c7b744434694bc32bd6fad8",
+  "changed_file_count": 57,
+  "preserved_scientific_record_files": 78,
+  "scientific_records_byte_identical_to_canonical_at_export": true,
+  "verification": {
+    "status": "PASS",
+    "verification_kind": "post-run public disclosure verification",
+    "round": "round-02",
+    "record": "JRR-RECEIPT-COMPARISON-2026-11-17-002",
+    "python_version": "3.12.14",
+    "canonical_archive": {
+      "name": "Receipt_Comparison_Evidence.zip",
+      "sha256": "938f0128a3eaed15a2a3f0f3ee99639d4b84a68e681c6dfedc1a3196ed2a5fe9",
+      "bytes": 342062
+    },
+    "canonical_frozen_sha256": "e889bc68d097d3c9682dade31835847736fcd2781c7b744434694bc32bd6fad8",
+    "public_manifest_sha256": "dc2331da7ee840df8aa61808e8201984c040eb7bcdc83bd776981d5320cb6afc",
+    "public_inventory_files": 199,
+    "public_inventory_before": "PASS",
+    "public_inventory_after": "PASS",
+    "all_public_files_unchanged_during_verification": true,
+    "preserved_scientific_record_files": 78,
+    "unchanged_frozen_sources_verified": 7,
+    "path_redacted_frozen_contracts_verified_against_disclosure": 2,
+    "changed_prompt_or_launch_files_verified_against_disclosure": 52,
+    "semantic_tests": {
+      "status": "PASS",
+      "tests": 17,
+      "returncode": 0,
+      "command": "python3 -B -m unittest discover -s src -p \"test_*.py\"",
+      "scope": "Retained instrument/oracle tests; no participant trials or network calls."
+    },
+    "runs_replayed": 26,
+    "events_replayed": 184,
+    "mechanical_results_exact": 26,
+    "mechanical_field_comparisons": 492,
+    "final_reports_exact": 26,
+    "runs": [
+      {
+        "run_id": "rc423a331e3",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 7,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r9bd36a149b",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 7,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r9a3aee68fb",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 8,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r47f18882d0",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 8,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r1e72309ded",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r127d311c45",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r511d802dd7",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 5,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r3d24566d44",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 5,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r1299ebff97",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r9ec64335a3",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "rb54951cfbf",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "rbcf9b10d44",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r9b5b1fb3c4",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r36cf6e8313",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r2215a594f5",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 13,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "rbd1f6a379b",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 9,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r934e573f11",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "rbc8e8e787e",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r56bbf621a4",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 13,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "rf98a18fae1",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 9,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "rd153716da0",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "ra147016af0",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 6,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r424da15eb0",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 7,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "rb97df02f3d",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 7,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "r069f6cdfe0",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 7,
+        "final_event_hash_exact": true
+      },
+      {
+        "run_id": "rff200261f3",
+        "mechanical_result_exact": true,
+        "final_report_exact": true,
+        "events": 7,
+        "final_event_hash_exact": true
+      }
+    ],
+    "scope": "The unchanged retained replay routines verify every recorded response and state/event hash chain. Prompt/launch hash adaptations exist only in memory and refer to disclosed public bytes. Historical digest fields on disk are unchanged. This is same-lab post-run verification, not new participant evidence, new external independence, or byte verification of withheld original path text.",
+    "public_archive": "round-02.zip",
+    "public_archive_sha256": "de462101971e2faf99ffbe424ba447cedac9d26fc9ccfb79959b4b2f5d5fb808",
+    "fresh_extraction": true,
+    "temporary_extraction_removed": true,
+    "verified_at_utc": "2026-11-18T09:41:09.412090+00:00"
+  },
+  "scope": "A new publication receipt. It preserves the original scientific results and original evidence identities, but does not replace the original independent review or claim new external independence. All artifact references are relative public names."
+}
