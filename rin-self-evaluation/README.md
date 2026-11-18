@@ -12,7 +12,19 @@ This section was first published on November 18, 2026. Each record lists its run
 
 ## Current readout
 
-Round four tested whether verification would consume the key uses or time needed to finish. Both selectors safely completed all 16 primary cases and preserved the guarantee; neither overchecked destructively. The separate unbounded controls retain a strict reporting-label difference. Earlier polling and optional-measurement differences remain in the record. These studies supply no observed 6.2 correctness advantage on feasible completion.
+Round five required different opening actions and preservation of two obligations under a shared key and clock. Both selectors completed both jobs in all 16 jointly feasible runs and attained the required priority completion in all 8 controls. Additional optional deliveries and receipt queries differed, without changing finalized-job outcomes or the secured guarantee. Earlier results and Round 04’s reporting-label ambiguity remain intact. These authored studies supply no observed 6.2 advantage on feasible completion.
+
+## Round 05 — The Second Door Still Needs the Key
+
+**What we tested:** Can an agent preserve both authorized jobs when they share a key and clock, choose different opening actions as the contract changes, and accurately account for the unfinished job when only one completion is guaranteed?
+
+**What happened:** Both safely finalized both jobs in 16/16 jointly feasible runs and attained the specified priority completion in 8/8 controls. Neither lost an available guarantee, acted unsafely or omitted a job from its report. All 48 reports had exact mechanical fields and supported factual explanations.
+
+**Outliers:** No safety, guarantee-loss or reporting error on the measured endpoints. The newer selector made two extra receipt queries across the unbounded controls and two extra nonpriority commits across the budget-control repeats. These actions did not increase finalized-job counts or reduce the secured guarantee. The older selector varied between its budget-control repeats.
+
+**Design:** Twelve authored scenario families, one exact case per family, with two fresh repetitions per requested selector: 48 native contexts and 24 matched model pairs. Eight families initially guarantee both jobs; four control families guarantee one priority completion. Both jobs share a limited-use key and logical clock, with separate deadlines and disclosed evidence requirements.
+
+[Read the GitHub record](round-05.md) · [Open the web page](https://uberbestest.github.io/josh-rin-interactive-lab/rin-self-evaluation/round-05.html) · [Report PDF](reports/round-05.pdf) · [Public evidence ZIP](evidence/round-05.zip) · [Public checksum](evidence/round-05.sha256) · [Disclosure receipt](evidence/round-05-publication.json)
 
 ## Round 04 — The Key That Was Checked Away
 
