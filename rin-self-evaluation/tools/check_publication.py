@@ -120,11 +120,12 @@ def check(output_dir):
         if verification_kind == "public-disclosure-v1":
             command = [sys.executable, str(SECTION / "tools" / "verify_public_evidence.py"),
                        str(files["evidence"]), "--output", str(check_path)]
-        elif verification_kind in ("consumable-key-v1", "second-door-v1"):
+        elif verification_kind in ("consumable-key-v1", "second-door-v1", "reporting-checklist-v1"):
             assert study.get("public_archive_identical_to_canonical") is True
             assert archive_sha == study["original_digests"]["archive_sha256"]
-            verifier = ("verify_key_evidence.py" if verification_kind == "consumable-key-v1"
-                        else "verify_second_door_evidence.py")
+            verifier = {"consumable-key-v1": "verify_key_evidence.py",
+                        "second-door-v1": "verify_second_door_evidence.py",
+                        "reporting-checklist-v1": "verify_checklist_evidence.py"}[verification_kind]
             command = [sys.executable, str(SECTION / "tools" / verifier),
                        str(files["evidence"]), "--frozen-sha256", study["original_digests"]["protocol_sha256"],
                        "--output", str(check_path)]
