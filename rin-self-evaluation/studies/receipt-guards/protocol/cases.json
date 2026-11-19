@@ -1,0 +1,394 @@
+{
+  "arms": [
+    "recovered",
+    "predicate_only",
+    "status_guard",
+    "status_job_guard"
+  ],
+  "assigned_scripted_executions": 64,
+  "case_count": 8,
+  "cases": [
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        }
+      },
+      "adapter": "identity",
+      "case_id": "control_committed",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 10,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "description": "Both original deliveries are present; A is initially known present and B receipt resolves COMMITTED.",
+      "target_job": "B"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        }
+      },
+      "adapter": "identity",
+      "case_id": "control_absent",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 10,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "description": "Both original deliveries are absent; A is initially known absent and B receipt resolves ABSENT. A differs deliberately so historical B ABSENT cannot corrupt a later COMMITTED A branch.",
+      "target_job": "B"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      },
+      "adapter": "identity",
+      "case_id": "pending_absent",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 10,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "description": "First B receipt is PENDING, A has known COMMITTED evidence, and actual B delivery is absent.",
+      "target_job": "B"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      },
+      "adapter": "identity",
+      "case_id": "pending_present",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 10,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "description": "First B receipt is PENDING, A has known COMMITTED evidence, and actual B delivery is present.",
+      "target_job": "B"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      },
+      "adapter": "identity",
+      "case_id": "pending_no_decoy",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 10,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "description": "First B receipt is PENDING and neither job has a known COMMITTED/ABSENT receipt at that decision; actual B is absent, A present.",
+      "target_job": "B"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      },
+      "adapter": "misbound_committed_A",
+      "case_id": "wrong_job_absent",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 10,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "description": "First B receipt is canonically PENDING but the adapter supplies top-level A COMMITTED; actual B is absent. Full local_status remains canonical.",
+      "target_job": "B"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      },
+      "adapter": "misbound_committed_A",
+      "case_id": "wrong_job_present",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 10,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "description": "First B receipt is canonically PENDING but the adapter supplies top-level A COMMITTED; actual B is present. Full local_status remains canonical.",
+      "target_job": "B"
+    },
+    {
+      "actual_world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        }
+      },
+      "adapter": "identity",
+      "case_id": "legacy_regression",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          },
+          "B": {
+            "deadline": 4,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              1
+            ]
+          }
+        },
+        "max_actions": 32,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "description": "Original C11 configuration and hidden world. Urgent B is absent; later A is present. After B recovery/finalization, its historical ABSENT remains in the combined A COMMITTED response.",
+      "target_job": "A"
+    }
+  ],
+  "helper_sources": [
+    "w041",
+    "w042"
+  ],
+  "native_participants": 0,
+  "record": "JRR-RECEIPT-GUARDS-2026-11-18-008"
+}

@@ -1,0 +1,1781 @@
+{
+  "absent_after_unsafe_finalize": {
+    "B_completion_requires_late_operation": true,
+    "B_inclusive_deadline": 6,
+    "earliest_receipt_commit_finalize_finish": 7,
+    "first_pending_ends_at": 2,
+    "qualification": "Timing calculation for B still requiring its authoritative receipt after an unsupported failed finalize; whole-trajectory safety was already violated.",
+    "unsafe_finalize_denial_ends_at": 3
+  },
+  "all_safe_joint_completions": true,
+  "initial_policy_executions": 20,
+  "kind": "authored preflight schedule checks, separate from 64 helper executions",
+  "no_decoy_after_pending": {
+    "both_absent_minimum_uses": 6,
+    "initial_wait_policy_still_guarantees_both": true,
+    "joint_guarantee_ruled_out_by_budget": true,
+    "uses_remaining": 5
+  },
+  "post_pending_recovery_executions": 8,
+  "rows": [
+    {
+      "case_id": "control_committed",
+      "final_tick": 5,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 3,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        }
+      }
+    },
+    {
+      "case_id": "control_committed",
+      "final_tick": 4,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 3,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 3
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 3,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        }
+      }
+    },
+    {
+      "case_id": "control_absent",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 3,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 1
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 1,
+      "world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        }
+      }
+    },
+    {
+      "case_id": "control_absent",
+      "final_tick": 5,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 3,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "status": "APPLIED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        }
+      }
+    },
+    {
+      "case_id": "pending_absent",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_absent",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "post_pending_trusted_recovery",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "PENDING",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 1
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 1,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_absent",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 3,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_absent",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "post_pending_trusted_recovery",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "PENDING",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_present",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_present",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "post_pending_trusted_recovery",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "PENDING",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 1
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 1,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_present",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 3,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_present",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "post_pending_trusted_recovery",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "PENDING",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_no_decoy",
+      "final_tick": 10,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "receipt",
+          "job": "A",
+          "status": "ABSENT",
+          "tick": 8,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "status": "APPLIED",
+          "tick": 9,
+          "ticks": null,
+          "uses_remaining": 1
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 10,
+          "ticks": null,
+          "uses_remaining": 0
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 0,
+      "world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_no_decoy",
+      "final_tick": 9,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "receipt",
+          "job": "A",
+          "status": "ABSENT",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "status": "APPLIED",
+          "tick": 8,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 9,
+          "ticks": null,
+          "uses_remaining": 1
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 1,
+      "world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_no_decoy",
+      "final_tick": 9,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "receipt",
+          "job": "A",
+          "status": "COMMITTED",
+          "tick": 8,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 9,
+          "ticks": null,
+          "uses_remaining": 1
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 1,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "pending_no_decoy",
+      "final_tick": 8,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "receipt",
+          "job": "A",
+          "status": "COMMITTED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 8,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "wrong_job_absent",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "wrong_job_absent",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": true,
+      "policy": "post_pending_trusted_recovery",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "PENDING",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 1
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 1,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "wrong_job_absent",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 3,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "wrong_job_absent",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": true,
+      "policy": "post_pending_trusted_recovery",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "PENDING",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "wrong_job_present",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "wrong_job_present",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": true,
+      "policy": "post_pending_trusted_recovery",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "PENDING",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 1
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 1,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "wrong_job_present",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "wait",
+          "job": null,
+          "status": "WAITED",
+          "tick": 2,
+          "ticks": 2,
+          "uses_remaining": 6
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 3
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 3,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "wrong_job_present",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": true,
+      "policy": "post_pending_trusted_recovery",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "PENDING",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 0
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 4
+        }
+      }
+    },
+    {
+      "case_id": "legacy_regression",
+      "final_tick": 8,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 3,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "receipt",
+          "job": "A",
+          "status": "ABSENT",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "status": "APPLIED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 1
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 8,
+          "ticks": null,
+          "uses_remaining": 0
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 0,
+      "world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        }
+      }
+    },
+    {
+      "case_id": "legacy_regression",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 3,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "receipt",
+          "job": "A",
+          "status": "ABSENT",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "commit",
+          "job": "A",
+          "status": "APPLIED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 1
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 1,
+      "world": {
+        "A": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        }
+      }
+    },
+    {
+      "case_id": "legacy_regression",
+      "final_tick": 7,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "ABSENT",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "commit",
+          "job": "B",
+          "status": "APPLIED",
+          "tick": 3,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 4,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "receipt",
+          "job": "A",
+          "status": "COMMITTED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 7,
+          "ticks": null,
+          "uses_remaining": 1
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 1,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 0,
+          "receipt_ready": 1
+        }
+      }
+    },
+    {
+      "case_id": "legacy_regression",
+      "final_tick": 6,
+      "initial_policy_scope": "Canonical-service feasibility only; the misbinding adapter is not exercised by these schedules.",
+      "one_shot_fault_assumption": false,
+      "policy": "initial_public_policy",
+      "policy_selected_by_optimizer": false,
+      "response_scope": "Canonical engine observations; a first pending response is unused in the post-pending policy.",
+      "safe_joint_completion": true,
+      "steps": [
+        {
+          "action": "receipt",
+          "job": "B",
+          "status": "COMMITTED",
+          "tick": 2,
+          "ticks": null,
+          "uses_remaining": 5
+        },
+        {
+          "action": "finalize",
+          "job": "B",
+          "status": "FINALIZED",
+          "tick": 3,
+          "ticks": null,
+          "uses_remaining": 4
+        },
+        {
+          "action": "receipt",
+          "job": "A",
+          "status": "COMMITTED",
+          "tick": 5,
+          "ticks": null,
+          "uses_remaining": 3
+        },
+        {
+          "action": "finalize",
+          "job": "A",
+          "status": "FINALIZED",
+          "tick": 6,
+          "ticks": null,
+          "uses_remaining": 2
+        }
+      ],
+      "transport_adapter_exercised": false,
+      "uses_manual_arithmetic": true,
+      "uses_remaining": 2,
+      "world": {
+        "A": {
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        },
+        "B": {
+          "prior_delivered": 1,
+          "receipt_ready": 1
+        }
+      }
+    }
+  ],
+  "scope": "Independent arithmetic cross-check of simple authored public policies using the inherited engine for outcome verification. Initial schedules establish canonical-service feasibility, not behavior under the fault adapter. Post-pending schedules leave the first pending/misbound output unused and require later authentic responses. The response adapter itself is exercised only by transport tests and the separate helper matrix. Repeated worlds across paired case labels are not independent observations; no new native participant is involved.",
+  "status": "PASS",
+  "witness_world_executions": 28
+}

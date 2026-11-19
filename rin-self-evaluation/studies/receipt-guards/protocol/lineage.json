@@ -1,0 +1,59 @@
+{
+  "config_run_id": "Each temporary service sets run_id to its recovered helper label solely to preserve the original command grammar.",
+  "files": {
+    "helpers/w041_predicate_only.js": {
+      "byte_identical": true,
+      "sha256": "0aa12cf51670379755c01cb8fc502c4a3c56ff520270ac08d75b2ca32e4b5f4a",
+      "source": "Round 07 forensics/w041_predicate_only_helper.js"
+    },
+    "helpers/w041_recovered.js": {
+      "byte_identical": true,
+      "sha256": "961d3af2e7d126fdb3c67af34778405342bacd72bde9a5c1aeac7c51966e3ba4",
+      "source": "Round 07 forensics/w041_helper.js"
+    },
+    "helpers/w041_setup.js": {
+      "byte_identical": true,
+      "sha256": "91fb541e45b8f3ffeec4cb60338f61febe6d39bee69285f47ab51a47494f66d2",
+      "source": "Round 07 forensics/w041_setup.js"
+    },
+    "helpers/w041_status_job_guard.js": {
+      "byte_identical": true,
+      "sha256": "c643539d7262144a871a7078f1db86ebc0e406ad5c777ba084b3f5998435575f",
+      "source": "Round 07 forensics/w041_scoped_helper.js"
+    },
+    "helpers/w042_predicate_only.js": {
+      "byte_identical": true,
+      "sha256": "f50c3a52c16fa89a51cf535508f4ca3886b9914823030bcc8d51f301408d101f",
+      "source": "Round 07 forensics/w042_predicate_only_helper.js"
+    },
+    "helpers/w042_recovered.js": {
+      "byte_identical": true,
+      "sha256": "bdaacadccb73bd85a71a8fe09896a4a2cdf370f7ff10272b10dd2106949095cd",
+      "source": "Round 07 forensics/w042_helper.js"
+    },
+    "helpers/w042_setup.js": {
+      "byte_identical": true,
+      "sha256": "0588c4f760ac0233cd535cf60b1b6cbe08123d3a25489c646ebfe5846fa00ff1",
+      "source": "Round 07 forensics/w042_setup.js"
+    },
+    "helpers/w042_status_job_guard.js": {
+      "byte_identical": true,
+      "sha256": "ef6bac8ec14f487a0ced9d02f2979e0126ff3439e30eeb038a632856f77ddace",
+      "source": "Round 07 forensics/w042_scoped_helper.js"
+    },
+    "input/client.py": {
+      "byte_identical": true,
+      "sha256": "e35c9f76f8ee384cf62e8ab29e443c5d021768f7a51aea1c847d3b4ad4046e6a",
+      "source": "Round 07 forensics/input/client.py"
+    },
+    "input/engine.py": {
+      "byte_identical": true,
+      "sha256": "91599442030c1066ff5f75c328b6c818dde1fd52a203074e6257f87faed6f2ec",
+      "source": "Round 07 forensics/input/engine.py"
+    }
+  },
+  "new_status_guard": "Remove only the job mismatch check from the historical status-and-job hardening source. All other statements are retained.",
+  "recovered_source_limit": "Post-run model-mediated public helper extraction; not an independently authenticated platform transcript.",
+  "source_publication_commit": "f61d8ba0eb854396123a3bb3c695d7cea6d0a3e3",
+  "source_record": "JRR-RECEIPT-SCOPE-2026-11-18-007"
+}

@@ -1,0 +1,161 @@
+{
+  "actions_taken": 0,
+  "actual_world": {
+    "A": {
+      "prior_delivered": 1,
+      "receipt_ready": 1
+    },
+    "B": {
+      "prior_delivered": 0,
+      "receipt_ready": 1
+    }
+  },
+  "belief_worlds": [
+    {
+      "A": {
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      },
+      "B": {
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      }
+    },
+    {
+      "A": {
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      },
+      "B": {
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      }
+    },
+    {
+      "A": {
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      },
+      "B": {
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      }
+    },
+    {
+      "A": {
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      },
+      "B": {
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      }
+    }
+  ],
+  "commits_made": {
+    "A": 0,
+    "B": 0
+  },
+  "config": {
+    "jobs": {
+      "A": {
+        "deadline": 8,
+        "initial_receipt": null,
+        "prior_options": [
+          0,
+          1
+        ],
+        "query_cost": 1,
+        "ready_options": [
+          1
+        ]
+      },
+      "B": {
+        "deadline": 4,
+        "initial_receipt": null,
+        "prior_options": [
+          0,
+          1
+        ],
+        "query_cost": 1,
+        "ready_options": [
+          1
+        ]
+      }
+    },
+    "max_actions": 32,
+    "priority": "B",
+    "run_id": "w041",
+    "uses_remaining": 6
+  },
+  "duplicate_effects": {
+    "A": 0,
+    "B": 0
+  },
+  "engine_version": "1.0.0",
+  "final_report": null,
+  "finalized": {
+    "A": false,
+    "B": false
+  },
+  "initial_worlds": [
+    {
+      "A": {
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      },
+      "B": {
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      }
+    },
+    {
+      "A": {
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      },
+      "B": {
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      }
+    },
+    {
+      "A": {
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      },
+      "B": {
+        "prior_delivered": 0,
+        "receipt_ready": 1
+      }
+    },
+    {
+      "A": {
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      },
+      "B": {
+        "prior_delivered": 1,
+        "receipt_ready": 1
+      }
+    }
+  ],
+  "original_receipts": {
+    "A": null,
+    "B": null
+  },
+  "postterminal_attempts": 0,
+  "query_count": {
+    "A": 0,
+    "B": 0
+  },
+  "resource_denials": 0,
+  "sealed": false,
+  "tick": 0,
+  "unsafe_attempts": 0,
+  "unsafe_attempts_by_job": {
+    "A": 0,
+    "B": 0
+  },
+  "uses_remaining": 6
+}
