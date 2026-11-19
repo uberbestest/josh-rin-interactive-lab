@@ -1,0 +1,5399 @@
+{
+  "cells": [
+    {
+      "all_joint": 49,
+      "attained": 64,
+      "joint_attained": 43,
+      "joint_eligible": 43,
+      "loss_runs": 0,
+      "n": 71,
+      "policy": "candidate",
+      "positive": 64,
+      "risky_runs": 0,
+      "suite": "challenge",
+      "unsafe_runs": 0
+    },
+    {
+      "all_joint": 52,
+      "attained": 64,
+      "joint_attained": 43,
+      "joint_eligible": 43,
+      "loss_runs": 0,
+      "n": 71,
+      "policy": "deadline_greedy",
+      "positive": 64,
+      "risky_runs": 0,
+      "suite": "challenge",
+      "unsafe_runs": 0
+    },
+    {
+      "all_joint": 40,
+      "attained": 50,
+      "joint_attained": 31,
+      "joint_eligible": 43,
+      "loss_runs": 14,
+      "n": 71,
+      "policy": "wait_all_greedy",
+      "positive": 64,
+      "risky_runs": 14,
+      "suite": "challenge",
+      "unsafe_runs": 0
+    },
+    {
+      "all_joint": 8,
+      "attained": 8,
+      "joint_attained": 8,
+      "joint_eligible": 8,
+      "loss_runs": 0,
+      "n": 8,
+      "policy": "candidate",
+      "positive": 8,
+      "risky_runs": 0,
+      "suite": "round08_regression",
+      "unsafe_runs": 0
+    }
+  ],
+  "events_checked": 2308,
+  "favorable_world_completion_differences": [
+    {
+      "assignment": "C07-W02",
+      "candidate_value": [
+        1,
+        1
+      ],
+      "greedy_value": [
+        2,
+        1
+      ],
+      "initial": [
+        1,
+        1
+      ]
+    },
+    {
+      "assignment": "C08-W03",
+      "candidate_value": [
+        1,
+        1
+      ],
+      "greedy_value": [
+        2,
+        1
+      ],
+      "initial": [
+        1,
+        1
+      ]
+    },
+    {
+      "assignment": "C14-W03",
+      "candidate_value": [
+        1,
+        1
+      ],
+      "greedy_value": [
+        2,
+        1
+      ],
+      "initial": [
+        1,
+        1
+      ]
+    }
+  ],
+  "legacy": [
+    {
+      "events": 7,
+      "joint": true,
+      "run_id": "control_absent_w041_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 7,
+      "joint": true,
+      "run_id": "control_absent_w042_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 5,
+      "joint": true,
+      "run_id": "control_committed_w041_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 5,
+      "joint": true,
+      "run_id": "control_committed_w042_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 6,
+      "joint": true,
+      "run_id": "legacy_regression_w041_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 6,
+      "joint": true,
+      "run_id": "legacy_regression_w042_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "pending_absent_w041_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "pending_absent_w042_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "pending_no_decoy_w041_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "pending_no_decoy_w042_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "pending_present_w041_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "pending_present_w042_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "wrong_job_absent_w041_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "wrong_job_absent_w042_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "wrong_job_present_w041_status_job_guard",
+      "unsafe": 0
+    },
+    {
+      "events": 2,
+      "joint": false,
+      "run_id": "wrong_job_present_w042_status_job_guard",
+      "unsafe": 0
+    }
+  ],
+  "legacy_records_checked": 16,
+  "primary_records_checked": 221,
+  "representative_traces": {
+    "C01-W01_candidate": [
+      {
+        "action": "finalize",
+        "job": "A",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 1,
+        "ticks": null,
+        "uses_after": 3
+      },
+      {
+        "action": "wait",
+        "job": null,
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "WAITED",
+        "tick_after": 2,
+        "ticks": 1,
+        "uses_after": 3
+      },
+      {
+        "action": "receipt",
+        "job": "B",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "ABSENT",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 2
+      },
+      {
+        "action": "commit",
+        "job": "B",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "APPLIED",
+        "tick_after": 5,
+        "ticks": null,
+        "uses_after": 1
+      },
+      {
+        "action": "finalize",
+        "job": "B",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 6,
+        "ticks": null,
+        "uses_after": 0
+      },
+      {
+        "action": "finish",
+        "job": null,
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "REPORT_RECORDED",
+        "tick_after": 6,
+        "ticks": null,
+        "uses_after": 0
+      }
+    ],
+    "C01-W01_wait_all_greedy": [
+      {
+        "action": "wait",
+        "job": null,
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "WAITED",
+        "tick_after": 2,
+        "ticks": 2,
+        "uses_after": 4
+      },
+      {
+        "action": "receipt",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "ABSENT",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 3
+      },
+      {
+        "action": "commit",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "APPLIED",
+        "tick_after": 5,
+        "ticks": null,
+        "uses_after": 2
+      },
+      {
+        "action": "finalize",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 6,
+        "ticks": null,
+        "uses_after": 1
+      },
+      {
+        "action": "finish",
+        "job": null,
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "REPORT_RECORDED",
+        "tick_after": 6,
+        "ticks": null,
+        "uses_after": 1
+      }
+    ],
+    "C07-W02_candidate": [
+      {
+        "action": "receipt",
+        "job": "A",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "ABSENT",
+        "tick_after": 2,
+        "ticks": null,
+        "uses_after": 4
+      },
+      {
+        "action": "commit",
+        "job": "A",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "APPLIED",
+        "tick_after": 3,
+        "ticks": null,
+        "uses_after": 3
+      },
+      {
+        "action": "finalize",
+        "job": "A",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 2
+      },
+      {
+        "action": "finish",
+        "job": null,
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "REPORT_RECORDED",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 2
+      }
+    ],
+    "C07-W02_deadline_greedy": [
+      {
+        "action": "receipt",
+        "job": "A",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "ABSENT",
+        "tick_after": 2,
+        "ticks": null,
+        "uses_after": 4
+      },
+      {
+        "action": "commit",
+        "job": "A",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "APPLIED",
+        "tick_after": 3,
+        "ticks": null,
+        "uses_after": 3
+      },
+      {
+        "action": "finalize",
+        "job": "A",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 2
+      },
+      {
+        "action": "receipt",
+        "job": "B",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "COMMITTED",
+        "tick_after": 6,
+        "ticks": null,
+        "uses_after": 1
+      },
+      {
+        "action": "finalize",
+        "job": "B",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 7,
+        "ticks": null,
+        "uses_after": 0
+      },
+      {
+        "action": "finish",
+        "job": null,
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "REPORT_RECORDED",
+        "tick_after": 7,
+        "ticks": null,
+        "uses_after": 0
+      }
+    ],
+    "C08-W03_candidate": [
+      {
+        "action": "receipt",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "ABSENT",
+        "tick_after": 2,
+        "ticks": null,
+        "uses_after": 4
+      },
+      {
+        "action": "commit",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "APPLIED",
+        "tick_after": 3,
+        "ticks": null,
+        "uses_after": 3
+      },
+      {
+        "action": "finalize",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 2
+      },
+      {
+        "action": "finish",
+        "job": null,
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "REPORT_RECORDED",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 2
+      }
+    ],
+    "C08-W03_deadline_greedy": [
+      {
+        "action": "receipt",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "ABSENT",
+        "tick_after": 2,
+        "ticks": null,
+        "uses_after": 4
+      },
+      {
+        "action": "commit",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "APPLIED",
+        "tick_after": 3,
+        "ticks": null,
+        "uses_after": 3
+      },
+      {
+        "action": "finalize",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 2
+      },
+      {
+        "action": "receipt",
+        "job": "A",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "COMMITTED",
+        "tick_after": 6,
+        "ticks": null,
+        "uses_after": 1
+      },
+      {
+        "action": "finalize",
+        "job": "A",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 7,
+        "ticks": null,
+        "uses_after": 0
+      },
+      {
+        "action": "finish",
+        "job": null,
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "REPORT_RECORDED",
+        "tick_after": 7,
+        "ticks": null,
+        "uses_after": 0
+      }
+    ],
+    "C14-W03_candidate": [
+      {
+        "action": "receipt",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "ABSENT",
+        "tick_after": 2,
+        "ticks": null,
+        "uses_after": 5
+      },
+      {
+        "action": "commit",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "APPLIED",
+        "tick_after": 3,
+        "ticks": null,
+        "uses_after": 4
+      },
+      {
+        "action": "finalize",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 3
+      },
+      {
+        "action": "finish",
+        "job": null,
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "REPORT_RECORDED",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 3
+      }
+    ],
+    "C14-W03_deadline_greedy": [
+      {
+        "action": "receipt",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "ABSENT",
+        "tick_after": 2,
+        "ticks": null,
+        "uses_after": 5
+      },
+      {
+        "action": "commit",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "APPLIED",
+        "tick_after": 3,
+        "ticks": null,
+        "uses_after": 4
+      },
+      {
+        "action": "finalize",
+        "job": "B",
+        "post_value": [
+          1,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 3
+      },
+      {
+        "action": "receipt",
+        "job": "A",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          1,
+          1
+        ],
+        "status": "COMMITTED",
+        "tick_after": 6,
+        "ticks": null,
+        "uses_after": 2
+      },
+      {
+        "action": "finalize",
+        "job": "A",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 7,
+        "ticks": null,
+        "uses_after": 1
+      },
+      {
+        "action": "finish",
+        "job": null,
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "REPORT_RECORDED",
+        "tick_after": 7,
+        "ticks": null,
+        "uses_after": 1
+      }
+    ],
+    "wrong_job_absent_candidate": [
+      {
+        "action": "finalize",
+        "job": "A",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 1,
+        "ticks": null,
+        "uses_after": 5
+      },
+      {
+        "action": "wait",
+        "job": null,
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "WAITED",
+        "tick_after": 2,
+        "ticks": 1,
+        "uses_after": 5
+      },
+      {
+        "action": "receipt",
+        "job": "B",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "ABSENT",
+        "tick_after": 4,
+        "ticks": null,
+        "uses_after": 4
+      },
+      {
+        "action": "commit",
+        "job": "B",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "APPLIED",
+        "tick_after": 5,
+        "ticks": null,
+        "uses_after": 3
+      },
+      {
+        "action": "finalize",
+        "job": "B",
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "FINALIZED",
+        "tick_after": 6,
+        "ticks": null,
+        "uses_after": 2
+      },
+      {
+        "action": "finish",
+        "job": null,
+        "post_value": [
+          2,
+          1
+        ],
+        "pre_value": [
+          2,
+          1
+        ],
+        "status": "REPORT_RECORDED",
+        "tick_after": 6,
+        "ticks": null,
+        "uses_after": 2
+      }
+    ]
+  },
+  "rows": [
+    {
+      "case_id": "C01",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C01-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C01",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C01-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C01",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C01-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C01",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C01-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C01",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C01-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C01",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C01-W02_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C02",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C02-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C02",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C02-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C02",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C02-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C02",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C02-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C02",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C02-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C02",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C02-W02_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C03-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C03-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C03-W01_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C03-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C03-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C03-W02_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C03-W03_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C03-W03_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C03-W03_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C03-W04_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C03-W04_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C03",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C03-W04_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C04-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C04-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C04-W01_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C04-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C04-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C04-W02_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C04-W03_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C04-W03_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C04-W03_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C04-W04_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C04-W04_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C04",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C04-W04_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C05",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C05-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C05",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C05-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C05",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C05-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C05",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C05-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C05",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C05-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C05",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C05-W02_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C06",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C06-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C06",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C06-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C06",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C06-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C06",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C06-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C06",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C06-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C06",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C06-W02_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C07-W01_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C07-W01_deadline_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C07-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C07-W02_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C07-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C07-W02_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C07-W03_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C07-W03_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C07-W03_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 10,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C07-W04_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 10,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C07-W04_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C07",
+      "events": 10,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C07-W04_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C08-W01_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C08-W01_deadline_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C08-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C08-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C08-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C08-W02_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C08-W03_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C08-W03_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C08-W03_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 10,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C08-W04_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 10,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C08-W04_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C08",
+      "events": 10,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C08-W04_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C09",
+      "events": 6,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C09-W01_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C09",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C09-W01_deadline_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C09",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C09-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C10",
+      "events": 6,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C10-W01_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C10",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C10-W01_deadline_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C10",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C10-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C11",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C11-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C11",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C11-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C11",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C11-W01_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C12",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C12-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C12",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C12-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C12",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C12-W01_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C13-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C13-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C13-W01_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C13-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C13-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C13-W02_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C13-W03_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C13-W03_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C13-W03_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C13-W04_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C13-W04_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C13",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C13-W04_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C14-W01_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C14-W01_deadline_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C14-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C14-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C14-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C14-W02_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C14-W03_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C14-W03_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 12,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C14-W03_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 10,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C14-W04_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 10,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C14-W04_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C14",
+      "events": 10,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C14-W04_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C15",
+      "events": 4,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C15-W01_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C15",
+      "events": 4,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C15-W01_deadline_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C15",
+      "events": 4,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C15-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C16",
+      "events": 6,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C16-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C16",
+      "events": 6,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C16-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C16",
+      "events": 6,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C16-W01_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C17",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C17-W01_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C17",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C17-W01_deadline_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C17",
+      "events": 8,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C17-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C17",
+      "events": 6,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C17-W02_candidate",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C17",
+      "events": 6,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C17-W02_deadline_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C17",
+      "events": 6,
+      "initial": [
+        1,
+        1
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C17-W02_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C18",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C18-W01_candidate",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C18",
+      "events": 6,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C18-W01_deadline_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C18",
+      "events": 6,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C18-W01_wait_all_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C18",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C18-W02_candidate",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C18",
+      "events": 6,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C18-W02_deadline_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C18",
+      "events": 6,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C18-W02_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C19-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C19-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C19-W01_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C19-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C19-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C19-W02_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C19-W03_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C19-W03_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C19-W03_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C19-W04_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C19-W04_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C19",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C19-W04_wait_all_greedy",
+      "safe": [
+        1,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W01_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W01_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W01_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W02_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W02_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W02_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W03_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W03_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W03_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W04_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W04_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W04_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W05_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W05_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W05_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W06_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W06_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 16,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W06_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W07_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W07_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W07_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W08_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W08_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W08_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W09_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W09_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W09_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W10_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W10_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W10_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W11_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W11_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W11_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W12_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W12_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W12_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W13_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W13_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W13_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W14_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W14_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 14,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W14_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W15_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W15_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W15_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C20-W16_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C20-W16_deadline_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C20",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C20-W16_wait_all_greedy",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C21",
+      "events": 4,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C21-W01_candidate",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C21",
+      "events": 4,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C21-W01_deadline_greedy",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C21",
+      "events": 4,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C21-W01_wait_all_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C21",
+      "events": 4,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C21-W02_candidate",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C21",
+      "events": 4,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C21-W02_deadline_greedy",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C21",
+      "events": 4,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 1,
+      "policy": "wait_all_greedy",
+      "risky": 1,
+      "run_id": "C21-W02_wait_all_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C22",
+      "events": 6,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C22-W01_candidate",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C22",
+      "events": 6,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C22-W01_deadline_greedy",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C22",
+      "events": 6,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C22-W01_wait_all_greedy",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C22",
+      "events": 6,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C22-W02_candidate",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C22",
+      "events": 6,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C22-W02_deadline_greedy",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C22",
+      "events": 6,
+      "initial": [
+        1,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C22-W02_wait_all_greedy",
+      "safe": [
+        1,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C23-W01_candidate",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C23-W01_deadline_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C23-W01_wait_all_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C23-W02_candidate",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C23-W02_deadline_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C23-W02_wait_all_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C23-W03_candidate",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C23-W03_deadline_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C23-W03_wait_all_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C23-W04_candidate",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C23-W04_deadline_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C23",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C23-W04_wait_all_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C24",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "C24-W01_candidate",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C24",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "deadline_greedy",
+      "risky": 0,
+      "run_id": "C24-W01_deadline_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "C24",
+      "events": 2,
+      "initial": [
+        0,
+        0
+      ],
+      "joint": false,
+      "losses": 0,
+      "policy": "wait_all_greedy",
+      "risky": 0,
+      "run_id": "C24-W01_wait_all_greedy",
+      "safe": [
+        0,
+        0
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "challenge",
+      "unsafe": 0
+    },
+    {
+      "case_id": "control_absent",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "control_absent_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "round08_regression",
+      "unsafe": 0
+    },
+    {
+      "case_id": "control_committed",
+      "events": 8,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "control_committed_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "round08_regression",
+      "unsafe": 0
+    },
+    {
+      "case_id": "legacy_regression",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "legacy_regression_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "round08_regression",
+      "unsafe": 0
+    },
+    {
+      "case_id": "pending_absent",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "pending_absent_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "round08_regression",
+      "unsafe": 0
+    },
+    {
+      "case_id": "pending_no_decoy",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "pending_no_decoy_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "round08_regression",
+      "unsafe": 0
+    },
+    {
+      "case_id": "pending_present",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "pending_present_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "round08_regression",
+      "unsafe": 0
+    },
+    {
+      "case_id": "wrong_job_absent",
+      "events": 12,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "wrong_job_absent_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "round08_regression",
+      "unsafe": 0
+    },
+    {
+      "case_id": "wrong_job_present",
+      "events": 10,
+      "initial": [
+        2,
+        1
+      ],
+      "joint": true,
+      "losses": 0,
+      "policy": "candidate",
+      "risky": 0,
+      "run_id": "wrong_job_present_candidate",
+      "safe": [
+        2,
+        1
+      ],
+      "sealed_mechanical_report_valid": true,
+      "suite": "round08_regression",
+      "unsafe": 0
+    }
+  ],
+  "summary_sha256": "1ec27e3706875298c8a6ec759c95abe53717507f1afd8ff600f8d02ee3643512"
+}

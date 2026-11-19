@@ -1,0 +1,8 @@
+{
+  "challenge_configurations": 24,
+  "challenge_world_assignments": 71,
+  "legacy_executions": 16,
+  "primary_executions": 221,
+  "total_executions": 237,
+  "unit": "deterministic assignments; not independent model samples"
+}

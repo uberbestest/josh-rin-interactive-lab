@@ -1,0 +1,42 @@
+{
+  "canonical_archive": {
+    "identical_to_public_archive": true,
+    "sha256": "fcf70ea7ae37be448b36c6060910a2dab4a8dfbab4704fdd0c66a54b95bbf1d2"
+  },
+  "canonical_frozen_sha256": "8c127369b22c03e76f5b34f2b04558964afba5186610d4416c46e09037c917bd",
+  "kind": "post-run canonical scripted repair archive publication",
+  "pre_run_commit": "df147e36a61b57063def8cc5128b9067d36a6331",
+  "public_archive_sha256": "fcf70ea7ae37be448b36c6060910a2dab4a8dfbab4704fdd0c66a54b95bbf1d2",
+  "public_copy_changes": "None. The public ZIP is the complete canonical archive with identical bytes. Presentation files were authored after execution; the 40 frozen inputs and original raw records remain unchanged.",
+  "report_sha256": "d313dc273ba223cc285c85e94e3b5ad86642e944a6f40ee65f7e9d332420c04c",
+  "scientific_records_byte_identical_to_canonical_at_export": true,
+  "scope": "Same-lab deterministic reproduction and evidence integrity. No new native participants, external replication, production validation or revenue. Six exploratory executions remain separate from the 237 main assignments.",
+  "status": "PASS",
+  "verification": {
+    "all_public_files_unchanged_during_verification": true,
+    "events_replayed": 2308,
+    "exploratory_diagnostics": {
+      "canonical_recounts": 6,
+      "cases_sha256": "767376ddcb5ff9708cac58ef396378f265dee0c099e325802c149ad2951f3d33",
+      "native_model_participants": 0,
+      "runs_reproduced": 6,
+      "scope": "Exploratory post-hoc diagnostics; excluded from primary237.",
+      "status": "PASS"
+    },
+    "final_reports_exact": true,
+    "fresh_scripted_executions": 237,
+    "frozen_file_count": 40,
+    "frozen_sha256": "8c127369b22c03e76f5b34f2b04558964afba5186610d4416c46e09037c917bd",
+    "independent_recounts": 237,
+    "mechanical_results_exact": true,
+    "native_participants": 0,
+    "normalized_reproduction_exact": true,
+    "preserved_scientific_record_files": 365,
+    "public_archive_sha256": "fcf70ea7ae37be448b36c6060910a2dab4a8dfbab4704fdd0c66a54b95bbf1d2",
+    "reproduction_requested": true,
+    "runs_replayed": 237,
+    "scope": "Same-lab deterministic replay and separately written arithmetic; no external replication.",
+    "status": "PASS"
+  },
+  "verified_at_utc": "2026-11-19T13:34:24.131409+00:00"
+}

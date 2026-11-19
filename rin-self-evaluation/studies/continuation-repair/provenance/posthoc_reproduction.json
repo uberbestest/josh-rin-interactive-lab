@@ -1,0 +1,8 @@
+{
+  "canonical_recounts": 6,
+  "cases_sha256": "767376ddcb5ff9708cac58ef396378f265dee0c099e325802c149ad2951f3d33",
+  "native_model_participants": 0,
+  "runs_reproduced": 6,
+  "scope": "Exploratory post-hoc diagnostics; excluded from primary237.",
+  "status": "PASS"
+}

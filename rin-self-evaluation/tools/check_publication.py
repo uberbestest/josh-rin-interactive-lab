@@ -106,6 +106,10 @@ def check(output_dir):
             assert study["selectors"] == [], "Scripted forensics has no requested native selector"
             assert 'Deterministic forensics' in html
             assert 'No new model participants; saved JavaScript replayed' in html
+        elif study["kind"] == "repair":
+            assert study["selectors"] == [], "Scripted repair has no native participant selector"
+            assert 'Scripted continuation repair' in html
+            assert 'No new model participants; scripted controller evaluation' in html
 
         files = {key: SECTION / value for key, value in study["files"].items()}
         assert sha(files["report"]) == study["original_digests"]["report_sha256"]
@@ -124,14 +128,15 @@ def check(output_dir):
         if verification_kind == "public-disclosure-v1":
             command = [sys.executable, str(SECTION / "tools" / "verify_public_evidence.py"),
                        str(files["evidence"]), "--output", str(check_path)]
-        elif verification_kind in ("consumable-key-v1", "second-door-v1", "reporting-checklist-v1", "receipt-scope-v1", "receipt-guards-v1"):
+        elif verification_kind in ("consumable-key-v1", "second-door-v1", "reporting-checklist-v1", "receipt-scope-v1", "receipt-guards-v1", "continuation-repair-v1"):
             assert study.get("public_archive_identical_to_canonical") is True
             assert archive_sha == study["original_digests"]["archive_sha256"]
             verifier = {"consumable-key-v1": "verify_key_evidence.py",
                         "second-door-v1": "verify_second_door_evidence.py",
                         "reporting-checklist-v1": "verify_checklist_evidence.py",
                         "receipt-scope-v1": "verify_receipt_scope_evidence.py",
-                        "receipt-guards-v1": "verify_receipt_guard_evidence.py"}[verification_kind]
+                        "receipt-guards-v1": "verify_receipt_guard_evidence.py",
+                        "continuation-repair-v1": "verify_continuation_evidence.py"}[verification_kind]
             command = [sys.executable, str(SECTION / "tools" / verifier),
                        str(files["evidence"]), "--frozen-sha256", study["original_digests"]["protocol_sha256"],
                        "--output", str(check_path)]
@@ -145,6 +150,9 @@ def check(output_dir):
             assert study["kind"] == "forensic"
             assert replay["native_participants"] == 0
             fields += ("frozen_scripted_assignments", "fresh_helper_replays", "transport_records_verified")
+        elif verification_kind == "continuation-repair-v1":
+            assert study["kind"] == "repair" and replay["native_participants"] == 0
+            fields += ("fresh_scripted_executions", "independent_recounts")
         else:
             fields += ("final_reports_exact",)
         for field in fields:
@@ -159,6 +167,10 @@ def check(output_dir):
             result_row.update(kind="deterministic forensics", native_participants=0,
                               fresh_helper_replays=replay["fresh_helper_replays"],
                               transport_records_verified=replay["transport_records_verified"])
+        elif verification_kind == "continuation-repair-v1":
+            result_row.update(kind="scripted continuation repair", native_participants=0,
+                              fresh_scripted_executions=replay["fresh_scripted_executions"],
+                              independent_recounts=replay["independent_recounts"])
         else:
             result_row["semantic_tests_passed"] = replay["semantic_tests"]["tests"]
         results.append(result_row)

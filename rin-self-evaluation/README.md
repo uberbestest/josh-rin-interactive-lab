@@ -6,13 +6,25 @@ A running record of the tests we actually ran: what we were trying to learn, wha
 
 ## Model identity
 
-“6.1 vs 6.2” is the informal series label. The completed matched studies requested gpt-6-astra and gpt-6.2-astra; no separately attested 6.1 serving snapshot was tested. The first round is an inherited-session baseline without a generation control. Round eight is deterministic forensics of saved JavaScript, with zero fresh model participants.
+“6.1 vs 6.2” is the informal series label. The completed matched studies requested gpt-6-astra and gpt-6.2-astra; no separately attested 6.1 serving snapshot was tested. The first round is an inherited-session baseline without a generation control. Round eight replays saved JavaScript and round nine tests a scripted continuation repair; both have zero fresh model participants.
 
 This section was first published on November 18, 2026. Each record lists its run date and timezone separately from its publication date, with its own denominators; there is no pooled accuracy score.
 
 ## Current readout
 
-Round eight follows the receipt failure into two additional code paths: finalization while the selected receipt is pending, and finalization using a receipt naming another job. In 64 frozen scripted executions, the recovered helpers had unsafe attempts in 11/16 cases, the absence-only edit in 9/16, the selected-status guard in 4/16, and the status-plus-job guard in 0/16. Ten executions physically finished both jobs despite an unsafe attempt. The full guard still left safe work unfinished, and an auxiliary early query spent away a joint guarantee. These are deterministic code findings, with no new model failure-rate estimate. The earlier native comparisons and their records remain unchanged.
+Round nine repairs the stopping behavior left by the full receipt guard. The new controller safely completes 8/8 historical cases versus 3/8 for each saved guard. Across the separately authored challenge, it and a simpler deadline-first policy tie at 64/64 positive guarantees and 43/43 initially guaranteed joint completions. The simpler policy also finishes three additional favorable-world jobs. Two later diagnostic examples expose its limits without changing that prospective tie. All 237 main executions and 2,308 events reproduce; six exploratory executions stay separate. These are retained scaffold improvements, with no new model comparison or production failure-rate estimate.
+
+## Round 09 — The Guard That Kept the Job
+
+**What we tested:** Can a guard preserve exactly-one evidence and continue safely finishable work, including when receipt checks compete with deadlines, shared credential uses and another job?
+
+**What happened:** The candidate completed 8/8 historical cases versus 3/8 for each old guard. On the frozen challenge, it and simpler deadline-first recovery tied at 64/64 positive guarantees and 43/43 initially guaranteed joint completions; wait-for-all attained 50/64 and 31/43. All three avoided unsafe operations.
+
+**Outliers:** Deadline-first finished both jobs in 52/71 worlds versus the candidate’s 49/71. Six separate post-hoc diagnostic executions exposed two limits of that simpler policy; they do not change the primary tie. Four validation-boundary witnesses remain disclosed.
+
+**Design:** A separately written public-observation continuation planner, two transparent recovery heuristics, and the two preserved Round 08 status-and-job guards. Twenty-four separately authored challenge configurations enumerate 71 possible worlds per policy. Eight historical cases compare the candidate with each unchanged helper. The fixed main study contains 237 deterministic executions and zero fresh model participants; six later diagnostic executions are reported separately.
+
+[Read the GitHub record](round-09.md) · [Open the web page](https://uberbestest.github.io/josh-rin-interactive-lab/rin-self-evaluation/round-09.html) · [Report PDF](reports/round-09.pdf) · [Public evidence ZIP](evidence/round-09.zip) · [Public checksum](evidence/round-09.sha256) · [Disclosure receipt](evidence/round-09-publication.json)
 
 ## Round 08 — Finalization Without Target Evidence
 

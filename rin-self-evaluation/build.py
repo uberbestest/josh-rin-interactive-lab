@@ -96,7 +96,7 @@ def kind_badge(study):
     if study['status'] != 'executed':
         return f'<span class="badge planned">{esc(study["status"].capitalize())}</span>'
     label = {'baseline': 'Baseline pilot', 'matched': 'Matched comparison',
-             'forensic': 'Deterministic forensics'}[study['kind']]
+             'forensic': 'Deterministic forensics', 'repair': 'Scripted continuation repair'}[study['kind']]
     return f'<span class="badge{style}">{label}</span>'
 
 
@@ -113,8 +113,8 @@ def hub(data):
     executed = [s for s in studies if s['status'] == 'executed']
     matched = sum(s['kind'] == 'matched' for s in executed)
     baseline = sum(s['kind'] == 'baseline' for s in executed)
-    forensic = sum(s['kind'] == 'forensic' for s in executed)
-    forensic_stat = (f'<div class="stat"><b>{forensic}</b><span>deterministic forensic study</span></div>'
+    forensic = sum(s['kind'] in ('forensic', 'repair') for s in executed)
+    forensic_stat = (f'<div class="stat"><b>{forensic}</b><span>scripted studies</span></div>'
                      if forensic else '')
     stats_class = 'stats has-forensic' if forensic else 'stats'
     jump = ''.join(f'<a href="#round-{s["round"]:02d}">Round {s["round"]:02d}</a>' for s in studies)
@@ -151,8 +151,11 @@ def detail(study, data):
     forensic = study['kind'] == 'forensic'
     if forensic:
         model_items = 'No new model participants; saved JavaScript replayed'
-    sample_label = 'Executions' if forensic else 'Participants'
-    provenance_label = 'Source provenance' if forensic else 'Model provenance'
+    scripted = study['kind'] in ('forensic', 'repair')
+    if study['kind'] == 'repair':
+        model_items = 'No new model participants; scripted controller evaluation'
+    sample_label = 'Executions' if scripted else 'Participants'
+    provenance_label = 'Source provenance' if scripted else 'Model provenance'
     result = result_table(study)
     observations = ''.join('<p>' + esc(text) + '</p>' for text in study['observations'])
     verification = ''.join('<li>' + esc(text) + '</li>' for text in study['verification_notes'])
@@ -232,7 +235,7 @@ def readme(data):
 
 
 def markdown_record(study):
-    forensic = study['kind'] == 'forensic'
+    forensic = study['kind'] in ('forensic', 'repair')
     sample_label = 'Executions' if forensic else 'Participants'
     provenance_label = 'Source provenance' if forensic else 'Model provenance'
     identical_archive = study.get('public_archive_identical_to_canonical', False)

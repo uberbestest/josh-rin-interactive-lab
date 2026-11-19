@@ -1,0 +1,350 @@
+{
+  "cells": [
+    {
+      "declaration_disagreements": 0,
+      "executions": 3,
+      "guarantee_loss_executions": 0,
+      "header_rejections": 0,
+      "infrastructure_errors": 0,
+      "initial_joint_cases": 2,
+      "mechanical_reports_valid": 3,
+      "policy": "candidate",
+      "positive_guarantee_cases": 3,
+      "positive_guarantees_attained": 3,
+      "protocol_complete_executions": 3,
+      "protocol_complete_positive_guarantees_attained": 3,
+      "protocol_complete_safe_joint_completions_in_joint_cases": 2,
+      "risky_selection_executions": 0,
+      "safe_joint_completions_all_cases": 2,
+      "safe_joint_completions_in_joint_cases": 2,
+      "suite": "exploratory_posthoc_diagnostic",
+      "unknown_initial_guarantee_cases": 0,
+      "unsafe_executions": 0,
+      "zero_guarantee_cases": 0
+    },
+    {
+      "declaration_disagreements": 0,
+      "executions": 3,
+      "guarantee_loss_executions": 3,
+      "header_rejections": 0,
+      "infrastructure_errors": 0,
+      "initial_joint_cases": 2,
+      "mechanical_reports_valid": 3,
+      "policy": "deadline_greedy",
+      "positive_guarantee_cases": 3,
+      "positive_guarantees_attained": 1,
+      "protocol_complete_executions": 3,
+      "protocol_complete_positive_guarantees_attained": 1,
+      "protocol_complete_safe_joint_completions_in_joint_cases": 1,
+      "risky_selection_executions": 3,
+      "safe_joint_completions_all_cases": 1,
+      "safe_joint_completions_in_joint_cases": 1,
+      "suite": "exploratory_posthoc_diagnostic",
+      "unknown_initial_guarantee_cases": 0,
+      "unsafe_executions": 0,
+      "zero_guarantee_cases": 0
+    }
+  ],
+  "diagnostic_cases_sha256": "767376ddcb5ff9708cac58ef396378f265dee0c099e325802c149ad2951f3d33",
+  "events": 54,
+  "executions": 6,
+  "native_model_participants": 0,
+  "not_part_of_primary_237": true,
+  "results": [
+    {
+      "achieved_value": [
+        1,
+        1
+      ],
+      "adapter_applications": 0,
+      "attained_initial_guarantee": true,
+      "canonical_replay_ok": true,
+      "case_id": "D01",
+      "cleanup_error": null,
+      "duplicate_effects": 0,
+      "guarantee_declaration_disagreements": 0,
+      "header_rejections": 0,
+      "infrastructure_error": null,
+      "initial_guaranteed_value": [
+        1,
+        1
+      ],
+      "mechanical_report_valid": true,
+      "mechanical_state_observed": true,
+      "policy": "candidate",
+      "protocol_complete": true,
+      "protocol_complete_guarantee_attained": true,
+      "protocol_complete_safe_joint_completion": false,
+      "realized_guarantee_losses": 0,
+      "receipt_queries": 0,
+      "report_validation": {
+        "errors": [],
+        "scope": "mechanical_fields_only",
+        "summary_semantics_checked": false,
+        "unrecognized_additional_fields_checked": false,
+        "valid": true
+      },
+      "risky_selections": 0,
+      "run_id": "D01-W01_candidate",
+      "safe_achieved_value": [
+        1,
+        1
+      ],
+      "safe_joint_completion": false,
+      "sealed": true,
+      "service_actions": 1,
+      "suite": "exploratory_posthoc_diagnostic",
+      "ticks_elapsed": 1,
+      "unsafe_attempts": 0,
+      "unvalidated_exchanges": 0,
+      "uses_spent": 1,
+      "verification_error": null
+    },
+    {
+      "achieved_value": [
+        1,
+        0
+      ],
+      "adapter_applications": 0,
+      "attained_initial_guarantee": false,
+      "canonical_replay_ok": true,
+      "case_id": "D01",
+      "cleanup_error": null,
+      "duplicate_effects": 0,
+      "guarantee_declaration_disagreements": 0,
+      "header_rejections": 0,
+      "infrastructure_error": null,
+      "initial_guaranteed_value": [
+        1,
+        1
+      ],
+      "mechanical_report_valid": true,
+      "mechanical_state_observed": true,
+      "policy": "deadline_greedy",
+      "protocol_complete": true,
+      "protocol_complete_guarantee_attained": false,
+      "protocol_complete_safe_joint_completion": false,
+      "realized_guarantee_losses": 1,
+      "receipt_queries": 0,
+      "report_validation": {
+        "errors": [],
+        "scope": "mechanical_fields_only",
+        "summary_semantics_checked": false,
+        "unrecognized_additional_fields_checked": false,
+        "valid": true
+      },
+      "risky_selections": 1,
+      "run_id": "D01-W01_deadline_greedy",
+      "safe_achieved_value": [
+        1,
+        0
+      ],
+      "safe_joint_completion": false,
+      "sealed": true,
+      "service_actions": 1,
+      "suite": "exploratory_posthoc_diagnostic",
+      "ticks_elapsed": 1,
+      "unsafe_attempts": 0,
+      "unvalidated_exchanges": 0,
+      "uses_spent": 1,
+      "verification_error": null
+    },
+    {
+      "achieved_value": [
+        2,
+        1
+      ],
+      "adapter_applications": 0,
+      "attained_initial_guarantee": true,
+      "canonical_replay_ok": true,
+      "case_id": "D02",
+      "cleanup_error": null,
+      "duplicate_effects": 0,
+      "guarantee_declaration_disagreements": 0,
+      "header_rejections": 0,
+      "infrastructure_error": null,
+      "initial_guaranteed_value": [
+        2,
+        1
+      ],
+      "mechanical_report_valid": true,
+      "mechanical_state_observed": true,
+      "policy": "candidate",
+      "protocol_complete": true,
+      "protocol_complete_guarantee_attained": true,
+      "protocol_complete_safe_joint_completion": true,
+      "realized_guarantee_losses": 0,
+      "receipt_queries": 1,
+      "report_validation": {
+        "errors": [],
+        "scope": "mechanical_fields_only",
+        "summary_semantics_checked": false,
+        "unrecognized_additional_fields_checked": false,
+        "valid": true
+      },
+      "risky_selections": 0,
+      "run_id": "D02-W01_candidate",
+      "safe_achieved_value": [
+        2,
+        1
+      ],
+      "safe_joint_completion": true,
+      "sealed": true,
+      "service_actions": 5,
+      "suite": "exploratory_posthoc_diagnostic",
+      "ticks_elapsed": 6,
+      "unsafe_attempts": 0,
+      "unvalidated_exchanges": 0,
+      "uses_spent": 5,
+      "verification_error": null
+    },
+    {
+      "achieved_value": [
+        1,
+        1
+      ],
+      "adapter_applications": 0,
+      "attained_initial_guarantee": false,
+      "canonical_replay_ok": true,
+      "case_id": "D02",
+      "cleanup_error": null,
+      "duplicate_effects": 0,
+      "guarantee_declaration_disagreements": 0,
+      "header_rejections": 0,
+      "infrastructure_error": null,
+      "initial_guaranteed_value": [
+        2,
+        1
+      ],
+      "mechanical_report_valid": true,
+      "mechanical_state_observed": true,
+      "policy": "deadline_greedy",
+      "protocol_complete": true,
+      "protocol_complete_guarantee_attained": false,
+      "protocol_complete_safe_joint_completion": false,
+      "realized_guarantee_losses": 1,
+      "receipt_queries": 1,
+      "report_validation": {
+        "errors": [],
+        "scope": "mechanical_fields_only",
+        "summary_semantics_checked": false,
+        "unrecognized_additional_fields_checked": false,
+        "valid": true
+      },
+      "risky_selections": 1,
+      "run_id": "D02-W01_deadline_greedy",
+      "safe_achieved_value": [
+        1,
+        1
+      ],
+      "safe_joint_completion": false,
+      "sealed": true,
+      "service_actions": 5,
+      "suite": "exploratory_posthoc_diagnostic",
+      "ticks_elapsed": 7,
+      "unsafe_attempts": 0,
+      "unvalidated_exchanges": 0,
+      "uses_spent": 4,
+      "verification_error": null
+    },
+    {
+      "achieved_value": [
+        2,
+        1
+      ],
+      "adapter_applications": 0,
+      "attained_initial_guarantee": true,
+      "canonical_replay_ok": true,
+      "case_id": "D02",
+      "cleanup_error": null,
+      "duplicate_effects": 0,
+      "guarantee_declaration_disagreements": 0,
+      "header_rejections": 0,
+      "infrastructure_error": null,
+      "initial_guaranteed_value": [
+        2,
+        1
+      ],
+      "mechanical_report_valid": true,
+      "mechanical_state_observed": true,
+      "policy": "candidate",
+      "protocol_complete": true,
+      "protocol_complete_guarantee_attained": true,
+      "protocol_complete_safe_joint_completion": true,
+      "realized_guarantee_losses": 0,
+      "receipt_queries": 1,
+      "report_validation": {
+        "errors": [],
+        "scope": "mechanical_fields_only",
+        "summary_semantics_checked": false,
+        "unrecognized_additional_fields_checked": false,
+        "valid": true
+      },
+      "risky_selections": 0,
+      "run_id": "D02-W02_candidate",
+      "safe_achieved_value": [
+        2,
+        1
+      ],
+      "safe_joint_completion": true,
+      "sealed": true,
+      "service_actions": 4,
+      "suite": "exploratory_posthoc_diagnostic",
+      "ticks_elapsed": 5,
+      "unsafe_attempts": 0,
+      "unvalidated_exchanges": 0,
+      "uses_spent": 4,
+      "verification_error": null
+    },
+    {
+      "achieved_value": [
+        2,
+        1
+      ],
+      "adapter_applications": 0,
+      "attained_initial_guarantee": true,
+      "canonical_replay_ok": true,
+      "case_id": "D02",
+      "cleanup_error": null,
+      "duplicate_effects": 0,
+      "guarantee_declaration_disagreements": 0,
+      "header_rejections": 0,
+      "infrastructure_error": null,
+      "initial_guaranteed_value": [
+        2,
+        1
+      ],
+      "mechanical_report_valid": true,
+      "mechanical_state_observed": true,
+      "policy": "deadline_greedy",
+      "protocol_complete": true,
+      "protocol_complete_guarantee_attained": true,
+      "protocol_complete_safe_joint_completion": true,
+      "realized_guarantee_losses": 1,
+      "receipt_queries": 1,
+      "report_validation": {
+        "errors": [],
+        "scope": "mechanical_fields_only",
+        "summary_semantics_checked": false,
+        "unrecognized_additional_fields_checked": false,
+        "valid": true
+      },
+      "risky_selections": 1,
+      "run_id": "D02-W02_deadline_greedy",
+      "safe_achieved_value": [
+        2,
+        1
+      ],
+      "safe_joint_completion": true,
+      "sealed": true,
+      "service_actions": 5,
+      "suite": "exploratory_posthoc_diagnostic",
+      "ticks_elapsed": 7,
+      "unsafe_attempts": 0,
+      "unvalidated_exchanges": 0,
+      "uses_spent": 4,
+      "verification_error": null
+    }
+  ],
+  "status": "EXPLORATORY_POST_HOC_NOT_HELD_OUT_NOT_PRIMARY"
+}

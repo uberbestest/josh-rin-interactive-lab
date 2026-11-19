@@ -1,0 +1,13 @@
+{
+  "cases_sha256": "767376ddcb5ff9708cac58ef396378f265dee0c099e325802c149ad2951f3d33",
+  "diagnostic_script_sha256": "70f0926ee049500fcf537b765cf9afdb3eea794655478d25d0890de2cb0e2bbd",
+  "first_execution_occurred": false,
+  "frozen_at_utc": "2026-11-19T13:21:39.732415+00:00",
+  "sources": {
+    "comparators.py": "7ee791a675dd5de862087229002ecd009a15ba2b747e73eaccc50846c6b04dab",
+    "controller.py": "3d6403062e9914046a487fefb4fa17bf666a51ed84eb8219394dd6d32a9317c7",
+    "input/engine.py": "91599442030c1066ff5f75c328b6c818dde1fd52a203074e6257f87faed6f2ec",
+    "run_study.py": "633e3f0b5eda8822af3ffd87ed5c04a8153aa40d45a817943440c29e948865ac"
+  },
+  "status": "EXPLORATORY_POST_HOC_NOT_HELD_OUT_NOT_PRIMARY"
+}

@@ -1,0 +1,122 @@
+{
+  "case_count": 2,
+  "cases": [
+    {
+      "case_id": "D01",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 1,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 2,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 2,
+        "priority": "B",
+        "uses_remaining": 1
+      },
+      "label": "deadline_order_spends_priority_budget",
+      "reason": "Both are known present. One use allows only one finalization. Earlier-deadline A is nonpriority; B can still finish at tick 1. Count ties require choosing B.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "D02",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          },
+          "B": {
+            "deadline": 7,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 6,
+        "priority": "A",
+        "uses_remaining": 5
+      },
+      "label": "use_waiting_interval_for_other_job",
+      "reason": "A's receipt cannot cover before tick 4. Commit/finalize known-absent B during ticks 1 and 2, then query A to tick 4. Waiting first wastes that interval; if A is absent, B cannot finalize by tick 7.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    }
+  ],
+  "native_model_participants": 0,
+  "planned_executions": 6,
+  "policies": [
+    "candidate",
+    "deadline_greedy"
+  ],
+  "purpose": "Bound general equivalence of the cheap heuristic; do not retroactively claim a primary-suite superiority result.",
+  "record": "JRR-CONTINUATION-POSTHOC-DIAGNOSTIC-2026-11-19",
+  "selected_after": "Observed candidate/deadline_greedy tie in the 237-execution primary study.",
+  "status": "EXPLORATORY_POST_HOC_NOT_HELD_OUT_NOT_PRIMARY",
+  "world_assignments": 3
+}

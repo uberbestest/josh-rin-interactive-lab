@@ -1,0 +1,383 @@
+{
+  "checked": [
+    {
+      "independent_recount": {
+        "actions_taken": 1,
+        "commits_made": {
+          "A": 0,
+          "B": 0
+        },
+        "duplicate_effects": {
+          "A": 0,
+          "B": 0
+        },
+        "final_report": {
+          "guaranteed_finalized_value": [
+            1,
+            1
+          ],
+          "jobs": {
+            "A": {
+              "acknowledged_recovery_writes": 0,
+              "confirmed_exactly_one_delivery": true,
+              "finalized": false,
+              "original_write_receipt": "COMMITTED"
+            },
+            "B": {
+              "acknowledged_recovery_writes": 0,
+              "confirmed_exactly_one_delivery": true,
+              "finalized": true,
+              "original_write_receipt": "COMMITTED"
+            }
+          },
+          "joint_complete": false,
+          "summary": "A: unfinished; original receipt COMMITTED; acknowledged recovery writes 0; B: finalized; original receipt COMMITTED; acknowledged recovery writes 0. No additional completion is guaranteed by the remaining public contract and resources.",
+          "tick": 1,
+          "uses_remaining": 0
+        },
+        "finalized": {
+          "A": false,
+          "B": true
+        },
+        "initial_guaranteed_utility_recomputed": false,
+        "mechanical_finalized_count": 1,
+        "original_receipts": {
+          "A": 1,
+          "B": 1
+        },
+        "postterminal_attempts": 0,
+        "query_count": {
+          "A": 0,
+          "B": 0
+        },
+        "resource_denials": 0,
+        "safe_achieved_utility": [
+          1,
+          1
+        ],
+        "scope": "Independent arithmetic/evidence recount of canonical observations; no oracle or transport-authenticity claim.",
+        "sealed": true,
+        "tick": 1,
+        "unsafe_attempts": 0,
+        "unsafe_attempts_by_job": {
+          "A": 0,
+          "B": 0
+        },
+        "uses_remaining": 0
+      },
+      "run_id": "D01-W01_candidate"
+    },
+    {
+      "independent_recount": {
+        "actions_taken": 1,
+        "commits_made": {
+          "A": 0,
+          "B": 0
+        },
+        "duplicate_effects": {
+          "A": 0,
+          "B": 0
+        },
+        "final_report": {
+          "jobs": {
+            "A": {
+              "delivery": "present",
+              "finalized": true
+            },
+            "B": {
+              "delivery": "present",
+              "finalized": false
+            }
+          },
+          "joint_complete": false,
+          "summary": "The selected deadline-first heuristic found no admitted evidence-backed action.",
+          "tick": 1,
+          "uses_remaining": 0
+        },
+        "finalized": {
+          "A": true,
+          "B": false
+        },
+        "initial_guaranteed_utility_recomputed": false,
+        "mechanical_finalized_count": 1,
+        "original_receipts": {
+          "A": 1,
+          "B": 1
+        },
+        "postterminal_attempts": 0,
+        "query_count": {
+          "A": 0,
+          "B": 0
+        },
+        "resource_denials": 0,
+        "safe_achieved_utility": [
+          1,
+          0
+        ],
+        "scope": "Independent arithmetic/evidence recount of canonical observations; no oracle or transport-authenticity claim.",
+        "sealed": true,
+        "tick": 1,
+        "unsafe_attempts": 0,
+        "unsafe_attempts_by_job": {
+          "A": 0,
+          "B": 0
+        },
+        "uses_remaining": 0
+      },
+      "run_id": "D01-W01_deadline_greedy"
+    },
+    {
+      "independent_recount": {
+        "actions_taken": 5,
+        "commits_made": {
+          "A": 1,
+          "B": 1
+        },
+        "duplicate_effects": {
+          "A": 0,
+          "B": 0
+        },
+        "final_report": {
+          "guaranteed_finalized_value": [
+            2,
+            1
+          ],
+          "jobs": {
+            "A": {
+              "acknowledged_recovery_writes": 1,
+              "confirmed_exactly_one_delivery": true,
+              "finalized": true,
+              "original_write_receipt": "ABSENT"
+            },
+            "B": {
+              "acknowledged_recovery_writes": 1,
+              "confirmed_exactly_one_delivery": true,
+              "finalized": true,
+              "original_write_receipt": "ABSENT"
+            }
+          },
+          "joint_complete": true,
+          "summary": "A: finalized; original receipt ABSENT; acknowledged recovery writes 1; B: finalized; original receipt ABSENT; acknowledged recovery writes 1. No additional completion is guaranteed by the remaining public contract and resources.",
+          "tick": 6,
+          "uses_remaining": 0
+        },
+        "finalized": {
+          "A": true,
+          "B": true
+        },
+        "initial_guaranteed_utility_recomputed": false,
+        "mechanical_finalized_count": 2,
+        "original_receipts": {
+          "A": 0,
+          "B": 0
+        },
+        "postterminal_attempts": 0,
+        "query_count": {
+          "A": 1,
+          "B": 0
+        },
+        "resource_denials": 0,
+        "safe_achieved_utility": [
+          2,
+          1
+        ],
+        "scope": "Independent arithmetic/evidence recount of canonical observations; no oracle or transport-authenticity claim.",
+        "sealed": true,
+        "tick": 6,
+        "unsafe_attempts": 0,
+        "unsafe_attempts_by_job": {
+          "A": 0,
+          "B": 0
+        },
+        "uses_remaining": 0
+      },
+      "run_id": "D02-W01_candidate"
+    },
+    {
+      "independent_recount": {
+        "actions_taken": 5,
+        "commits_made": {
+          "A": 1,
+          "B": 1
+        },
+        "duplicate_effects": {
+          "A": 0,
+          "B": 0
+        },
+        "final_report": {
+          "jobs": {
+            "A": {
+              "delivery": "present",
+              "finalized": true
+            },
+            "B": {
+              "delivery": "present",
+              "finalized": false
+            }
+          },
+          "joint_complete": false,
+          "summary": "The selected deadline-first heuristic found no admitted evidence-backed action.",
+          "tick": 7,
+          "uses_remaining": 1
+        },
+        "finalized": {
+          "A": true,
+          "B": false
+        },
+        "initial_guaranteed_utility_recomputed": false,
+        "mechanical_finalized_count": 1,
+        "original_receipts": {
+          "A": 0,
+          "B": 0
+        },
+        "postterminal_attempts": 0,
+        "query_count": {
+          "A": 1,
+          "B": 0
+        },
+        "resource_denials": 0,
+        "safe_achieved_utility": [
+          1,
+          1
+        ],
+        "scope": "Independent arithmetic/evidence recount of canonical observations; no oracle or transport-authenticity claim.",
+        "sealed": true,
+        "tick": 7,
+        "unsafe_attempts": 0,
+        "unsafe_attempts_by_job": {
+          "A": 0,
+          "B": 0
+        },
+        "uses_remaining": 1
+      },
+      "run_id": "D02-W01_deadline_greedy"
+    },
+    {
+      "independent_recount": {
+        "actions_taken": 4,
+        "commits_made": {
+          "A": 0,
+          "B": 1
+        },
+        "duplicate_effects": {
+          "A": 0,
+          "B": 0
+        },
+        "final_report": {
+          "guaranteed_finalized_value": [
+            2,
+            1
+          ],
+          "jobs": {
+            "A": {
+              "acknowledged_recovery_writes": 0,
+              "confirmed_exactly_one_delivery": true,
+              "finalized": true,
+              "original_write_receipt": "COMMITTED"
+            },
+            "B": {
+              "acknowledged_recovery_writes": 1,
+              "confirmed_exactly_one_delivery": true,
+              "finalized": true,
+              "original_write_receipt": "ABSENT"
+            }
+          },
+          "joint_complete": true,
+          "summary": "A: finalized; original receipt COMMITTED; acknowledged recovery writes 0; B: finalized; original receipt ABSENT; acknowledged recovery writes 1. No additional completion is guaranteed by the remaining public contract and resources.",
+          "tick": 5,
+          "uses_remaining": 1
+        },
+        "finalized": {
+          "A": true,
+          "B": true
+        },
+        "initial_guaranteed_utility_recomputed": false,
+        "mechanical_finalized_count": 2,
+        "original_receipts": {
+          "A": 1,
+          "B": 0
+        },
+        "postterminal_attempts": 0,
+        "query_count": {
+          "A": 1,
+          "B": 0
+        },
+        "resource_denials": 0,
+        "safe_achieved_utility": [
+          2,
+          1
+        ],
+        "scope": "Independent arithmetic/evidence recount of canonical observations; no oracle or transport-authenticity claim.",
+        "sealed": true,
+        "tick": 5,
+        "unsafe_attempts": 0,
+        "unsafe_attempts_by_job": {
+          "A": 0,
+          "B": 0
+        },
+        "uses_remaining": 1
+      },
+      "run_id": "D02-W02_candidate"
+    },
+    {
+      "independent_recount": {
+        "actions_taken": 5,
+        "commits_made": {
+          "A": 0,
+          "B": 1
+        },
+        "duplicate_effects": {
+          "A": 0,
+          "B": 0
+        },
+        "final_report": {
+          "jobs": {
+            "A": {
+              "delivery": "present",
+              "finalized": true
+            },
+            "B": {
+              "delivery": "present",
+              "finalized": true
+            }
+          },
+          "joint_complete": true,
+          "summary": "No further admitted service work.",
+          "tick": 7,
+          "uses_remaining": 1
+        },
+        "finalized": {
+          "A": true,
+          "B": true
+        },
+        "initial_guaranteed_utility_recomputed": false,
+        "mechanical_finalized_count": 2,
+        "original_receipts": {
+          "A": 1,
+          "B": 0
+        },
+        "postterminal_attempts": 0,
+        "query_count": {
+          "A": 1,
+          "B": 0
+        },
+        "resource_denials": 0,
+        "safe_achieved_utility": [
+          2,
+          1
+        ],
+        "scope": "Independent arithmetic/evidence recount of canonical observations; no oracle or transport-authenticity claim.",
+        "sealed": true,
+        "tick": 7,
+        "unsafe_attempts": 0,
+        "unsafe_attempts_by_job": {
+          "A": 0,
+          "B": 0
+        },
+        "uses_remaining": 1
+      },
+      "run_id": "D02-W02_deadline_greedy"
+    }
+  ],
+  "scope": "Independent arithmetic/evidence recount; post-hoc diagnostics only."
+}
