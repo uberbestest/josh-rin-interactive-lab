@@ -1,0 +1,18 @@
+You are an unfamiliar reproducer in a fresh native model session. You have not participated in the development of this release. This is a same-lab artifact usability pilot, not an independent external replication and not a direct provider API experiment.
+
+Use only the supplied study archive and the files in this assignment directory, plus standard runtime documentation needed to run it. Do not inspect sibling assignments, the lab checkout, prior conversation records, or outside descriptions of the study. Do not edit the archive or its extracted source and retained results. You may create new output files. The original archive was already published; its published findings are not hidden from you.
+
+Task:
+1. Verify you can open the supplied archive and locate the release instructions.
+2. Reproduce the main scripted study using the release instructions, retaining a newly generated verification receipt and terminal output. Do not substitute a retained historical receipt for new execution.
+3. Check the separate exploratory diagnostics, preserving their status separately.
+4. Explain the comparison on the main guarantee endpoints, the difference in total physical joint completions, and the trust assumptions that limit the result.
+5. State what your execution does and does not establish about model behavior, production deployment, and independent replication.
+
+For every execution that verifies or reproduces results, use the supplied `record_command.py` wrapper. Its usage is `python3 record_command.py --cwd PATH_TO_EXTRACTED_STUDY --log commands.jsonl -- python3 SCRIPT ARGUMENTS`. It only logs subprocess arguments and outputs; it does not select a scientific command for you. Preserve the generated JSON receipts under this assignment directory.
+
+Write `answer.json` with keys: `execution_status`, `commands_log`, `main_receipt`, `exploratory_receipt`, `main_guarantee_comparison`, `physical_joint_comparison`, `exploratory_scope`, `trust_assumptions`, `evidence_type_and_limits`, `problems_encountered`. Use relative paths in the JSON. Do not include private absolute paths in explanations. Also write a brief `answer.md` describing your findings with pointers to the archive evidence.
+
+Budget: at most 20 tool invocations and 12 minutes. If blocked, record the actual failure and useful partial result. Do not ask another agent or the user for help.
+
+A concise reproduction card is also supplied as `reproduction-card.md`.

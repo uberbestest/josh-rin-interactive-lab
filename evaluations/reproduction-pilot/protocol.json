@@ -1,0 +1,55 @@
+{
+  "record": "JRR-RELEASE-REUSE-PILOT-2026-11-19",
+  "status": "frozen_before_assignment",
+  "frozen_at_utc": "2026-11-19T15:19:41.223030+00:00",
+  "source_commit": "8f5aaa28346f4c9d1a605fda85b36d1bacbbeb84",
+  "archive_url": "https://github.com/uberbestest/josh-rin-interactive-lab/blob/8f5aaa28346f4c9d1a605fda85b36d1bacbbeb84/rin-self-evaluation/evidence/round-09.zip",
+  "archive_sha256": "fcf70ea7ae37be448b36c6060910a2dab4a8dfbab4704fdd0c66a54b95bbf1d2",
+  "assignments": [
+    {
+      "arm": "a",
+      "input": "unchanged public archive and common task/recording helper",
+      "order": 1
+    },
+    {
+      "arm": "b",
+      "input": "same archive and common task/recording helper plus reproduction card",
+      "order": 2
+    }
+  ],
+  "contexts": 2,
+  "fork_turns": "none",
+  "selector": "inherited default; no explicit override",
+  "runtime_snapshot": "not independently attested",
+  "budget_per_context": {
+    "tool_invocations": 20,
+    "wall_minutes": 12
+  },
+  "direct_provider_api_calls": 0,
+  "provider_usage_and_cost": "unavailable for native context dispatch",
+  "evaluation_type": "small same-lab release usability pilot; one context per packaging condition; fixed order; descriptive only",
+  "success_requirements": [
+    "logged successful fresh main reproduction; receipt records 237 fresh scripted executions and normalized exact result",
+    "logged successful separate diagnostic verification",
+    "correct main guarantee tie:64/64 and43/43 for candidate and deadline-first",
+    "correct physical joint comparison:49/71 candidate,52/71 deadline-first",
+    "six exploratory executions kept separate from237 main executions",
+    "trusted authoritative local status/receipt and bounded synthetic contract acknowledged",
+    "no claim of model-weight improvement, production qualification, or external replication"
+  ],
+  "scoring": "mechanical receipt checks plus same-lab manual explanation review against published source; no blinded external judge",
+  "stop_rule": "one assigned context per condition; count blocked or incomplete assignments; do not retry successful or failed actors for a better result",
+  "limitations": [
+    "No sample supports a causal packaging advantage or population performance estimate.",
+    "Shared filesystem access is instruction-scoped, not OS-isolated.",
+    "Agent elapsed time can include shared workspace contention.",
+    "No direct-provider request IDs, token budgets, billing ledger or exact serving snapshot are attested.",
+    "Local timestamp and hashes establish the retained protocol order; no independent timestamp attestation."
+  ],
+  "files": {
+    "prompt-a.txt": "77ff66c0252f4e16bb91d9d29f42347046476d6f8234ed0e74afb4fa0afe2198",
+    "prompt-b.txt": "eab78c2f01e41904d6347254425805f02446a846ddf7d13fd71840d85218e505",
+    "record_command.py": "e5648c316d7d5ed15640ee41126c8ea5576e292428cf7ffecfbd7546bbd72bb3",
+    "reproduction-card.md": "40a423b185ad224662cc487e5233c6ca5fae3d550a6f59745714566849c22c3d"
+  }
+}

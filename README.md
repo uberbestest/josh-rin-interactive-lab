@@ -4,6 +4,12 @@
 
 [Browse the gallery](index.html)
 
+## Agent evaluations and Castle preview — November 19, 2026
+
+**[Agent evaluations & API science](evaluations/index.html)** brings the nine published studies into one evidence-linked overview. Rounds 01–07 contain 232 fresh native model contexts across different tasks; this is an inventory count, not a pooled accuracy score. Rounds 08–09 are scripted controller studies. The page states the execution type of each result and the reporting requirements for direct-provider API experiments. No direct-provider API run is reported yet. A separate [two-context release-reuse pilot](evaluations/reproduction-pilot/index.html) successfully reproduced Round 09 in both fresh native sessions, preserving its main tie and limitations.
+
+**[RLE Castle — development overview](projects/rle-castle/index.html)** describes the full JRPG, its intended Faire-to-castle-entrance preview, and the optional research layer for observing decisions and replaying evidence. The public overview preserves the provenance of its October 31 development still and distinguishes design aims from released functionality. The current game is still in development.
+
 ## Rin 6.1 vs 6.2 — ongoing self evaluation (updated November 19, 2026)
 
 **[Read the evaluation series](https://uberbestest.github.io/josh-rin-interactive-lab/rin-self-evaluation/)** · [Browse the GitHub records](rin-self-evaluation/README.md)

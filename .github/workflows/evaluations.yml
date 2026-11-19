@@ -1,0 +1,54 @@
+name: Evaluation hub and Castle overview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'evaluations/**'
+      - 'projects/rle-castle/**'
+      - 'index.html'
+      - 'README.md'
+      - '.github/workflows/evaluations.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evaluation-overview-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check provenance, links and evidence identity
+        run: python3 evaluations/check_publication.py --static-only --output-dir /tmp/evaluation-static
+      - name: Install pinned browser harness
+        run: |
+          python3 -m pip install playwright==1.57.0
+          python3 -m playwright install --with-deps chromium
+      - name: Operate the homepage and both overviews
+        run: python3 evaluations/check_publication.py --output-dir /tmp/evaluation-browser --revision "${{ github.sha }}"
+      - name: Verify public deployment and operate live pages
+        run: >-
+          python3 evaluations/check_publication.py
+          --base-url https://uberbestest.github.io/josh-rin-interactive-lab/
+          --output-dir /tmp/evaluation-live
+          --revision "${{ github.sha }}"
+          --wait-seconds 240
+      - name: Preserve receipts and rendered pages
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evaluation-overview-${{ github.sha }}
+          retention-days: 30
+          path: |
+            /tmp/evaluation-static/
+            /tmp/evaluation-browser/
+            /tmp/evaluation-live/

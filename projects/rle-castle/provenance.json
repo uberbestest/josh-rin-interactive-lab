@@ -1,7 +1,7 @@
 {
-  "project": "RLE Castle \u2014 The Faire",
+  "project": "RLE Castle — The Faire",
   "release_type": "development_preview",
-  "date": "2026-10-31",
+  "date": "2026-11-19",
   "build_verified_in_this_release": false,
   "public_playable_build": false,
   "source": {
@@ -35,12 +35,28 @@
   "claims": {
     "visible_scene": "Lab doorway, Clockwork Town sign, booth, castle-access objective",
     "footrace_status": "Josh reported playing the improved footrace on October 31; not independently rerun here",
-    "research_description": "Design intent, not completed experimental results"
+    "research_description": "Design and integration goals, not completed Castle API trials or verified current-build instrumentation"
   },
   "excluded": [
     "Rejected October 18 v0.1.0 screenshots",
     "Rejected top-down car-racing screenshot",
     "Footrace visual whose provenance as a running-build capture was not verified",
     "Private source code, executables, saves, chat, local paths and connection details"
-  ]
+  ],
+  "presentation_version": "0.2.0",
+  "previous_preview_date": "2026-10-31",
+  "design_basis": {
+    "record": "RLE-CASTLE-AGENT-LAYER-HANDOFF-2026-11-14-001-revision.1",
+    "kind": "revised developer handoff and project scope",
+    "implementation_evidence": false,
+    "public_scope": "Full JRPG adventure preserved; optional RLE observation and replay layer; intended preview route through the Faire to Castle entry",
+    "publication_request_date": "2026-11-19"
+  },
+  "verification_boundary": {
+    "website_checks": "Same-lab presentation checks; see BROWSER-RECEIPT.json",
+    "current_source_accessed": false,
+    "current_executable_launched": false,
+    "new_castle_model_trials": 0,
+    "current_game_version": "unknown in this publication pass"
+  }
 }

@@ -1,0 +1,98 @@
+{
+  "record": "JRR-RELEASE-REUSE-PILOT-2026-11-19",
+  "status": "completed",
+  "run_date": "2026-11-19",
+  "timezone": "America/New_York",
+  "protocol_sha256": "9e597f5a9ed1b272cf798064a050ac5a026d3035d552cd7eb7cfa746389397a7",
+  "source_revision": "8f5aaa28346f4c9d1a605fda85b36d1bacbbeb84",
+  "source_archive_sha256": "fcf70ea7ae37be448b36c6060910a2dab4a8dfbab4704fdd0c66a54b95bbf1d2",
+  "assignment_order": [
+    "a",
+    "b"
+  ],
+  "fresh_native_contexts": 2,
+  "completed_contexts": 2,
+  "failed_or_excluded_contexts": 0,
+  "context_dispatch": {
+    "fork_turns": "none",
+    "explicit_model_override": null,
+    "serving_snapshot": "not independently attested",
+    "reasoning_effort": "inherited; not independently attested"
+  },
+  "direct_provider_api_calls": 0,
+  "provider_token_usage": null,
+  "provider_api_cost": null,
+  "arms": [
+    {
+      "arm": "a",
+      "packaging": "published archive",
+      "native_contexts": 1,
+      "assignment_status": "completed",
+      "main_fresh_scripted_executions": 237,
+      "retained_events_replayed": 2308,
+      "normalized_reproduction_exact": true,
+      "separate_diagnostics_reproduced": 6,
+      "scripted_commands_exit_codes": [
+        0,
+        0
+      ],
+      "original_archive_members_unchanged": 366,
+      "interpretation_review": {
+        "reviewer": "same-lab publishing assistant",
+        "main_guarantee_tie_preserved": true,
+        "three_extra_deadline_first_joint_completions_explained": true,
+        "exploratory_denominator_kept_separate": true,
+        "trusted_status_assumptions_identified": true,
+        "model_production_and_replication_limits_preserved": true
+      },
+      "receipt_paths_in_evidence_zip": {
+        "answer": "a/answer.json",
+        "commands": "a/commands.jsonl",
+        "main": "a/main_verification.json",
+        "exploratory": "a/exploratory_verification.json"
+      },
+      "observed_issues": [
+        "A broad inspection exceeded the terminal display limit; a focused reread recovered the needed fields. No scientific command output was truncated in its saved command log."
+      ],
+      "main_command_elapsed_seconds": 26.252486
+    },
+    {
+      "arm": "b",
+      "packaging": "same archive plus reproduction card",
+      "native_contexts": 1,
+      "assignment_status": "completed",
+      "main_fresh_scripted_executions": 237,
+      "retained_events_replayed": 2308,
+      "normalized_reproduction_exact": true,
+      "separate_diagnostics_reproduced": 6,
+      "scripted_commands_exit_codes": [
+        0,
+        0
+      ],
+      "original_archive_members_unchanged": 366,
+      "interpretation_review": {
+        "reviewer": "same-lab publishing assistant",
+        "main_guarantee_tie_preserved": true,
+        "three_extra_deadline_first_joint_completions_explained": true,
+        "exploratory_denominator_kept_separate": true,
+        "trusted_status_assumptions_identified": true,
+        "model_production_and_replication_limits_preserved": true
+      },
+      "receipt_paths_in_evidence_zip": {
+        "answer": "b/answer.json",
+        "commands": "b/commands.jsonl",
+        "main": "b/main-verification.json",
+        "exploratory": "b/exploratory-verification.json"
+      },
+      "observed_issues": [
+        "A broad inspection exceeded the terminal display limit; a focused reread recovered the needed fields. No scientific command output was truncated in its saved command log."
+      ],
+      "main_command_elapsed_seconds": 18.383682
+    }
+  ],
+  "interpretation": "Both assigned fresh native contexts reproduced and correctly explained the released artifact. One context per packaging condition, fixed order, visible published answers, and shared infrastructure do not establish a reproduction-card benefit or population success rate.",
+  "scientific_boundary": "This tests same-lab artifact reuse. The underlying 237 main and 6 exploratory scripted executions are reproductions, not new model participants or independent scientific replications.",
+  "trace_boundary": "Each verifier removes its new temporary raw traces after comparison. New verification receipts and full logged command outputs are retained; original complete raw records remain in the frozen source archive.",
+  "cost_boundary": "Elapsed script runtimes are retained for provenance only. They exclude actor reading/reasoning and do not measure API cost or controlled speed differences.",
+  "publication_operations": "No scientific output was edited. Full answer files, receipts and command logs are copied byte-for-byte. Packaging and file inventories were created after both assignments."
+}
