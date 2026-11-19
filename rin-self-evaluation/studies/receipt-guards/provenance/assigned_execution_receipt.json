@@ -1,0 +1,13 @@
+{
+  "all_first_events_after_prerun_commit": true,
+  "assigned_executions": 64,
+  "canonical_events": 292,
+  "first_event_at_utc": "2026-11-19T01:06:21.842497+00:00",
+  "infrastructure_failures": 0,
+  "last_initial_event_at_utc": "2026-11-19T01:06:58.249048+00:00",
+  "native_participants": 0,
+  "prerun_commit_sha": "257591dd656e2fb8a54864e8139a0849d662c166",
+  "prerun_committed_at_utc": "2026-11-19T01:06:02Z",
+  "replacement_executions": 0,
+  "status": "PASS"
+}

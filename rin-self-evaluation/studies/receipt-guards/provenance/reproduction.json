@@ -1,0 +1,18 @@
+{
+  "excluded_from_fresh_comparison": [
+    "wall-clock event timestamp",
+    "event chain hashes that bind timestamps",
+    "Node runtime version",
+    "Python runtime version"
+  ],
+  "freeze_sha256": "ea42a1ebcf319e36679899f5aa2db0ef831aa4c8790dc5160a68bd923b3c00d1",
+  "fresh_actions_observations_oracles_states_and_transport_match": true,
+  "fresh_helper_replays": 64,
+  "frozen_file_count": 29,
+  "individual_retained_and_fresh_event_chains_verified": true,
+  "no_native_participants": true,
+  "retained_canonical_events_verified": 292,
+  "retained_files_modified": false,
+  "retained_runs_verified": 64,
+  "status": "PASS"
+}

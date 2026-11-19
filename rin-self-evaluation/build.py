@@ -95,7 +95,9 @@ def kind_badge(study):
     style = ' baseline' if study['kind'] == 'baseline' else ''
     if study['status'] != 'executed':
         return f'<span class="badge planned">{esc(study["status"].capitalize())}</span>'
-    return f'<span class="badge{style}">{"Baseline pilot" if study["kind"] == "baseline" else "Matched comparison"}</span>'
+    label = {'baseline': 'Baseline pilot', 'matched': 'Matched comparison',
+             'forensic': 'Deterministic forensics'}[study['kind']]
+    return f'<span class="badge{style}">{label}</span>'
 
 
 def study_card(study):
@@ -111,6 +113,10 @@ def hub(data):
     executed = [s for s in studies if s['status'] == 'executed']
     matched = sum(s['kind'] == 'matched' for s in executed)
     baseline = sum(s['kind'] == 'baseline' for s in executed)
+    forensic = sum(s['kind'] == 'forensic' for s in executed)
+    forensic_stat = (f'<div class="stat"><b>{forensic}</b><span>deterministic forensic study</span></div>'
+                     if forensic else '')
+    stats_class = 'stats has-forensic' if forensic else 'stats'
     jump = ''.join(f'<a href="#round-{s["round"]:02d}">Round {s["round"]:02d}</a>' for s in studies)
     cards = '\n'.join(study_card(s) for s in studies)
     body = f'''<div class="hero">
@@ -118,7 +124,7 @@ def hub(data):
 <h1>Rin 6.1 vs 6.2<br><span class="accent">Self evaluation.</span></h1>
 <p class="lede">{esc(data['description'])}</p>
 <div class="identity"><strong>Recorded model identities</strong><p>{esc(data['identity_note'])}</p></div>
-<div class="stats" aria-label="Series contents"><div class="stat"><b>{len(executed)}</b><span>completed studies</span></div><div class="stat"><b>{matched}</b><span>matched comparisons</span></div><div class="stat"><b>{baseline}</b><span>baseline pilot</span></div></div>
+<div class="{stats_class}" aria-label="Series contents"><div class="stat"><b>{len(executed)}</b><span>completed studies</span></div><div class="stat"><b>{matched}</b><span>matched comparisons</span></div><div class="stat"><b>{baseline}</b><span>baseline pilot</span></div>{forensic_stat}</div>
 <p class="fine">Each study keeps its own denominators. There is no pooled accuracy score.</p>
 </div>
 <section aria-labelledby="evaluations-heading"><div class="section-heading"><h2 id="evaluations-heading">The evaluation notebook</h2><p>Newest round first · Every test opens with its TL;DR</p></div>
@@ -142,6 +148,11 @@ def result_table(study):
 def detail(study, data):
     number = study['round']
     model_items = '<br>'.join('<code>' + esc(x) + '</code>' for x in study['selectors']) if study['selectors'] else 'Inherited session; no explicit selector override'
+    forensic = study['kind'] == 'forensic'
+    if forensic:
+        model_items = 'No new model participants; saved JavaScript replayed'
+    sample_label = 'Executions' if forensic else 'Participants'
+    provenance_label = 'Source provenance' if forensic else 'Model provenance'
     result = result_table(study)
     observations = ''.join('<p>' + esc(text) + '</p>' for text in study['observations'])
     verification = ''.join('<li>' + esc(text) + '</li>' for text in study['verification_notes'])
@@ -184,8 +195,8 @@ def detail(study, data):
 <div class="actions"><a class="button" href="{local_path(study['files']['report'])}">Read the full report <span aria-hidden="true">&nbsp;↗</span></a><a class="button secondary" href="{local_path(study['files']['evidence'])}">Download public evidence</a><a href="#results">Result table ↓</a></div>
 </div>
 <section class="content-section" aria-labelledby="setup-heading"><h2 id="setup-heading">Recorded setup</h2>
-<dl class="facts"><div><dt>Design</dt><dd>{esc(study['design'])}</dd></div><div><dt>Requested configuration</dt><dd>{model_items}</dd></div><div><dt>Participants</dt><dd>{esc(study['sample_label'])}</dd></div><div><dt>Record identifier</dt><dd><code>{esc(study['record_id'])}</code></dd></div></dl>
-<div class="identity"><strong>Model provenance</strong><p>{esc(study['model_note'])}</p></div></section>
+<dl class="facts"><div><dt>Design</dt><dd>{esc(study['design'])}</dd></div><div><dt>Requested configuration</dt><dd>{model_items}</dd></div><div><dt>{sample_label}</dt><dd>{esc(study['sample_label'])}</dd></div><div><dt>Record identifier</dt><dd><code>{esc(study['record_id'])}</code></dd></div></dl>
+<div class="identity"><strong>{provenance_label}</strong><p>{esc(study['model_note'])}</p></div></section>
 <section class="content-section" id="results" aria-labelledby="results-heading"><h2 id="results-heading">Results, with their denominators</h2>{result}<p class="fine">{esc(study['denominator_note'])}</p><p class="prose"><strong>{esc(study['interpretation'])}</strong></p></section>
 <section class="content-section" aria-labelledby="differences-heading"><h2 id="differences-heading">Outliers and informative differences</h2><div class="prose">{observations}</div></section>
 <section class="content-section" aria-labelledby="verification-heading"><h2 id="verification-heading">What was checked</h2><ul class="detail-list">{verification}</ul><p class="fine">These are retained same-lab checks, including separate model reviewers where recorded. They are not external scientific replication.</p><details class="read-more"><summary>Scope and limits of this result</summary><ul class="detail-list">{caveats}</ul></details></section>
@@ -221,6 +232,9 @@ def readme(data):
 
 
 def markdown_record(study):
+    forensic = study['kind'] == 'forensic'
+    sample_label = 'Executions' if forensic else 'Participants'
+    provenance_label = 'Source provenance' if forensic else 'Model provenance'
     identical_archive = study.get('public_archive_identical_to_canonical', False)
     evidence_note = ('The public evidence ZIP is byte-identical to the retained canonical archive, without path redaction or repackaging. Its public checksum is also the canonical archive checksum. The report has its own digest; the publication receipt records the replay and integrity checks.'
                      if identical_archive else 'The original report and public evidence copy have separate identities. Use the public ZIP’s own checksum and disclosure receipt when checking the download. Its packaging and path disclosures differ from the retained original archive.')
@@ -237,8 +251,8 @@ def markdown_record(study):
               f'- **Publication date:** {date_label(study["published_date"])}.',
               f'- **Record:** `{study["record_id"]}`.',
               f'- **Design:** {study["design"]}',
-              f'- **Participants:** {study["sample_label"]}.', '',
-              f'**Model provenance:** {study["model_note"]}', '',
+              f'- **{sample_label}:** {study["sample_label"]}.', '',
+              f'**{provenance_label}:** {study["model_note"]}', '',
               '## Results, with their denominators', '', study['result_caption'], '',
               '| ' + ' | '.join(study['columns']) + ' |',
               '| ' + ' | '.join(['---'] * len(study['columns'])) + ' |']

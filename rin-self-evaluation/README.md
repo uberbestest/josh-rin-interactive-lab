@@ -6,13 +6,25 @@ A running record of the tests we actually ran: what we were trying to learn, wha
 
 ## Model identity
 
-“6.1 vs 6.2” is the informal series label. The completed matched studies requested gpt-6-astra and gpt-6.2-astra; no separately attested 6.1 serving snapshot was tested. The first round is an inherited-session baseline without a generation control.
+“6.1 vs 6.2” is the informal series label. The completed matched studies requested gpt-6-astra and gpt-6.2-astra; no separately attested 6.1 serving snapshot was tested. The first round is an inherited-session baseline without a generation control. Round eight is deterministic forensics of saved JavaScript, with zero fresh model participants.
 
 This section was first published on November 18, 2026. Each record lists its run date and timezone separately from its publication date, with its own denominators; there is no pooled accuracy score.
 
 ## Current readout
 
-Round seven investigated the earlier duplicate-delivery failure. Both recovered helpers reproduced it through a whole-response ABSENT check, and three explicit scripted interventions avoided it in the original case. In 32 prospectively frozen fresh contexts, safe completion was 8/8 under both receipt scopes for the older selector and 6/8 combined versus 8/8 target-only for the newer. Both new errors were in the A/B reflection; all eight closest original/combined repetitions succeeded. All reports explicitly accounted for both jobs; review retained 29 supported, zero unsupported and three unclear reports. The result is local to one selected family, and fresh parser use or internal cause was not established. Earlier records remain unchanged.
+Round eight follows the receipt failure into two additional code paths: finalization while the selected receipt is pending, and finalization using a receipt naming another job. In 64 frozen scripted executions, the recovered helpers had unsafe attempts in 11/16 cases, the absence-only edit in 9/16, the selected-status guard in 4/16, and the status-plus-job guard in 0/16. Ten executions physically finished both jobs despite an unsafe attempt. The full guard still left safe work unfinished, and an auxiliary early query spent away a joint guarantee. These are deterministic code findings, with no new model failure-rate estimate. The earlier native comparisons and their records remain unchanged.
+
+## Round 08 — Finalization Without Target Evidence
+
+**What we tested:** Do pending and wrong-job receipts still trigger unsupported finalization after the historical absence check is repaired, and which additional guard blocks each behavior?
+
+**What happened:** In 64 scripted executions, runs with unsafe attempts fell from 11/16 for recovered helpers to 9/16 after the absence-only edit, 4/16 with a selected-status guard, and 0/16 with status plus job binding. Every positive control completed safely. These are code replays, not fresh model rates.
+
+**Outliers:** Ten executions mechanically completed both jobs despite an unsafe attempt. Full guards stopped with a safe joint continuation still available in eight cases. In the auxiliary no-decoy case, the first pending query itself lost the joint guarantee in all eight versions/helpers.
+
+**Design:** Eight authored synthetic-service cases, two recovered JavaScript programs and four separately retained code versions: 64 deterministic executions. The actual inherited client and engine run in isolated temporary directories. Pending receipts are authentic; wrong-job headers are an explicit one-shot response substitution. This forensic follow-up has zero fresh native-model participants.
+
+[Read the GitHub record](round-08.md) · [Open the web page](https://uberbestest.github.io/josh-rin-interactive-lab/rin-self-evaluation/round-08.html) · [Report PDF](reports/round-08.pdf) · [Public evidence ZIP](evidence/round-08.zip) · [Public checksum](evidence/round-08.sha256) · [Disclosure receipt](evidence/round-08-publication.json)
 
 ## Round 07 — The Check That Matched the Other Job
 

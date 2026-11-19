@@ -1,0 +1,88 @@
+{
+  "all_pages_visually_reviewed": true,
+  "build_source_sha256": "79dfa754f537f36f1db17248e9bb0edfaf327dbc0a01f4dd4d594e8d0b3cad22",
+  "final_precision_edit": "Page 1 qualifies the four PENDING executions per arm as known-A, separately from the no-decoy case; scientific results unchanged.",
+  "final_render_verification": "Page 1 re-rendered and visually rechecked. Pages 2 through 7 rendered byte-identically to their previously reviewed PNGs. All seven page counts and glyph bounds rechecked.",
+  "kind": "post-analysis report rendering and same-lab visual review",
+  "limits": "Visual and document-integrity review; this does not add scientific observations or certify conclusions independently.",
+  "pages": 7,
+  "pages_checked": [
+    {
+      "height_points": 792,
+      "out_of_page_glyphs": 0,
+      "page": 1,
+      "rendered_png_sha256": "7a387eb67823c164d38e7adea94decb12b4ddc4a64f56d58d76a74f310ba3700",
+      "text_characters": 1912,
+      "visual_findings": "No clipped text, overlapping elements, broken table borders or missing glyphs observed.",
+      "visually_reviewed": true,
+      "width_points": 612
+    },
+    {
+      "height_points": 792,
+      "out_of_page_glyphs": 0,
+      "page": 2,
+      "rendered_png_sha256": "626139ff88134e2cb526188e809e671c1722712c0b17a91f504f5a197a3f57a3",
+      "text_characters": 2265,
+      "visual_findings": "No clipped text, overlapping elements, broken table borders or missing glyphs observed.",
+      "visually_reviewed": true,
+      "width_points": 612
+    },
+    {
+      "height_points": 792,
+      "out_of_page_glyphs": 0,
+      "page": 3,
+      "rendered_png_sha256": "d2497f269de7904a205e40602fad1eb2cc605545a041077c7c52d7975ca3dd0c",
+      "text_characters": 1763,
+      "visual_findings": "No clipped text, overlapping elements, broken table borders or missing glyphs observed.",
+      "visually_reviewed": true,
+      "width_points": 612
+    },
+    {
+      "height_points": 792,
+      "out_of_page_glyphs": 0,
+      "page": 4,
+      "rendered_png_sha256": "dc98774fb5ec810aeb156f35686ac14d7da50acd80b44ab6113fc1fab4b4bcaa",
+      "text_characters": 2098,
+      "visual_findings": "No clipped text, overlapping elements, broken table borders or missing glyphs observed.",
+      "visually_reviewed": true,
+      "width_points": 612
+    },
+    {
+      "height_points": 792,
+      "out_of_page_glyphs": 0,
+      "page": 5,
+      "rendered_png_sha256": "4979bb9e69565588b11ba0889a205502633176f635d2dcf4f932b72180b3e0a5",
+      "text_characters": 2269,
+      "visual_findings": "No clipped text, overlapping elements, broken table borders or missing glyphs observed.",
+      "visually_reviewed": true,
+      "width_points": 612
+    },
+    {
+      "height_points": 792,
+      "out_of_page_glyphs": 0,
+      "page": 6,
+      "rendered_png_sha256": "a837954289eef5696865dbcc0b629d3877e617441929693d99b5b231a7a57346",
+      "text_characters": 2860,
+      "visual_findings": "No clipped text, overlapping elements, broken table borders or missing glyphs observed.",
+      "visually_reviewed": true,
+      "width_points": 612
+    },
+    {
+      "height_points": 792,
+      "out_of_page_glyphs": 0,
+      "page": 7,
+      "rendered_png_sha256": "5876114ad7363692524a8f7d1d599a9e7c87fcb9e399b1a6d3f149c8fc7d4072",
+      "text_characters": 3021,
+      "visual_findings": "No clipped text, overlapping elements, broken table borders or missing glyphs observed.",
+      "visually_reviewed": true,
+      "width_points": 612
+    }
+  ],
+  "rendered_images_stored_outside_canonical_evidence": true,
+  "renderer": "Poppler pdftoppm, PNG, 110 dpi",
+  "report": "report.pdf",
+  "report_bytes": 103009,
+  "report_sha256": "18876f8d899c9c4e1c23ee9cf182ee428b11ab0b525042b8069dad5d09b6a51b",
+  "results_source_sha256": "d021d3202c06d2153964b749c512ea73098c54381a021720538d59ee2ccbded7",
+  "status": "PASS"
+}
