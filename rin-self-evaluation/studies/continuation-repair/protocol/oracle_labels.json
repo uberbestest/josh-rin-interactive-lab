@@ -1,0 +1,3671 @@
+{
+  "assignment_sha256": "cf2473dddbbbd39304e03a9eefed5c1d4afb63d3f8bf1f3e97565139e57ed1f2",
+  "candidate_inspected": false,
+  "engine_sha256": "91599442030c1066ff5f75c328b6c818dde1fd52a203074e6257f87faed6f2ec",
+  "labels": [
+    {
+      "case_id": "C01",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "productive_work_during_delay",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "finalize",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "exactly_one_delivery": true,
+              "job": "A",
+              "status": "FINALIZED"
+            },
+            "policy": {
+              "action": "wait",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": null,
+              "outcomes": [
+                {
+                  "observation": {
+                    "status": "WAITED",
+                    "ticks": 1
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": 1
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 2
+    },
+    {
+      "case_id": "C02",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "productive_work_during_delay_reflected",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "finalize",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "exactly_one_delivery": true,
+              "job": "B",
+              "status": "FINALIZED"
+            },
+            "policy": {
+              "action": "wait",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": null,
+              "outcomes": [
+                {
+                  "observation": {
+                    "status": "WAITED",
+                    "ticks": 1
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "A",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "A",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "A",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "A",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": 1
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 2
+    },
+    {
+      "case_id": "C03",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "paid_pending_spends_joint_budget",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "receipt",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "B",
+                    "status": "ABSENT",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "B",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "action": "commit",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "job": "A",
+                                      "new_delivery_effects": 1,
+                                      "status": "APPLIED",
+                                      "transaction": "recovery-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "A",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "A",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                },
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "B",
+                    "status": "COMMITTED",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "B",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "A",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "A",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "receipt",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "B",
+                    "status": "ABSENT",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "B",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "A",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                },
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "B",
+                    "status": "COMMITTED",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "B",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 4
+    },
+    {
+      "case_id": "C04",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "paid_pending_spends_joint_budget_reflected",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "B",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "receipt",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "ABSENT",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "A",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "action": "commit",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "job": "B",
+                                      "new_delivery_effects": 1,
+                                      "status": "APPLIED",
+                                      "transaction": "recovery-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "B",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "B",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                },
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "COMMITTED",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "B",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "receipt",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "ABSENT",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "A",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                },
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "COMMITTED",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 4
+    },
+    {
+      "case_id": "C05",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "free_pending_spends_deadline",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "A",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 2
+    },
+    {
+      "case_id": "C06",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "free_pending_spends_deadline_reflected",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "B",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "B",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "A",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "A",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "A",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "A",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "A",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 2
+    },
+    {
+      "case_id": "C07",
+      "initial_guaranteed_utility": [
+        1,
+        1
+      ],
+      "initial_joint_guarantee": false,
+      "label": "unknown_budget_tradeoff_priority_A",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "A",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "finalized": {
+                            "A": true,
+                            "B": false
+                          },
+                          "guaranteed_value": [
+                            1,
+                            1
+                          ],
+                          "stop": true
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 4
+    },
+    {
+      "case_id": "C08",
+      "initial_guaranteed_utility": [
+        1,
+        1
+      ],
+      "initial_joint_guarantee": false,
+      "label": "unknown_budget_tradeoff_priority_B",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "A",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            1,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  1,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": false,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        1,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 4
+    },
+    {
+      "case_id": "C09",
+      "initial_guaranteed_utility": [
+        1,
+        1
+      ],
+      "initial_joint_guarantee": false,
+      "label": "known_absent_budget_priority_A",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "A",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "finalized": {
+                      "A": true,
+                      "B": false
+                    },
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "stop": true
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 1
+    },
+    {
+      "case_id": "C10",
+      "initial_guaranteed_utility": [
+        1,
+        1
+      ],
+      "initial_joint_guarantee": false,
+      "label": "known_absent_budget_priority_B",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "A",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "B",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "B",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "finalized": {
+                            "A": false,
+                            "B": true
+                          },
+                          "guaranteed_value": [
+                            1,
+                            1
+                          ],
+                          "stop": true
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 1
+    },
+    {
+      "case_id": "C11",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "inclusive_deadlines_known_states",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "A",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "B",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "finalized": {
+                            "A": true,
+                            "B": true
+                          },
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "stop": true
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 1
+    },
+    {
+      "case_id": "C12",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "inclusive_deadlines_known_states_reflected",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "B",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "B",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "finalized": {
+                            "A": true,
+                            "B": true
+                          },
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "stop": true
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 1
+    },
+    {
+      "case_id": "C13",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "action_cap_exactly_six",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "A",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "receipt",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "B",
+                                "status": "ABSENT",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "commit",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "job": "B",
+                                      "new_delivery_effects": 1,
+                                      "status": "APPLIED",
+                                      "transaction": "recovery-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "B",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "B",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            },
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "B",
+                                "status": "COMMITTED",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 4
+    },
+    {
+      "case_id": "C14",
+      "initial_guaranteed_utility": [
+        1,
+        1
+      ],
+      "initial_joint_guarantee": false,
+      "label": "action_cap_one_short",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "A",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            1,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  1,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": false,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        1,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "action": "receipt",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "B",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "ABSENT",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "commit",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "job": "B",
+                                "new_delivery_effects": 1,
+                                "status": "APPLIED",
+                                "transaction": "recovery-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      },
+                      {
+                        "observation": {
+                          "coverage": "AUTHORITATIVE_FINAL",
+                          "job": "B",
+                          "status": "COMMITTED",
+                          "transaction": "original-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "B",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 4
+    },
+    {
+      "case_id": "C15",
+      "initial_guaranteed_utility": [
+        1,
+        1
+      ],
+      "initial_joint_guarantee": false,
+      "label": "one_action_known_present_priority",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "finalize",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "exactly_one_delivery": true,
+              "job": "A",
+              "status": "FINALIZED"
+            },
+            "policy": {
+              "finalized": {
+                "A": true,
+                "B": false
+              },
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "stop": true
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 1
+    },
+    {
+      "case_id": "C16",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "two_actions_known_present",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "finalize",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "exactly_one_delivery": true,
+              "job": "A",
+              "status": "FINALIZED"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "B",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "finalized": {
+                      "A": true,
+                      "B": true
+                    },
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "stop": true
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 1
+    },
+    {
+      "case_id": "C17",
+      "initial_guaranteed_utility": [
+        1,
+        1
+      ],
+      "initial_joint_guarantee": false,
+      "label": "unknown_job_inclusive_last_tick",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "receipt",
+        "guaranteed_value": [
+          1,
+          1
+        ],
+        "job": "A",
+        "outcomes": [
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "ABSENT",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "commit",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "job": "A",
+                    "new_delivery_effects": 1,
+                    "status": "APPLIED",
+                    "transaction": "recovery-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "finalized": {
+                            "A": true,
+                            "B": false
+                          },
+                          "guaranteed_value": [
+                            1,
+                            1
+                          ],
+                          "stop": true
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          },
+          {
+            "observation": {
+              "coverage": "AUTHORITATIVE_FINAL",
+              "job": "A",
+              "status": "COMMITTED",
+              "transaction": "original-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                1,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "A",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "finalized": {
+                      "A": true,
+                      "B": false
+                    },
+                    "guaranteed_value": [
+                      1,
+                      1
+                    ],
+                    "stop": true
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 2
+    },
+    {
+      "case_id": "C18",
+      "initial_guaranteed_utility": [
+        0,
+        0
+      ],
+      "initial_joint_guarantee": false,
+      "label": "unknown_job_one_tick_short",
+      "positive_initial_guarantee": false,
+      "reference_policy_witness": {
+        "finalized": {
+          "A": false,
+          "B": false
+        },
+        "guaranteed_value": [
+          0,
+          0
+        ],
+        "stop": true
+      },
+      "world_count": 2
+    },
+    {
+      "case_id": "C19",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "multiple_coverage_times_with_urgent_known_job",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "finalize",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "exactly_one_delivery": true,
+              "job": "B",
+              "status": "FINALIZED"
+            },
+            "policy": {
+              "action": "receipt",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "ABSENT",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "A",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "finalized": {
+                                  "A": true,
+                                  "B": true
+                                },
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "stop": true
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                },
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "COMMITTED",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "finalized": {
+                            "A": true,
+                            "B": true
+                          },
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "stop": true
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 4
+    },
+    {
+      "case_id": "C20",
+      "initial_guaranteed_utility": [
+        2,
+        1
+      ],
+      "initial_joint_guarantee": true,
+      "label": "both_receipts_have_multiple_coverage_times",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "wait",
+        "guaranteed_value": [
+          2,
+          1
+        ],
+        "job": null,
+        "outcomes": [
+          {
+            "observation": {
+              "status": "WAITED",
+              "ticks": 1
+            },
+            "policy": {
+              "action": "receipt",
+              "guaranteed_value": [
+                2,
+                1
+              ],
+              "job": "A",
+              "outcomes": [
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "ABSENT",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "commit",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "job": "A",
+                          "new_delivery_effects": 1,
+                          "status": "APPLIED",
+                          "transaction": "recovery-write"
+                        },
+                        "policy": {
+                          "action": "finalize",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "A",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "acknowledgement": "AUTHORITATIVE",
+                                "exactly_one_delivery": true,
+                                "job": "A",
+                                "status": "FINALIZED"
+                              },
+                              "policy": {
+                                "action": "receipt",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "coverage": "AUTHORITATIVE_FINAL",
+                                      "job": "B",
+                                      "status": "ABSENT",
+                                      "transaction": "original-write"
+                                    },
+                                    "policy": {
+                                      "action": "commit",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "B",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "job": "B",
+                                            "new_delivery_effects": 1,
+                                            "status": "APPLIED",
+                                            "transaction": "recovery-write"
+                                          },
+                                          "policy": {
+                                            "action": "finalize",
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "job": "B",
+                                            "outcomes": [
+                                              {
+                                                "observation": {
+                                                  "acknowledgement": "AUTHORITATIVE",
+                                                  "exactly_one_delivery": true,
+                                                  "job": "B",
+                                                  "status": "FINALIZED"
+                                                },
+                                                "policy": {
+                                                  "finalized": {
+                                                    "A": true,
+                                                    "B": true
+                                                  },
+                                                  "guaranteed_value": [
+                                                    2,
+                                                    1
+                                                  ],
+                                                  "stop": true
+                                                }
+                                              }
+                                            ],
+                                            "ticks": null
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  },
+                                  {
+                                    "observation": {
+                                      "coverage": "AUTHORITATIVE_FINAL",
+                                      "job": "B",
+                                      "status": "COMMITTED",
+                                      "transaction": "original-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "B",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "B",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                },
+                {
+                  "observation": {
+                    "coverage": "AUTHORITATIVE_FINAL",
+                    "job": "A",
+                    "status": "COMMITTED",
+                    "transaction": "original-write"
+                  },
+                  "policy": {
+                    "action": "finalize",
+                    "guaranteed_value": [
+                      2,
+                      1
+                    ],
+                    "job": "A",
+                    "outcomes": [
+                      {
+                        "observation": {
+                          "acknowledgement": "AUTHORITATIVE",
+                          "exactly_one_delivery": true,
+                          "job": "A",
+                          "status": "FINALIZED"
+                        },
+                        "policy": {
+                          "action": "receipt",
+                          "guaranteed_value": [
+                            2,
+                            1
+                          ],
+                          "job": "B",
+                          "outcomes": [
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "B",
+                                "status": "ABSENT",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "commit",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "job": "B",
+                                      "new_delivery_effects": 1,
+                                      "status": "APPLIED",
+                                      "transaction": "recovery-write"
+                                    },
+                                    "policy": {
+                                      "action": "finalize",
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "job": "B",
+                                      "outcomes": [
+                                        {
+                                          "observation": {
+                                            "acknowledgement": "AUTHORITATIVE",
+                                            "exactly_one_delivery": true,
+                                            "job": "B",
+                                            "status": "FINALIZED"
+                                          },
+                                          "policy": {
+                                            "finalized": {
+                                              "A": true,
+                                              "B": true
+                                            },
+                                            "guaranteed_value": [
+                                              2,
+                                              1
+                                            ],
+                                            "stop": true
+                                          }
+                                        }
+                                      ],
+                                      "ticks": null
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            },
+                            {
+                              "observation": {
+                                "coverage": "AUTHORITATIVE_FINAL",
+                                "job": "B",
+                                "status": "COMMITTED",
+                                "transaction": "original-write"
+                              },
+                              "policy": {
+                                "action": "finalize",
+                                "guaranteed_value": [
+                                  2,
+                                  1
+                                ],
+                                "job": "B",
+                                "outcomes": [
+                                  {
+                                    "observation": {
+                                      "acknowledgement": "AUTHORITATIVE",
+                                      "exactly_one_delivery": true,
+                                      "job": "B",
+                                      "status": "FINALIZED"
+                                    },
+                                    "policy": {
+                                      "finalized": {
+                                        "A": true,
+                                        "B": true
+                                      },
+                                      "guaranteed_value": [
+                                        2,
+                                        1
+                                      ],
+                                      "stop": true
+                                    }
+                                  }
+                                ],
+                                "ticks": null
+                              }
+                            }
+                          ],
+                          "ticks": null
+                        }
+                      }
+                    ],
+                    "ticks": null
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": 1
+      },
+      "world_count": 16
+    },
+    {
+      "case_id": "C21",
+      "initial_guaranteed_utility": [
+        1,
+        0
+      ],
+      "initial_joint_guarantee": false,
+      "label": "readiness_after_deadline",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "finalize",
+        "guaranteed_value": [
+          1,
+          0
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "exactly_one_delivery": true,
+              "job": "B",
+              "status": "FINALIZED"
+            },
+            "policy": {
+              "finalized": {
+                "A": false,
+                "B": true
+              },
+              "guaranteed_value": [
+                1,
+                0
+              ],
+              "stop": true
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 2
+    },
+    {
+      "case_id": "C22",
+      "initial_guaranteed_utility": [
+        1,
+        0
+      ],
+      "initial_joint_guarantee": false,
+      "label": "unbounded_priority_known_other_job",
+      "positive_initial_guarantee": true,
+      "reference_policy_witness": {
+        "action": "commit",
+        "guaranteed_value": [
+          1,
+          0
+        ],
+        "job": "B",
+        "outcomes": [
+          {
+            "observation": {
+              "acknowledgement": "AUTHORITATIVE",
+              "job": "B",
+              "new_delivery_effects": 1,
+              "status": "APPLIED",
+              "transaction": "recovery-write"
+            },
+            "policy": {
+              "action": "finalize",
+              "guaranteed_value": [
+                1,
+                0
+              ],
+              "job": "B",
+              "outcomes": [
+                {
+                  "observation": {
+                    "acknowledgement": "AUTHORITATIVE",
+                    "exactly_one_delivery": true,
+                    "job": "B",
+                    "status": "FINALIZED"
+                  },
+                  "policy": {
+                    "finalized": {
+                      "A": false,
+                      "B": true
+                    },
+                    "guaranteed_value": [
+                      1,
+                      0
+                    ],
+                    "stop": true
+                  }
+                }
+              ],
+              "ticks": null
+            }
+          }
+        ],
+        "ticks": null
+      },
+      "world_count": 2
+    },
+    {
+      "case_id": "C23",
+      "initial_guaranteed_utility": [
+        0,
+        0
+      ],
+      "initial_joint_guarantee": false,
+      "label": "both_receipts_unbounded",
+      "positive_initial_guarantee": false,
+      "reference_policy_witness": {
+        "finalized": {
+          "A": false,
+          "B": false
+        },
+        "guaranteed_value": [
+          0,
+          0
+        ],
+        "stop": true
+      },
+      "world_count": 4
+    },
+    {
+      "case_id": "C24",
+      "initial_guaranteed_utility": [
+        0,
+        0
+      ],
+      "initial_joint_guarantee": false,
+      "label": "zero_uses_known_jobs",
+      "positive_initial_guarantee": false,
+      "reference_policy_witness": {
+        "finalized": {
+          "A": false,
+          "B": false
+        },
+        "guaranteed_value": [
+          0,
+          0
+        ],
+        "stop": true
+      },
+      "world_count": 1
+    }
+  ],
+  "record": "JRR-CONTINUATION-CHALLENGE-2026-11-19-009",
+  "reference_oracle_is_candidate_input": false,
+  "summary": {
+    "assignments": 71,
+    "cases": 24,
+    "joint_guaranteed_cases": 12,
+    "one_guaranteed_cases": 9,
+    "zero_guaranteed_cases": 3
+  }
+}

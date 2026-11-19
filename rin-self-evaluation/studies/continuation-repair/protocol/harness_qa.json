@@ -1,0 +1,10 @@
+{
+  "checks": 8,
+  "status": "PASS",
+  "assigned_executions": 0,
+  "kind": "mocked plumbing checks",
+  "private_original_sha256": "f7f23439ff3df20e8de21c16f6c8b3d9741b876dcaa188d5daffa7295c3baac0",
+  "public_script_sha256": "e195e394e5099d750d3732382c1d7ccafcba90fdeb7299691b36ed3edc7ed1e7",
+  "public_change": "Replace private absolute module locator with relative path; test logic unchanged.",
+  "independent_author": true
+}

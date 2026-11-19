@@ -1,0 +1,22 @@
+{
+  "base_commit": "b82bc04fc6d23a518b8e3e67f2f51f6174fa0b4e",
+  "original_round08_files": {
+    "reference_round08/run_helper.mjs": "4ddf1bdf0ec4bc16f738dd7bc1b2fe5be58b30756818107f5188f96516f5eb29",
+    "reference_round08/execute.py": "6e75624f018171e6c7468e950c3c740710f3a07abfe94205805f4fe7b8f55c63",
+    "reference_round08/input/client.py": "e35c9f76f8ee384cf62e8ab29e443c5d021768f7a51aea1c847d3b4ad4046e6a",
+    "reference_round08/input/legacy_initial_state.json": "a03674858c5f1d1fbf500fb98f105042d06e3c780726cbbd606dfd4b5bb1d7e5",
+    "reference_round08/input/extraction_provenance.json": "bdd66d710f131e33ddb2acf11a5570b79621ebd6913d7f186c86ccb1cc975e27",
+    "reference_round08/input/COMMON_CONTRACT.md": "ac4529053ceb6f255301ade6a28fcfbb46009bcf0d0b0e7f54f0a9450e6b143b",
+    "reference_round08/input/engine.py": "91599442030c1066ff5f75c328b6c818dde1fd52a203074e6257f87faed6f2ec",
+    "reference_round08/helpers/w042_status_guard.js": "bea420b19908d34ac5d29bf88359599754c65fd968c4eebc0f64fc8570a3325c",
+    "reference_round08/helpers/w041_status_guard.js": "d934c1a2ca9fe3a08c94c6f3f12878f30a586a7271a04b0ce11b9d4d97504cc3",
+    "reference_round08/helpers/w041_predicate_only.js": "0aa12cf51670379755c01cb8fc502c4a3c56ff520270ac08d75b2ca32e4b5f4a",
+    "reference_round08/helpers/w042_predicate_only.js": "f50c3a52c16fa89a51cf535508f4ca3886b9914823030bcc8d51f301408d101f",
+    "reference_round08/helpers/w041_setup.js": "91fb541e45b8f3ffeec4cb60338f61febe6d39bee69285f47ab51a47494f66d2",
+    "reference_round08/helpers/w042_recovered.js": "bdaacadccb73bd85a71a8fe09896a4a2cdf370f7ff10272b10dd2106949095cd",
+    "reference_round08/helpers/w042_setup.js": "0588c4f760ac0233cd535cf60b1b6cbe08123d3a25489c646ebfe5846fa00ff1",
+    "reference_round08/helpers/w041_status_job_guard.js": "c643539d7262144a871a7078f1db86ebc0e406ad5c777ba084b3f5998435575f",
+    "reference_round08/helpers/w041_recovered.js": "961d3af2e7d126fdb3c67af34778405342bacd72bde9a5c1aeac7c51966e3ba4",
+    "reference_round08/helpers/w042_status_job_guard.js": "ef6bac8ec14f487a0ced9d02f2979e0126ff3439e30eeb038a632856f77ddace"
+  }
+}

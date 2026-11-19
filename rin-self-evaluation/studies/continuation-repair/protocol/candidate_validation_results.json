@@ -1,0 +1,268 @@
+{
+  "boundaries": [
+    {
+      "interpretation": "The parser authenticates neither source nor truthful coverage. Trusted service/status is an assumption.",
+      "result": {
+        "accepted": true,
+        "needs_fresh_status": true,
+        "reason": "SCOPED_RESPONSE_ACCEPTED"
+      },
+      "witness": "well-formed same-job fabricated receipt accepted structurally"
+    },
+    {
+      "interpretation": "No per-request nonce or consumed-response replay defense is implemented.",
+      "result": {
+        "accepted": true,
+        "needs_fresh_status": true,
+        "reason": "SCOPED_RESPONSE_ACCEPTED"
+      },
+      "witness": "identical reply accepted twice before another decision"
+    },
+    {
+      "decision_action": "finalize",
+      "guaranteed_value": [
+        2,
+        1
+      ],
+      "interpretation": "A finalized/exact flag is trusted even if ABSENT plus zero fresh writes contradicts it. This is not validation of arbitrary untrusted status.",
+      "witness": "contradictory finalized receipt facts accepted under trusted-status assumption"
+    },
+    {
+      "interpretation": "Wait ack comparison is value-based, not exact-type validation. No delivery inference is made; a fresh trusted status is still required.",
+      "result": {
+        "accepted": true,
+        "needs_fresh_status": true,
+        "reason": "SCOPED_RESPONSE_ACCEPTED"
+      },
+      "witness": "boolean wait acknowledgement equals integer one"
+    }
+  ],
+  "boundary_witnesses": 4,
+  "candidate_sha256": "3d6403062e9914046a487fefb4fa17bf666a51ed84eb8219394dd6d32a9317c7",
+  "native_model_participants": 0,
+  "primary_study_assignments_executed": 0,
+  "results": [
+    {
+      "accepted": true,
+      "passed": true,
+      "probe": "valid target receipt control",
+      "reason": "SCOPED_RESPONSE_ACCEPTED"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "wrong-job receipt",
+      "reason": "RECEIPT_OR_ACK_JOB_MISMATCH"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "wrong-transaction receipt",
+      "reason": "RECEIPT_TRANSACTION_MISMATCH"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "nonfinal receipt coverage",
+      "reason": "RECEIPT_COVERAGE_NOT_FINAL"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "unrecognized receipt status",
+      "reason": "UNRECOGNIZED_RECEIPT_STATUS"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "pending cannot assert final coverage",
+      "reason": "PENDING_COVERAGE_MISMATCH"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "missing receipt job",
+      "reason": "RECEIPT_OR_ACK_JOB_MISMATCH"
+    },
+    {
+      "accepted": true,
+      "passed": true,
+      "probe": "pending response not authorized by another job marker",
+      "reason": "SCOPED_RESPONSE_ACCEPTED"
+    },
+    {
+      "accepted": true,
+      "passed": true,
+      "probe": "valid fresh-commit control",
+      "reason": "SCOPED_RESPONSE_ACCEPTED"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "fresh-commit wrong job",
+      "reason": "RECEIPT_OR_ACK_JOB_MISMATCH"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "fresh-commit wrong transaction",
+      "reason": "FRESH_COMMIT_ACK_NOT_ESTABLISHED"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "fresh-commit nonauthoritative ack",
+      "reason": "FRESH_COMMIT_ACK_NOT_ESTABLISHED"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "fresh-commit effect bool rejected",
+      "reason": "FRESH_COMMIT_ACK_NOT_ESTABLISHED"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "fresh-commit multiple effects rejected",
+      "reason": "FRESH_COMMIT_ACK_NOT_ESTABLISHED"
+    },
+    {
+      "accepted": true,
+      "passed": true,
+      "probe": "valid finalization control",
+      "reason": "SCOPED_RESPONSE_ACCEPTED"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "finalization wrong job",
+      "reason": "RECEIPT_OR_ACK_JOB_MISMATCH"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "finalization missing exact evidence",
+      "reason": "FINALIZATION_ACK_NOT_ESTABLISHED"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "finalization integer exact flag rejected",
+      "reason": "FINALIZATION_ACK_NOT_ESTABLISHED"
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "finalization nonauthoritative ack",
+      "reason": "FINALIZATION_ACK_NOT_ESTABLISHED"
+    },
+    {
+      "passed": true,
+      "probe": "revoked authorization",
+      "reason": "A: stable active authorization is required",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "unstable authorization",
+      "reason": "A: stable active authorization is required",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "boolean use count",
+      "reason": "uses_remaining must be an integer >= 0",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "negative tick",
+      "reason": "tick must be an integer >= 0",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "unsupported query duration",
+      "reason": "unsupported query_duration_ticks",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "invalid priority",
+      "reason": "priority must identify one of the jobs",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "unknown receipt with exact evidence",
+      "reason": "A: unresolved original write with recovery effects is unsupported",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "unknown receipt with recovery write",
+      "reason": "A: unresolved original write with recovery effects is unsupported",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "contradictory bounded timing",
+      "reason": "A: coverage bound disagrees with support",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "exclusive deadlines unsupported",
+      "reason": "inclusive deadlines are required",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "joint flag contradicts jobs",
+      "reason": "joint_complete disagrees with per-job completion",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "actions exceed cap",
+      "reason": "actions_taken exceeds action_limit",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "changed deadline after first decision",
+      "reason": "task contract changed; create a new controller or reauthorize explicitly",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "changed priority after first decision",
+      "reason": "task contract changed; create a new controller or reauthorize explicitly",
+      "rejected": true
+    },
+    {
+      "passed": true,
+      "probe": "increased resource counter",
+      "reason": "trusted status counters moved backwards",
+      "rejected": true
+    },
+    {
+      "accepted": false,
+      "passed": true,
+      "probe": "reply bound to issued request",
+      "reason": "RESPONSE_NOT_BOUND_TO_ISSUED_REQUEST"
+    }
+  ],
+  "scope": "Same-lab frozen-source validation probes. No hidden challenge cases, reference engine or service execution used.",
+  "source_imports": [
+    "__future__",
+    "dataclasses",
+    "functools",
+    "hashlib",
+    "json",
+    "sys",
+    "typing"
+  ],
+  "structural_probes_passed": 35,
+  "verified_at_utc": "2026-11-19T13:15:35.591683+00:00"
+}

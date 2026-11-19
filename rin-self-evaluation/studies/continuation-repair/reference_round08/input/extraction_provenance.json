@@ -1,0 +1,28 @@
+{
+  "extractions": [
+    {
+      "helper_file": "w041_helper.js",
+      "helper_sha256": "961d3af2e7d126fdb3c67af34778405342bacd72bde9a5c1aeac7c51966e3ba4",
+      "original_agent_task": "native_two_job_w041",
+      "reported_availability": "Participant states the setup and helper JavaScript are copied directly from its available public tool-call record. Expanded nested exec_command strings were not separately displayed.",
+      "run_id": "w041",
+      "setup_file": "w041_setup.js",
+      "setup_sha256": "91fb541e45b8f3ffeec4cb60338f61febe6d39bee69285f47ab51a47494f66d2"
+    },
+    {
+      "helper_file": "w042_helper.js",
+      "helper_sha256": "bdaacadccb73bd85a71a8fe09896a4a2cdf370f7ff10272b10dd2106949095cd",
+      "original_agent_task": "native_two_job_w042",
+      "reported_availability": "Participant states the setup and helper JavaScript are copied directly from its available public tool-call record. Expanded nested exec_command strings were not separately displayed.",
+      "run_id": "w042",
+      "setup_file": "w042_setup.js",
+      "setup_sha256": "0588c4f760ac0233cd535cf60b1b6cbe08123d3a25489c646ebfe5846fa00ff1"
+    }
+  ],
+  "kind": "post-run model-mediated extraction of retained public tool-call text",
+  "limits": "The earlier canonical archive retained parsed service actions and observations, not the public orchestration code. These post-run extractions are supplied by the original model contexts, not independently authenticated platform-log exports. Their consistency and behavior can be checked against retained observations; that does not independently attest historical execution text. No hidden reasoning is requested or retained.",
+  "recorded_at_utc": "2026-11-18T22:47:09.449736+00:00",
+  "requests_forbade_new_commands_reads_edits_retries_and_private_reasoning": true,
+  "source_publication_commit": "fa9794b3760542749c40a4d986f9343026eb475f",
+  "source_study": "JRR-CHECKLIST-2026-11-18-006"
+}

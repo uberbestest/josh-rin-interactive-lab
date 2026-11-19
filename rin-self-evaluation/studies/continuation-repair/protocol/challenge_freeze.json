@@ -1,0 +1,13 @@
+{
+  "assignment_count": 71,
+  "candidate_source_inspected": false,
+  "case_count": 24,
+  "constraint": "Do not edit assignments in response to candidate performance. Record defects/corrections separately.",
+  "files": {
+    "make_challenges.py": "2ddc84a4ab5879720bdd8572797ef9873040674033f4718e748363be62118e58",
+    "stress_cases.json": "cf2473dddbbbd39304e03a9eefed5c1d4afb63d3f8bf1f3e97565139e57ed1f2"
+  },
+  "frozen_at_utc": "2026-11-19T13:08:37.991617+00:00",
+  "oracle_labels_computed": false,
+  "record": "JRR-CONTINUATION-CHALLENGE-2026-11-19-009"
+}

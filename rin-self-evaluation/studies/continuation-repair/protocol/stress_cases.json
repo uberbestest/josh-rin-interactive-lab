@@ -1,0 +1,1994 @@
+{
+  "assignment_count": 71,
+  "assignments": [
+    {
+      "assignment_id": "C01-W01",
+      "case_id": "C01",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C01-W02",
+      "case_id": "C01",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C02-W01",
+      "case_id": "C02",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C02-W02",
+      "case_id": "C02",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C03-W01",
+      "case_id": "C03",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C03-W02",
+      "case_id": "C03",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C03-W03",
+      "case_id": "C03",
+      "world_index": 2
+    },
+    {
+      "assignment_id": "C03-W04",
+      "case_id": "C03",
+      "world_index": 3
+    },
+    {
+      "assignment_id": "C04-W01",
+      "case_id": "C04",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C04-W02",
+      "case_id": "C04",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C04-W03",
+      "case_id": "C04",
+      "world_index": 2
+    },
+    {
+      "assignment_id": "C04-W04",
+      "case_id": "C04",
+      "world_index": 3
+    },
+    {
+      "assignment_id": "C05-W01",
+      "case_id": "C05",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C05-W02",
+      "case_id": "C05",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C06-W01",
+      "case_id": "C06",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C06-W02",
+      "case_id": "C06",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C07-W01",
+      "case_id": "C07",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C07-W02",
+      "case_id": "C07",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C07-W03",
+      "case_id": "C07",
+      "world_index": 2
+    },
+    {
+      "assignment_id": "C07-W04",
+      "case_id": "C07",
+      "world_index": 3
+    },
+    {
+      "assignment_id": "C08-W01",
+      "case_id": "C08",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C08-W02",
+      "case_id": "C08",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C08-W03",
+      "case_id": "C08",
+      "world_index": 2
+    },
+    {
+      "assignment_id": "C08-W04",
+      "case_id": "C08",
+      "world_index": 3
+    },
+    {
+      "assignment_id": "C09-W01",
+      "case_id": "C09",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C10-W01",
+      "case_id": "C10",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C11-W01",
+      "case_id": "C11",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C12-W01",
+      "case_id": "C12",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C13-W01",
+      "case_id": "C13",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C13-W02",
+      "case_id": "C13",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C13-W03",
+      "case_id": "C13",
+      "world_index": 2
+    },
+    {
+      "assignment_id": "C13-W04",
+      "case_id": "C13",
+      "world_index": 3
+    },
+    {
+      "assignment_id": "C14-W01",
+      "case_id": "C14",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C14-W02",
+      "case_id": "C14",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C14-W03",
+      "case_id": "C14",
+      "world_index": 2
+    },
+    {
+      "assignment_id": "C14-W04",
+      "case_id": "C14",
+      "world_index": 3
+    },
+    {
+      "assignment_id": "C15-W01",
+      "case_id": "C15",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C16-W01",
+      "case_id": "C16",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C17-W01",
+      "case_id": "C17",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C17-W02",
+      "case_id": "C17",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C18-W01",
+      "case_id": "C18",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C18-W02",
+      "case_id": "C18",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C19-W01",
+      "case_id": "C19",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C19-W02",
+      "case_id": "C19",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C19-W03",
+      "case_id": "C19",
+      "world_index": 2
+    },
+    {
+      "assignment_id": "C19-W04",
+      "case_id": "C19",
+      "world_index": 3
+    },
+    {
+      "assignment_id": "C20-W01",
+      "case_id": "C20",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C20-W02",
+      "case_id": "C20",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C20-W03",
+      "case_id": "C20",
+      "world_index": 2
+    },
+    {
+      "assignment_id": "C20-W04",
+      "case_id": "C20",
+      "world_index": 3
+    },
+    {
+      "assignment_id": "C20-W05",
+      "case_id": "C20",
+      "world_index": 4
+    },
+    {
+      "assignment_id": "C20-W06",
+      "case_id": "C20",
+      "world_index": 5
+    },
+    {
+      "assignment_id": "C20-W07",
+      "case_id": "C20",
+      "world_index": 6
+    },
+    {
+      "assignment_id": "C20-W08",
+      "case_id": "C20",
+      "world_index": 7
+    },
+    {
+      "assignment_id": "C20-W09",
+      "case_id": "C20",
+      "world_index": 8
+    },
+    {
+      "assignment_id": "C20-W10",
+      "case_id": "C20",
+      "world_index": 9
+    },
+    {
+      "assignment_id": "C20-W11",
+      "case_id": "C20",
+      "world_index": 10
+    },
+    {
+      "assignment_id": "C20-W12",
+      "case_id": "C20",
+      "world_index": 11
+    },
+    {
+      "assignment_id": "C20-W13",
+      "case_id": "C20",
+      "world_index": 12
+    },
+    {
+      "assignment_id": "C20-W14",
+      "case_id": "C20",
+      "world_index": 13
+    },
+    {
+      "assignment_id": "C20-W15",
+      "case_id": "C20",
+      "world_index": 14
+    },
+    {
+      "assignment_id": "C20-W16",
+      "case_id": "C20",
+      "world_index": 15
+    },
+    {
+      "assignment_id": "C21-W01",
+      "case_id": "C21",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C21-W02",
+      "case_id": "C21",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C22-W01",
+      "case_id": "C22",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C22-W02",
+      "case_id": "C22",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C23-W01",
+      "case_id": "C23",
+      "world_index": 0
+    },
+    {
+      "assignment_id": "C23-W02",
+      "case_id": "C23",
+      "world_index": 1
+    },
+    {
+      "assignment_id": "C23-W03",
+      "case_id": "C23",
+      "world_index": 2
+    },
+    {
+      "assignment_id": "C23-W04",
+      "case_id": "C23",
+      "world_index": 3
+    },
+    {
+      "assignment_id": "C24-W01",
+      "case_id": "C24",
+      "world_index": 0
+    }
+  ],
+  "authorship": "Separate same-lab challenge author; candidate source not inspected before challenge freeze.",
+  "candidate_inspected": false,
+  "case_count": 24,
+  "cases": [
+    {
+      "case_id": "C01",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 1,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "B",
+        "uses_remaining": 4
+      },
+      "label": "productive_work_during_delay",
+      "rationale": "A must finalize before waiting for B. Waiting for all receipts to be ready loses an already known job.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 4
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 4
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C02",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          },
+          "B": {
+            "deadline": 1,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "A",
+        "uses_remaining": 4
+      },
+      "label": "productive_work_during_delay_reflected",
+      "rationale": "Complete A/B reflection of C01; prevents fixed job-order success from being mistaken for scheduling.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C03",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 10,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "label": "paid_pending_spends_joint_budget",
+      "rationale": "The first immediate urgent-job query is pending and paid. All six uses are needed in the both-absent world.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 4
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 4
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 4
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 4
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C04",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              4
+            ]
+          },
+          "B": {
+            "deadline": 10,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "A",
+        "uses_remaining": 6
+      },
+      "label": "paid_pending_spends_joint_budget_reflected",
+      "rationale": "A/B reflection of scarce-budget delayed-receipt case.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C05",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 2,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 0,
+            "ready_options": [
+              4
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "B",
+        "uses_remaining": 4
+      },
+      "label": "free_pending_spends_deadline",
+      "rationale": "A zero-price B receipt still consumes two ticks, enough to lose A. Free reads are not free in time.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 4
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 4
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C06",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 0,
+            "ready_options": [
+              4
+            ]
+          },
+          "B": {
+            "deadline": 2,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "A",
+        "uses_remaining": 4
+      },
+      "label": "free_pending_spends_deadline_reflected",
+      "rationale": "A/B reflection of the zero-price but time-consuming pending query.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 4
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C07",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "A",
+        "uses_remaining": 5
+      },
+      "label": "unknown_budget_tradeoff_priority_A",
+      "rationale": "Five uses cannot guarantee both absent jobs. Preserve the declared priority when guaranteeing one.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C08",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "B",
+        "uses_remaining": 5
+      },
+      "label": "unknown_budget_tradeoff_priority_B",
+      "rationale": "Only the public priority differs from C07. Favorable hidden delivery may enable extra completion; no initial joint guarantee exists.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C09",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 6,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "A",
+        "uses_remaining": 3
+      },
+      "label": "known_absent_budget_priority_A",
+      "rationale": "Both jobs are known absent. Three uses allow only one safe commit/finalize pair.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C10",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 6,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "B",
+        "uses_remaining": 3
+      },
+      "label": "known_absent_budget_priority_B",
+      "rationale": "Priority-only contrast to C09; querying immutable evidence cannot improve the budget.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C11",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 2,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 3,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 3,
+        "priority": "B",
+        "uses_remaining": 3
+      },
+      "label": "inclusive_deadlines_known_states",
+      "rationale": "Exactly three service actions and three uses suffice at inclusive deadlines. The earlier job needs two actions.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C12",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 3,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 2,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 3,
+        "priority": "A",
+        "uses_remaining": 3
+      },
+      "label": "inclusive_deadlines_known_states_reflected",
+      "rationale": "A/B reflection of an exact action-count, use-count and deadline boundary.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C13",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 6,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "label": "action_cap_exactly_six",
+      "rationale": "Two unknown absent jobs need exactly six query/commit/finalize actions. No spare status-independent service action exists.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C14",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 5,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "label": "action_cap_one_short",
+      "rationale": "Only the cap differs from C13. Both-present favorable worlds can finish, but the initial guaranteed count is at most one.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C15",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 2,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 2,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 1,
+        "priority": "A",
+        "uses_remaining": 2
+      },
+      "label": "one_action_known_present_priority",
+      "rationale": "Both deliveries are known present, but only one finalization is admitted. Preserve priority.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C16",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 2,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 2,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 2,
+        "priority": "A",
+        "uses_remaining": 2
+      },
+      "label": "two_actions_known_present",
+      "rationale": "One additional action makes both known-present jobs jointly guaranteed.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C17",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 4,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              2
+            ]
+          },
+          "B": {
+            "deadline": 0,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "A",
+        "uses_remaining": 3
+      },
+      "label": "unknown_job_inclusive_last_tick",
+      "rationale": "Receipt at tick 2, commit at 3 and finalize at 4 meets the inclusive deadline. The other job expired initially.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 2
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 2
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C18",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 3,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              2
+            ]
+          },
+          "B": {
+            "deadline": 0,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "A",
+        "uses_remaining": 3
+      },
+      "label": "unknown_job_one_tick_short",
+      "rationale": "One less tick removes any positive worst-case guarantee. A present hidden world remains physically completable; do not report guaranteed success.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 2
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 2
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C19",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 5,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0,
+              3
+            ]
+          },
+          "B": {
+            "deadline": 1,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 5,
+        "priority": "A",
+        "uses_remaining": 4
+      },
+      "label": "multiple_coverage_times_with_urgent_known_job",
+      "rationale": "A receipt's support contains early and late readiness. Finalizing known B first makes A's first query cover every readiness value.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C20",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 5,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 0,
+            "ready_options": [
+              0,
+              3
+            ]
+          },
+          "B": {
+            "deadline": 9,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0,
+              3
+            ]
+          }
+        },
+        "max_actions": 7,
+        "priority": "A",
+        "uses_remaining": 5
+      },
+      "label": "both_receipts_have_multiple_coverage_times",
+      "rationale": "Both jobs have four public hidden combinations. An immediate query can return pending and consume the only safe time window; waiting one tick before urgent A is a feasible route.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 3
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 3
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 3
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 3
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 3
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 3
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 3
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 3
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 3
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C21",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              7
+            ]
+          },
+          "B": {
+            "deadline": 3,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "A",
+        "uses_remaining": 4
+      },
+      "label": "readiness_after_deadline",
+      "rationale": "A cannot obtain authoritative coverage before its deadline. The nonpriority known B still has an attainable guarantee.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": 7
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 7
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C22",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 8,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 0,
+            "ready_options": [
+              null
+            ]
+          },
+          "B": {
+            "deadline": 3,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "A",
+        "uses_remaining": 3
+      },
+      "label": "unbounded_priority_known_other_job",
+      "rationale": "The priority receipt has no finite guarantee. A speculative early free query can destroy B's known safe completion window.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": null
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": null
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C23",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              null
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": null,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              null
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "B",
+        "uses_remaining": 6
+      },
+      "label": "both_receipts_unbounded",
+      "rationale": "Neither receipt has a finite coverage guarantee. Honest unresolved stopping is compatible with initial utility zero; no positive completion guarantee is claimed.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": null
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": null
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 0,
+            "receipt_ready": null
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": null
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": null
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": null
+          }
+        },
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": null
+          },
+          "B": {
+            "prior_delivered": 1,
+            "receipt_ready": null
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "C24",
+      "config": {
+        "jobs": {
+          "A": {
+            "deadline": 6,
+            "initial_receipt": 1,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          },
+          "B": {
+            "deadline": 6,
+            "initial_receipt": 0,
+            "prior_options": [
+              0,
+              1
+            ],
+            "query_cost": 1,
+            "ready_options": [
+              0
+            ]
+          }
+        },
+        "max_actions": 8,
+        "priority": "B",
+        "uses_remaining": 0
+      },
+      "label": "zero_uses_known_jobs",
+      "rationale": "Knowledge alone does not buy a required finalization. With zero uses, neither job has a safe completion guarantee.",
+      "worlds": [
+        {
+          "A": {
+            "prior_delivered": 1,
+            "receipt_ready": 0
+          },
+          "B": {
+            "prior_delivered": 0,
+            "receipt_ready": 0
+          }
+        }
+      ]
+    }
+  ],
+  "oracle_access": "Reference oracle labels are evaluator-only; no oracle output or hidden configuration is candidate input.",
+  "record": "JRR-CONTINUATION-CHALLENGE-2026-11-19-009",
+  "selection": "All declared independent prior/readiness combinations, filtered only by initial authoritative receipt.",
+  "zero_initial_utility": "Report safe guarantee preservation and truthful unresolved status separately from positive guaranteed completion and favorable-world mechanical completion."
+}
