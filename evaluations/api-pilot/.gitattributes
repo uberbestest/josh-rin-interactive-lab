@@ -1,0 +1,3 @@
+*.py text eol=lf
+COMPATIBILITY.md text eol=lf
+compatibility.json text eol=lf

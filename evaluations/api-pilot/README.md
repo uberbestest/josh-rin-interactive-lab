@@ -8,6 +8,8 @@
 
 This implementation follows the reviewed architecture decision: keep SQLite, the Windows-compatible runtime, simulator and small replaceable HTTPS adapter, and correct the scoped accounting/stop-policy defects. [Draft PR #32](https://github.com/uberbestest/josh-rin-interactive-lab/pull/32) remains intact as an audit record. Historical results, denominators and publication pages are unchanged.
 
+The separately proposed [two-call compatibility protocol](COMPATIBILITY.md) checks one harmless tool exchange before considering full-task calibration. Its own plan, offline fixture and verifier reuse these components. It grants no paid-execution authorization and does not change the two-job experiment below.
+
 ## Start offline on Windows
 
 Use Python 3.11 or later with its standard `sqlite3` and TLS modules. In the downloaded repository's `evaluations/api-pilot` folder, run:

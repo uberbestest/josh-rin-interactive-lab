@@ -44,3 +44,8 @@ jobs:
         run: |
           python runner.py dry-run --output results/ci-fixture
           python runner.py verify results/ci-fixture/evidence.json
+      - name: Exercise the separate two-call compatibility fixture
+        run: |
+          python compatibility.py check
+          python compatibility.py dry-run --output results/ci-compatibility
+          python compatibility.py verify results/ci-compatibility/evidence.json

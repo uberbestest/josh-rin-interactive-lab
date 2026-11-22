@@ -371,7 +371,7 @@ class Journal:
             self.db.execute("UPDATE runs SET status=?,summary=?,ended_utc=? WHERE id=?",
                             (status, canonical(summary), event["created_utc"], run_id))
 
-    def review_halt(self, run_id, expected_snapshot_hash, reviewer, note):
+    def review_halt(self, run_id, expected_snapshot_hash, reviewer, note, *, protocol_verifier=None):
         """Acknowledge a finished, fully priced halt; never reset or resume it."""
         from verifier import verify_snapshot
 
@@ -387,7 +387,9 @@ class Journal:
                 raise RuntimeError("Only a finished, fully accounted live halt can be reviewed")
             if any(e["kind"] == "halt_reviewed" for e in snapshot["events"]):
                 raise RuntimeError("Halt has already been reviewed")
-            verify_snapshot(snapshot)  # Recompute charges from the retained raw responses.
+            # A separately identified instrument supplies its own semantic replay;
+            # all accounting, closure and unresolved-cost guards above stay fixed.
+            (protocol_verifier or verify_snapshot)(snapshot)
             return self._append(run_id, "halt_reviewed", {
                 "reviewed_snapshot_sha256": expected_snapshot_hash,
                 "reviewer": reviewer.strip(), "note": note.strip(),
