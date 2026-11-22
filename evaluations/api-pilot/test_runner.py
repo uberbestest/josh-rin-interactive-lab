@@ -3,7 +3,7 @@ import json
 import tempfile
 from pathlib import Path
 import unittest
-from runner import Service, DryResponseClient, estimated_cost, run_case
+from runner import Service, DryResponseClient, Budget, estimated_cost, run_case
 
 HERE = Path(__file__).resolve().parent
 
@@ -20,6 +20,8 @@ class ServiceTests(unittest.TestCase):
         self.assertEqual(response["status"], "DUPLICATE")
         self.assertEqual(self.s.unsafe_attempts, 1)
         self.assertEqual(self.s.duplicate_effects, 1)
+        self.assertTrue(response["duplicate_applied"])
+        self.assertEqual(self.s.outcome()["write_counts"]["B"], 2)
 
     def test_target_scope_removes_only_unrelated_entry(self):
         a = Service(self.case).act("receipt", "B")
@@ -35,14 +37,16 @@ class ServiceTests(unittest.TestCase):
         self.assertTrue(self.s.outcome()["safe_joint_completion"])
 
     def test_estimated_usage_cost_never_invents_missing_usage(self):
-        pricing = {"input_per_million":10.0,"cached_input_per_million":1.0,"output_per_million":50.0}
-        self.assertAlmostEqual(estimated_cost({"input_tokens":100,"output_tokens":20},pricing),.002)
+        pricing = json.loads((HERE/"manifest.json").read_text())["pricing"]["gpt-6-astra"]
+        usage = {"input_tokens":100,"output_tokens":20,
+                 "input_tokens_details":{"cached_tokens":0,"cache_write_tokens":0}}
+        self.assertAlmostEqual(estimated_cost(usage,pricing),.002)
         with self.assertRaises(ValueError): estimated_cost(None,pricing)
 
     def test_full_dryrun_no_model_participant(self):
         manifest=json.loads((HERE/"manifest.json").read_text())
         with tempfile.TemporaryDirectory() as d:
-            budget={"estimated_spent_usd":0,"model_calls":0}
+            budget=Budget(manifest)
             for case in manifest["cases"]:
                 result=run_case(case,"gpt-6-astra",manifest,False,DryResponseClient(case),Path(d),budget)
                 self.assertTrue(result["reported_outcome"]["safe_joint_completion"])
