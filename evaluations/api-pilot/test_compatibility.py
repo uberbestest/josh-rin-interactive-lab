@@ -410,6 +410,11 @@ class CompatibilityTests(unittest.TestCase):
             self.assertEqual(compat.main(["dry-run", "--output", str(self.root / "cli")] ), 0)
             self.assertEqual(compat.main(["verify", str(self.root / "cli" / "evidence.json")]), 0)
 
+    def test_frozen_source_bytes_have_consistent_line_endings(self):
+        for name in compat.SOURCES:
+            with self.subTest(source=name):
+                self.assertNotIn(b"\r\n", (compat.HERE / name).read_bytes())
+
     def test_cli_returns_failure_for_recorded_unsuccessful_exchange(self):
         real_fixture = compat.fixture_response
         def bad_fixture(request, number):
