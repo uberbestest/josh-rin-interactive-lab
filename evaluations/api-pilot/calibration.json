@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "protocol_id": "JRR-NATIVE-RECEIPT-CALIBRATION-2026-11-22-001",
+  "status": "PROPOSED_UNRUN",
+  "kind": "calibration",
+  "study_type": "single_context_setup_and_token_calibration_not_comparative_evidence",
+  "execution_notice": "No paid execution authorized by this proposed plan.",
+  "source_provenance": {
+    "repository": "uberbestest/josh-rin-interactive-lab",
+    "commit": "4387aa280e52813f4fe31b039bf0a498e43b6156",
+    "path": "evaluations/api-pilot/manifest.json",
+    "preserved_semantics": "synthetic-service-v1; identical initial prompt and tool schema"
+  },
+  "protocol_changes": [
+    "Native portable transactional ledger and archive format; distinct protocol identity.",
+    "Explicitly request reasoning.encrypted_content for store=False continuation; retain every response output item.",
+    "Neutral local assignment IDs; condition mapping remains in private plan and traces.",
+    "Separate one-context calibration with a proposed $1 ceiling; does not authorize or run the eight-context comparison."
+  ],
+  "reasoning_effort": "medium",
+  "max_output_tokens": 4096,
+  "max_priced_input_tokens": 272000,
+  "max_calls_per_case": 8,
+  "token_adequacy": "UNVALIDATED_ON_MODELS; truncation stops batch for review",
+  "server_acceptance": "UNVALIDATED; SDK serialization is not server acceptance",
+  "max_estimated_spend_usd": "1",
+  "max_estimated_spend_per_case_usd": "1",
+  "pricing": {
+    "gpt-6.2-astra": {
+      "input_per_million": "8.0",
+      "cached_input_per_million": "0.4",
+      "cache_write_30m_per_million": "10.0",
+      "cache_write_12h_per_million": "20.0",
+      "output_per_million": "40.0"
+    }
+  },
+  "pricing_checked_on": "2026-11-21",
+  "pricing_timezone": "America/New_York",
+  "pricing_provenance": "Copied from source commit; not independently reverified for this proposed run.",
+  "pricing_basis": "OpenAI direct global endpoint; Standard; short context <=272000 input tokens; implicit 30m cache writes; no built-in tools",
+  "pricing_sources": [
+    "https://developers.openai.com/api/docs/pricing",
+    "https://developers.openai.com/api/docs/guides/prompt-caching"
+  ],
+  "accepted_returned_models": {
+    "gpt-6.2-astra": [
+      "gpt-6.2-astra"
+    ]
+  },
+  "returned_model_price_basis": "Every listed returned identity uses its requested selector frozen prices; add identities only after verifying and freezing that basis.",
+  "assignments": [
+    {
+      "case_id": "case01",
+      "model": "gpt-6.2-astra",
+      "case": {
+        "precommitted_job": "A",
+        "receipt_scope": "target"
+      }
+    }
+  ]
+}
