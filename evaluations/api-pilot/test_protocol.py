@@ -163,14 +163,26 @@ class PricingTests(unittest.TestCase):
                  "input_tokens_details": {"cached_tokens": 0, "cache_write_tokens": 0}}
         self.assertEqual(Decimal(price_usage(usage, self.price)["estimated_cost_usd"]), Decimal("0.002"))
 
-    def test_reserve_accounts_for_full_output_and_growing_history(self):
+    def test_reserve_accounts_for_full_output_and_reported_token_growth(self):
         request = request_payload(initial_history(), "gpt-6-astra", self.plan)
         reserve = reserve_cost(request, "gpt-6-astra", self.plan)
         self.assertGreater(reserve, Decimal("0.2048"))
         request["input"].append({"role": "assistant", "content": "é" * 1000})
-        self.assertGreater(reserve_cost(request, "gpt-6-astra", self.plan), reserve)
         with self.assertRaises(ValueError):
-            reserve_cost(request, "gpt-6-astra", {**self.plan, "max_priced_input_tokens": 100})
+            reserve_cost(request, "gpt-6-astra", self.plan)
+        self.assertEqual(reserve_cost(request, "gpt-6-astra", self.plan,
+                                     {"input_tokens": 100, "output_tokens": 20}), reserve)
+        self.assertGreater(reserve_cost(request, "gpt-6-astra", self.plan,
+                                       {"input_tokens": 12000, "output_tokens": 4096}), reserve)
+        with self.assertRaisesRegex(ValueError, "pricing basis"):
+            reserve_cost(request, "gpt-6-astra", {**self.plan, "max_priced_input_tokens": 100},
+                         {"input_tokens": 100, "output_tokens": 20})
+
+    def test_oversized_initial_text_cannot_use_the_small_fixed_allowance(self):
+        request = request_payload(initial_history(), "gpt-6-astra", self.plan)
+        request["input"][0]["content"] = "x" * 10000
+        with self.assertRaisesRegex(ValueError, "Initial prompt/tools"):
+            reserve_cost(request, "gpt-6-astra", self.plan)
 
 
 if __name__ == "__main__":

@@ -158,7 +158,7 @@ class RunnerTests(unittest.TestCase):
             response["output"] = []
             response["status"] = "incomplete"
         provider, snapshot = self.run_fake(mutate=empty_truncation)
-        self.assertEqual(len(provider.requests), 1)
+        self.assertEqual(len(provider.requests), 8)
         self.assertEqual(snapshot["totals"]["unresolved_requests"], 0)
         self.assertGreater(Decimal(snapshot["totals"]["estimated_total_cost_usd"]), 0)
         self.assertEqual(snapshot["run"]["summary"]["cases"][0]["reason"], "INCOMPLETE_RESPONSE")
@@ -242,26 +242,29 @@ class RunnerTests(unittest.TestCase):
         provider, snapshot = self.run_fake(mutate=tier)
         self.assert_one_uncertain_attempt(provider, snapshot, "UNEXPECTED_TIER")
 
-    def test_incomplete_response_is_priced_then_stops(self):
+    def test_incomplete_response_is_priced_then_stops_only_its_case(self):
         def incomplete(response, _count):
             response["status"] = "incomplete"
             response["incomplete_details"] = {"reason": "max_output_tokens"}
         provider, snapshot = self.run_fake(mutate=incomplete)
-        self.assertEqual(len(provider.requests), 1)
+        self.assertEqual(len(provider.requests), 8)
         self.assertEqual(snapshot["totals"]["unresolved_requests"], 0)
         self.assertGreater(Decimal(snapshot["totals"]["estimated_total_cost_usd"]), 0)
         rows = snapshot["run"]["summary"]["cases"]
         self.assertEqual(rows[0]["reason"], "INCOMPLETE_RESPONSE")
-        self.assertTrue(all(row["status"] == "BLOCKED" for row in rows[1:]))
+        self.assertTrue(all(row["status"] == "CASE_FAILED" for row in rows))
+        self.assertEqual(snapshot["run"]["status"], "COMPLETED")
+        self.assertFalse(snapshot["run"]["summary"]["successful"])
         self.assertFalse(any(event["kind"] == "tool_action" for event in snapshot["events"]))
 
     def test_malformed_tool_call_has_no_service_effect(self):
         def malformed(response, _count):
             response["output"][-1]["arguments"] = '{"action":"commit","job":"C"}'
         provider, snapshot = self.run_fake(mutate=malformed)
-        self.assertEqual(len(provider.requests), 1)
+        self.assertEqual(len(provider.requests), 8)
         row = snapshot["run"]["summary"]["cases"][0]
         self.assertEqual(row["reason"], "INVALID_TOOL_CALL")
+        self.assertTrue(all(c["status"] == "CASE_FAILED" for c in snapshot["run"]["summary"]["cases"]))
         self.assertEqual(row["outcome"]["ticks"], 0)
         self.assertEqual(snapshot["totals"]["unresolved_requests"], 0)
 
@@ -272,7 +275,7 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual(provider.requests, [])
         self.assertEqual(snapshot["requests"], [])
         self.assertEqual(snapshot["totals"]["attempted_requests"], 0)
-        self.assertEqual(snapshot["run"]["summary"]["cases"][0]["reason"], "REQUEST_REFUSED")
+        self.assertEqual(snapshot["run"]["summary"]["cases"][0]["reason"], "RUN_BUDGET_EXCEEDED")
 
     def test_state_lives_outside_checkout(self):
         with patch.dict(os.environ, {"LOCALAPPDATA": str(self.root), "XDG_STATE_HOME": str(self.root)}):

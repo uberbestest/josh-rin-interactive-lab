@@ -9,6 +9,8 @@ from common import canonical, money
 PRICE_KEYS = ("input_per_million", "cached_input_per_million",
               "cache_write_30m_per_million", "cache_write_12h_per_million",
               "output_per_million")
+CASE_FAILURES = {"CASE_BUDGET_EXCEEDED", "CALL_LIMIT", "INCOMPLETE_RESPONSE",
+                 "INVALID_TOOL_CALL", "INPUT_RESERVE_OUTSIDE_PRICING_BASIS"}
 TOOLS = [{"type": "function", "name": "service_action", "description":
           "Operate one authorized synthetic job. Receipt evidence is authoritative only "
           "for the top-level returned job. Nested historical facts are NOT target evidence.",
@@ -154,10 +156,25 @@ def price_usage(usage, price, max_input_tokens=272000):
             "estimated_cost_usd": str(total), "is_invoice": False}
 
 
-def reserve_cost(request, model, plan):
-    """Conservative local estimate, not a provider invoice or hard billing limit."""
+def reserve_cost(request, model, plan, prior_usage=None):
+    """Use observed token counts, never opaque reasoning or receipt serialization.
+
+    The initial allowance and follow-up margin are uncalibrated estimates. A
+    request can still exceed its reserve; settlement then stops the whole run.
+    """
     price = plan["pricing"][model]
-    input_reserve = len(canonical(request).encode("utf-8")) * 2 + 4096
+    policy = plan["reservation_policy"]
+    input_reserve = policy["initial_input_tokens"]
+    if len(request["input"]) > 1 and prior_usage is None:
+        raise ValueError("Continuation requires the preceding priced usage")
+    if prior_usage is None:
+        initial_text = canonical({"input": request["input"], "tools": request["tools"]}).encode("utf-8")
+        if len(initial_text) * 2 + 4096 > input_reserve:
+            raise ValueError("Initial prompt/tools exceed the frozen input allowance")
+    if prior_usage is not None:
+        input_reserve = max(input_reserve, token_count(prior_usage.get("input_tokens"))
+                            + token_count(prior_usage.get("output_tokens"))
+                            + policy["continuation_margin_tokens"])
     if input_reserve > plan["max_priced_input_tokens"]:
         raise ValueError("Input reserve exceeds frozen pricing basis")
     rate = max(money(price[key]) for key in PRICE_KEYS[:-1])
@@ -166,7 +183,7 @@ def reserve_cost(request, model, plan):
 
 
 def validate_plan(plan):
-    if not isinstance(plan, dict) or type(plan.get("schema_version")) is not int or plan["schema_version"] != 1:
+    if not isinstance(plan, dict) or type(plan.get("schema_version")) is not int or plan["schema_version"] != 2:
         raise ValueError("Unsupported plan schema")
     if not isinstance(plan.get("protocol_id"), str) or not re.fullmatch(r"[A-Za-z0-9_.-]{1,120}", plan["protocol_id"]):
         raise ValueError("Invalid protocol identity")
@@ -177,6 +194,14 @@ def validate_plan(plan):
             raise ValueError("Invalid positive integer: " + key)
     if plan["max_priced_input_tokens"] > 272000 or plan["max_output_tokens"] > 128000:
         raise ValueError("Token limits outside frozen pricing basis")
+    policy = plan.get("reservation_policy")
+    if not isinstance(policy, dict) or policy.get("version") != "provider-usage-v1":
+        raise ValueError("Missing frozen reservation policy")
+    for key in ("initial_input_tokens", "continuation_margin_tokens"):
+        if type(policy.get(key)) is not int or policy[key] <= 0:
+            raise ValueError("Invalid reservation token allowance")
+    if policy["initial_input_tokens"] > plan["max_priced_input_tokens"]:
+        raise ValueError("Initial reservation exceeds pricing basis")
     ceiling = money(plan.get("max_estimated_spend_usd"))
     case_ceiling = money(plan.get("max_estimated_spend_per_case_usd"))
     if ceiling <= 0 or case_ceiling <= 0 or case_ceiling > ceiling:

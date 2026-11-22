@@ -8,7 +8,7 @@ import json
 import math
 
 from common import canonical, digest, money
-from protocol import (TOOLS, Fixture, Service, initial_history, price_usage,
+from protocol import (CASE_FAILURES, TOOLS, Fixture, Service, initial_history, price_usage,
                       request_payload, reserve_cost, validate_plan)
 
 
@@ -143,8 +143,11 @@ def _after_pricing(state, plan, mode):
     if mode == "live" and response["usage"]["output_tokens"] > plan["max_output_tokens"]:
         state["issue"] = "OUTPUT_LIMIT_EXCEEDED"
         return
-    if response.get("status") != "completed":
+    if response.get("status") == "incomplete":
         state["issue"] = "INCOMPLETE_RESPONSE"
+        return
+    if response.get("status") != "completed":
+        state["issue"] = "UNEXPECTED_RESPONSE_STATUS"
         return
     try:
         action = parse_action(response["output"], state["seen"])
@@ -157,16 +160,20 @@ def _after_pricing(state, plan, mode):
         state["terminal"] = "COMPLETED" if state["service"].report()["safe_joint_completion"] else "STOPPED_EARLY"
 
 
-def _refusal_possible(state, plan, settled):
+def _refusal_reason(state, plan, settled):
     assignment = state["assignment"]
     try:
-        amount = reserve_cost(request_payload(state["history"], assignment["model"], plan), assignment["model"], plan)
+        amount = reserve_cost(request_payload(state["history"], assignment["model"], plan),
+                              assignment["model"], plan, state["prior_usage"])
     except ValueError:
-        return True
+        return "INPUT_RESERVE_OUTSIDE_PRICING_BASIS"
     total = sum((cost for _, cost in settled), Decimal(0))
     case_total = sum((cost for case_id, cost in settled if case_id == assignment["case_id"]), Decimal(0))
-    return (total + amount > money(plan["max_estimated_spend_usd"])
-            or case_total + amount > money(plan["max_estimated_spend_per_case_usd"]))
+    if total + amount > money(plan["max_estimated_spend_usd"]):
+        return "RUN_BUDGET_EXCEEDED"
+    if case_total + amount > money(plan["max_estimated_spend_per_case_usd"]):
+        return "CASE_BUDGET_EXCEEDED"
+    return None
 
 
 def verify_snapshot(snapshot):
@@ -195,7 +202,7 @@ def verify_snapshot(snapshot):
                      "fixture": Fixture(assignment["case"]), "history": initial_history(), "seen": set(),
                      "calls": 0, "responses": 0, "returned_models": [], "model_response_observed": False, "issue": None,
                      "terminal": None, "action": None, "pending": None, "response": None,
-                     "calculation": None, "blocked": halt_reason}
+                     "calculation": None, "blocked": halt_reason, "prior_usage": None}
         elif kind in {"request_reserved", "fixture_exchange"}:
             if (state is None or halt_reason is not None or state["issue"] or state["terminal"]
                     or state["action"] is not None or state["pending"] is not None):
@@ -220,7 +227,7 @@ def verify_snapshot(snapshot):
                 record = requests[data["id"]]
                 _equal(data["payload"], expected, "Exact provider request history mismatch")
                 _equal(record["payload"], expected, "Request record differs from its event")
-                amount = reserve_cost(expected, assignment["model"], plan)
+                amount = reserve_cost(expected, assignment["model"], plan, state["prior_usage"])
                 if money(data["reserve_usd"]) != amount or money(record["reserve_usd"]) != amount:
                     raise ValueError("Request reserve does not match frozen calculation")
                 reserved.append(data["id"])
@@ -248,6 +255,7 @@ def verify_snapshot(snapshot):
                 raise ValueError("Settlement cost mismatch")
             settled.append((state["assignment"]["case_id"], cost))
             state["pending"] = None
+            state["prior_usage"] = state["response"]["usage"]
             if cost > money(record["reserve_usd"]):
                 state["issue"] = "RESERVE_EXCEEDED"
             else:
@@ -265,19 +273,30 @@ def verify_snapshot(snapshot):
             if halt_reason is not None:
                 raise ValueError("Duplicate run halt")
             halt_reason = data["reason"]
-            if state is not None and state["issue"] is None and halt_reason == "REQUEST_REFUSED":
-                if not _refusal_possible(state, plan, settled):
+            if state is not None and state["issue"] is None and halt_reason == "RUN_BUDGET_EXCEEDED":
+                if _refusal_reason(state, plan, settled) != halt_reason:
                     raise ValueError("Reported budget refusal has no replayable basis")
-                state["issue"] = "REQUEST_REFUSED"
+                state["issue"] = halt_reason
+            if state is None or state["issue"] != halt_reason or halt_reason in CASE_FAILURES:
+                raise ValueError("Global halt must have a matching global safety reason")
         elif kind == "case_finished":
             if state is None or state["action"] is not None:
                 raise ValueError("Missing case start or unapplied valid tool action")
             if state["blocked"] is not None:
                 status, reason = "BLOCKED", state["blocked"]
+            elif state["issue"] is None and data.get("reason") in {
+                    "CASE_BUDGET_EXCEEDED", "INPUT_RESERVE_OUTSIDE_PRICING_BASIS"}:
+                reason = _refusal_reason(state, plan, settled)
+                if reason != data["reason"] or halt_reason is not None:
+                    raise ValueError("Case refusal has no replayable basis")
+                status = "CASE_FAILED"
             elif state["issue"]:
-                status, reason = "HALTED", state["issue"]
-                if halt_reason is None:
+                reason = state["issue"]
+                status = "CASE_FAILED" if reason in CASE_FAILURES else "HALTED"
+                if status == "HALTED" and halt_reason is None:
                     raise ValueError("Failed case did not halt later requests")
+                if status == "CASE_FAILED" and halt_reason is not None:
+                    raise ValueError("Case failure incorrectly blocked later cases")
             elif state["terminal"]:
                 status, reason = state["terminal"], None
             elif state["calls"] == plan["max_calls_per_case"] and state["pending"] is None:
@@ -293,7 +312,7 @@ def verify_snapshot(snapshot):
             _timing(data)
             rows.append(data)
             state = None
-        elif kind not in {"run_started", "run_finished"}:
+        elif kind not in {"run_started", "run_finished", "halt_reviewed"}:
             raise ValueError("Unknown replay event")
     _equal(reserved, [record["id"] for record in records], "Request denominator/order mismatch")
     if run["summary"] is not None:
@@ -303,6 +322,9 @@ def verify_snapshot(snapshot):
         expected = {"run_id": run["id"], "mode": mode, "protocol_id": plan["protocol_id"],
                     "assigned_contexts": len(rows), "safe_joint_completions": sum(row["outcome"]["safe_joint_completion"] for row in rows),
                     "model_contexts_observed": sum(row["model_response_observed"] for row in rows),
+                    "case_failures": sum(row["status"] not in {"COMPLETED", "BLOCKED"} for row in rows),
+                    "blocked_contexts": sum(row["status"] == "BLOCKED" for row in rows),
+                    "successful": all(row["status"] == "COMPLETED" for row in rows),
                     "provider_cost_usd": totals["estimated_total_cost_usd"] if mode == "live" else None,
                     "cases": rows, **totals, "interpretation": "Scripted infrastructure fixture; no model evidence" if mode == "fixture"
                         else "Estimated costs; semantic claims require human review"}

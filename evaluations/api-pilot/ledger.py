@@ -20,7 +20,7 @@ SCHEMA_VERSION = 1
 APPLICATION_ID = 0x4A524C42
 ZERO_HASH = "0" * 64
 CONTROL_EVENTS = {"run_started", "request_reserved", "response_saved",
-                  "request_settled", "run_halted", "run_finished"}
+                  "request_settled", "run_halted", "run_finished", "halt_reviewed"}
 SCHEMA = {
     "runs": ("table", """CREATE TABLE runs (
         id TEXT PRIMARY KEY, mode TEXT NOT NULL CHECK(mode IN ('live','fixture')),
@@ -118,6 +118,12 @@ def _totals(requests):
     }
 
 
+class ReserveRefused(RuntimeError):
+    def __init__(self, reason, explanation):
+        super().__init__(explanation)
+        self.reason = reason
+
+
 def _allow_reserve(run, requests, case_id, amount):
     if run["status"] != "RUNNING" or run["ended_utc"] is not None:
         raise RuntimeError("Run is not active; no more requests are permitted")
@@ -128,11 +134,11 @@ def _allow_reserve(run, requests, case_id, amount):
         raise ValueError("case_id is not a frozen assignment")
     case_requests = [r for r in requests if r["case_id"] == case_id]
     if len(case_requests) >= plan["max_calls_per_case"]:
-        raise RuntimeError("Case request ceiling reached")
+        raise ReserveRefused("CALL_LIMIT", "Case request ceiling reached")
     if money(_totals(requests)["estimated_exposure_usd"]) + amount > money(plan["max_estimated_spend_usd"]):
-        raise RuntimeError("Run spending reserve would exceed the ceiling")
+        raise ReserveRefused("RUN_BUDGET_EXCEEDED", "Run spending reserve would exceed the ceiling")
     if money(_totals(case_requests)["estimated_exposure_usd"]) + amount > money(plan["max_estimated_spend_per_case_usd"]):
-        raise RuntimeError("Case spending reserve would exceed the ceiling")
+        raise ReserveRefused("CASE_BUDGET_EXCEEDED", "Case spending reserve would exceed the ceiling")
 
 
 class Journal:
@@ -264,8 +270,9 @@ class Journal:
             if mode == "live":
                 if self.db.execute("SELECT 1 FROM runs WHERE mode='live' AND protocol_id=?", (plan["protocol_id"],)).fetchone():
                     raise RuntimeError("This live protocol has already been claimed; no relaunch")
-                if self.db.execute("SELECT 1 FROM runs WHERE mode='live' AND status IN ('RUNNING','HALTED')").fetchone():
-                    raise RuntimeError("A previous live run blocks further paid execution")
+                for previous in self.db.execute("SELECT id FROM runs WHERE mode='live' AND status IN ('RUNNING','HALTED')"):
+                    if not any(e["kind"] == "halt_reviewed" for e in self._snapshot(previous["id"])["events"]):
+                        raise RuntimeError("A previous live run blocks further paid execution")
             self.db.execute("INSERT INTO runs VALUES (?,?,?,?,?,'RUNNING',NULL,?,NULL,NULL)",
                             (run_id, mode, plan["protocol_id"], canonical(plan), canonical(metadata), now()))
             event = self._append(run_id, "run_started", {"mode": mode, "plan": plan, "metadata": metadata})
@@ -332,7 +339,7 @@ class Journal:
             self.db.execute("UPDATE requests SET cost_usd=?,calculation=?,settled_utc=?,state='SETTLED' WHERE id=?",
                             (str(cost), canonical(calculation), event["created_utc"], request_id))
             if cost > money(request["reserve_usd"]):
-                self._halt(run_id, "Actual estimated cost exceeded the reserved maximum")
+                self._halt(run_id, "RESERVE_EXCEEDED")
 
     def _halt(self, run_id, reason):
         row = self.db.execute("SELECT status FROM runs WHERE id=?", (run_id,)).fetchone()
@@ -364,11 +371,33 @@ class Journal:
             self.db.execute("UPDATE runs SET status=?,summary=?,ended_utc=? WHERE id=?",
                             (status, canonical(summary), event["created_utc"], run_id))
 
+    def review_halt(self, run_id, expected_snapshot_hash, reviewer, note):
+        """Acknowledge a finished, fully priced halt; never reset or resume it."""
+        from verifier import verify_snapshot
+
+        if not all(isinstance(value, str) and value.strip() for value in (reviewer, note)):
+            raise ValueError("Review requires a reviewer and a nonempty note")
+        with self._transaction():
+            snapshot = self._current(run_id)
+            run = snapshot["run"]
+            if digest(snapshot) != expected_snapshot_hash:
+                raise ValueError("Stale review: inspect the current snapshot hash")
+            if (run["mode"] != "live" or run["status"] != "HALTED" or run["ended_utc"] is None
+                    or run["summary"] is None or snapshot["totals"]["unresolved_requests"]):
+                raise RuntimeError("Only a finished, fully accounted live halt can be reviewed")
+            if any(e["kind"] == "halt_reviewed" for e in snapshot["events"]):
+                raise RuntimeError("Halt has already been reviewed")
+            verify_snapshot(snapshot)  # Recompute charges from the retained raw responses.
+            return self._append(run_id, "halt_reviewed", {
+                "reviewed_snapshot_sha256": expected_snapshot_hash,
+                "reviewer": reviewer.strip(), "note": note.strip(),
+                "known_estimated_spend_usd": snapshot["totals"]["known_estimated_spend_usd"]})
+
     @staticmethod
     def _verify(snapshot):
         """Rebuild accounting from the event chain and compare every mutable row."""
         actual = snapshot["run"]
-        run, requests, previous = None, {}, ZERO_HASH
+        run, requests, previous, reviewed = None, {}, ZERO_HASH, False
         for sequence, event in enumerate(snapshot["events"], 1):
             unhashed = {k: v for k, v in event.items() if k != "event_hash"}
             if (event["run_id"] != actual["id"] or event["sequence"] != sequence
@@ -382,6 +411,19 @@ class Journal:
                 run = {"id": actual["id"], "mode": data["mode"], "plan": _plan(data["plan"]),
                        "metadata": data["metadata"], "status": "RUNNING", "summary": None,
                        "started_utc": timestamp, "ended_utc": None, "halt_reason": None}
+                continue
+            if kind == "halt_reviewed":
+                before = {"run": run, "requests": list(requests.values()),
+                          "events": snapshot["events"][:sequence - 1],
+                          "totals": _totals(list(requests.values()))}
+                if (reviewed or run is None or run["mode"] != "live" or run["status"] != "HALTED"
+                        or run["ended_utc"] is None or run["summary"] is None
+                        or before["totals"]["unresolved_requests"]
+                        or data.get("reviewed_snapshot_sha256") != digest(before)
+                        or data.get("known_estimated_spend_usd") != before["totals"]["known_estimated_spend_usd"]
+                        or any(not isinstance(data.get(k), str) or not data[k].strip() for k in ("reviewer", "note"))):
+                    raise RuntimeError("Invalid fully accounted halt review")
+                reviewed = True
                 continue
             if run is None or run["ended_utc"] is not None or kind == "run_started":
                 raise RuntimeError("Invalid run event order")

@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "protocol_id": "JRR-NATIVE-RECEIPT-PILOT-2026-11-22-001",
+  "schema_version": 2,
+  "protocol_id": "JRR-NATIVE-RECEIPT-PILOT-2026-11-22-002",
   "status": "PROPOSED_UNRUN",
   "kind": "comparison",
   "study_type": "new_synthetic_receipt_scope_pilot_not_historical_Round_07_replication",
@@ -14,7 +14,9 @@
   "protocol_changes": [
     "Native portable transactional ledger and archive format; distinct protocol identity.",
     "Explicitly request reasoning.encrypted_content for store=False continuation; retain every response output item.",
-    "Neutral local assignment IDs; condition mapping remains in private plan and traces."
+    "Neutral local assignment IDs; condition mapping remains in private plan and traces.",
+    "Reserve from an 8192-input-token initial allowance and prior reported input+output tokens plus 1024 margin; opaque replay bytes do not affect eligibility.",
+    "Priced case failures are local; uncertain billing, provider limit violations and run-level financial stops halt the batch."
   ],
   "reasoning_effort": "medium",
   "max_output_tokens": 4096,
@@ -122,5 +124,10 @@
         "receipt_scope": "target"
       }
     }
-  ]
+  ],
+  "reservation_policy": {
+    "version": "provider-usage-v1",
+    "initial_input_tokens": 8192,
+    "continuation_margin_tokens": 1024
+  }
 }

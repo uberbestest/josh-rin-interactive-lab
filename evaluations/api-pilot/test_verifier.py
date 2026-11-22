@@ -93,7 +93,7 @@ class VerifierTests(unittest.TestCase):
         self.assertIsNotNone(snapshot["requests"][0]["cost_usd"])
         self.assertEqual(snapshot["run"]["summary"]["cases"][0]["reason"], "INCOMPLETE_RESPONSE")
         self.assertTrue(snapshot["run"]["summary"]["cases"][0]["model_response_observed"])
-        self.assertEqual(snapshot["run"]["summary"]["model_contexts_observed"], 1)
+        self.assertEqual(snapshot["run"]["summary"]["model_contexts_observed"], 8)
 
     def test_empty_json_object_is_not_observed_model_context(self):
         snapshot = self.snapshot(live=True, mode="empty_object")

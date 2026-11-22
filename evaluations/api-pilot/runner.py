@@ -16,8 +16,8 @@ import time
 import uuid
 
 from common import canonical, digest, money, now
-from ledger import Journal, verify_accounting
-from protocol import (TOOLS, Fixture, Service, initial_history, price_usage,
+from ledger import Journal, ReserveRefused, verify_accounting
+from protocol import (CASE_FAILURES, TOOLS, Fixture, Service, initial_history, price_usage,
                       request_payload, reserve_cost, validate_plan)
 from transport import Transport
 from verifier import parse_action, validate_output, verify_snapshot
@@ -90,6 +90,7 @@ def execute(plan, journal, mode="fixture", transport=None, run_id=None, approval
     for assignment in plan["assignments"]:
         case_id, model, case = assignment["case_id"], assignment["model"], assignment["case"]
         service, history, seen = Service(case), initial_history(), set()
+        prior_usage = None
         fixture = Fixture(case)
         started, clock = now(), time.monotonic()
         row = {"case_id": case_id, "status": "CALL_LIMIT", "reason": None,
@@ -109,9 +110,14 @@ def execute(plan, journal, mode="fixture", transport=None, run_id=None, approval
                 reason = None
                 if mode == "live":
                     try:
-                        request_id = journal.reserve(run_id, case_id, request, reserve_cost(request, model, plan))
-                    except (ValueError, RuntimeError):
-                        reason = "REQUEST_REFUSED"
+                        reserve = reserve_cost(request, model, plan, prior_usage)
+                    except ValueError:
+                        reason = "INPUT_RESERVE_OUTSIDE_PRICING_BASIS"
+                    if reason is None:
+                        try:
+                            request_id = journal.reserve(run_id, case_id, request, reserve)
+                        except ReserveRefused as exc:
+                            reason = exc.reason
                     if reason is None:
                         row["calls"] += 1
                         # A failure after reservation leaves a durable, unresolved reserve.
@@ -157,20 +163,26 @@ def execute(plan, journal, mode="fixture", transport=None, run_id=None, approval
                         reason = "UNPRICEABLE_USAGE"
                     else:
                         journal.settle(request_id, calculation)
+                        prior_usage = response["usage"]
                         if journal.snapshot(run_id)["run"]["status"] != "RUNNING":
                             reason = "RESERVE_EXCEEDED"
                         elif response["usage"]["output_tokens"] > plan["max_output_tokens"]:
                             reason = "OUTPUT_LIMIT_EXCEEDED"
-                if reason is None and response.get("status") != "completed":
+                if reason is None and response.get("status") == "incomplete":
                     reason = "INCOMPLETE_RESPONSE"
+                elif reason is None and response.get("status") != "completed":
+                    reason = "UNEXPECTED_RESPONSE_STATUS"
                 if reason is None:
                     try:
                         action = parse_action(response["output"], seen)
                     except ValueError:
                         reason = "INVALID_TOOL_CALL"
                 if reason is not None:
-                    row.update(status="HALTED", reason=reason)
-                    journal.halt(run_id, reason)
+                    if reason in CASE_FAILURES:
+                        row.update(status="CASE_FAILED", reason=reason)
+                    else:
+                        row.update(status="HALTED", reason=reason)
+                        journal.halt(run_id, reason)
                     break
                 history.extend(response["output"])
                 if action is None:
@@ -188,6 +200,9 @@ def execute(plan, journal, mode="fixture", transport=None, run_id=None, approval
                "assigned_contexts": len(rows), "safe_joint_completions": sum(
                    row["outcome"]["safe_joint_completion"] for row in rows),
                "model_contexts_observed": sum(row["model_response_observed"] for row in rows),
+               "case_failures": sum(row["status"] not in {"COMPLETED", "BLOCKED"} for row in rows),
+               "blocked_contexts": sum(row["status"] == "BLOCKED" for row in rows),
+               "successful": all(row["status"] == "COMPLETED" for row in rows),
                "provider_cost_usd": totals["estimated_total_cost_usd"] if mode == "live" else None,
                "cases": rows, **totals,
                "interpretation": "Scripted infrastructure fixture; no model evidence" if mode == "fixture"
@@ -221,6 +236,7 @@ def plan_summary(plan):
     return {"protocol": plan["protocol_id"], "plan_sha256": digest(plan), "assignments": len(plan["assignments"]),
             "estimated_spend_ceiling_usd": plan["max_estimated_spend_usd"],
             "per_case_ceiling_usd": plan["max_estimated_spend_per_case_usd"],
+            "reservation_policy": plan["reservation_policy"],
             "max_calls_per_case": plan["max_calls_per_case"], "max_output_tokens": plan["max_output_tokens"],
             "first_request_reserves_usd": {a["model"]: str(reserve_cost(request_payload(initial_history(), a["model"], plan),
                                                                        a["model"], plan)) for a in plan["assignments"]}}
@@ -257,15 +273,20 @@ def main(argv=None):
     sub = commands.add_parser("export")
     sub.add_argument("run_id")
     sub.add_argument("destination", type=Path)
+    sub = commands.add_parser("review-halt", help="Record review of a finished, fully accounted halt; no network calls")
+    sub.add_argument("run_id")
+    sub.add_argument("--snapshot-sha256", required=True, help="Current snapshot hash printed by report")
+    sub.add_argument("--reviewer", required=True)
+    sub.add_argument("--note", required=True, help="Review rationale; never include credentials")
     args = parser.parse_args(argv or (["dry-run"] if len(sys.argv) == 1 else None))
     journal = None
     try:
         if args.command == "verify":
             print(json.dumps(verify_export(args.evidence), indent=2))
-        elif args.command in {"report", "export"}:
+        elif args.command in {"report", "export", "review-halt"}:
             if not live_database().exists():
                 raise ValueError("No live ledger exists on this computer")
-            journal = Journal(live_database(), read_only=True)
+            journal = Journal(live_database(), read_only=args.command != "review-halt")
             run_id = getattr(args, "run_id", None)
             if not run_id:
                 row = journal.db.execute("SELECT id FROM runs ORDER BY started_utc DESC LIMIT 1").fetchone()
@@ -275,9 +296,18 @@ def main(argv=None):
             snapshot = journal.snapshot(run_id)
             if args.command == "export":
                 print(json.dumps(export_snapshot(snapshot, args.destination), indent=2))
+            elif args.command == "review-halt":
+                event = journal.review_halt(run_id, args.snapshot_sha256, args.reviewer, args.note)
+                print(json.dumps({"run_id": run_id, "review_receipt_sha256": event["event_hash"],
+                                  "reviewed_snapshot_sha256": args.snapshot_sha256,
+                                  "effect": "May propose a different approved protocol; original run cannot resume or relaunch"}, indent=2))
             else:
                 print(json.dumps({"run_id": run_id, "status": snapshot["run"]["status"],
-                                  "halt_reason": snapshot["run"]["halt_reason"], **snapshot["totals"]}, indent=2))
+                                  "halt_reason": snapshot["run"]["halt_reason"],
+                                  "snapshot_sha256": digest(snapshot),
+                                  "halt_reviewed": any(e["kind"] == "halt_reviewed" for e in snapshot["events"]),
+                                  "successful": snapshot["run"]["summary"].get("successful") if snapshot["run"]["summary"] else None,
+                                  **snapshot["totals"]}, indent=2))
         else:
             plan = load_plan(args.plan)
             if args.command == "check":
@@ -307,7 +337,11 @@ def main(argv=None):
                                   "safe_joint_completions": summary["safe_joint_completions"],
                                   "assigned_contexts": summary["assigned_contexts"],
                                   "provider_cost_usd": summary["provider_cost_usd"],
+                                  "successful": summary["successful"], "case_failures": summary["case_failures"],
+                                  "blocked_contexts": summary["blocked_contexts"],
                                   "status": snapshot["run"]["status"], "evidence": str(output / "evidence.json")}, indent=2))
+                if not summary["successful"]:
+                    return 2
         return 0
     except (ValueError, RuntimeError, OSError, sqlite3.Error) as exc:
         print("Stopped: " + str(exc), file=sys.stderr)
