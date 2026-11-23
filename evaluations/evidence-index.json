@@ -7,21 +7,24 @@
   "source_presentation_record_sha256": "f5c997bbbb96089a67fc73d2198898a0978348fffa928b941e8834eb888462fe",
   "source_revision": "8f5aaa28346f4c9d1a605fda85b36d1bacbbeb84",
   "direct_provider_api": {
-    "status": "three_completed_direct_provider_studies",
-    "published_results": 3,
+    "status": "four_completed_direct_provider_studies",
+    "published_results": 4,
     "usage_ledger": "retained privately, not publicly downloadable",
     "cost": {
       "compatibility_estimated_usd": "0.004696",
       "behavioral_estimated_usd": "0.246104",
       "invoice_verified": false,
       "warning_ablation_estimated_usd": "0.481632",
-      "two_behavioral_pilots_estimated_usd": "0.727736"
+      "two_behavioral_pilots_estimated_usd": "0.727736",
+      "authority_claims_estimated_usd": "0.752792",
+      "three_behavioral_pilots_estimated_usd": "1.480528"
     },
-    "note": "One two-call compatibility test, the original eight-context receipt-scope pilot, and a distinct sixteen-context warning-removal pilot. Both behavioral pilots achieved a narrow ceiling result; historical native/scripted counts unchanged. Public redacted summaries only; raw API records and ledger retained privately.",
+    "note": "Four separately completed direct-provider API studies: one tool exchange, eight receipt-scope cases, sixteen warning-removal cases, and thirty-two authority-claims cases. Each has its own denominator. Authority Claims 003 used an explicit strong registry-first developer contract and same-lab semantic review; raw API evidence remains private and no external replication is claimed.",
     "public_results": "live-api/index.html",
     "public_manifest": "live-api/summary.json",
     "external_replication": false,
-    "warning_study_page": "live-api/warning-002.html"
+    "warning_study_page": "live-api/warning-002.html",
+    "authority_claims_study_page": "live-api/authority-003.html"
   },
   "inventory": {
     "native_studies_rounds_01_to_07": 7,
@@ -30,8 +33,8 @@
     "scripted_primary_executions_rounds_08_to_09": 301,
     "separate_round_09_posthoc_executions": 6,
     "pooled_accuracy": null,
-    "direct_provider_api_studies": 3,
-    "direct_provider_api_behavioral_contexts": 24
+    "direct_provider_api_studies": 4,
+    "direct_provider_api_behavioral_contexts": 56
   },
   "native_cold_start_pilot": {
     "status": "completed",
