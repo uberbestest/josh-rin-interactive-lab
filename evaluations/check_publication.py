@@ -19,7 +19,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 SECTION = ROOT / "evaluations"
 PAGES = ["index.html", "evaluations/index.html", "projects/rle-castle/index.html",
-         "evaluations/reproduction-pilot/index.html"]
+         "evaluations/reproduction-pilot/index.html", "evaluations/live-api/index.html"]
 
 
 class Links(HTMLParser):
@@ -57,10 +57,22 @@ def static_checks():
     assert sum(s["fresh_model_participants"] for s in record["studies"]) == 232
     assert record["inventory"]["native_contexts_rounds_01_to_07"] == 232
     assert record["inventory"]["pooled_accuracy"] is None
-    assert record["direct_provider_api"]["published_results"] == 0
-    assert record["direct_provider_api"]["cost"] is None
+    assert record["direct_provider_api"]["published_results"] == 2
+    assert record["direct_provider_api"]["cost"]["behavioral_estimated_usd"] == "0.246104"
+    public = json.loads((SECTION / "live-api/summary.json").read_text())
+    assert len(public["studies"]) == 2
+    compatibility, behavioral = public["studies"]
+    assert compatibility["provider_requests"] == 2 and compatibility["verdict"] == "PASS"
+    assert behavioral["assigned_contexts"] == 8 and behavioral["provider_requests"] == 48
+    assert len(behavioral["cases"]) == 8 and all(case["safe_joint_completion"] for case in behavioral["cases"])
+    assert sum(case["model_requests"] for case in behavioral["cases"]) == 48
+    assert behavioral["unsafe_attempts"] == behavioral["actual_duplicate_effects"] == 0
+    assert all(arm["assigned"] == arm["safe_joint_completions"] == 4 for arm in behavioral["arms"])
+    assert behavioral["primary_contrast_target_minus_combined_percentage_points"] == 0
+    assert public["privacy"]["raw_model_requests_public"] is False
     html = (SECTION / "index.html").read_text()
-    assert "No direct-provider API run is reported on this page yet" in html
+    assert "Direct provider API results: now reported" in html
+    assert "No direct-provider API run is reported on this page yet" not in html
     checked = 0
     for name in PAGES:
         path = ROOT / name
@@ -109,7 +121,7 @@ def static_checks():
                         assert hashlib.sha256(command[stream].encode()).hexdigest() == command[stream + "_sha256"]
     return {"status": "PASS", "local_links_and_fragments": checked,
             "studies_matched_to_original": 9, "historic_native_contexts": 232,
-            "direct_provider_api_results": 0,
+            "direct_provider_api_results": 2,
             "scope": "Publication integrity and evidence labels; no new scientific execution."}
 
 
@@ -178,11 +190,16 @@ def browser_checks(base, output):
                 assert page.locator("h1").count() == 1
                 assert page.evaluate("document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1"), (name, width)
                 if name == "evaluations/index.html":
-                    assert page.get_by_text("No direct-provider API run is reported on this page yet", exact=False).is_visible()
+                    assert page.get_by_text("Direct provider API results: now reported", exact=False).is_visible()
+                    assert page.locator('a[href="live-api/index.html"]').count() >= 1
                     assert page.locator('[id^="round-"]').count() == 9
                     page.locator('a[href="../rin-self-evaluation/round-07.html"]').first.click()
                     assert page.locator("h1").inner_text() == json.loads((SECTION / "evidence-index.json").read_text())["studies"][6]["title"]
                     page.go_back(wait_until="networkidle")
+                elif name == "evaluations/live-api/index.html":
+                    assert page.locator("#results .live-table tbody tr").count() >= 3
+                    assert "4/4" in page.locator("#results").inner_text()
+                    assert page.locator('a[href="summary.json"]').count() >= 1
                 elif name == "projects/rle-castle/index.html":
                     assert page.locator('img[src="assets/faire-doorway.webp"]').evaluate("el => el.complete && el.naturalWidth === 575")
                     assert page.locator('a[href="../../evaluations/index.html"], a[href="../../evaluations/"]').count() >= 1
