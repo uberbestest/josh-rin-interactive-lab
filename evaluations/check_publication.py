@@ -19,7 +19,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 SECTION = ROOT / "evaluations"
 PAGES = ["index.html", "evaluations/index.html", "projects/rle-castle/index.html",
-         "evaluations/reproduction-pilot/index.html", "evaluations/live-api/index.html"]
+         "evaluations/reproduction-pilot/index.html", "evaluations/live-api/index.html", "evaluations/live-api/warning-002.html"]
 
 
 class Links(HTMLParser):
@@ -57,11 +57,13 @@ def static_checks():
     assert sum(s["fresh_model_participants"] for s in record["studies"]) == 232
     assert record["inventory"]["native_contexts_rounds_01_to_07"] == 232
     assert record["inventory"]["pooled_accuracy"] is None
-    assert record["direct_provider_api"]["published_results"] == 2
+    assert record["direct_provider_api"]["published_results"] == 3
     assert record["direct_provider_api"]["cost"]["behavioral_estimated_usd"] == "0.246104"
+    assert record["direct_provider_api"]["cost"]["warning_ablation_estimated_usd"] == "0.481632"
+    assert record["inventory"]["direct_provider_api_behavioral_contexts"] == 24
     public = json.loads((SECTION / "live-api/summary.json").read_text())
-    assert len(public["studies"]) == 2
-    compatibility, behavioral = public["studies"]
+    assert len(public["studies"]) == 3
+    compatibility, behavioral, warning = public["studies"]
     assert compatibility["provider_requests"] == 2 and compatibility["verdict"] == "PASS"
     assert behavioral["assigned_contexts"] == 8 and behavioral["provider_requests"] == 48
     assert len(behavioral["cases"]) == 8 and all(case["safe_joint_completion"] for case in behavioral["cases"])
@@ -69,6 +71,14 @@ def static_checks():
     assert behavioral["unsafe_attempts"] == behavioral["actual_duplicate_effects"] == 0
     assert all(arm["assigned"] == arm["safe_joint_completions"] == 4 for arm in behavioral["arms"])
     assert behavioral["primary_contrast_target_minus_combined_percentage_points"] == 0
+    assert warning["assigned_contexts"] == 16 and warning["provider_requests"] == 96
+    assert warning["safe_joint_completions"] == 16 and warning["verified_service_actions"] == 80
+    assert len(warning["cases"]) == 16 and all(c["safe_joint_completion"] for c in warning["cases"])
+    assert sum(c["model_requests"] for c in warning["cases"]) == 96
+    assert warning["unsafe_attempts"] == warning["actual_duplicate_effects"] == 0
+    assert len(warning["arms"]) == 4 and all(a["assigned"] == a["safe_joint_completions"] == 4 for a in warning["arms"])
+    assert warning["primary_warning_by_receipt_interaction_percentage_points"] == 0
+    assert warning["estimated_provider_cost_usd"] == "0.481632"
     assert public["privacy"]["raw_model_requests_public"] is False
     html = (SECTION / "index.html").read_text()
     assert "Direct provider API results: now reported" in html
@@ -121,7 +131,7 @@ def static_checks():
                         assert hashlib.sha256(command[stream].encode()).hexdigest() == command[stream + "_sha256"]
     return {"status": "PASS", "local_links_and_fragments": checked,
             "studies_matched_to_original": 9, "historic_native_contexts": 232,
-            "direct_provider_api_results": 2,
+            "direct_provider_api_results": 3,
             "scope": "Publication integrity and evidence labels; no new scientific execution."}
 
 
@@ -199,6 +209,11 @@ def browser_checks(base, output):
                 elif name == "evaluations/live-api/index.html":
                     assert page.locator("#results .live-table tbody tr").count() >= 3
                     assert "4/4" in page.locator("#results").inner_text()
+                    assert page.locator('a[href="warning-002.html"]').count() >= 1
+                    assert page.locator('a[href="summary.json"]').count() >= 1
+                elif name == "evaluations/live-api/warning-002.html":
+                    assert page.locator("#warning-results .live-table tbody tr").count() >= 5
+                    assert "16/16" in page.locator("#warning-results").inner_text()
                     assert page.locator('a[href="summary.json"]').count() >= 1
                 elif name == "projects/rle-castle/index.html":
                     assert page.locator('img[src="assets/faire-doorway.webp"]').evaluate("el => el.complete && el.naturalWidth === 575")

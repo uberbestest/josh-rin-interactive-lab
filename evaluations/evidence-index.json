@@ -1,24 +1,27 @@
 {
   "schema_version": 1,
   "title": "Josh & Rin’s Lab — Agent evaluations",
-  "as_of_date": "2026-11-22",
+  "as_of_date": "2026-11-23",
   "timezone": "America/New_York",
   "source_presentation_record": "../rin-self-evaluation/studies.json",
   "source_presentation_record_sha256": "f5c997bbbb96089a67fc73d2198898a0978348fffa928b941e8834eb888462fe",
   "source_revision": "8f5aaa28346f4c9d1a605fda85b36d1bacbbeb84",
   "direct_provider_api": {
-    "status": "two_completed_direct_provider_studies",
-    "published_results": 2,
+    "status": "three_completed_direct_provider_studies",
+    "published_results": 3,
     "usage_ledger": "retained privately, not publicly downloadable",
     "cost": {
       "compatibility_estimated_usd": "0.004696",
       "behavioral_estimated_usd": "0.246104",
-      "invoice_verified": false
+      "invoice_verified": false,
+      "warning_ablation_estimated_usd": "0.481632",
+      "two_behavioral_pilots_estimated_usd": "0.727736"
     },
-    "note": "Distinct two-call compatibility test and eight-session behavioral pilot. Historical native/scripted studies and their counts remain unchanged. Public results are redacted same-lab summaries; full raw API traces and ledgers remain private.",
+    "note": "One two-call compatibility test, the original eight-context receipt-scope pilot, and a distinct sixteen-context warning-removal pilot. Both behavioral pilots achieved a narrow ceiling result; historical native/scripted counts unchanged. Public redacted summaries only; raw API records and ledger retained privately.",
     "public_results": "live-api/index.html",
     "public_manifest": "live-api/summary.json",
-    "external_replication": false
+    "external_replication": false,
+    "warning_study_page": "live-api/warning-002.html"
   },
   "inventory": {
     "native_studies_rounds_01_to_07": 7,
@@ -27,8 +30,8 @@
     "scripted_primary_executions_rounds_08_to_09": 301,
     "separate_round_09_posthoc_executions": 6,
     "pooled_accuracy": null,
-    "direct_provider_api_studies": 2,
-    "direct_provider_api_behavioral_contexts": 8
+    "direct_provider_api_studies": 3,
+    "direct_provider_api_behavioral_contexts": 24
   },
   "native_cold_start_pilot": {
     "status": "completed",
