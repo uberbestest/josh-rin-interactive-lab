@@ -183,8 +183,6 @@
       "requested_model": "gpt-6.2-astra",
       "returned_model": "gpt-6.2-astra",
       "private_artifact_zip_sha256": "f6b2f3077f928a13debdd16700708c0428fe8fd0acccf688596f7012fb264eb7",
-      "private_artifact_id": 14813158848,
-      "github_actions_run_id": 45164752973,
       "frozen_plan_sha256": "825adb786bf1b854c4e313020c4439e85514c6719cfb1976f369a3dfdbd402db",
       "frozen_source_and_plan_sha256": "1908ce1cd47677f277f62c1d96eea093de6935aa02659cbb7bbbfc19e61f0667",
       "assigned_contexts": 16,
