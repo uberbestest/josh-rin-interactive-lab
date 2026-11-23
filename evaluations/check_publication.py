@@ -19,7 +19,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 SECTION = ROOT / "evaluations"
 PAGES = ["index.html", "evaluations/index.html", "projects/rle-castle/index.html",
-         "evaluations/reproduction-pilot/index.html", "evaluations/live-api/index.html", "evaluations/live-api/warning-002.html"]
+         "evaluations/reproduction-pilot/index.html", "evaluations/live-api/index.html", "evaluations/live-api/warning-002.html", "evaluations/live-api/authority-003.html"]
 
 
 class Links(HTMLParser):
@@ -57,13 +57,14 @@ def static_checks():
     assert sum(s["fresh_model_participants"] for s in record["studies"]) == 232
     assert record["inventory"]["native_contexts_rounds_01_to_07"] == 232
     assert record["inventory"]["pooled_accuracy"] is None
-    assert record["direct_provider_api"]["published_results"] == 3
+    assert record["direct_provider_api"]["published_results"] == 4
     assert record["direct_provider_api"]["cost"]["behavioral_estimated_usd"] == "0.246104"
     assert record["direct_provider_api"]["cost"]["warning_ablation_estimated_usd"] == "0.481632"
-    assert record["inventory"]["direct_provider_api_behavioral_contexts"] == 24
+    assert record["inventory"]["direct_provider_api_behavioral_contexts"] == 56
+    assert record["direct_provider_api"]["cost"]["authority_claims_estimated_usd"] == "0.752792"
     public = json.loads((SECTION / "live-api/summary.json").read_text())
-    assert len(public["studies"]) == 3
-    compatibility, behavioral, warning = public["studies"]
+    assert len(public["studies"]) == 4
+    compatibility, behavioral, warning, authority = public["studies"]
     assert compatibility["provider_requests"] == 2 and compatibility["verdict"] == "PASS"
     assert behavioral["assigned_contexts"] == 8 and behavioral["provider_requests"] == 48
     assert len(behavioral["cases"]) == 8 and all(case["safe_joint_completion"] for case in behavioral["cases"])
@@ -79,6 +80,19 @@ def static_checks():
     assert len(warning["arms"]) == 4 and all(a["assigned"] == a["safe_joint_completions"] == 4 for a in warning["arms"])
     assert warning["primary_warning_by_receipt_interaction_percentage_points"] == 0
     assert warning["estimated_provider_cost_usd"] == "0.481632"
+    assert authority["assigned_contexts"] == authority["clean_action_completions"] == 32
+    assert authority["provider_requests"] == 144 and authority["verified_service_actions"] == 112
+    assert authority["genuine_grants"] == authority["genuine_denials"] == 16
+    assert authority["authorized_protected_actions"] == authority["verified_denied_nonaction"] == 16
+    assert authority["final_reports_supported_same_lab"] == authority["final_reports_present"] == 32
+    assert authority["unsafe_protected_attempts"] == authority["material_omissions"] == 0
+    assert authority["input_tokens"] == 67104 and authority["output_tokens"] == 5399
+    assert authority["estimated_provider_cost_usd"] == "0.752792"
+    assert len(authority["cases"]) == 32 and len(authority["cue_arms"]) == 8
+    assert sum(a["provider_requests"] for a in authority["effort_arms"]) == 144
+    assert all(c["mechanical_completion"] == "CLEAN" and c["final_report_support"] == "SUPPORTED" and c["material_omission"] == "NONE" for c in authority["cases"])
+    assert authority["strong_explicit_developer_scaffold"] is True
+    assert all("private_artifact_id" not in study and "github_actions_run_id" not in study for study in public["studies"])
     assert public["privacy"]["raw_model_requests_public"] is False
     html = (SECTION / "index.html").read_text()
     assert "Direct provider API results: now reported" in html
@@ -131,7 +145,7 @@ def static_checks():
                         assert hashlib.sha256(command[stream].encode()).hexdigest() == command[stream + "_sha256"]
     return {"status": "PASS", "local_links_and_fragments": checked,
             "studies_matched_to_original": 9, "historic_native_contexts": 232,
-            "direct_provider_api_results": 3,
+            "direct_provider_api_results": 4,
             "scope": "Publication integrity and evidence labels; no new scientific execution."}
 
 
@@ -214,6 +228,11 @@ def browser_checks(base, output):
                 elif name == "evaluations/live-api/warning-002.html":
                     assert page.locator("#warning-results .live-table tbody tr").count() >= 5
                     assert "16/16" in page.locator("#warning-results").inner_text()
+                    assert page.locator('a[href="summary.json"]').count() >= 1
+                elif name == "evaluations/live-api/authority-003.html":
+                    assert page.locator("#cases .live-table tbody tr").count() == 32
+                    assert "32/32" in page.locator("#results").inner_text()
+                    assert "developer" in page.locator("#methods").inner_text().lower()
                     assert page.locator('a[href="summary.json"]').count() >= 1
                 elif name == "projects/rle-castle/index.html":
                     assert page.locator('img[src="assets/faire-doorway.webp"]').evaluate("el => el.complete && el.naturalWidth === 575")
