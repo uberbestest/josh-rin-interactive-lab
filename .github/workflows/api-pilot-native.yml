@@ -1,0 +1,51 @@
+name: Native API pilot — offline checks
+
+on:
+  pull_request:
+    paths:
+      - 'evaluations/api-pilot/**'
+      - '.github/workflows/api-pilot-native.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: native-pilot-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  offline:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            python: '3.12'
+          - os: windows-latest
+            python: '3.14'
+          - os: ubuntu-latest
+            python: '3.12'
+    defaults:
+      run:
+        working-directory: evaluations/api-pilot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Test storage, transport, protocol, replay, and interruption
+        run: python -m unittest discover -v
+      - name: Check the local runtime without credentials or network
+        run: python runner.py check
+      - name: Exercise and verify all eight scripted assignments
+        run: |
+          python runner.py dry-run --output results/ci-fixture
+          python runner.py verify results/ci-fixture/evidence.json
+      - name: Exercise the separate two-call compatibility fixture
+        run: |
+          python compatibility.py check
+          python compatibility.py dry-run --output results/ci-compatibility
+          python compatibility.py verify results/ci-compatibility/evidence.json
